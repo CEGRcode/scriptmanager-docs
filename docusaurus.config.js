@@ -123,7 +123,7 @@ const config = {
             items: [
               {
                 label: 'ScriptManager',
-                href: 'https://github.com/CEGRcode/scriptmanager',
+                href: 'http://pughlab.mbg.cornell.edu/scriptmanager',
               },
               {
                 label: 'PEGR',
@@ -131,11 +131,11 @@ const config = {
               },
               {
                 label: 'STENCIL',
-                href: 'https://github.com/CEGRcode/stencil',
+                href: 'http://pughlab.mbg.cornell.edu//stencil',
               },
               {
                 label: 'GenoPipe',
-                href: 'https://github.com/CEGRcode/GenoPipe',
+                href: 'http://pughlab.mbg.cornell.edu/GenoPipe',
               },
             ],
           },

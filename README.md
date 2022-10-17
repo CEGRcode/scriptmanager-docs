@@ -36,7 +36,7 @@ This command generates static content into the `build` directory and can be serv
 $ npm run serve
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+This command serves the static content from the `build` directory and can be used to check that the site renders properly before deployment.
 
 ### Deployment
 
