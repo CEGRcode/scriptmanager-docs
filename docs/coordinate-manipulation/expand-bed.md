@@ -9,7 +9,7 @@ author: Olivia Lang
 
 Expands input BED file by adding positions to the border or around the center.
 
-![ExpandBED_center_500bp](/../static/md-img/ExpandBED_center_500bp.png)
+![ExpandBED_center_500bp](./img/ExpandBED_center_500bp.png)
 
 This script is related to several [Bedtools functions][bedtools-slop] and is typically used to expand a set of peak annotations from the center to create a set of genomic intervals of fixed size. BED files with fixed interval lengths are useful for a variety of tools including ScriptManager's [Tag Pileup][tag-pileup] occupancy counts, [Extract FASTA sequence][fasta-extract] for [Four Color plots][four-color], and even for a number of other third-party analysis tools.
 

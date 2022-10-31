@@ -8,7 +8,7 @@ sidebar_label: Label Heatmap
 
 This tool will embed a `.png` file into an output `.svg` with a title and axes and tickmark labels.
 
-<img src={require('/../static/md-img/Figure_Generation/LabelHeatMapSchematic.jpg').default} style={{width:70+'%'}}/>
+<img src={require('./img/LabelHeatMapSchematic.jpg').default} style={{width:70+'%'}}/>
 
 Typically this tool is used to label figures such as merged ChIP-exo heatmaps, ATAC-seq heatmaps plot of tag counts, or four color sequence plots but there is no reason it cannot be used for any input `.png`.
 

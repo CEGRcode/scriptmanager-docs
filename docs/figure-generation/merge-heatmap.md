@@ -20,7 +20,7 @@ style={{
 
 This tool merges two PNG files into a third PNG file that is an average of each corresponding pair of pixels from the input files.
 
-<img src={require('/../static/md-img/Figure_Generation/MergeHeatMapSchematic.jpg').default} style={{width:35+'%'}}/>
+<img src={require('./img/MergeHeatMapSchematic.jpg').default} style={{width:35+'%'}}/>
 
 Typical use of this tool is for merging <Highlight color="blue">blue(sense)</Highlight> and <Highlight color="red">red(anti-sense)</Highlight> [**two-color heatmap plots**][heatmap] plots for [**ChIP-exo analysis**][chip-exo-tutorial].
 

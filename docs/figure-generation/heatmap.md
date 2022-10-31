@@ -25,18 +25,18 @@ The values to color scale is defined as a range from a minimum value of 0 (desig
 
 <div className="row">
   <div class = "col col--3">
-  <img src={require('/../static/md-img/Figure_Generation/matrix.jpg').default} style={{width:85+'%',}}/>
-  </div>
-  <div class = "col col--2">
-  <img src={require('/../static/md-img/blue_nucleosome.png').default} style={{width:100+'%',}}/>
-  <p>--blue</p>
+  <img src={require('./img/matrix.jpg').default} style={{width:85+'%',}}/>
   </div>
     <div class = "col col--2">
-  <img src={require('/../static/md-img/default_nucleosome.png').default} style={{width:100+'%',}}/>
+  <img src={require('./img/default_nucleosome.png').default} style={{width:100+'%',}}/>
   <p>--black</p>
   </div>
   <div class = "col col--2">
-  <img src={require('/../static/md-img/custom_nucleosome.png').default} style={{width:100+'%',}}/>
+  <img src={require('./img/blue_nucleosome.png').default} style={{width:100+'%',}}/>
+  <p>--blue</p>
+  </div>
+  <div class = "col col--2">
+  <img src={require('./img/custom_nucleosome.png').default} style={{width:100+'%',}}/>
   <p>--custom</p>
   </div>
 </div>

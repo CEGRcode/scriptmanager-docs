@@ -8,7 +8,7 @@ sidebar_label: Filter PIP-seq
 
 Filter BAM file by -1 nucleotide. Requires genome FASTA file.
 
-![PIP-seq figure 1a from Lai 2017 ](/../static/md-img/Lai_2017_PIPseq_F1a.jpeg)
+![PIP-seq figure 1a from Lai 2017 ](./img/Lai_2017_PIPseq_F1a.jpeg)
 
 Permanganate (KMnO4) and piperidine treatment of DNA fragments preferentially oxidizes and cleaves off the T (thymine) at the 5' end of single stranded DNA fragment. When analyzing data from sequencing assays like PIP-seq that use this treatment ([Lai et al, 2017][pip-seq-paper]), a filter step using this tool for reads that align to positions with a 'T' at the -1 position of the 5' end of read 1 can reduce the amount of noise (i.e. DNA fragments not cleaved by piperidine). This tool can potentially clarify signal in the downstream steps of your analysis.
 

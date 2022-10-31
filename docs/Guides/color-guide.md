@@ -13,7 +13,7 @@ Color customization options available in the [Heatmap Labeler][heatmap-labeler],
 
 When the user opens up the color selector window, they will see several tabs, each visualizing a different method for selecting a custom color.
 
-![swatch-guide](/../static/md-img/ColorSelector/swatch-guide.png)
+![swatch-guide](./img/swatch-guide.png)
 
 The default/first tab, "Swatch" (above), shows a bunch of color swatches for a fixed collection of colors to choose from.
 
@@ -22,8 +22,8 @@ The default/first tab, "Swatch" (above), shows a bunch of color swatches for a f
 * "RGB" tab  allows the user to select a color based on the Red, Green, and Blue color system
 * "CMYK" tab  allows the user to select a color based on the Cyan, Magenta, Yellow, and Black color system
 
-<img src={require('/../static/md-img/ColorSelector/hsv-guide.png').default} style={{width:50+'%'}}/><img src={require('/../static/md-img/ColorSelector/hsl-guide.png').default} style={{width:50+'%'}}/>
-<img src={require('/../static/md-img/ColorSelector/rgb-guide.png').default} style={{width:50+'%'}}/><img src={require('/../static/md-img/ColorSelector/cmyk-guide.png').default} style={{width:50+'%'}}/>
+<img src={require('./img/hsv-guide.png').default} style={{width:50+'%'}}/><img src={require('./img/hsl-guide.png').default} style={{width:50+'%'}}/>
+<img src={require('./img/rgb-guide.png').default} style={{width:50+'%'}}/><img src={require('./img/cmyk-guide.png').default} style={{width:50+'%'}}/>
 
 Note that the RGB selector window includes a "Color Code" text box that allows you to directly paste a hexstring (see below) value encoding a color.
 

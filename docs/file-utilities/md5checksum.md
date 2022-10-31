@@ -10,7 +10,7 @@ A common quality control and security step that everyone should use when downloa
 
 MD5 is one of several methodologies (message digest function, others including the hash function [SHA-1][sha1sum-link]) for calculating a near-unique alphanumeric code for a file. MD5sum values also need to be generated for submissions to public data repositories such as NCBI's [Gene Expression Omnibus (GEO)][submission-reqs-geo] and [Sequence Read Archive(SRA)][submission-reqs-sra] and EBI's [European Nucleotide Archive (ENA)][submission-reqs-ena].
 
-![ENA_MD5sum](/../static/md-img/ENA_MD5sum.png)
+![ENA_MD5sum](./img/ENA_MD5sum.png)
 
 For example, the European Nucleotide Archive provides MD5 checksum file values for FASTQ and BAM files downloaded from their servers. To ensure that you downloaded the correct file, to ensure that the file was not corrupted, and to ensure that the file downloaded completely, you can run this tool on the file and make sure that the alphanumeric code matches the code provided by ENA for the file.
 
