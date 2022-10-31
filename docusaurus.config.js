@@ -91,6 +91,10 @@ const config = {
       },
       footer: {
         style: 'dark',
+        logo: {
+          alt: 'Pugh Lab Logo',
+          src: 'img/pughlab_logo.svg',
+        },
         links: [
           {
             title: 'Docs',
