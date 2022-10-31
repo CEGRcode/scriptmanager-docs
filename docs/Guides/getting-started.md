@@ -36,7 +36,7 @@ There are two ways to obtain the ScriptManager executable JAR file.
 ### Download pre-compiled binary (easy)
 We pre-compiled the JAR binary files to run ScriptManager (same for all operating systems) and made them available for direct download [on Github][github-releases].
 
-Click [here][direct-download-jar] for the latest JAR (v0.13).
+[Download the latest JAR (v0.14)][direct-download-jar] 
 
 ### Clone the Github repository (for latest dev version)
 Open your terminal and move to the directory where you want to install scriptmanager and type the following command to download all the source code so you can build the executable JAR file from scratch.
@@ -134,7 +134,7 @@ We welcome anyone who uses ScriptManager for analysis in their publications to l
 [temurin-11]:https://adoptium.net/temurin/releases?version=11
 [conda-openjdk]:https://anaconda.org/conda-forge/openjdk
 [github-releases]:https://github.com/CEGRcode/scriptmanager/releases
-[direct-download-jar]:https://github.com/CEGRcode/scriptmanager/releases/download/v0.13/ScriptManager-v0.13.jar
+[direct-download-jar]:https://github.com/CEGRcode/scriptmanager/releases/download/v0.14/ScriptManager-v0.14.jar
 [pearc-paper]:https://dl.acm.org/doi/abs/10.1145/3491418.3535161
 [rrid-link]:https://scicrunch.org/resources/data/record/nlx_144509-1/SCR_021797/resolver?q=SCR_021797%2A&l=SCR_021797%2A&i=rrid:scr_021797
 

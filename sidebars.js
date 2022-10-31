@@ -32,6 +32,7 @@ module.exports = {
       "coordinate-manipulation/gff-to-bed",
       "coordinate-manipulation/sort-bed",
       "coordinate-manipulation/sort-gff",
+      "coordinate-manipulation/shift-coord",
     ],
     "Figure Generation": [
       "figure-generation/heatmap",
@@ -44,6 +45,7 @@ module.exports = {
     "File Utilities": [
       "file-utilities/md5checksum",
       "file-utilities/chrname-converter",
+      "file-utilities/compress-files",
     ],
     "Peak Analysis": [
       "peak-analysis/peak-align-ref",

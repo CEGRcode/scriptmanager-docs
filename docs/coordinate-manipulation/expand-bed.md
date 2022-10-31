@@ -28,8 +28,7 @@ Depending on the strategy selected, the "Size of Expansion" (in bp) can mean dif
 * __Add to Border:__ This strategy pads both sides of the borders of the input intervals by a fixed amount specified by the user ("Size of Expansion"). Depending on whether or not the input BED file contains intervals of a fixed length, the resulting expansions will not necessarily include intervals of a fixed length.
 
 ### Output format
-For each input BED file, a new BED file is created with the original filename and the `.bed` file extension replaced with the `*_<sizeofexpansion>bp.bed` suffix.
-
+For each input BED file, a new BED file is created with the original filename and the `.bed` file extension replaced with the `*_<sizeofexpansion>bp.bed` suffix. If the "Output GZIP" checkbox is slected, the `.gz` extension will also be appended.
 
 ## Command Line Interface
 
@@ -48,7 +47,7 @@ This tool takes a single [BED file][bed-format] for input.
 
 | Option | Description |
 | ------ | ----------- |
-| `-o, --output` | specify output directory (default name will be same as original with `.gff` ext) |
+| `-o, --output` | specify output directory (name will be same as original with coordinate info appended) |
 | `-s, --stdout` | output gff to STDOUT |
 
 

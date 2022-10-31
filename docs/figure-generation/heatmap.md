@@ -22,23 +22,6 @@ This tool generates a heatmap from a tab-delimited matrix input of numeric value
 
 The values to color scale is defined as a range from a minimum value of 0 (designated white) to a customizable maximum value specified by the user (customizable but typically red, blue, or black), hence, the "two colors" in the "Two Color Heatmap".
 
-<!--$
-\begin{bmatrix}
-1 & 2 & .. & 10\\
-\vdots & \ddots & \ddots & \vdots\\
-\vdots & \ddots & \ddots & \vdots\\
-\vdots & \ddots & \ddots & \vdots\\
-\vdots & \ddots & \ddots & \vdots\\
-\vdots & \ddots & \ddots & \vdots\\
-\vdots & \ddots & \ddots & \vdots\\
-\vdots & \ddots & \ddots & \vdots\\
-\vdots & \ddots & \ddots & \vdots\\
-\vdots & \ddots & \ddots & \vdots\\
-\vdots & \ddots & \ddots & \vdots\\
-\vdots & \ddots & \ddots & \vdots\\
-\vdots & \ddots & \ddots & \vdots\\
-11 & 30 & .. & 1
-\end{bmatrix}$ &rarr; ![blue-nucleosome](/../static/md-img/blue_nucleosome.png) ![default-nucleosome](/../static/md-img/default_nucleosome.png) ![custom-nucleosome](/../static/md-img/custom_nucleosome.png)-->
 
 <div className="row">
   <div class = "col col--3">
@@ -58,13 +41,6 @@ The values to color scale is defined as a range from a minimum value of 0 (desig
   </div>
 </div>
 
-<!--[blue-nucleosome](/../static/md-img/Figure_Generation/matrix.jpg)
-![blue-nucleosome](/../static/md-img/blue_nucleosome.png)
-![default-nucleosome](/../static/md-img/default_nucleosome.png)
-![custom-nucleosome](/../static/md-img/custom_nucleosome.png)
-
-                             --blue           --black          --custom-->
-
 This tool is typically used for visualizing the matrix output of [**Tag Pileup**][tag-pileup] to look at the raw tag coverage of any biochemical sequencing assay (ChIP-exo, ATAC-seq, PROcap, etc.). But there are many other tools in ScriptmManager like [**Align BED to Reference**][peak-align-ref] that produce output that can be visualized by this tool. Any tab-delimited text file can be used (many third party tools use such outputs) so long as the appropriate start row and start column are specified to skip over header columns and rows.
 
 <img src={require('/../static/md-img/Figure_Generation/TwoColorHeatMapWindow.png').default} style={{width:70+'%'}}/>
@@ -79,6 +55,14 @@ Details of the implementation are described below but typically red and blue are
 
 :::tip
 The Pugh Lab standard for ChIP-exo heatmap strand colors is <Highlight color="blue">‘Sense’ = blue</Highlight> and <Highlight color="red">‘Anti’ = red</Highlight>.
+:::
+
+### Transparent Background
+
+This checkbox was introduced with v0.14 and allows the user to create heatmap traces where the base color scales from transparent instead of white to the user-selected color.
+
+:::caution
+If selecting a transparent background, there is no need to use the [Merge Heatmap][merge-heatmap] tool to merge separate "Sense" and "Anti" heatmaps in classic ChIP-exo analysis. Simply overlay the images on a white background.
 :::
 
 ### Contrast threshold
@@ -216,6 +200,7 @@ However if you want to use a color outside the preset values, you can indicate R
 [color-hex-url]:http://www.javascripter.net/faq/rgbtohex.htm
 [treeview-paper]:https://pubmed.ncbi.nlm.nih.gov/15180930/
 [tag-pileup]:/docs/read-analysis/tag-pileup
+[merge-heatmap]:/docs/figure-generation/merge-heatmap
 [peak-align-ref]:/docs/peak-analysis/peak-align-ref
 [cdt-format]:/docs/file-formats
 [png-format]:/docs/file-formats
