@@ -3,7 +3,7 @@ module.exports = {
     Guides: ["Guides/getting-started", "Guides/command-line", "Guides/tool-group", "Guides/color-guide"],
     Tutorials: ["Tutorials/threebasicplots-exo"],
     References: ["file-formats", "References/tool-index", "References/publications"],
-    Contributing: ["Contributing/developer-guidelines", "Contributing/testing"],
+    Contributing: ["Contributing/developer-guidelines", "Contributing/code-snippets", "Contributing/testing"],
     Community: ["Community/code-of-conduct"],
   },
   toolSidebar: {
