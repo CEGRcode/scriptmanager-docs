@@ -1,9 +1,25 @@
 module.exports = {
   someSidebar: {
-    Guides: ["Guides/getting-started", "Guides/command-line", "Guides/tool-group", "Guides/color-guide"],
-    Tutorials: ["Tutorials/threebasicplots-exo"],
-    References: ["file-formats", "References/tool-index", "References/publications"],
-    Contributing: ["Contributing/developer-guidelines", "Contributing/code-snippets", "Contributing/testing"],
+    Guides: [
+      "Guides/getting-started",
+      "Guides/command-line",
+      "Guides/tool-group",
+      "Guides/color-guide",
+    ],
+    Tutorials: [
+      "Tutorials/threebasicplots-exo",
+      "Tutorials/chipexo-tutorial"
+    ],
+    References: [
+      "file-formats",
+      "References/tool-index",
+      "References/publications",
+    ],
+    Contributing: [
+      "Contributing/developer-guidelines",
+      "Contributing/code-snippets",
+      "Contributing/testing",
+    ],
     Community: ["Community/code-of-conduct"],
   },
   toolSidebar: {
