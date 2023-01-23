@@ -10,7 +10,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'ScriptManager',
   tagline: 'Toolbox for analyzing your genomic datasets',
-  url: 'https://github.com/CEGRcode',
+  url: 'https://CEGRcode.github.io',
   baseUrl: '/scriptmanager/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

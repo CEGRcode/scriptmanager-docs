@@ -7,7 +7,7 @@ module.exports = {
       "Guides/color-guide",
     ],
     Tutorials: [
-      "Tutorials/threebasicplots-exo",
+      "Tutorials/genomic-features-tutorial",
       "Tutorials/chipexo-tutorial"
     ],
     References: [

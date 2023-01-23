@@ -17,13 +17,13 @@ text-align: center;
 margin-top: 50px;
 }
 :root {
-  --ifm-color-primary: #8497b0;
-  --ifm-color-primary-dark: #7187a4;
-  --ifm-color-primary-darker: #687f9e;
-  --ifm-color-primary-darkest: #546983;
-  --ifm-color-primary-light: #97a7bc;
-  --ifm-color-primary-lighter: #a0afc2;
-  --ifm-color-primary-lightest: #bcc7d4;
+  --ifm-color-primary: #8497B0;
+  --ifm-color-primary-dark: rgb(33, 175, 144);
+  --ifm-color-primary-darker: rgb(31, 165, 136);
+  --ifm-color-primary-darkest: rgb(26, 136, 112);
+  --ifm-color-primary-light: rgb(70, 203, 174);
+  --ifm-color-primary-lighter: rgb(102, 212, 189);
+  --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
 }
 
@@ -56,4 +56,16 @@ opacity: 0.6;
   display: flex;
   height: 24px;
   width: 24px;
+}
+
+.tutorial-img-flow-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowra;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.tutorial-main-gui {
+  width: 60%;
 }
