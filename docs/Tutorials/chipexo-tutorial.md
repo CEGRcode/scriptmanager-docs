@@ -13,7 +13,7 @@ _Generating two basic sequence-specific ChIP-exo plots: composite and heatmap_
 ## Download ScriptManager (v0.14):
 The current version of ScriptManager is available for download **[here][github-v14]**. Make sure you have [Java installed][java-install].
 
-The file ‘ScriptManager-v0.14.jar’ should be placed someplace locally accessible. For example on Mac OS on the Desktop (Permissions will need to be accepted) or someplace in your home directory (i.e. Macintosh HD/Users/userID/ScriptManager)
+The file `ScriptManager-v0.14.jar` should be placed someplace locally accessible. For example on Mac OS on the Desktop (Permissions will need to be accepted) or someplace in your home directory (i.e. Macintosh HD/Users/userID/ScriptManager)
 
 
 ## Download Reb1 sample ChIP-exo data:
@@ -27,13 +27,20 @@ The file ‘ScriptManager-v0.14.jar’ should be placed someplace locally access
 3. Select "Direct Download"
 4. Unzip the resulting file ‘12141_YEP.zip’ and inspect the contents of the new `12141_YEP` folder. It should contain a file called `12141_filtered.bam`.
 
-
+:::caution
+If your BED file downloads with a `.txt` extension, make sure to change the filename to a `.bed` extension. For this tutorial, the BED file is named `Reb1_Rhee_primary_sites_975.bed`.
+:::
 
 ## Generate the Plots
-### 1. Open ScriptManager
-Depending on your system permissions, you may need to be an administrator to open this for the first time. On Mac systems, this can be done by right-clicking the file and selecting ‘Open’ at the top.
 
-![open-sm]
+### 1. Open ScriptManager
+Depending on your system permissions, you may need to be an administrator to open this for the first time.
+
++ On Mac systems, this can be done by right-clicking the file and selecting ‘Open’ at the top.
+
+<div class="tutorial-img-flow-container">
+  <img src={require('./img/open-sm.png').default} style={{width:40+'%',}} />
+</div>
 
 :::caution
 Some of the newer MacOS systems may not properly open the JAR by simply double-clicking on the JAR file so you may need to open your Terminal window and execute it from the command line by typing
@@ -59,13 +66,13 @@ Reb1_YEP_12141.bam.bai  # Need to generate this file to proceed.
 :::
 
 
-1. Navigate to __BAM Manipulation__ -> [__BAM-BAI Indexer__][bam-indexer]
+#### 2.1. Navigate to BAM Manipulation ➡️ [__BAM-BAI Indexer__][bam-indexer]
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/maingui-bamidx.png').default} style={{width:60+'%',}} />
 </div>
 
-2. Generate BAI index files for each BAM file of interest by loading your BAM file and clicking "Index."
+#### 2.2. Generate BAI index files for each BAM file of interest by loading your BAM file and clicking "Index."
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/gui-bamidx.png').default} style={{width:60+'%',}}/>
@@ -80,14 +87,14 @@ The speed of this step scales with the size of the BAM file. Generally this step
 ### 3. Resize the Reb1 motif-aligned BED file
 The BED file is the set of reference coordinates that your heatmap and composite plots will be aligned to, but you’ll need to specify how far upstream and downstream you want your data to be plotted; i.e., “Size of Expansion (bp). If you bed file is defined by more than a 1 bp interval AND you want to add to limits of that interval, then select  “Add to Border”).
 
-1. Navigate to __Coordinate File Manipulation__ -> [__Expand BED File__][expand-bed]
+#### 3.1. Navigate to Coordinate File Manipulation ➡️ [__Expand BED File__][expand-bed]
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/maingui-expandbed.png').default} style={{width:60+'%',}}/>
 </div>
 
 
-2. For this tutorial, use the 250bp expansion and select "Expand from Center".
+#### 3.2. For this tutorial, use the 250bp expansion and select "Expand from Center".
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/gui-expandbed.png').default} style={{width:60+'%',}}/>
@@ -103,35 +110,38 @@ BED file coordinates often need to be resized for more informative tag pileups. 
 ### 4. Generate the tag pileup
 Use TagPileup to pileup the BAM data within a set of BED coordinate windows to generate the composite plot and the matrix(CDT) files that will be used to generate the heatmaps.
 
-1. Navigate to __Sequence Read Analysis__ -> [__Tag Pileup__][tag-pileup]
+#### 4.1. Navigate to Sequence Read Analysis ➡️ [__Tag Pileup__][tag-pileup]
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/maingui-tagpileup.png').default} style={{width:60+'%',}}/>
 </div>
 
-2. Load the BED and BAM files
+#### 4.2. Load the BED and BAM files
 
-3. Select output directory & make sure "Output Matrix", "CDT", and "Output GZIP" are selected
-      + Bioinformatic projects should be organized in a uniform and consistent manner as described below
-      + [Paper on how to organize bioinformatics projects (Noble 2009)][noble2009]
+#### 4.3. Select output directory & make sure "Output Matrix", "CDT", and "Output GZIP" are selected
+
++ Bioinformatic projects should be organized in a uniform and consistent manner as described below
+
++ [Paper on how to organize bioinformatics projects (Noble 2009)][noble2009]
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/gui-tagpileup.png').default} style={{width:100+'%',}}/>
 </div>
 
-4. When ready, select ‘Pile Tags’ to execute
+#### 4.4. When ready, select ‘Pile Tags’ to execute
 
 :::tip
 The default parameters Tag Pileup is set to expect is a sequence-specific strand separated ChIP-exo dataset. Modifications to these parameters are needed for more specific analysis or when using data generated from other assays.
 :::
 
-5. Save composite results
+#### 4.5. Save composite results
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/gui-tagpileup-out.png').default} style={{width:100+'%',}}/>
 </div>
 
 + The displayed composite plot can be modified by right-clicking and selecting properties. Things such as axis labels, axis range, and colors can be modified here.
+
 + The final image can then be saved by right-clicking and selecting ‘Save as’. PNG is fine for most cases, but SVG is strongly recommended if this composite plot will be used in Adobe Illustrator later.
 
 :::note
@@ -142,25 +152,25 @@ Besides the composite plot image, ScriptManager has saved the matrix \*.CDT file
 ### 5. Generate Heatmaps
 
 
-1. Navigate to __Figure Generation__ -> [__Heat Map__][heatmap].
+#### 5.1. Navigate to Figure Generation ➡️ [__Heat Map__][heatmap].
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/maingui-heatmap.png').default} style={{width:60+'%',}}/>
 </div>
 
-2. Heatmap Generator can only generate one color at a time, so ‘Sense’ and ‘Anti’ files should be processed separately. The ChIP-exo standard for strand colors is ‘Sense’ == blue and ‘Anti’ == red.
+#### 5.2. Heatmap Generator can only generate one color at a time, so ‘Sense’ and ‘Anti’ files should be processed separately. The ChIP-exo standard for strand colors is ‘Sense’ == blue and ‘Anti’ == red.
 
-3. Start by generating the 'Sense' heatmap first.
+Start by generating the 'Sense' heatmap first.
 
-    1. Click "Load Files" and select the `_sense.cdt` output CDT files from running the TagPileup step.
+#### 5.3. Click "Load Files" and select the `_sense.cdt` output CDT files from running the TagPileup step.
 
-    2. Select "blue" for the color (per the lab standard)
+#### 5.4. Select "blue" for the color (per the lab standard)
 
-    3. The heatmaps for this dataset show the best contrast when using the default "Percentile Threshold" value (.95 or 95%).  Otherwise your heatmaps will come out too light or too dark to see the shape.
+#### 5.5. The heatmaps for this dataset show the best contrast when using the default "Percentile Threshold" value (.95 or 95%).  Otherwise your heatmaps will come out too light or too dark to see the shape.
 
-    4. Click the "Output Heatmap" checkbox. The Heatmap generator does not save the produced PNG by default.
+#### 5.6. Click the "Output Heatmap" checkbox. The Heatmap generator does not save the produced PNG by default.
 
-    5. Click "Generate" to save your Sense PNG heatmap!
+#### 5.7. Click "Generate" to save your Sense PNG heatmap!
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/gui-heatmap-sense.png').default} style={{width:40+'%',}}/>
@@ -174,17 +184,17 @@ Besides the composite plot image, ScriptManager has saved the matrix \*.CDT file
 :::
 
 
-4. Similarly generate the 'Anti' heatmap.
+Similarly generate the 'Anti' heatmap.
 
-    1. Remove the "Sense" file by selecting it to highlight it and then clicking the "Remove Files button"
+#### 5.8. Remove the "Sense" file by selecting it to highlight it and then clicking the "Remove Files button"
 
-    2. Click "Load Files" and select the `_anti.cdt` output CDT files from running the TagPileup step.
+#### 5.9. Click "Load Files" and select the `_anti.cdt` output CDT files from running the TagPileup step.
 
-    3. Select "red" for the color (per the lab standard)
+#### 5.10. Select "red" for the color (per the lab standard)
 
-    4. Since all the other parameters should be the same from you "Sense" run, you shouldn't need to re-select the "Percentile Threshold" or "Output Heatmap" options.
+#### 5.11. Since all the other parameters should be the same from you "Sense" run, you shouldn't need to re-select the "Percentile Threshold" or "Output Heatmap" options.
 
-    5. Click "Generate" to save you Anti PNG heatmap!
+#### 5.12. Click "Generate" to save you Anti PNG heatmap!
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/gui-heatmap-anti.png').default} style={{width:40+'%',}}/>
@@ -195,18 +205,17 @@ Besides the composite plot image, ScriptManager has saved the matrix \*.CDT file
 ### 6. Merge strange-separated heatmaps
 
 
-
-1. Navigate to __Figure Generation__ -> [__Merge Heatmaps__][merge-heatmap] so we can merge our strand-separated heatmaps into a single PNG.
+#### 6.1. Navigate to Figure Generation ➡️ [__Merge Heatmaps__][merge-heatmap] so we can merge our strand-separated heatmaps into a single PNG.
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/maingui-mergehm.png').default} style={{width:60+'%',}}/>
 </div>
 
-2. The script will automatically match sense to anti heatmaps using the standardized naming conventions used by ScriptManager
+The script will automatically match sense to anti heatmaps using the standardized naming conventions used by ScriptManager
 
-    1. Click "Load PNG Files" to select the two files output by the HeatMap tool (sense and anti) in the last step
+#### 6.2. Click "Load PNG Files" to select the two files output by the HeatMap tool (sense and anti) in the last step
 
-    2. Click "Generate" to merge the PNG files into the same heatmap
+#### 6.3. Click "Generate" to merge the PNG files into the same heatmap
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/gui-mergehm.png').default} style={{width:50+'%',}} />
@@ -215,32 +224,38 @@ Besides the composite plot image, ScriptManager has saved the matrix \*.CDT file
 </div>
 
 ## General Comments
+
 Bioinformatic projects should be organized in a uniform and consistent manner as described in [__Noble, 2009__][noble-paper].
 
 
 
-## Command-Line Bash Script
+## Command-Line shell script
 
-Within the [Github repository][github-repo], there is (will be) also an [example bash script][ex-chipexo-bash] that takes a BED file, BAM file, and OUTPUT basename as arguments to generate heatmaps. This can serve as a template for you to write out your own workflows as bash scripts that execute command-line style ScriptManager.
+The following shell commands records the locations for a BED file, a BAM file, and the anticipated OUTPUT basename as environmental variables to derive the corresponding composite plot values and heatmaps. This can serve as a template for you to write out your own workflows as bash scripts that execute command-line style ScriptManager.
 
 ```bash
 SCRIPTMANAGER=/path/to/ScriptManager.jar
-BEDFILE=/path/to/12141_Motif_1_bound.bed
-BAMFILE=/path/to/
+BEDFILE=/path/to/Reb1_Rhee_primary_sites_975.bed
+BAMFILE=/path/to/12141_filtered.bam
+OUTPUT=/path/to/myoutput
 
 samtools index $BAMFILE
 java -jar $SCRIPTMANAGER coordinate-manipulation expand-bed -c 250 $BEDFILE -o BED_250bp.bed
-java -jar $SCRIPTMANAGER read-analysis tag-pileup
-java -jar $SCRIPTMANAGER figure-generation heatmap
-java -jar $SCRIPTMANAGER figure-generation heatmap
-java -jar $SCRIPTMANAGER figure-generation merge-heatmap
+java -jar $SCRIPTMANAGER read-analysis tag-pileup $BEDFILE $BAMFILE -o $OUTPUT\_composite.out -M $OUTPUT\_matrix
+java -jar $SCRIPTMANAGER figure-generation heatmap -p .95 --blue $OUTPUT\_matrix_sense.cdt -o SENSE.png
+java -jar $SCRIPTMANAGER figure-generation heatmap -p .95 --red $OUTPUT\_matrix_sense.cdt -o ANTI.png
+java -jar $SCRIPTMANAGER figure-generation merge-heatmap SENSE.png ANTI.png -o $OUTPUT\_heatmap.png
 
-rm BED_250bp.bed
+rm BED_250bp.bed SENSE.png ANTI.png
+
+# Output files:
+#  - /path/to/myoutput_composite.out
+#  - /path/to/myoutput_matrix_sense.cdt
+#  - /path/to/myoutput_matrix_anti.cdt
+#  - /path/to/myoutput_heatmap.png
 ```
-[noble-paper]:https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1000424&type=printable
-[open-sm]:/../static/figs-ex-chipexo/open-sm.png
-[gui-expandbed]:/../static/figs-ex-chipexo/gui-expandbed.png
 
+[noble-paper]:https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1000424&type=printable
 [testdata-reb1-bed]:https://github.com/CEGRcode/2018-Rossi_GenomeResearch/blob/master/Fig1_Reb1/A.Reb1_Rhee_primary_sites_975.bed
 [testdata-reb1-bam]:ftp://data1.commons.psu.edu/pub/commons/eberly/pughlab/yeast-epigenome-project/12141_YEP.zip
 [saccer3cegr-fasta]:https://github.com/CEGRcode/GenoPipe/blob/master/EpitopeID/utility_scripts/genome_data/download_sacCer3_Genome.sh
@@ -248,6 +263,8 @@ rm BED_250bp.bed
 [github-repo]:https://www.github.com/CEGRcode/scriptmanager
 [github-v14]:https://github.com/CEGRcode/scriptmanager/releases/download/v0.14/ScriptManager-v0.14.jar
 [ex-chipexo-bash]:https://www.github.com/CEGRcode/scriptmanager
+
+[java-install]:/docs/#java
 
 [bam-indexer]:/docs/bam-manipulation/bam-indexer.md
 [expand-bed]:/docs/coordinate-manipulation/expand-bed.md
