@@ -6,14 +6,30 @@ sidebar_label: "Testing"
 
 ## Automatic CLI Testing
 
-:::caution
+## Testing
+
+:::warning
+🚧 👷‍♀️ **UNDER CONSTRUCTION** 👷‍ 🚧
+
 We have shell scripts for testing that need to be deployed to the Github Actions system and documented here.
+
+Execute the commands below after building the `jar` file to test that the file built correctly.
+<!---Clean-up test file, write test script, and add to repo-->
+<!---Add doc for executing during setup-->
+<!---Check java version-->
+
+```bash
+cd travis_test
+bash test_all.sh
+```
 :::
 
 
 ## Automatic GUI Testing
 
 :::warning
+🚧 👷‍♀️ **UNDER CONSTRUCTION** 👷‍ 🚧
+
 We need to decide on a method for GUI testing and set it up with Github Actions.
 :::
 

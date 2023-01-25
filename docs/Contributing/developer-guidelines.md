@@ -45,6 +45,32 @@ Gradle will need to be updated periodically to support *building* on later Java 
 Please note the minimum Java version required to support building the JAR executable. Code compiling with Gradle creates an upper Java version limit depending on the version of Gradle used. See this [table][gradle-version-compatibility] for more information on version compatibility.
 :::
 
+### Clone the Github repository (for latest dev version)
+Open your terminal and move to the directory where you want to install scriptmanager and type the following command to download all the source code so you can build the executable JAR file from scratch.
+```bash
+git clone https://github.com/CEGRcode/scriptmanager
+```
+
+Then you need to build the executable JAR file with the following two commands.
+```
+cd scriptmanager
+./gradlew build
+```
+
+The ScriptManager jar file will be created in the `build/libs` directory. As long as you have this file, you can move it wherever you want and do whatever you want with the rest of the ScriptManager files (even delete them). If you ever lose the JAR file, you can regenerate it by rerunning the Gradle build command in while in the `scriptmanager` directory.
+
+:::caution
+Please note that the latest **Java version** may not be compatible our supported Gradle version to compile. The JAR can be *executed* on most versions but compiling the code may require installing an older version of Java. Consider directly downloading the JAR executable (instructions above) if these steps aren't working.
+:::
+
+### Update the Github repository (update to latest dev version)
+If you ever need to get the latest code from the Github repo, just navigate to the `scriptmanager` directory and run the following commands in the terminal to update and then re-build your JAR executable.
+```bash
+cd scriptmanager
+git pull
+./gradlew build
+```
+
 ## The Code Structure (Packages)
 ```
 scriptmanager/src/
