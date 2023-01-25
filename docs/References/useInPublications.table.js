@@ -9,6 +9,14 @@ import React from "react";
 
 export const publications = [
   {
+    "author": "Mittal",
+    "title": "An integrated SAGA and TFIID PIC assembly pathway selective for poised and induced promoters.",
+    "year": "2022",
+    "journal": "Genes Dev.",
+    "PMID": "36302553"
+  },
+
+  {
     "author": "John",
     "title": "Genome-wide promoter assembly in E. coli measured at single-base resolution.",
     "year": "2022",
