@@ -7,8 +7,8 @@ module.exports = {
       "Guides/color-guide",
     ],
     Tutorials: [
+      "Tutorials/chipexo-tutorial",
       "Tutorials/genomic-features-tutorial",
-      "Tutorials/chipexo-tutorial"
     ],
     References: [
       "file-formats",

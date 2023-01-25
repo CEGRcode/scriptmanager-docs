@@ -47,7 +47,7 @@ const ChipexoInfo = {
     </>
   ),
   label: "View tutorial",
-  href: "docs/Tutorials/threebasicplots-exo",
+  href: "docs/Tutorials/chipexo-tutorial",
 };
 
 // Create an Javascript object for the Genomic Features gallery tab
@@ -65,6 +65,8 @@ const GenomicInfo = {
       which shows nucleotide enrichment across a set of protein-bound sites .
     </>
   ),
+  label: "View tutorial",
+  href: "docs/Tutorials/genomic-features-tutorial",
 };
 
 // Create an Javascript object for the ATAC-seq gallery tab
