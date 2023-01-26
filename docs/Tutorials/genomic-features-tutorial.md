@@ -40,7 +40,7 @@ Depending on your system permissions, you may need to be an administrator to ope
 + On Mac systems, this can be done by right-clicking the file and selecting ‘Open’ at the top.
 
 <div class="tutorial-img-flow-container">
-  <img src={require('./img/open-sm.png').default} style={{width:40+'%',}} />
+  <img src={require('/static/md-img/General/MacOpenSM.png').default} style={{width:40+'%',}} />
 </div>
 
 :::caution

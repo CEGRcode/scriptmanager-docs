@@ -74,7 +74,7 @@ We pre-compiled the JAR binary file (same for all operating systems) and made th
 Depending on your system permissions, you may need to be an administrator to open this for the first time. On Mac systems, this can be done by right-clicking the file and selecting ‘Open’ at the top.
 
 <div class="tutorial-img-flow-container">
-  <img src={require('/docs/Tutorials/img/open-sm.png').default} style={{width:40+'%',}} />
+  <img src={require('/static/md-img/General/MacOpenSM.png').default} style={{width:40+'%',border:'solid 1px'}} />
 </div>
 
 :::caution
@@ -90,20 +90,22 @@ If you're not sure how to type the path to ScriptManager, you can type `java -ja
   </TabItem>
   <TabItem value="linux" label="Linux">
 
-This is an orange 🍊
+Double-click or right-click the ScriptManager JAR file to start the program.
 
 <div class="tutorial-img-flow-container">
-  <img src={require('/docs/Tutorials/img/open-sm.png').default} style={{width:40+'%',}} />
+  <img src={require('/static/md-img/General/LinuxOpenSM.png').default} style={{width:40+'%',border:'solid 1px'}} />
 </div>
+
 
   </TabItem>
   <TabItem value="windows" label="Windows">
 
-This is a banana 🍌
+Double-click or right-click the ScriptManager JAR file to start the program.
 
 <div class="tutorial-img-flow-container">
-  <img src={require('/docs/Tutorials/img/open-sm.png').default} style={{width:40+'%',}} />
+  <img src={require('/static/md-img/General/WindowsOpenSM.png').default} style={{width:40+'%',border:'solid 1px'}} />
 </div>
+
 
   </TabItem>
 </Tabs>
@@ -116,14 +118,7 @@ Once you see the main tool selection window, you're off to the races!
 To run the CLI version of ScriptManager, you must append the two subcommands corresponding to the tool you wish to run and any input arguments and options. The subcommand structure reflects the organization of the GUI tool.
 
 <Tabs>
-  <TabItem value="macos" label="MacOS" default>
-
-```bash
-java -jar /path/to/ScriptManager.jar <tool-group> <tool-name> <INPUTS> <OPTIONS>
-```
-
-  </TabItem>
-  <TabItem value="linux" label="Linux">
+  <TabItem value="macos-linux" label="MacOS & Linux" default>
 
 ```bash
 java -jar /path/to/ScriptManager.jar <tool-group> <tool-name> <INPUTS> <OPTIONS>
@@ -133,7 +128,7 @@ java -jar /path/to/ScriptManager.jar <tool-group> <tool-name> <INPUTS> <OPTIONS>
   <TabItem value="windows" label="Windows">
 
 ```bash
-????
+java -jar \path\to\ScriptManager.jar <tool-group> <tool-name> <INPUTS> <OPTIONS>
 ```
 
   </TabItem>
