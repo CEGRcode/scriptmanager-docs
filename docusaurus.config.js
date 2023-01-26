@@ -11,7 +11,7 @@ const config = {
   title: 'ScriptManager',
   tagline: 'Toolbox for analyzing your genomic datasets',
   url: 'https://CEGRcode.github.io',
-  baseUrl: '/scriptmanager/',
+  baseUrl: '/scriptmanager-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/SM_favicon.png', //ico file was here
