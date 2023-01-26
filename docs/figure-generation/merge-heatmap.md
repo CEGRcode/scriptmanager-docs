@@ -22,7 +22,7 @@ This tool merges two PNG files into a third PNG file that is an average of each 
 
 <img src={require('./img/MergeHeatMapSchematic.jpg').default} style={{width:35+'%'}}/>
 
-Typical use of this tool is for merging <Highlight color="blue">blue(sense)</Highlight> and <Highlight color="red">red(anti-sense)</Highlight> [**two-color heatmap plots**][heatmap] plots for [**ChIP-exo analysis**][chip-exo-tutorial].
+Typical use of this tool is for merging <Highlight color="blue">blue(sense)</Highlight> and <Highlight color="red">red(anti-sense)</Highlight> [**two-color heatmap plots**][heatmap] plots for [**ChIP-exo analysis**][chipexo-tutorial].
 
 <img src={require('/../static/md-img/Figure_Generation/MergeHeatMapWindow.png').default} style={{width:70+'%'}}/>
 
@@ -106,7 +106,7 @@ Expects two [PNG][png-format] like the output from the [heatmap tool][heatmap]. 
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | `-o, --output=<output>` | specify output filename, please use PNG extension (`<senseFile>_merged.png` appended to the name in working directory of ScriptManager |
 
-[cdt-format]: /docs/file-formats
-[png-format]: /docs/file-formats
-[heatmap]: /docs/figure-generation/heatmap.md
-[chip-exo-tutorial]: /docs/Tutorials/threebasicplots-exo.md
+[cdt-format]:/docs/file-formats#cdt
+[png-format]:/docs/file-formats#png
+[heatmap]:/docs/figure-generation/heatmap
+[chipexo-tutorial]:/docs/Tutorials/chipexo-tutorial
