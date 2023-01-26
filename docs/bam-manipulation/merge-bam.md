@@ -10,22 +10,27 @@ Merges Multiple BAM files into single BAM file. Sorting is performed automatical
 
 <img src={require('/../static/md-img/BAM_Manipulation/MergeBAMWindow.png').default} style={{width:70+'%'}}/>
 
-This is frequently used for replicate merging. All input files loaded will be saved to a merged BAM file with the default `merged_BAM.bam` but user-customizable filename in the "Output Directory".
+This is frequently used for replicate merging. All input files loaded will be merged to a single BAM file.
+
+### File inputs (BAM list)
+Make sure your inputs are properly formatted and use the appropriate `.bam` extension. This script also supports bulk selection and processing of files.
+
+### Output File Name (BAM)
+The output merged BAM will be named according to the user-customizable text field that defaults to `merged_BAM.bam`.
 
 :::tip
-
-Make sure to keep the `.bam` file extension to follow bioinformatics best practices.
-
+Make sure if you change the filename that you keep the `.bam` file extension.
 :::
+
 
 ### Use multiple CPUs
 User may speed up the merging by checking this box to allow threading for parallelization of the merge and sort algorithms.
 
-### Generate BAI file
+### Generate BAI file (GUI only)
 By checking this box, the script will automatically generate a BAI index file for each new filtered BAM file.
 
-:::note
-The CLI cannot index the resulting BAM file. The user must use appropriate [samtools][samtools-index]/[Picard][picard-index] command to generate BAI.
+:::caution
+The CLI will not index the resulting BAM file. The user must use appropriate [samtools][samtools-index]/[Picard][picard-index] command to generate BAI.
 :::
 
 ## Command Line Interface (Picard and Samtools)
@@ -36,3 +41,6 @@ Please see the [Samtools merge tool][samtools-merge] or the [Picard MergeBamAlig
 
 [samtools-merge]:http://www.htslib.org/doc/samtools-merge.html
 [picard-merge]:https://broadinstitute.github.io/picard/command-line-overview.html#MergeBamAlignment
+
+[samtools-index]:http://www.htslib.org/doc/samtools-index.html
+[picard-index]:https://broadinstitute.github.io/picard/command-line-overview.html#BuildBamIndex

@@ -38,7 +38,7 @@ $$
 $$
 :::caution
 
-User should not use the pound symbol `#` in front of the hexidecimal because it renders the token invisible to bash and thus, ScriptManager.
+User should not use the pound symbol `#` in front of the hexidecimal when typing out commands in the terminal because it renders the token invisible to the shell and thus, invisible to ScriptManager.
 
 :::
 

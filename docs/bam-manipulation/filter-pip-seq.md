@@ -18,33 +18,30 @@ Permanganate (KMnO4) and piperidine treatment of DNA fragments preferentially ox
 
 Since the alignment files only capture the reference genome sequence at genomic positions covered by a read, the sequence upstream of the 5' end of Read 1 is not necessarily captured by the BAM file format. Thus the reference genome is required to determine the sequence upstream of the 5' end of read 1 (the basis for this filtering script).
 
-:::note
+:::caution
 Make sure that the genome build used for the genome input matches the genome aligned to for the BAM formatted files. If you aren't sure, compare the chromosoome lengths in the genomic FASTA index file (FAI) against each BAM file header (`samtools view -H myfile.bam`).
 :::
 
 ### File inputs (BAM)
-
-This script filters BAM-type files so make sure your input is properly formatted and uses the appropriate `.bam` extension. The script also supports bulk selection and processing of files.
+This script filters BAM-type files so make sure your inputs are properly formatted and use the appropriate `.bam` extension. The script also supports bulk selection and processing of files.
 
 ### Output
-The output file for this script is a filtered set of alignments in BAM format for each input BAM file. The `_PSfilter.bam` suffix is used for each output. For example, for a given `XXX.bam` input file, `XXX_PSfilter.bam` will be output the the user-selected output directory.
+The output file for this script is a filtered set of alignments in BAM format for each input BAM file. The `_PSfilter.bam` suffix is used for each output. For example, for a given `XXX.bam` input file, `XXX_PSfilter.bam` will be output to the user-selected output directory.
 
 ### Upstream sequence
 The sequence upstream of the 5' end of read 1 to check for and filter by. If the sequence in the reference genome upstream of the 5'end of read 1 matches this sequence, the read-pair information is written to the output BAM file.
 
-:::caution
-
+:::info
 For classic PIP-seq datasets the default "T" sequence should be used.
-
 :::
 
 This tool supports different sequences in the event an as of yet unknown future biochemical assay or analysis requires this filtering based on a different sequence. For example, a user investigating and comparing the rates of permanganate oxidation and piperdine cleavage at other nucelotides might compare BAM files filtered by other upstream sequences such as "C" which is known to be cleaved under such treatment (just not as frequently as at "T").
 
 ### Generate BAI file (GUI only)
-By checking this box, the script will automatically generate a BAI index file for each new filtered BAM file.
+By checking this box, the script will automatically generate a BAI index file for each new output BAM file.
 
-:::note
-The CLI cannot index the resulting BAM file. The user must use appropriate [samtools][samtools-index]/[Picard][picard-index] command to generate BAI.
+:::caution
+The CLI will not index the resulting BAM file. The user must use appropriate [samtools][samtools-index]/[Picard][picard-index] command to generate BAI.
 :::
 
 ## Command Line Interface

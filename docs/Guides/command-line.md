@@ -116,23 +116,24 @@ Only some of the tools have this option. Check the help guide if you're not sure
 This flag cannot be used in combination with the `-o` flag.
 :::
 
-### Examples
+#### Examples
 
-For example, if we wanted to run some `COMMANDA` tool and then use the output as an input for the `COMMANDB` tool, there are several ways to run this in a shell script. The first way explicitly saves the intermediate file between commands.
+For example, if we wanted to run some `COMMANDA` tool and then use the output as an input for the `COMMANDB` tool, there are several ways to run this in a shell script.
 
++ This first way explicitly saves the intermediate file between commands:
 ```bash
 # Method A -save intermediate files
 COMMANDA input.file -o intermediate.file
 COMMANDB intermediate.file -o results.file
 ```
 
-...or alternatively, we could stream the output of `COMMANDA` to the input of `COMMANDB` using the pipe (`|`) character:
++ Alternatively, we could stream the output of `COMMANDA` to the input of `COMMANDB` using the pipe (`|`) character:
 ```bash
 # Method B -pipe stream
 COMMANDA input.file -s | COMMANDB -o results.file
 ```
 
-...or we could redirect (`<`) the stream directly into the positional argument location:
++ Yet another option is to redirect (`<`) the stream directly into the positional argument location:
 ```bash
 # Method C -redirect stream
 COMMANDB <( COMMANDA input.file -s ) -o results.file
@@ -142,15 +143,16 @@ COMMANDB <( COMMANDA input.file -s ) -o results.file
 
 More specifically, below shows how these methods would look linking the inputs and outputs of the [Expand BED][expand-bed] and [Tag Pileup][tag-pileup] tools for a user that wants to look at the tag pileup results around a wider coordinate interval window.
 ```bash
+## TASK: Run TagPileup using data.bam on a GFF-formatted Tup1 peak file when TagPileup expects a BED-formatted input.
 # Method A -save intermediate files
-java -jar ScriptManager.jar coordinate-manipulation expand-bed Tup1_peaks.bed -b 500 -o intermediate.bed
+java -jar ScriptManager.jar coordinate-manipulation gff-to-bed Tup1_peaks.gff -o intermediate.bed
 java -jar ScriptManager.jar read-analysis tag-pileup intermediate.bed data.bam -o RESULTS.composite
 # Method B -pipe stream
-java -jar ScriptManager.jar coordinate-manipulation expand-bed Tup1_peaks.bed -b 500 -s \
+java -jar ScriptManager.jar coordinate-manipulation gff-to-bed Tup1_peaks.gff -s \
   | java -jar ScriptManager.jar read-analysis tag-pileup - data.bam -o RESULTS.composite
 # Method C -redirect stream
 java -jar ScriptManager.jar read-analysis tag-pileup \
-  <(java -jar ScriptManager.jar coordinate-manipulation expand-bed Tup1_peaks.bed -b 500 -s) \
+  <(java -jar ScriptManager.jar coordinate-manipulation gff-to-bed Tup1_peaks.gff -s) \
   data.bam -o RESULTS.composite
 ```
 

@@ -10,33 +10,26 @@ Removes or marks duplicate reads in paired-end sequencing given identical 5' rea
 
 <img src={require('/../static/md-img/BAM_Manipulation/BAMMarkDupWindow.png').default} style={{width:70+'%'}}/>
 
-### File inputs (BAM list)
+### File inputs (BAM)
+This script filters BAM-type files so make sure your inputs are properly formatted and use the appropriate `.bam` extension. The script also supports bulk selection and processing of files.
 
-This script filters BAM-type files so make sure your input is properly formatted and uses the appropriate `.bam` extension. The script also supports bulk selection and processing of files.
+### Output file (BAM & TXT)
+The output BAM files are named based on the input filenames. The `_dedup.bam` suffix is used for each output. For example, for a given `XXX.bam` input file, a new `XXX_dedup.bam` file will be written to the user-selected output directory.
 
-### Output file (BAM)
-The output filename for this script is based on a user-customizable text field that defaults to `merged_BAM.bam`.
+The output text files are also named based on the input filenames. The `_dedup.metrics` suffix is used for each output. For example, for a given `XXX.bam` input file, a new `XXX_dedup.metrics` file will be written to the user-selected output directory.
 
-:::tip
-Make sure if you change the filename that you keep the `.bam` file extension.
-:::
+#### Example XXX_dedup.metrix output (TXT)
+```
+```
 
-### Upstream sequence
-The sequence upstream of the 5' end of read 1 to check for and filter by. If the sequence in the reference genome upstream of the 5'end of read 1 matches this sequence, the read-pair information is written to the output BAM file.
-
-:::caution
-
-For classic PIP-seq datasets the default "T" sequence should be used.
-
-:::
-
-This tool supports different sequences in the event an as of yet unknown future biochemical assay or analysis requires this filtering based on a different sequence. For example, a user investigating and comparing the rates of permanganate oxidation and piperdine cleavage at other nucelotides might compare BAM files filtered by other upstream sequences such as "C" which is known to be cleaved under such treatment (just not as frequently as at "T").
+### Remove Duplicates Option
+Each output file can either remove one of the duplicate reads or mark them by changing the SAMFlag value to update the status as "duplicate." This checkbox option determines whether the duplicate reads are kept or just marked.
 
 ### Generate BAI file (GUI only)
-By checking this box, the script will automatically generate a BAI index file for each new filtered BAM file.
+By checking this box, the script will automatically generate a BAI index file for each new output BAM file.
 
-:::note
-The CLI cannot index the resulting BAM file. The user must use appropriate [samtools][samtools-index]/[Picard][picard-index] command to generate BAI.
+:::caution
+The CLI will not index the resulting BAM file. The user must use appropriate [samtools][samtools-index]/[Picard][picard-index] command to generate BAI.
 :::
 
 
@@ -44,6 +37,9 @@ The CLI cannot index the resulting BAM file. The user must use appropriate [samt
 _CommandLine tools already exist for this function. This tool only exists as a GUI wrapper in ScriptManager._
 
 Please see the [Samtools markdup tool][samtools-markdup] or the [Picard MarkDuplicates tool][picard-markdup] for a command line tool that performs this function.
+
+[samtools-index]:http://www.htslib.org/doc/samtools-index.html
+[picard-index]:https://broadinstitute.github.io/picard/command-line-overview.html#BuildBamIndex
 
 [samtools-markdup]:http://www.htslib.org/doc/samtools-markdup.html
 [picard-markdup]:https://broadinstitute.github.io/picard/command-line-overview.html#MarkDuplicates

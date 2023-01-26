@@ -197,6 +197,10 @@ However if you want to use a color outside the preset values, you can indicate R
 
 `java -jar ScriptManager.jar figure-generation heatmap nucleosomes.cdt -c 9400D3`
 
+:::caution
+Note user should not use the pound symbol (`#`) in front of the hexidecimal because it renders the token invisible to bash and thus, invisible to ScriptManager
+:::
+
 [color-hex-url]:http://www.javascripter.net/faq/rgbtohex.htm
 [treeview-paper]:https://pubmed.ncbi.nlm.nih.gov/15180930/
 [tag-pileup]:/docs/read-analysis/tag-pileup
