@@ -49,5 +49,5 @@ This tool takes a single [BED file][bed-format] for input.
 
 [bedtools-shift]:https://bedtools.readthedocs.io/en/latest/content/tools/shift.html
 
-[bed-format]:/docs/file-formats#bed
-[gff-format]:/docs/file-formats#gff
+[bed-format]:/docs/References/file-formats#bed
+[gff-format]:/docs/References/file-formats#gff

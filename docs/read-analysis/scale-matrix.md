@@ -8,7 +8,7 @@ sidebar_label: scale-matrix
 
 Apply a user-specified scaling factor to tab-delimited matrix data
 
-<img src={require('/../static/md-img/Read_Analysis/ScaleMatrixWindow.png').default} style={{width:70+'%'}}/> 
+<img src={require('/../static/md-img/Read_Analysis/ScaleMatrixWindow.png').default} style={{width:70+'%'}}/>
 
 ## Command Line Interface
 
@@ -47,4 +47,4 @@ This tool takes a single matrix file for input.
 | `-r, --start-row` |  |
 | `-l, --start-col` |  |
 
-[file-format]:file-formats.md
+[file-format]:/docs/References/file-formats

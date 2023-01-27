@@ -60,6 +60,6 @@ Similarly for *propeller*, *helical*, and *roll*, the output matrix [CDT files][
 [rohs-paper]:https://pubmed.ncbi.nlm.nih.gov/23703209/
 [fasta-extract]:/docs/sequence-analysis/fasta-extract
 
-[cdt-format]:/docs/file-formats#cdt
-[bed-format]:/docs/file-formats#bed
-[fasta-format]:/docs/file-formats#fasta
+[cdt-format]:/docs/References/file-formats#cdt
+[bed-format]:/docs/References/file-formats#bed
+[fasta-format]:/docs/References/file-formats#fasta

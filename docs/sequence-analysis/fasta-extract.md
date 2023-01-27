@@ -37,4 +37,4 @@ The first positional input
 | `-c, --coord-header` | use genome coordinate for output FASTA header (default is to use bed file headers) |
 | `-f, --force` | force-strandedness (default) |
 
-[fasta-format]:/docs/file-formats#fasta
+[fasta-format]:/docs/References/file-formats#fasta

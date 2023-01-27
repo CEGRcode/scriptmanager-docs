@@ -41,4 +41,4 @@ This tool takes a single [GFF file][gff-format] for input.
 | `-b, --border` | add to border |
 
 
-[gff-format]:/docs/file-formats#gff
+[gff-format]:/docs/References/file-formats#gff

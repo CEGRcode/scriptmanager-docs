@@ -206,6 +206,6 @@ Note user should not use the pound symbol (`#`) in front of the hexidecimal beca
 [tag-pileup]:/docs/read-analysis/tag-pileup
 [merge-heatmap]:/docs/figure-generation/merge-heatmap
 [peak-align-ref]:/docs/peak-analysis/peak-align-ref
-[cdt-format]:/docs/file-formats
-[png-format]:/docs/file-formats
+[cdt-format]:/docs/References/file-formats#cdt
+[png-format]:/docs/References/file-formats#png
 [color-guide]:/docs/Guides/color-guide

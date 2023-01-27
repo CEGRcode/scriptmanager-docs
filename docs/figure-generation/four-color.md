@@ -85,5 +85,5 @@ java -jar ScriptManager.jar figure-generation four-color [-hV] [-o=<output>]
 
 [fasta-extract]:/docs/sequence-analysis/fasta-extract
 
-[fasta-format]:/docs/file-formats#fasta
-[png-format]:/docs/file-formats#png
+[fasta-format]:/docs/References/file-formats#fasta
+[png-format]:/docs/References/file-formats#png

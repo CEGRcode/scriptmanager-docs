@@ -30,5 +30,5 @@ This tool takes a single [BED file][bed-format] for input.
 | -o, --output | specify output directory (default name will be same as original with .gff ext) |
 | -s, --stdout | output gff to STDOUT |
 
-[bed-format]:/docs/file-formats#bed
-[gff-format]:/docs/file-formats#gff
+[bed-format]:/docs/References/file-formats#bed
+[gff-format]:/docs/References/file-formats#gff

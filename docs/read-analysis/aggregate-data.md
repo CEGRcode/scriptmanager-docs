@@ -80,4 +80,4 @@ The file output can be specified by the user using this flag. Otherwise the outp
 | `-r, --start-row` |  |
 | `-l, --start-col` |  |
 
-[file-format]:file-formats.md
+[file-format]:/docs/References/file-formats

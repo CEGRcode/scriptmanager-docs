@@ -11,7 +11,7 @@ module.exports = {
       "Tutorials/genomic-features-tutorial",
     ],
     References: [
-      "file-formats",
+      "References/file-formats",
       "References/tool-index",
       "References/publications",
     ],

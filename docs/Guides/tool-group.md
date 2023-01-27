@@ -125,61 +125,61 @@ _Sequence Analysis tools description_
 [Roh_paper]:https://pubmed.ncbi.nlm.nih.gov/23703209
 
 
-[bam-to-bedgraph]:bam-format-converter/bam-to-bedgraph.md
-[bam-to-bed]:bam-format-converter/bam-to-bed.md
-[bam-to-gff]:bam-format-converter/bam-to-gff.md
-[bam-to-scidx]:bam-format-converter/bam-to-scidx.md
+[bam-to-bedgraph]:/docs/bam-format-converter/bam-to-bedgraph
+[bam-to-bed]:/docs/bam-format-converter/bam-to-bed
+[bam-to-gff]:/docs/bam-format-converter/bam-to-gff
+[bam-to-scidx]:/docs/bam-format-converter/bam-to-scidx
 
-[bam-indexer]:bam-manipulation/bam-indexer.md
-[filter-pip-seq]:bam-manipulation/filter-pip-seq.md
-[merge-bam]:bam-manipulation/merge-bam.md
-[remove-duplicates]:bam-manipulation/remove-duplicates.md
-[sort-bam]:bam-manipulation/sort-bam.md
+[bam-indexer]:/docs/bam-manipulation/bam-indexer
+[filter-pip-seq]:/docs/bam-manipulation/filter-pip-seq
+[merge-bam]:/docs/bam-manipulation/merge-bam
+[remove-duplicates]:/docs/bam-manipulation/remove-duplicates
+[sort-bam]:/docs/bam-manipulation/sort-bam
 
-[bam-correlation]:bam-statistics/bam-correlation.md
-[pe-stat]:bam-statistics/pe-stat.md
-[se-stat]:bam-statistics/se-stat.md
+[bam-correlation]:/docs/bam-statistics/bam-correlation
+[pe-stat]:/docs/bam-statistics/pe-stat
+[se-stat]:/docs/bam-statistics/se-stat
 
-[bed-to-gff]:coordinate-manipulation/bed-to-gff.md
-[gff-to-bed]:coordinate-manipulation/gff-to-bed.md
-[expand-bed]:coordinate-manipulation/expand-bed.md
-[expand-gff]:coordinate-manipulation/expand-gff.md
-[sort-bed]:coordinate-manipulation/sort-bed.md
-[sort-gff]:coordinate-manipulation/sort-gff.md
+[bed-to-gff]:/docs/coordinate-manipulation/bed-to-gff
+[gff-to-bed]:/docs/coordinate-manipulation/gff-to-bed
+[expand-bed]:/docs/coordinate-manipulation/expand-bed
+[expand-gff]:/docs/coordinate-manipulation/expand-gff
+[sort-bed]:/docs/coordinate-manipulation/sort-bed
+[sort-gff]:/docs/coordinate-manipulation/sort-gff
 
-[composite]:figure-generation/composite-plot.md
-[four-color]:figure-generation/four-color.md
-[heatmap]:figure-generation/heatmap.md
-[merge-heatmap]:figure-generation/merge-heatmap.md
+[composite]:/docs/figure-generation/composite-plot
+[four-color]:/docs/figure-generation/four-color
+[heatmap]:/docs/figure-generation/heatmap
+[merge-heatmap]:/docs/figure-generation/merge-heatmap
 
-[md5checksum]:file-utilities/md5checksum.md
+[md5checksum]:/docs/file-utilities/md5checksum
 
-[filter-bed]:peak-analysis/filter-bed.md
-[peak-align-ref]:peak-analysis/peak-align-ref.md
-[rand-coord]:peak-analysis/rand-coord.md
-[signal-dup]:peak-analysis/signal-dup.md
-[tile-genome]:peak-analysis/tile-genome.md
+[filter-bed]:/docs/peak-analysis/filter-bed
+[peak-align-ref]:/docs/peak-analysis/peak-align-ref
+[rand-coord]:/docs/peak-analysis/rand-coord
+[signal-dup]:/docs/peak-analysis/signal-dup
+[tile-genome]:/docs/peak-analysis/tile-genome
 
-[aggregate-data]:read-analysis/aggregate-data.md
-[scale-matrix]:read-analysis/scale-matrix.md
-[scaling-factor]:read-analysis/scaling-factor.md
-[similarity-matrix]:read-analysis/similarity-matrix.md
-[tag-pileup]:read-analysis/tag-pileup.md
+[aggregate-data]:/docs/read-analysis/aggregate-data
+[scale-matrix]:/docs/read-analysis/scale-matrix
+[scaling-factor]:/docs/read-analysis/scaling-factor
+[similarity-matrix]:/docs/read-analysis/similarity-matrix
+[tag-pileup]:/docs/read-analysis/tag-pileup
 
-[dna-shape-bed]:sequence-analysis/dna-shape-bed.md
-[dna-shape-fasta]:sequence-analysis/dna-shape-fasta.md
-[fasta-extract]:sequence-analysis/fasta-extract.md
-[randomize-fasta]:sequence-analysis/randomize-fasta.md
-[search-motif]:sequence-analysis/search-motif.md
+[dna-shape-bed]:/docs/sequence-analysis/dna-shape-bed
+[dna-shape-fasta]:/docs/sequence-analysis/dna-shape-fasta
+[fasta-extract]:/docs/sequence-analysis/fasta-extract
+[randomize-fasta]:/docs/sequence-analysis/randomize-fasta
+[search-motif]:/docs/sequence-analysis/search-motif
 
-[bai-format]:file-formats.md
-[bam-format]:file-formats.md
-[bed-format]:file-formats.md
-[bedgraph-format]:file-formats.md
-[cdt-format]:file-formats.md
-[fasta-format]:file-formats.md
-[gff-format]:file-formats.md
-[mat-format]:file-formats.md
-[png-format]:file-formats.md
-[txt-format]:file-formats.md
-[scidx-format]:file-formats.md
+[bai-format]:/docs/References/file-formats#bam
+[bam-format]:/docs/References/file-formats#bam
+[bed-format]:/docs/References/file-formats#bed
+[bedgraph-format]:/docs/References/file-formats#bedgraph
+[cdt-format]:/docs/References/file-formats#cdt
+[fasta-format]:/docs/References/file-formats#fasta
+[gff-format]:/docs/References/file-formats#gff
+[mat-format]:/docs/References/file-formats#matrix-format-custom-for-these-tools
+[png-format]:/docs/References/file-formats#png
+[txt-format]:/docs/References/file-formats#txt
+[scidx-format]:/docs/References/file-formats#scidx

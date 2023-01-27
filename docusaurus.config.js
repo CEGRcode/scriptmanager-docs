@@ -105,7 +105,7 @@ const config = {
               },
               {
                 label: 'File Formats',
-                to: '/docs/file-formats',
+                to: '/docs/References/file-formats',
               },
             ],
           },
@@ -127,7 +127,7 @@ const config = {
             items: [
               {
                 label: 'ScriptManager',
-                href: 'http://pughlab.mbg.cornell.edu/scriptmanager',
+                href: 'http://pughlab.mbg.cornell.edu/scriptmanager-docs',
               },
               {
                 label: 'PEGR',
@@ -135,11 +135,11 @@ const config = {
               },
               {
                 label: 'STENCIL',
-                href: 'http://pughlab.mbg.cornell.edu//stencil',
+                href: 'http://pughlab.mbg.cornell.edu/stencil',
               },
               {
                 label: 'GenoPipe',
-                href: 'http://pughlab.mbg.cornell.edu/GenoPipe',
+                href: 'http://pughlab.mbg.cornell.edu/GenoPipe-docs',
               },
             ],
           },

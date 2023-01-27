@@ -34,5 +34,5 @@ This tool takes a single [GFF file][gff-format] for input.
 
 
 
-[bed-format]:/docs/file-formats#bed
-[gff-format]:/docs/file-formats#gff
+[bed-format]:/docs/References/file-formats#bed
+[gff-format]:/docs/References/file-formats#gff

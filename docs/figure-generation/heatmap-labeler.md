@@ -68,4 +68,4 @@ Create an SVG label for heatmap inputs
   -V, --version            Print version information and exit.
 ```
 
-[png-format]:/docs/file-formats#png
+[png-format]:/docs/References/file-formats#png

@@ -41,5 +41,5 @@ Expects a [FASTA][fasta-format] formatted file with many sequences to stack up w
 
 [rohs-paper]:https://pubmed.ncbi.nlm.nih.gov/23703209/
 
-[cdt-format]:/docs/file-formats#cdt
-[fasta-format]:/docs/file-formats#fasta
+[cdt-format]:/docs/References/file-formats#cdt
+[fasta-format]:/docs/References/file-formats#fasta

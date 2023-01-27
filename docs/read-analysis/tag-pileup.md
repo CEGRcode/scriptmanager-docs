@@ -118,4 +118,4 @@ For the gaussian smoothing, you can think of the stnadardeviaiton size as the
 
 For visualizing composite data like the GUI window, you need to use a separate tool in the CLI tools. See [composite-plot][giturl-composite] tool.
 
-[file-format]:file-formats.md
+[file-format]:/docs/References/file-formats

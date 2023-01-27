@@ -66,4 +66,4 @@ java -jar ScriptManager.jar figure-generation composite-plot [-hlV] [-o=<output>
 [tag-pileup]:/docs/read-analysis/tag-pileup
 
 [color-hex-url]:http://www.javascripter.net/faq/rgbtohex.htm
-[png-format]:/docs/file-formats
+[png-format]:/docs/References/file-formats#png

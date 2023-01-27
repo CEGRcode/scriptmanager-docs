@@ -219,14 +219,14 @@ Related Tools:
 [bam-specs]:https://samtools.github.io/hts-specs/
 [gff-specs]:https://useast.ensembl.org/info/website/upload/gff3.html
 
-[bam-format]:file-formats#bam
-[bed-format]:file-formats#bed
-[bedgraph-format]:file-formats#bedgraph
-[gff-format]:file-formats#gff
-[fasta-format]:file-formats#fasta
-[cdt-format]:file-formats#cdt
-[png-format]:file-formats#png
-[scidx-format]:file-formats#scidx
+[bam-format]:/docs/References/file-formats#bam
+[bed-format]:/docs/References/file-formats#bed
+[bedgraph-format]:/docs/References/file-formats#bedgraph
+[gff-format]:/docs/References/file-formats#gff
+[fasta-format]:/docs/References/file-formats#fasta
+[cdt-format]:/docs/References/file-formats#cdt
+[png-format]:/docs/References/file-formats#png
+[scidx-format]:/docs/References/file-formats#scidx
 
 [aggregate-data]:read-analysis/aggregate-data
 [bam-correlation]:bam-statistics/bam-correlation

@@ -29,4 +29,4 @@ java -jar ScriptManager.jar sequence-analysis randomize-fasta [-hV] [-o=<output>
 
 
 
-[fasta-format]:/docs/file-formats#fasta
+[fasta-format]:/docs/References/file-formats#fasta

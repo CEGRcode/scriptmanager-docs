@@ -193,6 +193,6 @@ We welcome anyone who uses ScriptManager for analysis in their publications to l
 
 [sdk-notes]:/docs/Contributing/developer-guidelines#sdkman
 [cli]:/docs/Guides/command-line
-[file-formats]:/docs/file-formats
+[file-formats]:/docs/References/file-formats
 [tool-index]:/docs/References/tool-index
 [publications-list]:/docs/References/publications
