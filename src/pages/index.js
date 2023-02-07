@@ -73,10 +73,12 @@ const GenomicInfo = {
 const AtacseqInfo = {
   ...DefaultInfo,
   title: "ATAC-seq",
-  imageUrl: "img/ENCFF534DCE_InsertHistogram.png",
   imageList: [
     {
-      url: "img/ENCFF534DCE_InsertHistogram.png",
+      url: "img/ATAC-seq_heatmap.jpg",
+    },
+    {
+      url: "img/ATAC-seq_composite.png",
     },
   ],
   description: (
@@ -85,6 +87,8 @@ const AtacseqInfo = {
       size histograms for ATACseq data.
     </>
   ),
+  label: "View tutorial",
+  href: "docs/Tutorials/atacseq-tutorial",
 };
 
 // Format list of images/figures for a single tab in GalleryTabContent

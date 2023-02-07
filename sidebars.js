@@ -8,6 +8,7 @@ module.exports = {
     ],
     Tutorials: [
       "Tutorials/chipexo-tutorial",
+      "Tutorials/atacseq-tutorial",
       "Tutorials/genomic-features-tutorial",
     ],
     References: [
