@@ -33,10 +33,10 @@ const ChipexoInfo = {
   title: "ChIP-exo",
   imageList: [
     {
-      url: "img/ChIP-exo_heatmap.jpg",
+      url: "gallery/ChIP-exo_heatmap.png",
     },
     {
-      url: "img/ChIP-exo_composite.jpg",
+      url: "gallery/ChIP-exo_composite.png",
     },
   ],
   description: (
