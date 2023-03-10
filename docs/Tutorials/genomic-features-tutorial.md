@@ -6,6 +6,7 @@ sidebar_label: "Genomic Features Tutorial"
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Link from '@docusaurus/Link';
 
 _Generating four-color plots to compare positional sequence content across genomic sites_
 
@@ -20,20 +21,43 @@ The current version of ScriptManager is available for download **[here][github-v
 
 The file `ScriptManager-v0.14.jar` should be placed someplace locally accessible. For example on Mac OS on the Desktop (Permissions will need to be accepted) or someplace in your home directory (i.e. Macintosh HD/Users/userID/ScriptManager)
 
-## Download data files
+## Download data
+You need one set of genomic coordinate regions to investigate (BED) and the reference genome sequence (FASTQ) to complete this exercise. [Read more about the BED/FASTA file formats here.][file-formats]
 
-+ You need the full reference genome(FASTA) and the Reb1 peak coordinates (BED) to complete this exercise.
-  + [Sample BED file for Reb1][testdata-reb1-bed]
-  + Reference Yeast Genome - sacCer3 build (see instructions below)
+### BED File
+This is the set of Reb1 binding sites from [Rossi et al (2018)][rossi-2018].
+
+<Link
+  className="button button--secondary"
+  href="https://github.com/CEGRcode/2018-Rossi_GenomeResearch/blob/master/Fig1_Reb1/A.Reb1_Rhee_primary_sites_975.bed">
+  Download sample BED file
+</Link>
+
+<br />
+<br />
+
+:::caution
+If your BED file downloads with a `.txt` extension, make sure to change the filename to a `.bed` extension. For this tutorial, the BED file is named `Reb1_Rhee_primary_sites_975.bed`.
+:::
+
+### FASTA Genome sequence
+You will also need the reference genome for yeast (sacCer3).
+
+<Link
+  className="button button--secondary"
+  href="https://hgdownload.soe.ucsc.edu/goldenPath/sacCer3/bigZips/sacCer3.fa.gz">
+  Download sacCer3 genome (FASTA)
+</Link>
+
+<br />
+<br />
 
 :::warning
 🚧 👷‍♀️ **UNDER CONSTRUCTION** 👷‍ 🚧
 
-Turn [this script][saccer3-fasta] into an easier-to-run way to get the reference genome with arabic numerals. Your own sacCer3.fa genome should work in this tutorial if you use the `chr1 chr2 chr3 ...` naming system, not the `chrI chrII chrIII ...`.
-:::
+The downloaded genome linked here uses r numerals for the chromosome names. Below are some links to scripts that will help you convert them to the arabic numeral names that the downloaded BED file is based on.
 
-:::caution
-If your BED file downloads with a `.txt` extension, make sure to change the filename to a `.bed` extension. For this tutorial, the BED file is named `Reb1_Rhee_primary_sites_975.bed`.
+Turn [this script][saccer3-fasta] into an easier-to-run way to get the reference genome with arabic numerals. Your own sacCer3.fa genome should work in this tutorial if you use the `chr1 chr2 chr3 ...` naming system, not the `chrI chrII chrIII ...`.
 :::
 
 ## Generate the Four-color Plot
@@ -164,12 +188,10 @@ The following shell commands takes a BED file and a FASTA file of the full genom
 
 ```bash
 SCRIPTMANAGER=/path/to/ScriptManager.jar
-GENOME=/path/to/hg19.fa
+GENOME=/path/to/sacCer3.fa
 BEDFILE=/path/to/Reb1_Rhee_primary_sites_975.bed
-BAMFILE=/path/to/12141_filtered.bam
 OUTPUT=/path/to/myfourcolorplot.png
 
-samtools index $BAMFILE
 java -jar $SCRIPTMANAGER coordinate-manipulation expand-bed -c 50 $BEDFILE -o BED_50bp.bed
 java -jar $SCRIPTMANAGER sequence-analysis fasta-extract $GENOME $BEDFILE -o BED_50bp.fa
 java -jar $SCRIPTMANAGER figure-generation four-color BED_50bp.fa -o $OUTPUT
@@ -177,12 +199,11 @@ java -jar $SCRIPTMANAGER figure-generation four-color BED_50bp.fa -o $OUTPUT
 rm BED_50bp.bed BED_50bp.fa
 
 # Output files:
-#  - /path/to/myoutput_composite.out
-#  - /path/to/myoutput_matrix_sense.cdt
-#  - /path/to/myoutput_matrix_anti.cdt
-#  - /path/to/myoutput_heatmap.png
+#  - /path/to/BED_50bp.fa
+#  - /path/to/myfourcolorplot.png
 ```
 
+[rossi-2018]:https://pubmed.ncbi.nlm.nih.gov/29563167/
 [testdata-reb1-bed]:https://github.com/CEGRcode/2018-Rossi_GenomeResearch/blob/master/Fig1_Reb1/A.Reb1_Rhee_primary_sites_975.bed
 [testdata-reb1-bam]:ftp://data1.commons.psu.edu/pub/commons/eberly/pughlab/yeast-epigenome-project/12141_YEP.zip
 [saccer3-fasta]:https://github.com/CEGRcode/GenoPipe/blob/master/EpitopeID/utility_scripts/genome_data/download_sacCer3_Genome.sh
@@ -200,3 +221,5 @@ rm BED_50bp.bed BED_50bp.fa
 [merge-heatmap]:/docs/figure-generation/merge-heatmap.md
 [fasta-extract]:/docs/sequence-analysis/fasta-extract.md
 [four-color]:/docs/figure-generation/four-color.md
+
+[file-formats]:/docs/References/file-formats
