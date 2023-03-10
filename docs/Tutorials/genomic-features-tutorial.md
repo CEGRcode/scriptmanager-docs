@@ -6,7 +6,6 @@ sidebar_label: "Genomic Features Tutorial"
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
 
 _Generating four-color plots to compare positional sequence content across genomic sites_
 
@@ -100,7 +99,7 @@ The BED file is the set of reference coordinates that your heatmap and composite
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/gui-expandbed50.png').default} style={{width:60+'%',}}/>
-  <i class="fa fa-arrow-right fa-lg"></i>
+  <i class="fa-solid fa-arrow-right fa-lg"></i>
   <img src={require('./img/gui-expandbed-complete.png').default} style={{width:30+'%',}}/>
 </div>
 
@@ -124,7 +123,7 @@ BED file coordinates often need to be resized for more informative tag pileups. 
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/gui-extractfasta.png').default} style={{width:60+'%',}} />
-  <i class="fa fa-arrow-right fa-lg"></i>
+  <i class="fa-solid fa-arrow-right fa-lg"></i>
   <img src={require('./img/gui-extractfasta-complete.png').default} style={{width:40+'%',}}/>
 </div>
 
@@ -149,7 +148,7 @@ At this point you may opt to resize the pixel dimensions of each nucleotide rect
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/gui-fourcolor.png').default} style={{width:60+'%',}} />
-  <i class="fa fa-arrow-right fa-lg"></i>
+  <i class="fa-solid fa-arrow-right fa-lg"></i>
   <img src={require('./img/Reb1_Rhee_primary_sites_975_50bp.png').default} style={{width:15+'%'}}/>
 </div>
 

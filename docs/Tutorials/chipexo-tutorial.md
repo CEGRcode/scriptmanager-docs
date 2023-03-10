@@ -7,7 +7,6 @@ sidebar_label: "ChIP-exo Tutorial"
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Link from '@docusaurus/Link';
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
 
 _Generating two basic sequence-specific ChIP-exo plots: composite and heatmap_
 
@@ -134,7 +133,7 @@ Reb1_YEP_12141.bam.bai  # Need to generate this file to proceed.
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/gui-bamidx.png').default} style={{width:60+'%',}}/>
-  <i class="fa fa-arrow-right fa-lg"></i>
+  <i class="fa-solid fa-arrow-right fa-lg"></i>
   <img src={require('./img/gui-bamidx-complete.png').default} style={{width:30+'%',}}/>
 </div>
 
@@ -156,7 +155,7 @@ The BED file is the set of reference coordinates that your heatmap and composite
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/gui-expandbed.png').default} style={{width:60+'%',}}/>
-  <i class="fa fa-arrow-right fa-lg"></i>
+  <i class="fa-solid fa-arrow-right fa-lg"></i>
   <img src={require('./img/gui-expandbed-complete.png').default} style={{width:30+'%',}}/>
 </div>
 
@@ -232,7 +231,7 @@ Start by generating the 'Sense' heatmap first.
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/gui-heatmap-sense.png').default} style={{width:40+'%',}}/>
-  <i class="fa fa-arrow-right fa-lg"></i>
+  <i class="fa-solid fa-arrow-right fa-lg"></i>
   <img src={require('./img/gui-heatmap-sense-out.png').default} style={{width:40+'%',}}/>
 </div>
 
@@ -256,7 +255,7 @@ Similarly generate the 'Anti' heatmap.
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/gui-heatmap-anti.png').default} style={{width:40+'%',}}/>
-  <i class="fa fa-arrow-right fa-lg"></i>
+  <i class="fa-solid fa-arrow-right fa-lg"></i>
   <img src={require('./img/gui-heatmap-anti-out.png').default} style={{width:40+'%',}}/>
 </div>
 
@@ -277,7 +276,7 @@ The script will automatically match sense to anti heatmaps using the standardize
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/gui-mergehm.png').default} style={{width:50+'%',}} />
-  <i class="fa fa-arrow-right fa-lg"></i>
+  <i class="fa-solid fa-arrow-right fa-lg"></i>
   <img src={require('./img/gui-mergehm-out.png').default} style={{width:40+'%',}}/>
 </div>
 
@@ -295,7 +294,7 @@ The script will automatically match sense to anti heatmaps using the standardize
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/gui-labelhm.png').default} style={{width:40+'%',}}/>
-  <i class="fa fa-arrow-right fa-lg"></i>
+  <i class="fa-solid fa-arrow-right fa-lg"></i>
   <img src={require('./img/gui-labelhm-dialog.png').default} style={{width:40+'%',}}/>
 </div>
 
