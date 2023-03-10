@@ -50,6 +50,25 @@ const ChipexoInfo = {
   href: "docs/Tutorials/chipexo-tutorial",
 };
 
+// Create an Javascript object for the Genome Track gallery tab
+const GTrackInfo = {
+  ...DefaultInfo,
+  title: "Genome Tracks",
+  imageList: [
+    {
+      url: "gallery/IGV_BrowserShot.png",
+    },
+  ],
+  description: (
+    <>
+    Build strand-specific base-pair resolution genome tracks from BAM files. Shown here is the strand-separated
+    5' Read 1 tag pileup from real ChIP-exo data.
+    </>
+  ),
+  label: "View tutorial",
+  href: "docs/Tutorials/genome-tracks-tutorial",
+};
+
 // Create an Javascript object for the Genomic Features gallery tab
 const GenomicInfo = {
   ...DefaultInfo,
@@ -201,6 +220,9 @@ function Home() {
           </TabItem>
           <TabItem value={AtacseqInfo.title} label={AtacseqInfo.title} >
             <GalleryTabContent {...AtacseqInfo} />
+          </TabItem>
+          <TabItem value={GTrackInfo.title} label={GTrackInfo.title} >
+            <GalleryTabContent {...GTrackInfo} />
           </TabItem>
         </Tabs>
       </main>

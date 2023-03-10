@@ -9,6 +9,7 @@ module.exports = {
     Tutorials: [
       "Tutorials/chipexo-tutorial",
       "Tutorials/genomic-features-tutorial",
+      "Tutorials/genome-tracks-tutorial",
     ],
     References: [
       "References/file-formats",
