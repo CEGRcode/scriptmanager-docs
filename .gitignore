@@ -1,5 +1,6 @@
 # Dependencies
 /node_modules
+Tutorial_RawImages/*
 
 # Production
 /build
