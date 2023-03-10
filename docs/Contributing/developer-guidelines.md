@@ -26,15 +26,47 @@ There are several principles to keep in mind during development, especially for 
 
 While there are plenty of developer tools available for Java developers, this page is provides some recommendations based on Olivia's setup as a starting point for new developers.
 
+:::info
+** BAM vs BigWig (and other genome-track formats)**
+
+ScriptManager has been built to favor BAM files over BigWig and other genome track formats in genomic data processing. There are a number of reasons for this, including...
+- **More Information:**
+  - BAM files are more information-rich and much of this information gets lost during conversion to BigWigs
+  - <u>Example1:</u> Insert-size information is lost during conversion so BAM files have the advantage of filtering by insert sizes. Think DNA accessibility assays filtering for mono-nucleosome-sized fragments.
+  - <u>Example2:</u> SAM flag information is also lost so you need to go back to the BAM file to obtain this subset (think primary/secondary alignments, concordant ves non-concordant alignments, mate-pair is mapped, etc)
+  - <u>Example3:</u> Sequence clipping and nucleotide mis-match information is also lost during conversion (think SNPs/sequence variation information)
+- **Reproducibility:**
+  - BAM headers will often, if not always, track all the commands used to sort, filter, and manipulate the alignments to get the current file you are working with. The '@PG' tag shows all the programs run to generate the current BAM file, including flag options and arguments.
+  - This is important for backtracking how a file was generated, even if you "randomly picked-up it up off the street."
+  - BigWig files do not track processing steps so you are relying on whoever made the file to track and communicate all the processing and normalization steps to make the BigWig.
+
+This is a long explanation for why BigWigs are not a part of our lab standards but of course, this is our preference and other labs may disagree.
+
+We recognize the popularity of the BigWig format and we are in the process of building support for the file format in ScriptManager. It is also important to note that the efficiency advantages of BigWigs were specifically designed for scrolling through a genome browser (i.e. random-access at many zoom levels). However, this efficiency may not hold true for certain kinds of processing and analysis.
+:::
 
 ## Java Development
 We write exclusively in Java or Java-compiled languages without any operating-system specific packages (to maintain portability across machines).
 
+<div class="tutorial-img-flow-container">
+  <img src={require('/docs/Guides/img/sdkman-logo.png').default} style={{width:40+'%',}} />
+</div>
+
 ### SDKMAN!
-Olivia recommends installing Java using [SDKMAN!][sdkman] for convenient flipping between Java versions and releases. While ScriptManager is currently developed to the Java 8 SE standard, it is good practice to check for forward and backward compatibility between Java versions. We are constantly monitoring new Java releases and developing according to a standard that is consistent across Java versions makes our lives easier down the road when the Java version standard is incremented.
+Olivia recommends installing Java using [SDKMAN!][sdkman] for convenient flipping between Java versions and releases. While ScriptManager is currently developed to the Java 8 SE standard, it is good practice to check for forward and backward compatibility between Java versions.
+
+We are constantly monitoring new Java releases and developing according to a standard that ensures consistent behavior across Java versions. It is important that ScriptManager can at least *execute* across Java versions from the earliest supported version to the latest. See [Gradle section below][gradle-based-build] below for more information on Java versions for building.
+
+<div class="tutorial-img-flow-container">
+  <img src={require('./img/Eclipse2014_RGB.png').default} style={{width:40+'%',}} />
+</div>
 
 ### Integrated Development Environment (IDE) - Eclipse
 We recommend using [Eclipse][eclipse] to write Java code for ScriptManager because it supports both [Gradle][gradle] (see below) and [WindowBuilder][window-builder] for convenient building of JAR files and graphical interface development.
+
+<div class="tutorial-img-flow-container">
+  <img src={require('./img/GradleBuildLogo.png').default} style={{width:60+'%',}} />
+</div>
 
 ### Gradle-based build
 Compiling Java classes and building JAR files could be handled manually, but for this project, we let Gradle juggle the process of compiling, retrieving dependencies, and building the final JAR file. The dependencies we use are a mix of downloaded JAR files (`scriptmanager/lib/*.jar` and dependencies retrieved directly from [Maven][maven]).
@@ -42,8 +74,19 @@ Compiling Java classes and building JAR files could be handled manually, but for
 Gradle will need to be updated periodically to support *building* on later Java versions.
 
 :::caution
-Please note the minimum Java version required to support building the JAR executable. Code compiling with Gradle creates an upper Java version limit depending on the version of Gradle used. See this [table][gradle-version-compatibility] for more information on version compatibility.
+Please note the minimum Java version required to support building the JAR executable. Code compiling with Gradle creates an upper Java version limit depending on the version of Gradle used. See this [table][gradle-version-compatibility] for more information on version compatibility. Check [Java version history][java-version-history] LTS versions for a sense of which Java versions should be supported.
 :::
+
+#### Shadow plugin
+We are using the [shadow plugin][gradle-shadow] to manage building fat-jars (jar with dependencies included). This makes building the fat jars a little easier to manage including more control over which libraries are included in the fat-jar.
+
+There are features that may allow us to shrink the storage footprint of the executable jar. (`minimize()`)
+
+>Shadow can automatically remove all classes of dependencies that are not used by the project, thereby minimizing the resulting shadowed JAR.
+
+The build runtime should be faster too with less I/O due to the direct inclusion of dependencies
+
+>Shadow utilizes JarInputStream and JarOutputStream to efficiently process dependent libraries into the output jar without incurring the I/O overhead of expanding the jars to disk
 
 ### Clone the Github repository (for latest dev version)
 Open your terminal and move to the directory where you want to install scriptmanager and type the following command to download all the source code so you can build the executable JAR file from scratch.
@@ -181,6 +224,7 @@ The [Release Roadmap][release-roadmap] on Github organizes issue tickets and cre
 * Switch naming back to `dev`
   * [ ] `build.gradle` file should switch naming JAR to use `dev`
 
+[java-version-history]:https://en.wikipedia.org/wiki/Java_version_history
 [eclipse]:https://www.eclipse.org/ide/
 [eclipse-ide]:https://www.eclipse.org/eclipseide/
 [gradle]:https://docs.gradle.org/current/userguide/userguide.html
@@ -197,3 +241,6 @@ The [Release Roadmap][release-roadmap] on Github organizes issue tickets and cre
 
 [release-roadmap]:https://github.com/CEGRcode/scriptmanager/projects/6
 [lambda-tutorial]:https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html
+
+[gradle-based-build]:/docs/Contributing/developer-guidelines#gradle-based-build
+[gradle-shadow]:https://imperceptiblethoughts.com/shadow/
