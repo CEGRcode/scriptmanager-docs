@@ -1,7 +1,7 @@
 ---
 id: genome-tracks-tutorial
 title: "Making Genome Tracks Tutorial"
-sidebar_label: "Genome Tracks Tutorial"
+sidebar_label: "Genome Tracks (BigWig)"
 ---
 
 import Tabs from '@theme/Tabs';
@@ -67,10 +67,20 @@ This is the set of Reb1 read alignments from the Yeast Epigenome Project (YEP). 
 
 OR
 
-1. Navigate to www.yeastepigenome.org and search for Reb1
+
+<div class="tutorial-img-flow-container">
+  <img src={require('./img/download-yep-home.png').default} style={{width:60+'%'}} />
+</div>
+
+1. Navigate to [www.yeastepigenome.org][yep-stencil] and search for Reb1
 2. Select "META DATA"
 3. Select "Direct Download"
 4. Unzip the resulting file ‘12141_YEP.zip’ and inspect the contents of the new `12141_YEP` folder. It should contain a file called `12141_filtered.bam`.
+
+<div class="tutorial-img-flow-container">
+  <img src={require('./img/download-yep-reb1.png').default} style={{width:50+'%'}} />
+  <img src={require('./img/download-yep-reb1-metadata.png').default} style={{width:50+'%'}} />
+</div>
 
 ### XXXX.chrom.sizes Reference File
 You will also need the chromosome sizes file of the yeast reference genome (sacCer3):
@@ -306,8 +316,7 @@ rm $OUTPUT.raw.tab $OUTPUT.filtered.tab $OUTPUT.scaled.tab $OUTPUT.forward.bedgr
 
 [rossi-2021]:https://pubmed.ncbi.nlm.nih.gov/33692541/
 [geo-tracks-script]:https://github.com/CEGRcode/2022-Mittal_SAGA/blob/main/03_Bulk_Processing/job/bulk_geo_tracks.pbs
-[testdata-reb1-bed]:https://github.com/CEGRcode/2018-Rossi_GenomeResearch/blob/master/Fig1_Reb1/A.Reb1_Rhee_primary_sites_975.bed
-[testdata-reb1-bam]:ftp://data1.commons.psu.edu/pub/commons/eberly/pughlab/yeast-epigenome-project/12141_YEP.zip
+[yep-stencil]:http://www.yeastepigenome.org/
 [saccer3-fasta]:https://github.com/CEGRcode/GenoPipe/blob/master/EpitopeID/utility_scripts/genome_data/download_sacCer3_Genome.sh
 [noble2009]:https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1000424&type=printable
 [github-repo]:https://www.github.com/CEGRcode/scriptmanager
@@ -317,7 +326,7 @@ rm $OUTPUT.raw.tab $OUTPUT.filtered.tab $OUTPUT.scaled.tab $OUTPUT.forward.bedgr
 [get-igv]:https://software.broadinstitute.org/software/igv/download
 
 [java-install]:/docs/#java
-[bam-v-bigwig]:/docs/Contributing/developer-guidelines#bam-vs-bigwig-and-other-genome-track-formats
+[bam-v-bigwig]:/docs/Contributing/developer-guidelines#scriptmanager-design-principles
 
 [bam-indexer]:/docs/bam-manipulation/bam-indexer
 [bam-to-scidx]:/docs/bam-format-converter/bam-to-scidx

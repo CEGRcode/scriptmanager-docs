@@ -1,7 +1,7 @@
 ---
 id: chipexo-tutorial
 title: "ChIP-exo Tutorial"
-sidebar_label: "ChIP-exo Tutorial"
+sidebar_label: "ChIP-exo"
 ---
 
 import Tabs from '@theme/Tabs';
@@ -55,11 +55,19 @@ This is the set of Reb1 read alignments from the Yeast Epigenome Project (YEP). 
 
 OR
 
-1. Navigate to www.yeastepigenome.org and search for Reb1
+<div class="tutorial-img-flow-container">
+  <img src={require('./img/download-yep-home.png').default} style={{width:60+'%'}} />
+</div>
+
+1. Navigate to [www.yeastepigenome.org][yep-stencil] and search for Reb1
 2. Select "META DATA"
 3. Select "Direct Download"
 4. Unzip the resulting file ‘12141_YEP.zip’ and inspect the contents of the new `12141_YEP` folder. It should contain a file called `12141_filtered.bam`.
 
+<div class="tutorial-img-flow-container">
+  <img src={require('./img/download-yep-reb1.png').default} style={{width:50+'%'}} />
+  <img src={require('./img/download-yep-reb1-metadata.png').default} style={{width:50+'%'}} />
+</div>
 
 ## Generate the Plots
 

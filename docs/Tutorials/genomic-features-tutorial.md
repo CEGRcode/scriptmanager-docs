@@ -1,7 +1,7 @@
 ---
 id: genomic-features-tutorial
 title: "Genomic Features Tutorial"
-sidebar_label: "Genomic Features Tutorial"
+sidebar_label: "Genomic Features"
 ---
 
 import Tabs from '@theme/Tabs';
@@ -193,7 +193,7 @@ BEDFILE=/path/to/Reb1_Rhee_primary_sites_975.bed
 OUTPUT=/path/to/myfourcolorplot.png
 
 java -jar $SCRIPTMANAGER coordinate-manipulation expand-bed -c 50 $BEDFILE -o BED_50bp.bed
-java -jar $SCRIPTMANAGER sequence-analysis fasta-extract $GENOME $BEDFILE -o BED_50bp.fa
+java -jar $SCRIPTMANAGER sequence-analysis fasta-extract $GENOME BED_50bp.bed -o BED_50bp.fa
 java -jar $SCRIPTMANAGER figure-generation four-color BED_50bp.fa -o $OUTPUT
 
 rm BED_50bp.bed BED_50bp.fa
@@ -204,8 +204,6 @@ rm BED_50bp.bed BED_50bp.fa
 ```
 
 [rossi-2018]:https://pubmed.ncbi.nlm.nih.gov/29563167/
-[testdata-reb1-bed]:https://github.com/CEGRcode/2018-Rossi_GenomeResearch/blob/master/Fig1_Reb1/A.Reb1_Rhee_primary_sites_975.bed
-[testdata-reb1-bam]:ftp://data1.commons.psu.edu/pub/commons/eberly/pughlab/yeast-epigenome-project/12141_YEP.zip
 [saccer3-fasta]:https://github.com/CEGRcode/GenoPipe/blob/master/EpitopeID/utility_scripts/genome_data/download_sacCer3_Genome.sh
 [noble2009]:https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1000424&type=printable
 [github-repo]:https://www.github.com/CEGRcode/scriptmanager
