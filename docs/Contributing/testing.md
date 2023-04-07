@@ -8,7 +8,7 @@ sidebar_label: "Testing"
 
 We use Github Actions for automatic testing during development. Below is a list of Github Actions workflows and what they do.
 
-### Java CI with Gradle
+### Test build: Java CI with Gradle
 [This workflow][java-ci-workflow] tests that the ScriptManager JAR to "matrix test" across three operating systems and two versions of java:
 - **Checks:** The project builds successfully across OS and Java versions
 - **Trigger:** This workflow kicks off for any pushes to the `master` branch or pull requests to the `master` and `dev` branches
@@ -16,10 +16,17 @@ We use Github Actions for automatic testing during development. Below is a list 
 
 |  | Ubuntu (latest) | Windows (latest) | MacOS (latest) |
 | - |:--:|:--:|:--:|
+| **Java 8 (Temurin)**<br/>_need to confirm Github support for this_ |  👷‍♀️  |  👷‍♀️  | 👷‍♀️ |
 | **Java 11 (Temurin)** |  ✅  |  ✅  | ✅ |
-| **Java 17 (Temurin)**<br/>_suspended until Gradle upgrade_ |  👷‍♀️  |  👷‍♀️  | 👷‍♀️ |
+| **Java 17 (Temurin)** |  ✅  |  ✅  | ✅ |
 
-### JUnit testing
+### JUnit testing (Gradle)
+We build JUnit-style tests for each tool that can be run with the help of Gradle.
+
+```
+./gradlew test
+```
+
 
 :::warning
 🚧 👷‍♀️ **UNDER CONSTRUCTION** 👷‍ 🚧

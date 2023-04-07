@@ -83,6 +83,11 @@ const config = {
             label: 'Tools',
           },
           {
+            href: '/javadocs',
+            position: 'right',
+            label: 'JavaDocs'
+          },
+          {
             href: 'https://github.com/CEGRcode/scriptmanager',
             className: "header-github-link",
             position: 'right',

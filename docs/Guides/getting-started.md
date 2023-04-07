@@ -151,13 +151,16 @@ The help documentation is very useful so at any point in constructing your comma
     * Java build with version
     * OS with version you are using
 
+
 ## Singularity
 
+### Build Singularity Image
 ```
 $ cd scriptmanager
 $ singularity build --fakeroot scriptmanager.sif scriptmanager.def
 ```
 
+### Run from Singularity Image
 ```
 $ singularity exec scriptmanager.sif scriptmanager ${command}
 ```
@@ -166,7 +169,6 @@ $ singularity exec scriptmanager.sif scriptmanager ${command}
 ```
 $ singularity exec scriptmanager.sif scriptmanager coordinate-manipulation bed-to-gff BEDFILE.bed -o OUTPUT.gff
 ```
-
 
 
 ## Additional Resources
