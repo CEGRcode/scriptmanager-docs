@@ -17,6 +17,13 @@ export const toolIndex = [
     url: "docs/read-analysis/aggregate-data",
   },
   {
+    name: "ArchTEx Cross Correlation",
+    group: "BS",
+    description: "Calculate optimal tag shift based on ArchTEx implementation from (PMID:22302569)",
+    command: "-",
+    url: "docs/bam-statistics/archtex-cross-corr",
+  },
+  {
     name: "BAM Correlation",
     group: "BS",
     description: "Output BAM Header including alignment statistics and parameters given any indexed (BAI) BAM File.",
