@@ -41,7 +41,7 @@ module.exports = {
       "bam-statistics/se-stat",
       "bam-statistics/pe-stat",
       "bam-statistics/bam-correlation",
-      "bam-statistics/archtex-cross-corr",
+      "bam-statistics/cross-corr",
     ],
     "Coordinate Manipulation": [
       "coordinate-manipulation/expand-bed",
