@@ -8,6 +8,12 @@ This website includes all the website-building files for the documentation of [S
 ## Docusaurus Instructions
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
+### Dependencies
+Docusaurus is powered by [NodeJS](https://nodejs.org/en). You can set it up with the following [conda](https://anaconda.org/conda-forge/nodejs) command:
+```
+conda create -n docusaurus -c conda-forge nodejs
+```
+
 ### Installation
 
 ```
