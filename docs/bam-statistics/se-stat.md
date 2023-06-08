@@ -8,7 +8,7 @@ sidebar_label: se-stat
 
 Output BAM Header including alignment statistics and parameters given any indexed (BAI) BAM File.
 
-<img src={require('/../static/md-img/BAM_Statistics/SEStatWindow.png').default} style={{width:70+'%'}}/>
+<img src={require('/../static/md-img/BAM_Statistics/BAMGenomeCorrelationWindow.png').default} style={{width:70+'%'}}/>
 
 ## Command Line Interface
 
