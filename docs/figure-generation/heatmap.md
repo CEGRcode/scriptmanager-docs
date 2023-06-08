@@ -41,7 +41,7 @@ The values to color scale is defined as a range from a minimum value of 0 (desig
   </div>
 </div>
 
-This tool is typically used for visualizing the matrix output of [**Tag Pileup**][tag-pileup] to look at the raw tag coverage of any biochemical sequencing assay (ChIP-exo, ATAC-seq, PROcap, etc.). But there are many other tools in ScriptmManager like [**Align BED to Reference**][peak-align-ref] that produce output that can be visualized by this tool. Any tab-delimited text file can be used (many third party tools use such outputs) so long as the appropriate start row and start column are specified to skip over header columns and rows.
+This tool is typically used for visualizing the matrix output of [**Tag Pileup**][tag-pileup] to look at the raw tag coverage of any biochemical sequencing assay (ChIP-exo, ATAC-seq, PROcap, etc.). But there are many other tools in ScriptManager like [**Align BED to Reference**][peak-align-ref] that produce output that can be visualized by this tool. Any tab-delimited text file can be used (many third party tools use such outputs) so long as the appropriate start row and start column are specified to skip over header columns and rows.
 
 <img src={require('/../static/md-img/Figure_Generation/TwoColorHeatMapWindow.png').default} style={{width:70+'%'}}/>
 
