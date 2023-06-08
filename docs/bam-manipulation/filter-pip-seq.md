@@ -19,7 +19,7 @@ Permanganate (KMnO4) and piperidine treatment of DNA fragments preferentially ox
 Since the alignment files only capture the reference genome sequence at genomic positions covered by a read, the sequence upstream of the 5' end of Read 1 is not necessarily captured by the BAM file format. Thus the reference genome is required to determine the sequence upstream of the 5' end of read 1 (the basis for this filtering script).
 
 :::caution
-Make sure that the genome build used for the genome input matches the genome aligned to for the BAM formatted files. If you aren't sure, compare the chromosoome lengths in the genomic FASTA index file (FAI) against each BAM file header (`samtools view -H myfile.bam`).
+Make sure that the genome build used for the genome input matches the genome aligned to for the BAM formatted files. If you aren't sure, compare the chromosome lengths in the genomic FASTA index file (FAI) against each BAM file header (`samtools view -H myfile.bam`).
 :::
 
 ### File inputs (BAM)
@@ -35,7 +35,7 @@ The sequence upstream of the 5' end of read 1 to check for and filter by. If the
 For classic PIP-seq datasets the default "T" sequence should be used.
 :::
 
-This tool supports different sequences in the event an as of yet unknown future biochemical assay or analysis requires this filtering based on a different sequence. For example, a user investigating and comparing the rates of permanganate oxidation and piperdine cleavage at other nucelotides might compare BAM files filtered by other upstream sequences such as "C" which is known to be cleaved under such treatment (just not as frequently as at "T").
+This tool supports different sequences in the event of yet unknown future biochemical assay or analysis requires this filtering based on a different sequence. For example, a user investigating and comparing the rates of permanganate oxidation and piperdine cleavage at other nucelotides might compare BAM files filtered by other upstream sequences such as "C" which is known to be cleaved under such treatment (just not as frequently as at "T").
 
 ### Generate BAI file (GUI only)
 By checking this box, the script will automatically generate a BAI index file for each new output BAM file.
