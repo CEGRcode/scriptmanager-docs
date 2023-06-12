@@ -39,33 +39,29 @@ These parameters refer to the formatting of the font in the SVG.
 * **Y-axis Label** refers the text used for describing the y-axis, typically describing the set of features that the heatmap/sequence plot is visualizing.
 
 ## Command Line Interface
-
+Usage:
 ```bash
-Usage: script-manager figure-generation label-heatmap [-hV] [-c=<color>]
+java -jar ScriptManager.jar figure-generation label-heatmap [-hV] [-c=<color>]
        [-f=<FONTSIZE>] [-l=<xLeftLabel>] [-m=<xMidLabel>] [-o=<OUTPUT>]
        [-r=<xRightLabel>] [-t=<xTickHeight>] [-w=<borderWidth>] [-x=<xLabel>]
        [-y=<yLabel>] <PNG>
-Create an SVG label for heatmap inputs
-      <PNG>                Input image (required)
-  -o, --output=<OUTPUT>    Output image (default="OutputHeatmap.svg"
-  -c, --color=<color>      Output color: Must be in Hex format. (default=black)
-  -w, --width=<borderWidth>
-                           Line thickness of border. Integer required. (default
-                             = 2)
-  -t, --tick-height=<xTickHeight>
-                           X-tickmark height. (default=10)
-  -f, --font-size=<FONTSIZE>
-                           Font size. (default=18)
-  -l, --left-label=<xLeftLabel>
-                           Left X-tick label. (default=nolabel)
-  -m, --mid-label=<xMidLabel>
-                           Mid X-tick label. (default=nolabel)
-  -r, --right-label=<xRightLabel>
-                           Right X-tick label. (default=nolabel)
-  -x, --x-label=<xLabel>   X-axis label. (default=nolabel)
-  -y, --y-label=<yLabel>   Y-axis label. (default=nolabel)
-  -h, --help               Show this help message and exit.
-  -V, --version            Print version information and exit.
 ```
+
+### Output Options
+| Option                                    | Description                                                                                                 |
+| ----------------------------------------- | ----------------------------------------------------------------------------------------------------------- |                                               
+|  `-o, --output=<OUTPUT>`                  | specify output filename, please use SVG extension (default="OutputHeatmap.svg") |
+### Plot Design Options
+| Option                                    | Description                                                                                                 |
+| ----------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+|  `-c, --color=<color>`                    | indicate a color value; must be in Hex format (default=black)
+|  `-w, --width=<borderWidth>`              | indicate the border width; must be an integer (default = 2)
+|  `-t, --tick-height=<xTickHeight>`        | indicate the X-tickmark height (default=10)
+|  `-f, --font-size=<FONTSIZE>`             | indicate the font size (default=18)
+|  `-l, --left-label=<xLeftLabel>`          | indicate the left X-tick label (default=nolabel)
+|  `-m, --mid-label=<xMidLabel>`            | indicate the mid X-tick label (default=nolabel)
+|  `-r, --right-label=<xRightLabel>`        | indicate the right X-tick label (default=nolabel)
+|  `-x, --x-label=<xLabel>`                 | indicate the X-axis label (default=nolabel)
+|  `-y, --y-label=<yLabel>`                 | indicate the Y-axis label (default=nolabel)
 
 [png-format]:/docs/References/file-formats#png
