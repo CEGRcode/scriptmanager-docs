@@ -46,6 +46,9 @@ java -jar ScriptManager.jar figure-generation label-heatmap [-hV] [-c=<color>]
        [-r=<xRightLabel>] [-t=<xTickHeight>] [-w=<borderWidth>] [-x=<xLabel>]
        [-y=<yLabel>] <PNG>
 ```
+Description:
+
+Create an SVG label for heatmap inputs.
 
 ### Output Options
 | Option                                    | Description                                                                                                 |
