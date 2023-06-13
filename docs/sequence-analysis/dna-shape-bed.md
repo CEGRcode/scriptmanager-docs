@@ -11,6 +11,8 @@ Calculate intrinsic DNA shape parameters given BED file and Genome FASTA file.
 <!--![DNA Shape Cheatsheet](IMGADDRESS) -->
 <img src={require('/../static/md-img/Sequence_Analysis/DNAShapefromBEDWindow.png').default} style={{width:70+'%'}}/>
 
+# Command Line Interface
+
 Usage:
 ```bash
 java -jar ScriptManager.jar sequence-analysis dna-shape-bed [-afghlprV]
@@ -19,13 +21,16 @@ java -jar ScriptManager.jar sequence-analysis dna-shape-bed [-afghlprV]
 
 Based on Roh's lab DNAshape server data.
 Notes: Sequences with Ns are thrown out.
-      `<genomeFile>`      reference genome FASTA file
-      `<bedFile>`         the BED file of sequences to extract
+
 
 ### Positional Input
 
 Expects a [FASTA][fasta-format] formatted file with many sequences to stack up with each other (like [fasta-extract tool][fasta-extract] output).
 
+| Option | Description |
+| ------ | ----------- |
+|      `<genomeFile>` |    reference genome FASTA file |
+|      `<bedFile>`    |     the BED file of sequences to extract |
 
 ### Output Options
 
