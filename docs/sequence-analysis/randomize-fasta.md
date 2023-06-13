@@ -10,6 +10,8 @@ Randomizes FASTA sequence for each input entry
 
 <img src={require('/../static/md-img/Sequence_Analysis/RandomizeFASTAWindow.png').default} style={{width:70+'%'}}/>
 
+# Command Line Interface
+
 Usage:
 ```bash
 java -jar ScriptManager.jar sequence-analysis randomize-fasta [-hV] [-o=<output>]
