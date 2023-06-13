@@ -18,10 +18,10 @@ java -jar ScriptManager.jar sequence-analysis fasta-extract [-cfhV] [-o=<output>
 
 ### Positional Input
 
-The first positional input
-
-      `<genomeFile>`        reference genome FASTA file
-      `<bedFile>`           the BED file of sequences to extract
+| Option | Description |
+| ------ | ----------- |
+|      `<genomeFile>`    |    reference genome FASTA file |
+|      `<bedFile>`    |       the BED file of sequences to extract |
 
 ### Output Options
 
