@@ -17,8 +17,9 @@ java -jar ScriptManager.jar sequence-analysis randomize-fasta [-hV] [-o=<output>
 ```
 
 ### Positional Input
-
-      `<fastaFile>`         the FASTA file
+| Option | Description |
+| ------ | ----------- |
+|      `<fastaFile>`        | the FASTA file |
 
 
 ### Output Options
