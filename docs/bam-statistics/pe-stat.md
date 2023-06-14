@@ -18,6 +18,10 @@ This tool processes each input BAM file by calculating and tallying the insert-s
 Make sure your BAM input files are [sorted][sort-bam] and [indexed][bam-indexer].
 :::
 
+### Duplication Statistics
+
+The user can determine the duplicate rate vs. number of duplicate molecules by checking the box "Calculate duplication statistics."
+
 ## Command Line Interface
 Usage:
 
