@@ -10,6 +10,10 @@ Align BED peaks to Reference BED file creating CDT files for heatmap generation
 
 <img src={require('/../static/md-img/Peak_Analysis/BEDPeakAligntoRefWindow.png').default} style={{width:70+'%'}}/>
 
+### File Inputs (BED)
+
+This script expects both a Peak BED file input and a Reference BED file input. 
+
 ## Command Line Interface
 
 Usage:
@@ -25,4 +29,4 @@ java -jar ScriptManager.jar peak-analysis peak-align-ref [-hV] [-o=<output>]
 ### Output Options
 | Option | Description |
 | ------ | ----------- |
-| `-o, --output=<output>` | specify output file |
+| `-o, --output=<output>` | specify output file (default=`<peakBED>_<refBED>_Output.cdt`) |
