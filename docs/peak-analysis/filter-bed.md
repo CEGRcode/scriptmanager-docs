@@ -26,5 +26,5 @@ java -jar ScriptManager.jar peak-analysis filter-bed [-hV] [-e=<exclusion>]
 ### Output Options
 | Option | Description |
 | ------ | ----------- |
-| `-o, --output=<outputBasename>` | specify output file |
+| `-o, --output=<outputBasename>` | specify basename for output files (default=`<bedFilename>_<exclusionNum>bp`)|
 | `-e, --exclusion=<exclusion>` | exclusion distance in bp (default=100) |
