@@ -1,7 +1,7 @@
 ---
 id: se-stat
 title: Single-End Statistics
-sidebar_label: se-stat
+sidebar_label: Single-End Statistics
 ---
 
 ![se-stat](/../static/icons/BAM_Statistics/SEStats_square.svg)

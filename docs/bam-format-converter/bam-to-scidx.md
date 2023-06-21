@@ -1,7 +1,7 @@
 ---
 id: bam-to-scidx
 title: BAM to scIDX
-sidebar_label: bam-to-scidx
+sidebar_label: BAM to scIDX
 ---
 
 ![bam-to-scidx](/../static/icons/BAM_Format_Converter/BAMtoscIDX_square.svg)

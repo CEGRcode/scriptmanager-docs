@@ -1,7 +1,7 @@
 ---
 id: bam-to-bedgraph
 title: BAM to bedGraph
-sidebar_label: bam-to-bedgraph
+sidebar_label: BAM to bedGraph
 ---
 
 ![bam-to-bedgraph](/../static/icons/BAM_Format_Converter/BAMtobedGraph_square.svg)

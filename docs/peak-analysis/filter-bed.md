@@ -1,7 +1,7 @@
 ---
 id: filter-bed
 title: Filter BED by Proximity
-sidebar_label: filter-bed
+sidebar_label: Filter BED by Proximity
 ---
 
 ![filter-bed](/../static/icons/Peak_Analysis/FilterBEDbyProximity_square.svg)

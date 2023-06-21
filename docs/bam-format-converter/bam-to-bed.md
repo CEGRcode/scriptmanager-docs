@@ -1,7 +1,7 @@
 ---
 id: bam-to-bed
 title: BAM to BED
-sidebar_label: bam-to-bed
+sidebar_label: BAM to BED
 ---
 
 ![bam-to-bed](/../static/icons/BAM_Format_Converter/BAMtoBED_square.svg)

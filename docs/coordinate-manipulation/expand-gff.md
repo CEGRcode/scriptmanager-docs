@@ -1,7 +1,7 @@
 ---
 id: expand-gff
 title: Expand GFF File
-sidebar_label: expand-gff
+sidebar_label: Expand GFF File
 ---
 
 ![expand-gff](/../static/icons/Coordinate_Manipulation/ExpandGFF_square.svg)

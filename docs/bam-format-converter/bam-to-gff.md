@@ -1,7 +1,7 @@
 ---
 id: bam-to-gff
 title: BAM to GFF
-sidebar_label: bam-to-gff
+sidebar_label: BAM to GFF
 ---
 
 ![bam-to-gff](/../static/icons/BAM_Format_Converter/BAMtoGFF_square.svg)

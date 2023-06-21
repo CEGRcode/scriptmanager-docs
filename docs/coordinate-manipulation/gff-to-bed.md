@@ -1,7 +1,7 @@
 ---
 id: gff-to-bed
 title: Convert GFF to BED
-sidebar_label: gff-to-bed
+sidebar_label: Convert GFF to BED
 ---
 
 ![gff-to-bed](/../static/icons/Coordinate_Manipulation/GFFtoBED_square.svg)

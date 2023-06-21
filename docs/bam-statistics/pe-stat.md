@@ -1,7 +1,7 @@
 ---
 id: pe-stat
 title: Paired-End Statistics
-sidebar_label: pe-stat
+sidebar_label: Paired-End Statistics
 ---
 
 ![pe-stat](/../static/icons/BAM_Statistics/PEStats_square.svg)
