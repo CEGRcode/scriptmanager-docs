@@ -1,7 +1,7 @@
 ---
 id: rand-coord
 title: Generate Random Coordinate
-sidebar_label: rand-coord
+sidebar_label: Generate Random Coordinate
 ---
 
 ![rand-coord](/../static/icons/Peak_Analysis/RandomCoordinate_square.svg)
@@ -24,7 +24,8 @@ java -jar ScriptManager.jar peak-analysis rand-coord [-fhV] [-n=<numSites>]
 
 | Input | Description |
 | ------ | ----------- |
-| `<genome>` | reference genome [`sacCer3|sacCer3_cegr|hg38|hg38_contigs|hg19|hg19_contigs|mm10`] |
+| `<genome>` | reference genome [`sacCer3`/`sacCer3_cegr`/`hg38`/`hg38_contigs`/`hg19`/`hg19_contigs`/`mm10`] |
+
 
 ### Output Options
 
