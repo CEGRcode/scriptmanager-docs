@@ -1,7 +1,7 @@
 ---
 id: tile-genome
 title: Genomic Coordinate Tile
-sidebar_label: tile-genome
+sidebar_label: Genomic Coordinate Tile
 ---
 
 ![tile-genome](/../static/icons/Peak_Analysis/TileGenome_square.svg)
@@ -24,7 +24,7 @@ java -jar ScriptManager.jar peak-analysis tile-genome [-fhV] [-o=<output>]
 
 | Input | Description |
 | ------ | ----------- |
-| `<genome>` | reference genome `[sacCer3][sacCer3_cegr][hg38][hg38_contigs][hg19][hg19_contigs][mm10]` |
+| `<genome>` | reference genome [`sacCer3`/`sacCer3_cegr`/`hg38`/`hg38_contigs`/`hg19`/`hg19_contigs`/`mm10`] |
 
 
 ### Output Options
