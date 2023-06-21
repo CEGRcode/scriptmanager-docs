@@ -330,7 +330,7 @@ samtools index $BAMFILE
 java -jar $SCRIPTMANAGER coordinate-manipulation expand-bed -c 250 $BEDFILE -o BED_250bp.bed
 java -jar $SCRIPTMANAGER read-analysis tag-pileup $BEDFILE $BAMFILE -o $OUTPUT\_composite.out -M $OUTPUT\_matrix
 java -jar $SCRIPTMANAGER figure-generation heatmap -p .95 --blue $OUTPUT\_matrix_sense.cdt -o SENSE.png
-java -jar $SCRIPTMANAGER figure-generation heatmap -p .95 --red $OUTPUT\_matrix_sense.cdt -o ANTI.png
+java -jar $SCRIPTMANAGER figure-generation heatmap -p .95 --red $OUTPUT\_matrix_anti.cdt -o ANTI.png
 java -jar $SCRIPTMANAGER figure-generation merge-heatmap SENSE.png ANTI.png -o $OUTPUT\_heatmap.png
 java -jar $SCRIPTMANAGER figure-generation label-heatmap $OUTPUT\_heatmap.png \
   -x "Reb1" -y "Reb1_Rhee_primary_sites_975" -l -250 -m 0 -r +250 -o $OUTPUT\_heatmap.svg
