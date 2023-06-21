@@ -1,7 +1,7 @@
 ---
 id: peak-align-ref
 title: Align BED to Reference
-sidebar_label: peak-align-ref
+sidebar_label: Align BED to Reference
 ---
 
 ![peak-align-ref](/../static/icons/Peak_Analysis/BEDPeakAligntoRef_square.svg)
@@ -12,7 +12,7 @@ Align BED peaks to Reference BED file creating CDT files for heatmap generation
 
 ### File Inputs (BED)
 
-This script expects both a Peak BED file input and a Reference BED file input. 
+This script expects both a Peak [BED file][bed-format] input and a Reference BED file input. 
 
 ## Command Line Interface
 
@@ -30,3 +30,5 @@ java -jar ScriptManager.jar peak-analysis peak-align-ref [-hV] [-o=<output>]
 | Option | Description |
 | ------ | ----------- |
 | `-o, --output=<output>` | specify output file (default=`<peakBED>_<refBED>_Output.cdt`) |
+
+[bed-format]:/docs/References/file-formats#bed
