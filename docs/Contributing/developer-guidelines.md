@@ -298,5 +298,5 @@ The [Release Roadmap][release-roadmap] on Github organizes issue tickets and cre
 [docs-readme]:https://github.com/CEGRcode/scriptmanager-docs
 [release-roadmap]:https://github.com/CEGRcode/scriptmanager/projects/6
 
-[sm-javadocs]:/javadocs/index.html
+[sm-javadocs]:/javadocs/
 [gradle-based-build]:/docs/Contributing/developer-guidelines#gradle-based-build
