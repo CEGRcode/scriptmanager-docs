@@ -83,7 +83,7 @@ const config = {
             label: 'Tools',
           },
           {
-            href: '/javadocs',
+            href: '/javadocs/index.html',
             position: 'right',
             label: 'JavaDocs'
           },
