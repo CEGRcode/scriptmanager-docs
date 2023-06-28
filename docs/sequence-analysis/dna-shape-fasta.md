@@ -11,6 +11,8 @@ Roh's lab DNAshape server data
 
 <img src={require('/../static/md-img/Sequence_Analysis/DNAShapefromFASTAWindow.png').default} style={{width:70+'%'}}/>
 
+# Command Line Interface
+
 Usage:
 ```bash
 java -jar ScriptManager.jar sequence-analysis dna-shape-fasta [-aghlprV]
@@ -43,3 +45,4 @@ Expects a [FASTA][fasta-format] formatted file with many sequences to stack up w
 
 [cdt-format]:/docs/References/file-formats#cdt
 [fasta-format]:/docs/References/file-formats#fasta
+[fasta-extract]: /docs/sequence-analysis/fasta-extract.md

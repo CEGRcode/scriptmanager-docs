@@ -1,7 +1,7 @@
 ---
 id: bam-to-bed
 title: BAM to BED
-sidebar_label: bam-to-bed
+sidebar_label: BAM to BED
 ---
 
 ![bam-to-bed](/../static/icons/BAM_Format_Converter/BAMtoBED_square.svg)
@@ -9,6 +9,17 @@ sidebar_label: bam-to-bed
 Convert BAM file to BED file
 
 <img src={require('/../static/md-img/BAM_Format_Converter/BAMtoBEDWindow.png').default} style={{width:70+'%'}}/>
+
+### Read Options
+
+This tool has multiple read options to output.
+* **Read 1**: output Read 1
+* **Read 2**: output Read 2
+* **Combined**: output combined reads
+* **Midpoint**: output the midpoint between reads
+* **Fragment**: output the full fragment of two reads
+
+Note: The **Midpoint** and **Fragment** options requires proper mate-pair reading.
 
 ## Command Line Interface
 

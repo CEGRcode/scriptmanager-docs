@@ -1,7 +1,7 @@
 ---
 id: bam-to-bedgraph
 title: BAM to bedGraph
-sidebar_label: bam-to-bedgraph
+sidebar_label: BAM to bedGraph
 ---
 
 ![bam-to-bedgraph](/../static/icons/BAM_Format_Converter/BAMtobedGraph_square.svg)
@@ -9,6 +9,16 @@ sidebar_label: bam-to-bedgraph
 Convert BAM file to bedGraph file
 
 <img src={require('/../static/md-img/BAM_Format_Converter/BAMtobedGraphWindow.png').default} style={{width:70+'%'}}/>
+
+### Read Options
+
+This tool has multiple read options to output.
+* **Read 1**: output Read 1
+* **Read 2**: output Read 2
+* **Combined**: output combined reads
+* **Midpoint**: output the midpoint between reads
+
+Note: The **Midpoint** option requires proper mate-pair reading.
 
 ## Command Line Interface
 

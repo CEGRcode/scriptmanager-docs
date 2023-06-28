@@ -10,6 +10,8 @@ Generate FASTA file from indexed Genome FASTA file and BED file. Script will gen
 
 <img src={require('/../static/md-img/Sequence_Analysis/FASTAExtractWindow.png').default} style={{width:70+'%'}}/>
 
+# Command Line Interface
+
 Usage:
 ```bash
 java -jar ScriptManager.jar sequence-analysis fasta-extract [-cfhV] [-o=<output>]
@@ -18,10 +20,10 @@ java -jar ScriptManager.jar sequence-analysis fasta-extract [-cfhV] [-o=<output>
 
 ### Positional Input
 
-The first positional input
-
-      `<genomeFile>`        reference genome FASTA file
-      `<bedFile>`           the BED file of sequences to extract
+| Option | Description |
+| ------ | ----------- |
+|      `<genomeFile>`    |    reference genome FASTA file |
+|      `<bedFile>`    |       the BED file of sequences to extract |
 
 ### Output Options
 

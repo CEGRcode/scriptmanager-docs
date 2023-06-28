@@ -247,7 +247,7 @@ You may also have read mapping to the very edges of the chromosome. These entrie
 Then rearrange the columns into BedGraph format by copying them in the following order (3rd column is the value of col2 plus one):
 
 * `12141_filtered_READ1_SCALE_forward.bedGraph`: col1, col2, (col2 +1), col3
-* `12141_filtered_READ1_SCALE_forward.bedGraph`: col1, col2, (col2 +1), col4
+* `12141_filtered_READ1_SCALE_reverse.bedGraph`: col1, col2, (col2 +1), col4
 
 ...and then sort each of them by the first and then the second columns. This format is tab-delimited (not comma-delimited!) so save as a tab-delimited text file. Do not save this as an Excel file format (`.xlsx`, `.xls`, etc). This should be a `.tsv` or `.tab` format.
 

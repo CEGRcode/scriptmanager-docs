@@ -1,7 +1,7 @@
 ---
 id: pe-stat
 title: Paired-End Statistics
-sidebar_label: pe-stat
+sidebar_label: Paired-End Statistics
 ---
 
 ![pe-stat](/../static/icons/BAM_Statistics/PEStats_square.svg)
@@ -18,13 +18,21 @@ This tool processes each input BAM file by calculating and tallying the insert-s
 Make sure your BAM input files are [sorted][sort-bam] and [indexed][bam-indexer].
 :::
 
+### Duplication Statistics
+
+The user can determine the duplicate rate vs. number of duplicate molecules by checking the box "Calculate duplication statistics."
+
 ## Command Line Interface
 Usage:
 
 ```bash
-script-manager bam-statistics pe-stat <bamFile> [-dhsV] [-n=<MIN_INSERT>]
+java -jar ScriptManager.jar bam-statistics pe-stat <bamFile> [-dhsV] [-n=<MIN_INSERT>]
 [-o=<outputBasename>] [-x=<MAX_INSERT>]
 ```
+
+### Positional Input
+
+This tool takes a single BAM file for input. As with other tools, this tool requires the BAM file be indexed.
 
 ### Output Options
 

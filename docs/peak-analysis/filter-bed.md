@@ -1,7 +1,7 @@
 ---
 id: filter-bed
 title: Filter BED by Proximity
-sidebar_label: filter-bed
+sidebar_label: Filter BED by Proximity
 ---
 
 ![filter-bed](/../static/icons/Peak_Analysis/FilterBEDbyProximity_square.svg)
@@ -26,5 +26,5 @@ java -jar ScriptManager.jar peak-analysis filter-bed [-hV] [-e=<exclusion>]
 ### Output Options
 | Option | Description |
 | ------ | ----------- |
-| `-o, --output=<outputBasename>` | specify output file |
+| `-o, --output=<outputBasename>` | specify basename for output files (default=`<bedFilename>_<exclusionNum>bp`)|
 | `-e, --exclusion=<exclusion>` | exclusion distance in bp (default=100) |

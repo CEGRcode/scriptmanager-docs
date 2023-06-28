@@ -10,6 +10,8 @@ Search for an IUPAC DNA sequence motif in FASTA files with mismatches allowed
 
 <img src={require('/../static/md-img/Sequence_Analysis/SearchMotifWindow.png').default} style={{width:70+'%'}}/>
 
+# Command Line Interface
+
 Usage:
 ```bash
 java -jar ScriptManager.jar sequence-analysis search-motif [-hV] -m=<motif>
@@ -17,8 +19,9 @@ java -jar ScriptManager.jar sequence-analysis search-motif [-hV] -m=<motif>
 ```
 
 ### Positional Input
-
-      `<fastaFile>`         The FASTA file in which to search for the motif.
+| Option | Description |
+| ------ | ----------- |
+|      `<fastaFile>`       |  The FASTA file in which to search for the motif. |
 
 ### Output Options
 
