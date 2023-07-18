@@ -3,7 +3,6 @@ module.exports = {
     Guides: [
       "Guides/getting-started",
       "Guides/command-line",
-      "Guides/tool-group",
       "Guides/color-guide",
     ],
     Tutorials: [
