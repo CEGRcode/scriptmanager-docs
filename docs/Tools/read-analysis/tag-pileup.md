@@ -11,11 +11,17 @@ Pileup 5' ends of aligned tags given BED and BAM files according to user-defined
 
 <img src={require('/../static/md-img/Read_Analysis/TagPileupWindow.png').default} style={{width:70+'%'}}/>
 
+The TagPileup tool is used to look at read density across a bed file. This tool has perhaps the most complex option structure of the ScriptManager tools.
+
 ### File inputs (BAM & BED)
 
 This script processes BAM-type files so make sure your input is properly formatted and uses the appropriate `.bam` extension. The script also supports bulk selection and processing of files.
 
 This script also processes BED-type files so make sure your input is properly formatted and uses the appropriate `.bed` or `.bed.gz` extension. The script also supports bulk selection and processing of files.
+
+:::caution
+Make sure your BAM input files are [sorted][sort-bam] and [indexed][bam-indexer].
+:::
 
 ### Output Matrix Options (CDT/TAB)
 
@@ -23,7 +29,11 @@ This script outputs a heatmap matrix in [CDT][cdt-format] format by default. The
 
 ### Output Composite Options (TXT)
 
-This script outputs a composite plot from the composite data. See the [Composite Plot][giturl-composite] tool for more details.
+This script outputs a composite plot from the composite data. See the [Composite Plot][composite-plot] tool for more details.
+
+:::tip
+When using the CLI, see [composite-plot][composite-plot] to generate the composite plot image similar to the GUI output window.
+:::
 
 ### Read Aspect & Type
 
@@ -53,7 +63,7 @@ Depending on the type of dataset or analysis the user seeks, the tool provides o
 
 The user can shift the aligned tags by indicating the number of base pairs to be shifted by in the 'Tag Shift' box. The genomic bin size can also be adjusted to simplify the composite plot visualization.
 
-### Composite Transformation/Smoothing Options
+### Composite Transformation (Smoothing options)
 
 There are three available options for smoothing:
 1. No smooth
@@ -82,10 +92,10 @@ Once the composite plot has been generated via a pop-up window, the plot can be 
 
 Usage:
 ```bash
-java -jar ScriptManager.jar read-analysis tag-pileup [-1 | -2 | -a | -m] [--separate
-| --combined] [-N | -w | -W=<winVals> | -g | -G=<gaussVals> <gaussVals>
-[-G=<gaussVals> <gaussVals>]...] [-dhptVz] [--cdt] [--tab] [-M
-[=<outputMatrix>]]... [-b=<binSize>] [--cpu=<cpu>]
+java -jar ScriptManager.jar read-analysis tag-pileup [-5 | -3 | -m | --full-fragment]
+[-1 | -2 | -a] [-N | -w | -W=<winVals> | -g | -G=<gaussVals> <gaussVals>
+[-G=<gaussVals> <gaussVals>]...] [-dhptVz] [--cdt] [--combined] [--tab]
+[-M[=<outputMatrix>]]... [-b=<binSize>] [--cpu=<cpu>] [-e=<tagExtend>]
 [-f=<blacklistFilter>] [-n=<MIN_INSERT>] [-o=<outputComposite>]
 [-s=<shift>] [-x=<MAX_INSERT>] <bedFile> <bamFile>
 ```
@@ -171,10 +181,12 @@ The help guide groups the options by their relation to different aspects of Scri
 
 ### Composite Plot Figure
 
-For visualizing composite data like the GUI window, you need to use a separate tool in the CLI tools. See [Composite Plot][giturl-composite] tool.
+For visualizing composite data like the GUI window, you need to use a separate tool in the CLI tools. See [Composite Plot][composite-plot] tool.
 
 [file-format]:/docs/References/file-formats
-[giturl-composite]: /docs/figure-generation/composite-plot
 [cdt-format]:/docs/References/file-formats#cdt
 
+[composite-plot]: /docs/Tools/figure-generation/composite-plot
 [heatmap]:/docs/Tools/figure-generation/heatmap
+[sort-bam]:/docs/Tools/bam-manipulation/sort-bam
+[bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer

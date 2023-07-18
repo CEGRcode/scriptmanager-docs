@@ -6,9 +6,25 @@ sidebar_label: scaling-factor
 
 ![scaling-factor](/../static/icons/Read_Analysis/ScalingFactor_square.svg)
 
-Calculate the factor as either total tag normalization or normalization of ChIP-seq data with control (PMID:22883957)
+Calculate a normalization factor using the total tag method or normalization of ChIP-seq data with control (NCIS) method by [Liang & Keles (BMC Bioinf 2012)][Liang_2012].
+
 
 <img src={require('/../static/md-img/Read_Analysis/ScalingFactorWindow.png').default} style={{width:70+'%'}}/>
+
+
+### File input (BAM)
+The scaling factors are calculated directly from a BAM file and are calculated on a per-BAM basis. The scaling factor determined for one file should not be used to normalize data from another BAM file.
+
+:::caution
+Make sure your BAM input files are [sorted][sort-bam] and [indexed][bam-indexer].
+:::
+
+### Scaling Methods
+
+* Total Tag normalization
+* NCIS normalization
+* Both total tag and NCIS methodologies
+
 
 ## Command Line Interface
 
@@ -24,7 +40,7 @@ java -jar ScriptManager.jar read-analysis scaling-factor [-t | -n | -b] [-hV]
 | Option | Description |
 | ------ | ----------- |
 | `-f, --blacklist=<blacklistFilter>` | specify blacklist file to filter by |
-| `-c, --control=<controlBAM>` | control BAM file |
+| `-c, --control=<controlBAM>` | control BAM file (to use with `-n` or `-b` flags) |
 | `-w, --window-size=<window>` | window size for NCIS-related scaling types (default=500) |
 | `-m, --min-fraction=<minFrac>` | minimum fraction for NCIS-related scaling types (default=0.75) |
 
@@ -56,3 +72,6 @@ This tool takes a single BAM file for input. As with other tools, this tool requ
 
 [Liang_2012]:https://pubmed.ncbi.nlm.nih.gov/22883957/
 [file-format]:/docs/References/file-formats
+
+[sort-bam]:/docs/Tools/bam-manipulation/sort-bam
+[bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer
