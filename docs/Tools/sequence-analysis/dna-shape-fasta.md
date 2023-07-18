@@ -45,4 +45,5 @@ Expects a [FASTA][fasta-format] formatted file with many sequences to stack up w
 
 [cdt-format]:/docs/References/file-formats#cdt
 [fasta-format]:/docs/References/file-formats#fasta
-[fasta-extract]: /docs/sequence-analysis/fasta-extract.md
+
+[fasta-extract]: /docs/Tools/sequence-analysis/fasta-extract

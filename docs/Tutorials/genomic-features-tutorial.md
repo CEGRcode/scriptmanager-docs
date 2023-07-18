@@ -212,12 +212,12 @@ rm BED_50bp.bed BED_50bp.fa
 
 [java-install]:/docs/#java
 
-[bam-indexer]:/docs/bam-manipulation/bam-indexer.md
-[expand-bed]:/docs/coordinate-manipulation/expand-bed.md
-[tag-pileup]:/docs/read-analysis/tag-pileup.md
-[heatmap]:/docs/figure-generation/heatmap.md
-[merge-heatmap]:/docs/figure-generation/merge-heatmap.md
-[fasta-extract]:/docs/sequence-analysis/fasta-extract.md
-[four-color]:/docs/figure-generation/four-color.md
+[bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer
+[expand-bed]:/docs/Tools/coordinate-manipulation/expand-bed
+[tag-pileup]:/docs/Tools/read-analysis/tag-pileup
+[heatmap]:/docs/Tools/figure-generation/heatmap
+[merge-heatmap]:/docs/Tools/figure-generation/merge-heatmap
+[fasta-extract]:/docs/Tools/sequence-analysis/fasta-extract
+[four-color]:/docs/Tools/figure-generation/four-color
 
 [file-formats]:/docs/References/file-formats

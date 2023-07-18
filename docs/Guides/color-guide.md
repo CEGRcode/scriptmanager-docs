@@ -45,8 +45,8 @@ User should not use the pound symbol `#` in front of the hexidecimal when typing
 
 [color-hex-url]:http://www.javascripter.net/faq/rgbtohex.htm
 
-[four-color]:/docs/figure-generation/heatmap
-[heatmap]:/docs/figure-generation/Four-color
-[three-color-heatmap]:/docs/figure-generation/three-color-heatmap
-[heatmap-labeler]:/docs/figure-generation/heatmap-labeler
-[composite]:/docs/figure-generation/composite-plot
+[four-color]:/docs/Tools/figure-generation/heatmap
+[heatmap]:/docs/Tools/figure-generation/Four-color
+[three-color-heatmap]:/docs/Tools/figure-generation/three-color-heatmap
+[heatmap-labeler]:/docs/Tools/figure-generation/heatmap-labeler
+[composite]:/docs/Tools/figure-generation/composite-plot

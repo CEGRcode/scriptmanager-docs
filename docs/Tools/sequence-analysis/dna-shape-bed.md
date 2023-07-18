@@ -63,7 +63,7 @@ If the *groove* information is indicated in the command to be used for the outpu
 Similarly for *propeller*, *helical*, and *roll*, the output matrix [CDT files][cdt-format] will be named with the suffixes `_PTwist.cdt`, `_HTwist.cdt`, and `_Roll.cdt`, respectively.
 
 [rohs-paper]:https://pubmed.ncbi.nlm.nih.gov/23703209/
-[fasta-extract]:/docs/sequence-analysis/fasta-extract
+[fasta-extract]:/docs/Tools/sequence-analysis/fasta-extract
 
 [cdt-format]:/docs/References/file-formats#cdt
 [bed-format]:/docs/References/file-formats#bed

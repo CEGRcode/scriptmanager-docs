@@ -357,11 +357,11 @@ rm BED_250bp.bed SENSE.png ANTI.png
 
 [java-install]:/docs/#java
 
-[bam-indexer]:/docs/bam-manipulation/bam-indexer
-[expand-bed]:/docs/coordinate-manipulation/expand-bed
-[tag-pileup]:/docs/read-analysis/tag-pileup
-[heatmap]:/docs/figure-generation/heatmap
-[merge-heatmap]:/docs/figure-generation/merge-heatmap
-[label-heatmap]:/docs/figure-generation/heatmap-labeler
+[bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer
+[expand-bed]:/docs/Tools/coordinate-manipulation/expand-bed
+[tag-pileup]:/docs/Tools/read-analysis/tag-pileup
+[heatmap]:/docs/Tools/figure-generation/heatmap
+[merge-heatmap]:/docs/Tools/figure-generation/merge-heatmap
+[label-heatmap]:/docs/Tools/figure-generation/heatmap-labeler
 
 [file-formats]:/docs/References/file-formats

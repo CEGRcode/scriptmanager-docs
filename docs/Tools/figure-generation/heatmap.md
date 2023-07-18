@@ -203,9 +203,11 @@ Note user should not use the pound symbol (`#`) in front of the hexidecimal beca
 
 [color-hex-url]:http://www.javascripter.net/faq/rgbtohex.htm
 [treeview-paper]:https://pubmed.ncbi.nlm.nih.gov/15180930/
-[tag-pileup]:/docs/read-analysis/tag-pileup
-[merge-heatmap]:/docs/figure-generation/merge-heatmap
-[peak-align-ref]:/docs/peak-analysis/peak-align-ref
+
+[tag-pileup]:/docs/Tools/read-analysis/tag-pileup
+[merge-heatmap]:/docs/Tools/figure-generation/merge-heatmap
+[peak-align-ref]:/docs/Tools/peak-analysis/peak-align-ref
+
 [cdt-format]:/docs/References/file-formats#cdt
 [png-format]:/docs/References/file-formats#png
 [color-guide]:/docs/Guides/color-guide

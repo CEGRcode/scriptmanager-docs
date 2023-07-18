@@ -108,5 +108,7 @@ Expects two [PNG][png-format] like the output from the [heatmap tool][heatmap]. 
 
 [cdt-format]:/docs/References/file-formats#cdt
 [png-format]:/docs/References/file-formats#png
-[heatmap]:/docs/figure-generation/heatmap
+
+[heatmap]:/docs/Tools/figure-generation/heatmap
+
 [chipexo-tutorial]:/docs/Tutorials/chipexo-tutorial

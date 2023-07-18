@@ -51,7 +51,7 @@ Depending on the type of dataset or analysis the user seeks, the tool provides o
 
 ### Read Manipulation
 
-The user can shift the aligned tags by indicating the number of base pairs to be shifted by in the 'Tag Shift' box. The genomic bin size can also be adjusted to simplify the composite plot visualization. 
+The user can shift the aligned tags by indicating the number of base pairs to be shifted by in the 'Tag Shift' box. The genomic bin size can also be adjusted to simplify the composite plot visualization.
 
 ### Composite Transformation/Smoothing Options
 
@@ -176,4 +176,5 @@ For visualizing composite data like the GUI window, you need to use a separate t
 [file-format]:/docs/References/file-formats
 [giturl-composite]: /docs/figure-generation/composite-plot
 [cdt-format]:/docs/References/file-formats#cdt
-[heatmap]:/docs/figure-generation/heatmap.md
+
+[heatmap]:/docs/Tools/figure-generation/heatmap

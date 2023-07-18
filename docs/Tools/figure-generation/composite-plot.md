@@ -63,7 +63,7 @@ java -jar ScriptManager.jar figure-generation composite-plot [-hlV] [-o=<output>
 | `-y, --height=<pixelHeight>`      | indicate a pixel height for the plot (default=270)  |
 | `-c, --custom-colors=<colors>...` | indicate colors to use for each series. Must indicate a number of colors that matches number of dataseries default behavior: if one series input, use black if two series input, use blue(sense) and red(anti) if greater than two series, cycle through a set of 20 preset colors. |
 
-[tag-pileup]:/docs/read-analysis/tag-pileup
+[tag-pileup]:/docs/Tools/read-analysis/tag-pileup
 
 [color-hex-url]:http://www.javascripter.net/faq/rgbtohex.htm
 [png-format]:/docs/References/file-formats#png

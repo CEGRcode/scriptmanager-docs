@@ -51,5 +51,5 @@ This tool takes a single BAM file for input. As with other tools, this tool requ
 | `-x, --max=<MAX_INSERT>` | histogram range maximum (1000 default) |
 
 
-[sort-bam]:/docs/bam-manipulation/sort-bam
-[bam-indexer]:/docs/bam-manipulation/bam-indexer
+[sort-bam]:/docs/Tools/bam-manipulation/sort-bam
+[bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer

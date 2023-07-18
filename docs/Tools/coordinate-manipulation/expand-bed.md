@@ -62,6 +62,7 @@ This tool takes a single [BED file][bed-format] for input.
 [bedtools-slop]:https://bedtools.readthedocs.io/en/latest/content/tools/slop.html
 
 [bed-format]:/docs/References/file-formats#bed
-[tag-pileup]:/docs/read-analysis/tag-pileup
-[four-color]:/docs/figure-generation/four-color
-[fasta-extract]:/docs/sequence-analysis/fasta-extract
+
+[tag-pileup]:/docs/Tools/read-analysis/tag-pileup
+[four-color]:/docs/Tools/figure-generation/four-color
+[fasta-extract]:/docs/Tools/sequence-analysis/fasta-extract

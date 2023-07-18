@@ -37,12 +37,12 @@ Please see the [Samtools index tool][samtools-index] or the [Picard BuildBamInde
 [samtools-index]:http://www.htslib.org/doc/samtools-index.html
 [picard-index]:https://broadinstitute.github.io/picard/command-line-overview.html#BuildBamIndex
 
-[bam-correlation]:/docs/bam-statistics/bam-correlation.md
-[bam-to-bedgraph]:/docs/bam-format-converter/bam-to-bedgraph.md
-[bam-to-bed]:/docs/bam-format-converter/bam-to-bed.md
-[bam-to-gff]:/docs/bam-format-converter/bam-to-gff.md
-[bam-to-scidx]:/docs/bam-format-converter/bam-to-scidx.md
-[bed-to-gff]:/docs/coordinate-manipulation/bed-to-gff.md
-[merge-bam]:/docs/bam-manipulation/merge-bam.md
-[sort-bam]:/docs/bam-manipulation/sort-bam
-[tag-pileup]:/docs/read-analysis/tag-pileup.md
+[bam-correlation]:/docs/Tools/bam-statistics/bam-correlation
+[bam-to-bedgraph]:/docs/Tools/bam-format-converter/bam-to-bedgraph
+[bam-to-bed]:/docs/Tools/bam-format-converter/bam-to-bed
+[bam-to-gff]:/docs/Tools/bam-format-converter/bam-to-gff
+[bam-to-scidx]:/docs/Tools/bam-format-converter/bam-to-scidx
+[bed-to-gff]:/docs/Tools/coordinate-manipulation/bed-to-gff
+[merge-bam]:/docs/Tools/bam-manipulation/merge-bam
+[sort-bam]:/docs/Tools/bam-manipulation/sort-bam
+[tag-pileup]:/docs/Tools/read-analysis/tag-pileup

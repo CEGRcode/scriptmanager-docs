@@ -328,16 +328,16 @@ rm $OUTPUT.raw.tab $OUTPUT.filtered.tab $OUTPUT.scaled.tab $OUTPUT.forward.bedgr
 [java-install]:/docs/#java
 [bam-v-bigwig]:/docs/Contributing/developer-guidelines#scriptmanager-design-principles
 
-[bam-indexer]:/docs/bam-manipulation/bam-indexer
-[bam-to-scidx]:/docs/bam-format-converter/bam-to-scidx
-[expand-bed]:/docs/coordinate-manipulation/expand-bed
-[tag-pileup]:/docs/read-analysis/tag-pileup
-[scaling-factor]:/docs/read-analysis/scaling-factor
-[scale-matrix]:/docs/read-analysis/scale-matrix
-[correct-normalization]:/docs/read-analysis/scaling-factor#
-[heatmap]:/docs/figure-generation/heatmap
-[merge-heatmap]:/docs/figure-generation/merge-heatmap
-[fasta-extract]:/docs/sequence-analysis/fasta-extract
-[four-color]:/docs/figure-generation/four-color
+[bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer
+[bam-to-scidx]:/docs/Tools/bam-format-converter/bam-to-scidx
+[expand-bed]:/docs/Tools/coordinate-manipulation/expand-bed
+[tag-pileup]:/docs/Tools/read-analysis/tag-pileup
+[scaling-factor]:/docs/Tools/read-analysis/scaling-factor
+[scale-matrix]:/docs/Tools/read-analysis/scale-matrix
+[correct-normalization]:/docs/Tools/read-analysis/scaling-factor#
+[heatmap]:/docs/Tools/figure-generation/heatmap
+[merge-heatmap]:/docs/Tools/figure-generation/merge-heatmap
+[fasta-extract]:/docs/Tools/sequence-analysis/fasta-extract
+[four-color]:/docs/Tools/figure-generation/four-color
 
 [file-formats]:/docs/References/file-formats

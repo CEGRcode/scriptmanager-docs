@@ -86,5 +86,5 @@ _Note that absolute file paths are easier to work with. For relative paths, you\
 | `-m, --midpoint` | output midpoint (require PE) |
 
 
-[sort-bam]:/docs/bam-manipulation/sort-bam
-[bam-indexer]:/docs/bam-manipulation/bam-indexer
+[sort-bam]:/docs/Tools/bam-manipulation/sort-bam
+[bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer

@@ -28,4 +28,4 @@ Please see the [Samtools sort tool][samtools-sort] or the [Picard SortSam tool][
 [samtools-sort]:http://www.htslib.org/doc/samtools-sort.html
 [picard-sort]:https://broadinstitute.github.io/picard/command-line-overview.html#SortSam
 
-[bam-indexer]:/docs/bam-manipulation/bam-indexer
+[bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer

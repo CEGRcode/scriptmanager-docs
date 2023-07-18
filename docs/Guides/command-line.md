@@ -158,5 +158,6 @@ java -jar ScriptManager.jar read-analysis tag-pileup \
 
 
 [stdout-help]:https://linuxhint.com/bash_stdin_stderr_stdout/
-[expand-bed]:/docs/coordinate-manipulation/expand-bed
-[tag-pileup]:/docs/read-analysis/tag-pileup
+
+[expand-bed]:/docs/Tools/coordinate-manipulation/expand-bed
+[tag-pileup]:/docs/Tools/read-analysis/tag-pileup

@@ -83,7 +83,7 @@ java -jar ScriptManager.jar figure-generation four-color [-hV] [-o=<output>]
 [color-guide]:/docs/Guides/color-guide
 [color-hex-url]:http://www.javascripter.net/faq/rgbtohex.htm
 
-[fasta-extract]:/docs/sequence-analysis/fasta-extract
+[fasta-extract]:/docs/Tools/sequence-analysis/fasta-extract
 
 [fasta-format]:/docs/References/file-formats#fasta
 [png-format]:/docs/References/file-formats#png
