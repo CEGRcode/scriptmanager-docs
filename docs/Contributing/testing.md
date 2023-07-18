@@ -82,5 +82,5 @@ The following tools need to be explicitly tested when making updates to the JFre
 
 - [ ] _
 
-[java-ci-workflow]:https://github.com/CEGRcode/scriptmanager/blob/dev/.github/workflows/gradle.yml
+[java-ci-workflow]:https://github.com/CEGRcode/scriptmanager/actions/workflows/gradle.yml
 [java-gradle-versioning]:/docs/Contributing/developer-guidelines#gradle-based-build
