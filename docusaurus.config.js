@@ -78,7 +78,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'read-analysis/tag-pileup',
+            docId: 'Tools/read-analysis/tag-pileup',
             position: 'left',
             label: 'Tools',
           },
