@@ -7,6 +7,7 @@ slug: /
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Link from '@docusaurus/Link';
 
 Welcome to the ScriptManager wiki!
 
@@ -62,7 +63,11 @@ conda install -n my-env -c conda-forge openjdk
 ### 🫙 Download JAR Executable
 We pre-compiled the JAR binary file (same for all operating systems) and made them available for direct download [on Github][github-releases]. This file can be run on any MacOS, Linux, or Windows systems with Java installed.
 
-[🫙 **Download the latest JAR (v0.14)** 🫙][github-v14]
+<Link
+  className="button button--primary"
+  href="https://github.com/CEGRcode/scriptmanager/releases/download/v0.14/ScriptManager-v0.14.jar">
+  Download JAR Executable (v0.14)
+</Link>
 
 ## Running ScriptManager
 
