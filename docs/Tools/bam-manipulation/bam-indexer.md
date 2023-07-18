@@ -9,9 +9,9 @@ Generates BAI Index for input BAM files. Output BAI is in the same directory as 
 
 <img src={require('/../static/md-img/BAM_Manipulation/BAIIndexerWindow.png').default} style={{width:70+'%'}}/>
 
-Most tools using BAM inputs (both within and without ScriptManager), a BAM index file (`.bai`) file is required so that the tool can efficiently query the file for alignment records. _Read more in the [Picard documentation][picard-index]_.
+Most tools using BAM inputs (including ScriptManager) require a BAM index file (`.bai`) file so that the tool can efficiently query the file for alignment records. _Read more in the [Picard documentation][picard-index]_.
 
-ScriptManager's [TagPileup][tag-pileup], [Merge BAM replicates][merge-bam], [BAM Correlation][bam-correlation], and BAM Format Converter tools ([bam-to-bed][bam-to-bed], [bam-to-gff][bam-to-gff], [bam-to-bedgraph][bam-to-bedgraph], and [bam-to-scidx][bam-to-scidx]) are some example tools that require a `.bai` file.
+ScriptManager's [TagPileup][tag-pileup], [Merge BAM replicates][merge-bam], [BAM Correlation][bam-correlation], and BAM Format Converter tools ([BAM to BED][bam-to-bed], [BAM to GFF][bam-to-gff], [BAM to bedGraph][bam-to-bedgraph], and [BAM to scIDX][bam-to-scidx]) are some example tools that require a `.bai` file.
 
 ### File inputs (BAM)
 Make sure your inputs are properly formatted and use the appropriate `.bam` extension. This script also supports bulk selection and processing of files.
@@ -21,10 +21,13 @@ BAM file **MUST** be [sorted][sort-bam] to successfully index.
 :::
 
 ### Output (BAI)
-The sorted output BAI files are named based on the input filenames. The `.bai` suffix is appended for each output. For example, for a given `XXX.bam` input file, a new `XXX.bam.bai` file will be written to the same directory as the BAM input file.
+After clicking "Index", ScriptManager will index all of the loaded BAM files and save them with the `.bai` extension following BAI convention.
+
 
 :::info
 It is standard practice to generate and save the index file in the same place with the same name as the `.bam` file it is indexing so that your bioinformatics tools can find it.
+
+For example, the file `/User/bob/mydir/sample123.bam` will be indexed to `/User/bob/mydir/sample123.bam.bai`.
 :::
 
 
@@ -45,4 +48,5 @@ Please see the [Samtools index tool][samtools-index] or the [Picard BuildBamInde
 [bed-to-gff]:/docs/Tools/coordinate-manipulation/bed-to-gff
 [merge-bam]:/docs/Tools/bam-manipulation/merge-bam
 [sort-bam]:/docs/Tools/bam-manipulation/sort-bam
+[bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer
 [tag-pileup]:/docs/Tools/read-analysis/tag-pileup
