@@ -326,7 +326,7 @@ rm $OUTPUT.raw.tab $OUTPUT.filtered.tab $OUTPUT.scaled.tab $OUTPUT.forward.bedgr
 [get-igv]:https://software.broadinstitute.org/software/igv/download
 
 [java-install]:/docs/#java
-[bam-v-bigwig]:/docs/Contributing/developer-guidelines#scriptmanager-design-principles
+[bam-v-bigwig]:/docs/Guides/Contributing/developer-guidelines#scriptmanager-design-principles
 
 [bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer
 [bam-to-scidx]:/docs/Tools/bam-format-converter/bam-to-scidx

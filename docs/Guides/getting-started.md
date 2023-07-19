@@ -189,7 +189,7 @@ $ singularity exec scriptmanager.sif scriptmanager coordinate-manipulation bed-t
 [github-v14]:https://github.com/CEGRcode/scriptmanager/releases/download/v0.14/ScriptManager-v0.14.jar
 
 
-[sdk-notes]:/docs/Contributing/developer-guidelines#sdkman
+[sdk-notes]:/docs/Guides/Contributing/developer-guidelines#sdkman
 [cli]:/docs/Guides/command-line
 [file-formats]:/docs/References/file-formats
 [tool-index]:/docs/References/tool-index

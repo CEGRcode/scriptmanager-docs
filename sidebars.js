@@ -26,9 +26,9 @@ module.exports = {
       label: 'Contributing',
       // link: {type: 'doc', id: "/path/to/doc"},
       items : [
-        "Contributing/developer-guidelines",
-        "Contributing/code-snippets",
-        "Contributing/testing",
+        "Guides/Contributing/developer-guidelines",
+        "Guides/Contributing/code-snippets",
+        "Guides/Contributing/testing",
       ],
     },
     {
@@ -36,7 +36,7 @@ module.exports = {
       label: 'Community',
       // link: {type: 'doc', id: "/path/to/doc"},
       items: [
-        "Community/code-of-conduct"
+        "Guides/Community/code-of-conduct"
       ],
     },
     "Guides/citing-us",
