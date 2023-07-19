@@ -49,7 +49,7 @@ We recognize the popularity of the BigWig format and we are in the process of bu
 We write exclusively in Java or Java-compiled languages without any operating-system specific packages (to maintain portability across machines).
 
 <div class="tutorial-img-flow-container">
-  <img src={require('/docs/Guides/img/sdkman-logo.png').default} style={{width:40+'%',}} />
+  <img src={require('/docs/Guides/Getting-Started/img/sdkman-logo.png').default} style={{width:40+'%',}} />
 </div>
 
 ### SDKMAN!

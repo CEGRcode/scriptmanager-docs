@@ -21,8 +21,8 @@ Perform various utility functions on BAM files (e.g. index, sort, remove duplica
 [remove-duplicates]:/docs/Tools/bam-manipulation/remove-duplicates
 [sort-bam]:/docs/Tools/bam-manipulation/sort-bams
 
-[bai-format]:/docs/References/file-formats#bam
-[bam-format]:/docs/References/file-formats#bam
+[bai-format]:/docs/Guides/References/file-formats#bam
+[bam-format]:/docs/Guides/References/file-formats#bam
 
 [samtools-index]:http://www.htslib.org/doc/samtools-index.html
 [samtools-markdup]:http://www.htslib.org/doc/samtools-markdup.html

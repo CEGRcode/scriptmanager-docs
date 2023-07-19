@@ -43,7 +43,7 @@ Expects a [FASTA][fasta-format] formatted file with many sequences to stack up w
 
 [rohs-paper]:https://pubmed.ncbi.nlm.nih.gov/23703209/
 
-[cdt-format]:/docs/References/file-formats#cdt
-[fasta-format]:/docs/References/file-formats#fasta
+[cdt-format]:/docs/Guides/References/file-formats#cdt
+[fasta-format]:/docs/Guides/References/file-formats#fasta
 
 [fasta-extract]: /docs/Tools/sequence-analysis/fasta-extract

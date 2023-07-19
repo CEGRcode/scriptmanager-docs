@@ -17,5 +17,5 @@ Perform various statistical checks on BAM files (e.g. insert size distributions 
 [pe-stat]:/docs/Tools/bam-statistics/pe-stat
 [se-stat]:/docs/Tools/bam-statistics/se-stat
 
-[bam-format]:/docs/References/file-formats#bam
-[txt-format]:/docs/References/file-formats#txt
+[bam-format]:/docs/Guides/References/file-formats#bam
+[txt-format]:/docs/Guides/References/file-formats#txt

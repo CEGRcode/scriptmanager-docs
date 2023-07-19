@@ -3,14 +3,14 @@ module.exports = {
     {
       type: 'category',
       label: 'Guides',
-      link: {type: 'doc', id: "Guides/getting-started"},
+      link: {type: 'doc', id: "Guides/Getting-Started/getting-started"},
       items: [
-        "References/file-formats",
-        "Guides/command-line",
-        "Guides/color-guide",
-        "References/tool-index",
+        "Guides/Getting-Started/file-formats",
+        "Guides/Getting-Started/command-line",
+        "Guides/Getting-Started/color-guide",
       ],
     },
+    "Guides/tool-index",
     {
       type: 'category',
       label: 'Tutorials',

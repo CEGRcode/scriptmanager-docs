@@ -71,7 +71,7 @@ This tool takes a single BAM file for input. As with other tools, this tool requ
 
 
 [Liang_2012]:https://pubmed.ncbi.nlm.nih.gov/22883957/
-[file-format]:/docs/References/file-formats
+[file-format]:/docs/Guides/References/file-formats
 
 [sort-bam]:/docs/Tools/bam-manipulation/sort-bam
 [bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer

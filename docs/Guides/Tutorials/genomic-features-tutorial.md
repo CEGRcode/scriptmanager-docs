@@ -220,4 +220,4 @@ rm BED_50bp.bed BED_50bp.fa
 [fasta-extract]:/docs/Tools/sequence-analysis/fasta-extract
 [four-color]:/docs/Tools/figure-generation/four-color
 
-[file-formats]:/docs/References/file-formats
+[file-formats]:/docs/Guides/References/file-formats

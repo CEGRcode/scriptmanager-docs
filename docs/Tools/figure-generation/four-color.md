@@ -80,10 +80,10 @@ java -jar ScriptManager.jar figure-generation four-color [-hV] [-o=<output>]
 | `-y, --pixel-height=<pixelHeight>` | pixel height (default=1)|
 
 
-[color-guide]:/docs/Guides/color-guide
+[color-guide]:/docs/Guides/Getting-Started/color-guide
 [color-hex-url]:http://www.javascripter.net/faq/rgbtohex.htm
 
 [fasta-extract]:/docs/Tools/sequence-analysis/fasta-extract
 
-[fasta-format]:/docs/References/file-formats#fasta
-[png-format]:/docs/References/file-formats#png
+[fasta-format]:/docs/Guides/References/file-formats#fasta
+[png-format]:/docs/Guides/References/file-formats#png

@@ -57,5 +57,5 @@ Expects a single [BED file][bed-format] or [GFF file][gff-format] for input.
 |  `-m, --chrmt` |             converter will map "chrM" --> "chrmt" (default with no flag is "chrmt" --> "chrM") |
 
 
-[bed-format]:/docs/References/file-formats#bed
-[gff-format]:/docs/References/file-formats#gff
+[bed-format]:/docs/Guides/References/file-formats#bed
+[gff-format]:/docs/Guides/References/file-formats#gff

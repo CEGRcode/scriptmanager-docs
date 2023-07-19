@@ -364,4 +364,4 @@ rm BED_250bp.bed SENSE.png ANTI.png
 [merge-heatmap]:/docs/Tools/figure-generation/merge-heatmap
 [label-heatmap]:/docs/Tools/figure-generation/heatmap-labeler
 
-[file-formats]:/docs/References/file-formats
+[file-formats]:/docs/Guides/References/file-formats

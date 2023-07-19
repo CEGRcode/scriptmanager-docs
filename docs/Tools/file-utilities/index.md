@@ -13,4 +13,4 @@ Miscellaneous GUI wrappers for common file utilities (e.g. checksums, compressio
 
 [md5checksum]:/docs/Tools/file-utilities/md5checksum
 
-[txt-format]:/docs/References/file-formats#txt
+[txt-format]:/docs/Guides/References/file-formats#txt

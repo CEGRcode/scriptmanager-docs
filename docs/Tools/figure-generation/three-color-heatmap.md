@@ -48,7 +48,7 @@ Expects a [CDT][cdt-format] formatted matrix file of values to generate heatmap 
 ### Output Options
 | Option | Description |
 | ------ | ----------- |
-|  `-o, --output=<output>`                  |  specify output filename, please use PNG extension (default=CDT filename with "_\<compression-type\>. png" appended to the name in working directory of ScriptManager) | 
+|  `-o, --output=<output>`                  |  specify output filename, please use PNG extension (default=CDT filename with "_\<compression-type\>. png" appended to the name in working directory of ScriptManager) |
 
 ### Plot Design Options
 | Option | Description |
@@ -95,4 +95,4 @@ Expects a [CDT][cdt-format] formatted matrix file of values to generate heatmap 
 
 For custom color: type hexadecimal string to represent colors (e.g. "FF0000" is hexadecimal for red). See http://www.javascripter.net/faq/rgbtohex.htm for some color options with their corresponding hex strings.
 
-[cdt-format]:/docs/References/file-formats#cdt
+[cdt-format]:/docs/Guides/References/file-formats#cdt

@@ -21,9 +21,9 @@ Useful peak manipulation (filter, comparison, and simulation) utilities.
 [signal-dup]:/docs/Tools/peak-analysis/signal-dup
 [tile-genome]:/docs/Tools/peak-analysis/tile-genome
 
-[bam-format]:/docs/References/file-formats#bam
-[bed-format]:/docs/References/file-formats#bed
-[cdt-format]:/docs/References/file-formats#cdt
-[gff-format]:/docs/References/file-formats#gff
-[mat-format]:/docs/References/file-formats#matrix-format-custom-for-these-tools
-[txt-format]:/docs/References/file-formats#txt
+[bam-format]:/docs/Guides/References/file-formats#bam
+[bed-format]:/docs/Guides/References/file-formats#bed
+[cdt-format]:/docs/Guides/References/file-formats#cdt
+[gff-format]:/docs/Guides/References/file-formats#gff
+[mat-format]:/docs/Guides/References/file-formats#matrix-format-custom-for-these-tools
+[txt-format]:/docs/Guides/References/file-formats#txt
