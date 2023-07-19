@@ -181,25 +181,15 @@ $ singularity exec scriptmanager.sif scriptmanager coordinate-manipulation bed-t
 * [File format specifications][file-formats]
 * Javadoc (🚧 👷‍♀️ **UNDER CONSTRUCTION** 👷‍ 🚧)
 
-## Citing Us
-If you use ScriptManager in your work, you can use the [Lang et al (2022)][pearc-paper] publication or use ScriptManager's unique [RRID:**SCR_021797**][rrid-link].
-
-:::info
-We welcome anyone who uses ScriptManager for analysis in their publications to let us know by sending an email to owl8@cornell.edu so we can list it in our [showcase of publications][publications-list]!
-:::
-
 [anaconda-install]:https://docs.anaconda.com/anaconda/install/index.html
 [temurin-11]:https://adoptium.net/temurin/releases?version=11
 [conda-openjdk]:https://anaconda.org/conda-forge/openjdk
 [github-releases]:https://github.com/CEGRcode/scriptmanager/releases
 [github-repo]:https://github.com/CEGRcode/scriptmanager
 [github-v14]:https://github.com/CEGRcode/scriptmanager/releases/download/v0.14/ScriptManager-v0.14.jar
-[pearc-paper]:https://dl.acm.org/doi/abs/10.1145/3491418.3535161
-[rrid-link]:https://scicrunch.org/resources/data/record/nlx_144509-1/SCR_021797/resolver?q=SCR_021797%2A&l=SCR_021797%2A&i=rrid:scr_021797
 
 
 [sdk-notes]:/docs/Contributing/developer-guidelines#sdkman
 [cli]:/docs/Guides/command-line
 [file-formats]:/docs/References/file-formats
 [tool-index]:/docs/References/tool-index
-[publications-list]:/docs/References/publications

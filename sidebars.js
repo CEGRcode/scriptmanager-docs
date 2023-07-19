@@ -4,6 +4,7 @@ module.exports = {
       "Guides/getting-started",
       "Guides/command-line",
       "Guides/color-guide",
+      "Guides/citing-us",
     ],
     Tutorials: [
       "Tutorials/chipexo-tutorial",
@@ -13,7 +14,6 @@ module.exports = {
     References: [
       "References/file-formats",
       "References/tool-index",
-      "References/publications",
     ],
     Contributing: [
       "Contributing/developer-guidelines",
