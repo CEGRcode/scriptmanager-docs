@@ -111,4 +111,4 @@ Expects two [PNG][png-format] like the output from the [heatmap tool][heatmap]. 
 
 [heatmap]:/docs/Tools/figure-generation/heatmap
 
-[chipexo-tutorial]:/docs/Tutorials/chipexo-tutorial
+[chipexo-tutorial]:/docs/Guides/Tutorials/chipexo-tutorial

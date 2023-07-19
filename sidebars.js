@@ -16,9 +16,9 @@ module.exports = {
       label: 'Tutorials',
       // link: {type: 'doc', id: "/path/to/doc"},
       items: [
-        "Tutorials/chipexo-tutorial",
-        "Tutorials/genomic-features-tutorial",
-        "Tutorials/genome-tracks-tutorial",
+        "Guides/Tutorials/chipexo-tutorial",
+        "Guides/Tutorials/genomic-features-tutorial",
+        "Guides/Tutorials/genome-tracks-tutorial",
       ],
     },
     {
