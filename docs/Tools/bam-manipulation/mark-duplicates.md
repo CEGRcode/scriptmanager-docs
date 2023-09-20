@@ -1,10 +1,10 @@
 ---
-id: remove-duplicates
+id: mark-duplicates
 title: Mark Duplicates (Picard)
 sidebar_label: Mark Duplicates
 ---
 
-![remove-duplicates](/../static/icons/BAM_Manipulation/BAMMarkDuplicates_square.svg)
+![mark-duplicates](/../static/icons/BAM_Manipulation/BAMMarkDuplicates_square.svg)
 
 Removes or marks duplicate reads in paired-end sequencing given identical 5' read positions. _Read more in the [Picard documentation][picard-markdup]_.
 

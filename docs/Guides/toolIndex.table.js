@@ -196,7 +196,7 @@ export const toolIndex = [
 	  group: "BM",
 	  description: "This tool locates and tags duplicate reads in a BAM or SAM file, where duplicate reads are defined as originating from a single fragment of DNA.",
 	  command: "Picard",
-	  url: "docs/Tools/bam-manipulation/remove-duplicates",
+	  url: "docs/Tools/bam-manipulation/mark-duplicates",
 	},
 	{
 		name: "Scale Matrix",

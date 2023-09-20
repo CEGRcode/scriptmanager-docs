@@ -28,7 +28,7 @@ The `TOOLGROUP` corresponds to one of the tabs in the GUI tool while the `TOOLNA
 | | [bam-to-gff](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Format-Converter#bam-to-gff) |
 | | [bam-to-scidx](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Format-Converter#bam-to-scidx) |
 | **bam-manipulation** | [bam-indexer\*](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Manipulation#bam-indexer) |
-| | [remove-duplicates\*](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Manipulation#remove-duplicates) |
+| | [mark-duplicates\*](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Manipulation#mark-duplicates) |
 | | [filter-pip-seq](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Manipulation#filter-pip-seq) |
 | | [merge-bam\*](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Manipulation#merge-bam) |
 | | [sort-bam\*](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Manipulation#sort-bam) |
