@@ -16,6 +16,7 @@ Others manipulate files to calculate normalization factors, normalize the data, 
 | [`scaling-factor`][scaling-factor] | [BAM][bam-format] | [TXT][txt-format] | Calculate the factor as either total tag normalization or normalization of ChIP-seq data with control. (PMID:22883957) |
 | [`scale-matrix`][scale-matrix] | \[[CDT][cdt-format]\|[TAB][mat-format]\] | [TAB][mat-format]\[..\] | Apply a user-specified scaling factor to tab-delimited matrix data. |
 | [`aggregate-data`][aggregate-data] | \[[CDT][cdt-format]\|[TAB][mat-format]\]\[..\] | [TAB][mat-format]\[..\] | The AggregateData tool is used to process a bunch of matrix files into one matrix file. |
+| [`transpose-matrix`][scale-matrix] | \[[CDT][cdt-format]\|[TAB][mat-format]\] | \[[CDT][cdt-format]\|[TAB][mat-format]\] | Interchange the rows and columns of a matrix |
 
 
 [aggregate-data]:/docs/Tools/read-analysis/aggregate-data
@@ -23,6 +24,7 @@ Others manipulate files to calculate normalization factors, normalize the data, 
 [scaling-factor]:/docs/Tools/read-analysis/scaling-factor
 [similarity-matrix]:/docs/Tools/read-analysis/similarity-matrix
 [tag-pileup]:/docs/Tools/read-analysis/tag-pileup
+[transpose-matrix]:read-analysis/transpose-matrix.md
 
 [bam-format]:/docs/Guides/References/file-formats#bam
 [bed-format]:/docs/Guides/References/file-formats#bed
