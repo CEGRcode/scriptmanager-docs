@@ -67,4 +67,4 @@ Create an SVG label for heatmap inputs.
 |  `-x, --x-label=<xLabel>`                 | indicate the X-axis label (default=nolabel)
 |  `-y, --y-label=<yLabel>`                 | indicate the Y-axis label (default=nolabel)
 
-[png-format]:/docs/Guides/References/file-formats#png
+[png-format]:/docs/Guides/Getting-Started/file-formats#png

@@ -103,6 +103,6 @@ Similarly for *propeller*, *helical*, and *roll*, the output matrix [CDT files][
 [tag-pileup]:/docs/Tools/read-analysis/tag-pileup
 [fasta-extract]:/docs/Tools/sequence-analysis/fasta-extract
 
-[cdt-format]:/docs/Guides/References/file-formats#cdt
-[bed-format]:/docs/Guides/References/file-formats#bed
-[fasta-format]:/docs/Guides/References/file-formats#fasta
+[cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt
+[bed-format]:/docs/Guides/Getting-Started/file-formats#bed
+[fasta-format]:/docs/Guides/Getting-Started/file-formats#fasta

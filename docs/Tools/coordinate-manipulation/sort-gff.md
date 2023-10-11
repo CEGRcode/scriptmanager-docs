@@ -45,5 +45,5 @@ These options indicate which windows to sort the files by (choose one).
 | `-x, --index=<index> <index>` | sort by index from the specified start to the specified stop (0-indexed and half-open interval) |
 
 
-[cdt-format]:/docs/Guides/References/file-formats#cdt
-[gff-format]:/docs/Guides/References/file-formats#gff
+[cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt
+[gff-format]:/docs/Guides/Getting-Started/file-formats#gff

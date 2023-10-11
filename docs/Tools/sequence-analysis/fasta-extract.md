@@ -39,4 +39,4 @@ java -jar ScriptManager.jar sequence-analysis fasta-extract [-cfhV] [-o=<output>
 | `-c, --coord-header` | use genome coordinate for output FASTA header (default is to use bed file headers) |
 | `-f, --force` | force-strandedness (default) |
 
-[fasta-format]:/docs/Guides/References/file-formats#fasta
+[fasta-format]:/docs/Guides/Getting-Started/file-formats#fasta

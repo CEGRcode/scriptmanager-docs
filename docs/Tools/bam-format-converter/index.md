@@ -19,8 +19,8 @@ Extract genome-wide pileup information from a BAM file.
 [bam-to-gff]:/docs/Tools/bam-format-converter/bam-to-gff
 [bam-to-scidx]:/docs/Tools/bam-format-converter/bam-to-scidx
 
-[bam-format]:/docs/Guides/References/file-formats#bam
-[bed-format]:/docs/Guides/References/file-formats#bed
-[bedgraph-format]:/docs/Guides/References/file-formats#bedgraph
-[gff-format]:/docs/Guides/References/file-formats#gff
-[scidx-format]:/docs/Guides/References/file-formats#scidx
+[bam-format]:/docs/Guides/Getting-Started/file-formats#bam
+[bed-format]:/docs/Guides/Getting-Started/file-formats#bed
+[bedgraph-format]:/docs/Guides/Getting-Started/file-formats#bedgraph
+[gff-format]:/docs/Guides/Getting-Started/file-formats#gff
+[scidx-format]:/docs/Guides/Getting-Started/file-formats#scidx

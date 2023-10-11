@@ -191,5 +191,5 @@ $ singularity exec scriptmanager.sif scriptmanager coordinate-manipulation bed-t
 
 [sdk-notes]:/docs/Guides/Contributing/developer-guidelines#sdkman
 [cli]:/docs/Guides/Getting-Started/command-line
-[file-formats]:/docs/Guides/References/file-formats
-[tool-index]:/docs/Guides/References/tool-index
+[file-formats]:/docs/Guides/Getting-Started/file-formats
+[tool-index]:/docs/Guides/tool-index

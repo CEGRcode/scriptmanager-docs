@@ -19,10 +19,10 @@ Perform various utility functions on BAM files (e.g. index, sort, remove duplica
 [filter-pip-seq]:/docs/Tools/bam-manipulation/filter-pip-seq
 [merge-bam]:/docs/Tools/bam-manipulation/merge-bam
 [mark-duplicates]:/docs/Tools/bam-manipulation/mark-duplicates
-[sort-bam]:/docs/Tools/bam-manipulation/sort-bams
+[sort-bam]:/docs/Tools/bam-manipulation/sort-bam
 
-[bai-format]:/docs/Guides/References/file-formats#bam
-[bam-format]:/docs/Guides/References/file-formats#bam
+[bai-format]:/docs/Guides/Getting-Started/file-formats#bam
+[bam-format]:/docs/Guides/Getting-Started/file-formats#bam
 
 [samtools-index]:http://www.htslib.org/doc/samtools-index.html
 [samtools-markdup]:http://www.htslib.org/doc/samtools-markdup.html

@@ -106,11 +106,11 @@ const config = {
             items: [
               {
                 label: 'Tool Index (A-Z)',
-                to: '/docs/References/tool-index',
+                to: '/docs/Guides/tool-index',
               },
               {
                 label: 'File Formats',
-                to: '/docs/References/file-formats',
+                to: '/docs/Guides/Getting-Started/file-formats',
               },
             ],
           },

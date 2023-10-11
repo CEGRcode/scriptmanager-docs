@@ -24,8 +24,8 @@ Others manipulate files to calculate normalization factors, normalize the data, 
 [similarity-matrix]:/docs/Tools/read-analysis/similarity-matrix
 [tag-pileup]:/docs/Tools/read-analysis/tag-pileup
 
-[bam-format]:/docs/Guides/References/file-formats#bam
-[bed-format]:/docs/Guides/References/file-formats#bed
-[cdt-format]:/docs/Guides/References/file-formats#cdt
-[mat-format]:/docs/Guides/References/file-formats#matrix-format-custom-for-these-tools
-[txt-format]:/docs/Guides/References/file-formats#txt
+[bam-format]:/docs/Guides/Getting-Started/file-formats#bam
+[bed-format]:/docs/Guides/Getting-Started/file-formats#bed
+[cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt
+[mat-format]:/docs/Guides/Getting-Started/file-formats#matrix-format-custom-for-these-tools
+[txt-format]:/docs/Guides/Getting-Started/file-formats#txt

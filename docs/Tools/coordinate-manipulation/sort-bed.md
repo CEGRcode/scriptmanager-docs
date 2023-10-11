@@ -52,5 +52,5 @@ Note that if the value input using the `-c` flag is odd, it is the equivalent of
 
 
 
-[bed-format]:/docs/Guides/References/file-formats#bed
-[cdt-format]:/docs/Guides/References/file-formats#cdt
+[bed-format]:/docs/Guides/Getting-Started/file-formats#bed
+[cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt

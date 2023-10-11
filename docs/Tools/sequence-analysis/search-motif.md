@@ -38,4 +38,4 @@ java -jar ScriptManager.jar sequence-analysis search-motif [-hV] -m=<motif>
 | `-n, --mismatches=<ALLOWED_MISMATCH>` | the number of mismatches allowed (default=0) |_
 
 
-[fasta-format]:/docs/Guides/References/file-formats#fasta
+[fasta-format]:/docs/Guides/Getting-Started/file-formats#fasta
