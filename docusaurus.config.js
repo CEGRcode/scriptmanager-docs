@@ -72,18 +72,18 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'Guides/getting-started',
+            docId: 'Guides/Getting-Started/getting-started',
             position: 'left',
             label: 'General',
           },
           {
             type: 'doc',
-            docId: 'read-analysis/tag-pileup',
+            docId: 'Tools/read-analysis/tag-pileup',
             position: 'left',
             label: 'Tools',
           },
           {
-            href: '/javadocs',
+            href: '/javadocs/',
             position: 'right',
             label: 'JavaDocs'
           },
