@@ -4,6 +4,9 @@ title: General Developer Notes
 sidebar_label: General Developer Notes
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Welcome to the ScriptManager developer wiki!
 
 This guide is designed to generally orient developers that plan to contribute to ScriptManager and establish some project-specific standards. There are some helpful checklists at the end for current developers.
@@ -48,27 +51,63 @@ We recognize the popularity of the BigWig format and we are in the process of bu
 ## Java Development Tools
 We write exclusively in Java or Java-compiled languages without any operating-system specific packages (to maintain portability across machines).
 
-<div class="tutorial-img-flow-container">
-  <img src={require('/docs/Guides/Getting-Started/img/sdkman-logo.png').default} style={{width:40+'%',}} />
-</div>
+### Java Development Toolkit (JDK)
 
-### SDKMAN!
-Olivia recommends installing Java using [SDKMAN!][sdkman] for convenient flipping between Java versions and releases. While ScriptManager is currently developed to the Java 8 SE standard, it is good practice to check for forward and backward compatibility between Java versions.
+<Tabs>
+
+  <TabItem value="sdkman-install" label="SDKMAN!">
+
+<div class="tutorial-img-flow-container">
+  <img src={require('./img/sdkman-logo.png').default} style={{width:40+'%',}} />
+</div>
+<br></br>
+
+Olivia recommends installing Java using [SDKMAN!][sdkman] for convenient flipping between Java and Gradle versions and releases. While ScriptManager is currently developed to the Java 8 SE standard, it is good practice to check for forward and backward compatibility between Java versions.
 
 We are constantly monitoring new Java releases and developing according to a standard that ensures consistent behavior across Java versions. It is important that ScriptManager can at least *execute* across Java versions from the earliest supported version to the latest. See [Gradle section below][gradle-based-build] below for more information on Java versions for building.
 
+  </TabItem>
+
+  <TabItem value="direct-install" label="Direct Download" default>
+
+<div class="tutorial-img-flow-container">
+  <img src={require('./img/adoptium-website.png').default} style={{width:40+'%',}} />
+</div>
+
+Alternatively, you can download the appropriate [OpenJDK for Java 11][temurin-11] for your OS and follow the instructions on the website to install Java for your system.
+
+  </TabItem>
+  <TabItem value="conda-install" label="Anaconda">
+
+<div class="tutorial-img-flow-container">
+  <img src={require('./img/anaconda-logo.png').default} style={{width:50+'%',}} />
+</div>
+<br></br>
+
+If you have [Anaconda][anaconda-install] set up on a Unix/MacOS system, create a [conda][conda-openjdk] environment with Java using the following command:
+```
+conda install -n my-env -c conda-forge openjdk
+```
+  </TabItem>
+</Tabs>
+
+
+
+### Integrated Development Environment (IDE) - Eclipse
+
+<br></br>
 <div class="tutorial-img-flow-container">
   <img src={require('./img/Eclipse2014_RGB.png').default} style={{width:40+'%',}} />
 </div>
 
-### Integrated Development Environment (IDE) - Eclipse
 We recommend using [Eclipse][eclipse] to write Java code for ScriptManager because it supports both [Gradle][gradle] (see below) and [WindowBuilder][window-builder] for convenient building of JAR files and [Swing-type][java-swing] graphical interface development.
+
+### Gradle
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/GradleBuildLogo.png').default} style={{width:60+'%',}} />
 </div>
 
-### Gradle
 With the help of plugins, Gradle can do all sorts of tasks to help manage and maintain the project.
 - compile classes
 - build JAR files
@@ -276,6 +315,9 @@ The [Release Roadmap][release-roadmap] on Github organizes issue tickets and cre
 
 [sdkman]:https://sdkman.io/install
 [sdkman-docs]:https://sdkman.io/
+[anaconda-install]:https://docs.anaconda.com/anaconda/install/index.html
+[temurin-11]:https://adoptium.net/temurin/releases?version=11
+[conda-openjdk]:https://anaconda.org/conda-forge/openjdk
 [eclipse]:https://www.eclipse.org/ide/
 [eclipse-ide]:https://www.eclipse.org/eclipseide/
 [gradle]:https://docs.gradle.org/current/userguide/userguide.html

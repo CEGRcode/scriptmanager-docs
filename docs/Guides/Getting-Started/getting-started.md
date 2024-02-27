@@ -21,44 +21,19 @@ ScriptManager was designed to be easy to set-up and get started. If you are havi
 ### ☕ Dependencies (just Java!)
 ScriptManager is a Java-based tool and has been developed to run using Java versions 8 or higher. Most machines already have Java installed! **So check if you've got it first!**
 
-There are a few ways you can install Java if you don't have it already installed. Feel free to use whatever Java installation method you are most comfortable with:
-
-<Tabs>
-  <TabItem value="direct-install" label="Direct Download" default>
-
 <div class="tutorial-img-flow-container">
-  <img src={require('./img/adoptium-website.png').default} style={{width:40+'%',}} />
+  <img src={require('./img/java-com.png').default} style={{width:40+'%',}} />
 </div>
 
-Download the appropriate [OpenJDK for Java 11][temurin-11] for your OS and follow the instructions on the website to install Java for your system.
+There are a few ways you can install Java if you don't have it already installed (**MacOS no longer comes with Java installed**). As a user (most people), you will want to install using the **Java Runtime Environment (JRE)** but if you are planning to compile the code from source, you will need the **[Java Development Kit (JDK)][sdk-notes]** installed.
 
-  </TabItem>
-  <TabItem value="conda-install" label="Anaconda">
-
-<div class="tutorial-img-flow-container">
-  <img src={require('./img/anaconda-logo.png').default} style={{width:50+'%',}} />
-</div>
-<br></br>
-
-If you have [Anaconda][anaconda-install] set up on a Unix/MacOS system, create a [conda][conda-openjdk] environment with Java using the following command:
-```
-conda install -n my-env -c conda-forge openjdk
-```
-  </TabItem>
-
-  <TabItem value="sdkman-install" label="SDKMAN!">
-
-<div class="tutorial-img-flow-container">
-  <img src={require('./img/sdkman-logo.png').default} style={{width:40+'%',}} />
-</div>
-<br></br>
-
-**For Developers:** If you are writing code for scriptmanager and need to flip between Java versions to perform testing across different versions and releases, consider using  [SDKMAN!][sdk-notes] (what Olivia does).
-
-  </TabItem>
-</Tabs>
-
-
+<Link
+  className="button button--primary"
+  href="https://www.java.com/en/">
+  Download JRE from java.com
+</Link>
+<br/><br/>
+Click the link above and follow the instructions to install the JRE.
 
 ### 🫙 Download JAR Executable
 We pre-compiled the JAR binary file (same for all operating systems) and made them available for direct download [on Github][github-releases]. This file can be run on any MacOS, Linux, or Windows systems with Java installed.
@@ -76,7 +51,7 @@ We pre-compiled the JAR binary file (same for all operating systems) and made th
 <Tabs>
   <TabItem value="macos" label="MacOS" default>
 
-Depending on your system permissions, you may need to be an administrator to open this for the first time. On Mac systems, this can be done by right-clicking the file and selecting ‘Open’ at the top.
+Depending on your system permissions, you may need to be an administrator to open this for the first time. On Mac systems, this can be done by double-clicking the icon or right-clicking the file and selecting ‘Open’ at the top.
 
 <div class="tutorial-img-flow-container">
   <img src={require('/static/md-img/General/MacOpenSM.png').default} style={{width:40+'%',border:'solid 1px'}} />
@@ -181,15 +156,11 @@ $ singularity exec scriptmanager.sif scriptmanager coordinate-manipulation bed-t
 * [File format specifications][file-formats]
 * Javadoc (🚧 👷‍♀️ **UNDER CONSTRUCTION** 👷‍ 🚧)
 
-[anaconda-install]:https://docs.anaconda.com/anaconda/install/index.html
-[temurin-11]:https://adoptium.net/temurin/releases?version=11
-[conda-openjdk]:https://anaconda.org/conda-forge/openjdk
 [github-releases]:https://github.com/CEGRcode/scriptmanager/releases
 [github-repo]:https://github.com/CEGRcode/scriptmanager
 [github-v14]:https://github.com/CEGRcode/scriptmanager/releases/download/v0.14/ScriptManager-v0.14.jar
 
-
-[sdk-notes]:/docs/Guides/Contributing/developer-guidelines#sdkman
+[sdk-notes]:/docs/Guides/Contributing/developer-guidelines#java-development-toolkit-jdk
 [cli]:/docs/Guides/Getting-Started/command-line
 [file-formats]:/docs/Guides/Getting-Started/file-formats
 [tool-index]:/docs/Guides/tool-index
