@@ -55,7 +55,7 @@ We write exclusively in Java or Java-compiled languages without any operating-sy
 
 <Tabs>
 
-  <TabItem value="sdkman-install" label="SDKMAN!">
+  <TabItem value="sdkman-install" label="SDKMAN!" default>
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/sdkman-logo.png').default} style={{width:40+'%',}} />
@@ -68,7 +68,7 @@ We are constantly monitoring new Java releases and developing according to a sta
 
   </TabItem>
 
-  <TabItem value="direct-install" label="Direct Download" default>
+  <TabItem value="direct-install" label="Direct Download">
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/adoptium-website.png').default} style={{width:40+'%',}} />
