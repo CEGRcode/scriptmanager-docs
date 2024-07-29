@@ -19,6 +19,7 @@ module.exports = {
         "Guides/Tutorials/chipexo-tutorial",
         "Guides/Tutorials/genomic-features-tutorial",
         "Guides/Tutorials/genome-tracks-tutorial",
+        "Guides/Tutorials/atac-seq-tutorial"
       ],
     },
     {

@@ -1,5 +1,5 @@
 ---
-id: atacseq-tutorial
+id: atac-seq-tutorial
 title: "ATAC-seq Tutorial"
 sidebar_label: "ATAC-seq"
 ---
