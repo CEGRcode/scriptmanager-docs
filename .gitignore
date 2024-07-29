@@ -11,6 +11,7 @@ Tutorial_RawImages/*
 
 # Misc
 **/.DS_Store
+**/.Rhistory
 .env.local
 .env.development.local
 .env.test.local
