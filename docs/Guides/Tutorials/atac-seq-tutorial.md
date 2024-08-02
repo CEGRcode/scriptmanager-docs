@@ -259,6 +259,7 @@ OUTPUT=/path/to/myoutput
 
 samtools index $BAMFILE
 
+java -jar $SCRIPTMANAGER bam-statistics pe-stat $BAMFILE -o $OUTPUT\_bam_stats.txt
 java -jar $SCRIPTMANAGER coordinate-manipulation expand-bed -c 5000 $BEDFILE -o BED_5000bp.bed 
 java -jar $SCRIPTMANAGER read-analysis tag-pileup --combined --full-fragment $OUTPUT/BED_5000bp.bed $BAMFILE -o $OUTPUT\_composite.out -M $OUTPUT\_matrix
 java -jar $SCRIPTMANAGER coordinate-manipulation sort-bed -c 1000 $OUTPUT/BED_5000bp.bed $OUTPUT\_matrix_combined.cdt -o $OUPUT\_SORT.cdt 
