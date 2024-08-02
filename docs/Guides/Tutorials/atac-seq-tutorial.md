@@ -133,17 +133,17 @@ The speed of this step scales with the size of the BAM file. Generally this step
 :::
 
 ### 3. BAM File Statistics
-The BAM File Statistics is a Quality Control feature that includes alignment statistics that can be used to check what the data looks like. 
+The BAM File Statistics is a Quality Control feature that includes alignment statistics that can be used to check what the data looks like. Paired-end Statistics is a common quality control step used in many ATAC-seq analyses.  
 
-#### 3.1. Navigate to BAM Statistics ➡️ [__BAM-Statistics__][bam-statistics] 
+#### 3.1. Navigate to BAM Statistics ➡️ [__Paired-End Statistics__][pair-end-statistics] 
 <div class="tutorial-img_atacseq-flow-container" style={{ textAlign: 'center' }}>
-  <img src={require('./img_atacseq/bamstatistics(1).png').default} style={{width:60+'%',}} />
+  <img src={require('./img_atacseq/bamstatistics(1).png').default} style={{width:70+'%',}} />
 </div>
 
 #### 3.2. Select Output Statistics 
 <div className="tutorial-img_atacseq-flow-container" style={{ textAlign: 'center' }}>
   <img src={require('./img_atacseq/bamstats(2).png').default} style={{width:60+'%',}}/>
-  <img src={require('./img_atacseq/bamstatsfile.png').default} style={{width:60+'%',}}/>
+  <img src={require('./img_atacseq/bamstatsfile.png').default} style={{width:80+'%',}}/>
 </div>
 
 ### 4. Resize the GRCh38 BED file
@@ -259,7 +259,6 @@ OUTPUT=/path/to/myoutput
 
 samtools index $BAMFILE
 
-java -jar $SCRIPTMANAGER bam-statistics se-stat $BAMFILE -o $OUTPUT\_bam_stats.txt
 java -jar $SCRIPTMANAGER coordinate-manipulation expand-bed -c 5000 $BEDFILE -o BED_5000bp.bed 
 java -jar $SCRIPTMANAGER read-analysis tag-pileup --combined --full-fragment $OUTPUT/BED_5000bp.bed $BAMFILE -o $OUTPUT\_composite.out -M $OUTPUT\_matrix
 java -jar $SCRIPTMANAGER coordinate-manipulation sort-bed -c 1000 $OUTPUT/BED_5000bp.bed $OUTPUT\_matrix_combined.cdt -o $OUPUT\_SORT.cdt 
@@ -286,6 +285,8 @@ rm BED_5000bp.bed
 
 [java-install]:/docs/#java
 
+[sort-BED]:/docs/Tools/coordinate-manipulation/sort-bed
+[pair-end-statistics]:/docs/Tools/bam-statistics/pe-stat
 [bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer
 [expand-bed]:/docs/Tools/coordinate-manipulation/expand-bed
 [tag-pileup]:/docs/Tools/read-analysis/tag-pileup
