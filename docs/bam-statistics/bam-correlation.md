@@ -10,6 +10,15 @@ Genome-Genome correlations for replicate comparisons given multiple sorted and i
 
 <img src={require('/../static/md-img/BAM_Statistics/BAMGenomeCorrelationWindow.png').default} style={{width:70+'%'}}/>
 
+### Read Options
+
+This tool has multiple read options to output.
+* **Read 1**: output Read 1
+* **Read 2**: output Read 2
+* **All Reads**: output both reads combined 
+* **Midpoint (Requires PE)**: output the midpoint between reads
+
+
 :::caution
 Make sure your BAM input files are [sorted][sort-bam] and [indexed][bam-indexer].
 :::

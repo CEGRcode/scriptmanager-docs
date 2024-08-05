@@ -24,3 +24,38 @@ Also, a mitochondiral chromosome name conversion is also included with the selec
 <img src={require('/../static/md-img/File_Utilities/ConvertBEDChrNamesWindow.png').default} style={{width:50+'%'}}/><img src={require('/../static/md-img/File_Utilities/ConvertGFFChrNamesWindow.png').default} style={{width:50+'%'}}/>
 
 ### Command Line Interface
+### Convert BED Chr Names
+Usage:
+```bash
+java -jar ScriptManager.jar file-utilities convert-bed-genome [-ahmV] [-o=<output>] <coordFile>
+```
+Description:
+
+Convert BED coordinate files between the standard SGD roman numeral chromosome names to the legacy SacCer3_cegr arabic numeral chromosome names.
+
+### Convert GFF Chr Names
+Usage:
+```bash
+java -jar ScriptManager.jar file-utilities convert-gff-genome [-ahmV] [-o=<output>] <coordFile>
+```
+Description:
+
+Convert GFF coordinate files between the standard SGD roman numeral chromosome names to the legacy SacCer3_cegr arabic numeral chromosome names.
+
+### Positional Input
+Expects a single [BED file][bed-format] or [GFF file][gff-format] for input.
+
+### Output Options
+| Option | Description |
+| ------ | ----------- |
+|  `-o, --output=<output>` |   specify output directory (name will be same as original with .bed ext) |
+
+### Conversion Options
+| Option | Description |
+| ------ | ----------- |
+|  `-a, --to-arabic` |        switch converter to output arabic numeral chromsome names (default outputs roman numeral chrnames) |
+|  `-m, --chrmt` |             converter will map "chrM" --> "chrmt" (default with no flag is "chrmt" --> "chrM") |
+
+
+[bed-format]:/docs/Guides/Getting-Started/file-formats#bed
+[gff-format]:/docs/Guides/Getting-Started/file-formats#gff

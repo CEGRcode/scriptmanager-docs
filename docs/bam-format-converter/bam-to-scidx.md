@@ -10,6 +10,17 @@ Convert BAM file to scIDX file
 
 <img src={require('/../static/md-img/BAM_Format_Converter/BAMtoscIDXWindow.png').default} style={{width:70+'%'}}/>
 
+### Read Options
+
+This tool has multiple read options to output.
+* **Read 1**: output Read 1
+* **Read 2**: output Read 2
+* **Combined**: output combined reads
+* **Midpoint**: output the midpoint between reads
+
+Note: The **Midpoint** option requires proper mate-pair reading.
+
+
 ## Command Line Interface
 
 Usage:

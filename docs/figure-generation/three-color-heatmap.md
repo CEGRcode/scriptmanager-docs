@@ -28,6 +28,36 @@ Extended description goes here.
 
 <img src={require('/../static/md-img/Figure_Generation/ThreeColorHeatMapWindow.png').default} style={{width:70+'%'}}/>
 
+### File inputs
+
+This script does not restrict selection of file inputs because a variety of file extensions may be parsed out for the numeric matrix. The tool supports bulk selection and processing of files.
+
+### Color selection
+
+Details of the implementation are described below but typically Lo(Low), Mid(Middle), and Hi(High) represent different ranges of data values, allowing for a visual gradinet that highlights variations in the data. 
+
+**Lo(Low)** represents the lowest range of data values and is assigned the color 'blue'.
+**Mid(Middle)** represents the middle range of data and is assigned the color 'black'.
+**Hi(High)** represents the highest range of data values and is assigned the color 'yellow'.
+
+### Contrast threshold
+
+The user can specify the contrast threshold in a couple ways:
+
+- **Absolute:** The user can directly define the value marking the "maximum color".
+- **Percentile:** Or the user can tell the script to dynamically determine the top $p$ percentile of values across the numeric matrix (excluding zeros) and set them all to have the "maximum color" value and scale color assignment for the rest of the values.
+
+Read more about the contrast threshold below ("Details of color-scaling strategy").
+
+### Image dimensions
+
+The image height and width specify the number of pixels to squish or expand the numeric matrix into for the final output `.png` heat map image.
+
+### Image Compression
+
+The image compression options allow the user to choose from several image compression strategies but we recommend "Treeview" for base-pair resolution tag-pileup occupancy data. This is the same strategy implemented by previous microarray visualization packages ([Saldanha et al, 2004][treeview-paper]).
+
+
 ```bash
 Usage: script-manager figure-generation three-color [-pn=<percentile> |
        -an=<absolute>] [-pd=<percentile> | -ad=<absolute>] [-px=<percentile> |

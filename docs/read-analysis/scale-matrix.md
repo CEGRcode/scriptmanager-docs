@@ -28,6 +28,7 @@ This tool takes a single matrix file for input.
 | Option | Description |
 | ------ | ----------- |
 | `-o, --output=<output>` | specify output filename |
+| `-z, --gzip` | output compressed output (default=false) |
 
 
 

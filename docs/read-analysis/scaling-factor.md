@@ -10,6 +10,19 @@ Calculate the factor as either total tag normalization or normalization of ChIP-
 
 <img src={require('/../static/md-img/Read_Analysis/ScalingFactorWindow.png').default} style={{width:70+'%'}}/>
 
+### File Inputs 
+This script processes BAM-type files so make sure your input is properly formatted and uses the appropriate `.bam` extension. 
+
+### Filter Options
+There are multiple filter options available for this tool. The 'Blacklist' option includes a file containing blacklisted entires to exclude. The 'Control BAM' option is for specifying the control BAM file. The 'Window Size(bp)' adjusts the size of the window used for NCIS-related sclaing. The 'Minimum Fraction' sets the minimum fraction required for NCIS-related scaling
+
+### Scaling Methods
+
+* **Total Tag normalization** method adjusts data by scaling based on the total number of tags (or reads) in a dataset. 
+* **NCIS normalization** method normalizes counts based on specific insertion sites.
+* **NCIS with Total Tag** uses both methods by normalizing data first by the total tag count and then applying the NCIS normalization. 
+
+
 ## Command Line Interface
 
 Usage:
@@ -20,7 +33,7 @@ java -jar ScriptManager.jar read-analysis scaling-factor [-t | -n | -b] [-hV]
 ```
 
 
-
+### Filter Options
 | Option | Description |
 | ------ | ----------- |
 | `-f, --blacklist=<blacklistFilter>` | specify blacklist file to filter by |
