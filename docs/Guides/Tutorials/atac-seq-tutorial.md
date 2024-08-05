@@ -33,7 +33,7 @@ This is a set of genomic regions based on the GRCh38 human genome reference buil
 
 <Link
   className="button button--secondary"
-  href="https://github.com/CEGRcode/scriptmanager-docs/blob/alima-tutorial_edits/docs/Guides/Tutorials/UCSC_GRCh38_knownGene_GENCODEV3_ALL-TSS_2000bp.bed">
+  href="https://github.com/CEGRcode/scriptmanager-docs/blob/alima-tutorial_edits/docs/Guides/Tutorials/SHORTENED_UCSC_GRCh38_knownGene_GENCODEV3_ALL-TSS_2000bp.bed">
   Download sample BED file
 </Link>
 
