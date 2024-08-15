@@ -84,7 +84,7 @@ const config = {
           },
           {
             type: 'html',
-            value: '<a href="/scriptmanager-docs/javadocs/" alt="API Docs" >JavaDocs</a>',
+            value: '<a target="\_blank" href="/scriptmanager-docs/javadocs/" alt="API Docs" >JavaDocs</a>',
             position: 'right',
           },
           {
