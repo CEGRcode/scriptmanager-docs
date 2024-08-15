@@ -17,6 +17,8 @@ Tutorial_RawImages/*
 .env.test.local
 .env.production.local
 ScriptManager*.jar
+**.bam
+**.bam.bai
 
 npm-debug.log*
 yarn-debug.log*

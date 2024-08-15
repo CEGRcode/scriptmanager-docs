@@ -29,11 +29,12 @@ You need one set of genomic coordinate regions to investigate (BED) and one file
 
 
 ### BED File
-This is a set of genomic regions based on the GRCh38 human genome reference build and is derived from the known genes track provided by the UCSC Genome Browser. 
+This is the set of transcription start site (TSS) annotations for the GRCh38 genome build that has been subsampled down to 2000 sites for quick tutorial purposes. A more formal analysis may use a more complete set of annotations (many more sites).
 
 <Link
   className="button button--secondary"
-  href="https://github.com/CEGRcode/scriptmanager-docs/blob/alima-tutorial_edits/docs/Guides/Tutorials/SHORTENED_UCSC_GRCh38_knownGene_GENCODEV3_ALL-TSS_2000bp.bed">
+  target="\_blank"
+  href="/sample_data/atac-seq-tutorial/UCSC_GRCh38_knownGene_GENCODEV3_ALL-TSS_2000bp.bed" >
   Download sample BED file
 </Link>
 
@@ -41,17 +42,24 @@ This is a set of genomic regions based on the GRCh38 human genome reference buil
 <br />
 
 :::caution
-If your BED file downloads with a `.txt` extension, make sure to change the filename to a `.bed` extension. For this tutorial, the BED file is named `UCSC_GRCh38_knownGene_GENCODEV3_ALL-TSS_2000bp.bed`.
+If your BED file downloads with a `.txt` extension, make sure to change the filename to a `.bed` extension. For this tutorial, the BED file is named `UCSC_GRCh38_knownGene_GENCODEV3_TSS_2000bp_SUBSAMPLE-2000-Sites.bed`.
 :::
 
 ### BAM File
-This is the set of read alignments from Stanford Encode Project. 
+This is the set of read alignments from the [ENCODE Project][encode-project] (`ENCFF128WZG.bam`). 
 
 <Link
   className="button button--secondary"
-  href="https://www.encodeproject.org/files/ENCFF534DCE/@@download/ENCFF534DCE.bam">
+  href="https://www.encodeproject.org/files/ENCFF128WZG/@@download/ENCFF128WZG.bam">
   Download sample BAM file
 </Link>
+
+<br />
+<br />
+
+:::caution
+The BAM file is ~6.5GB large so make sure you have enough space on your machine before downloading.
+:::
 
 ## Generate the Plots
 
@@ -198,7 +206,7 @@ The default parameters Tag Pileup is set to expect is a sequence-specific strand
 + The final image can then be saved by right-clicking and selecting ‘Save as’. PNG is fine for most cases, but SVG is strongly recommended if this composite plot will be used in Adobe Illustrator later.
 
 :::note
-Besides the composite plot image, ScriptManager has saved the matrix \*.CDT files to your Output Directory together with the composite plot values file (If you didn't change the name it would be called `composite_average.out`). These CDT files will be used as the input for generating heatmaps in the next step.
+Besides the composite plot image, ScriptManager has saved the matrix `*.cdt` files to your Output Directory together with the composite plot values file (If you didn't change the name it would be called `composite_average.out`). These CDT files will be used as the input for generating heatmaps in the next step.
 :::
 
 ### 6. Sort BED file by CDT file
@@ -247,36 +255,39 @@ Use Sort BED files by CDT to sort the entries based on chromosome name (C), foll
   <img src={require('./img_atacseq/gui-heatmap-out.png').default} style={{width:45+'%',}}/>
 </div>
 
+
+<!-- Add section 8 for labeling heatmap -->
+
 ## Command-Line shell script
 
 The following shell commands records the locations for a BED file, a BAM file, and the anticipated OUTPUT basename as environmental variables to derive the corresponding composite plot values and heatmaps. This can serve as a template for you to write out your own workflows as bash scripts that execute command-line style ScriptManager.
 
 ```bash
-SCRIPTMANAGER=/path/to/ScriptManager.jar
+SCRIPTMANAGER=/path/to/ScriptManager-v0.15.jar
 BEDFILE=/path/to/UCSC_GRCh38_knownGene_GENCODEV3_ALL-TSS_2000bp.bed
-BAMFILE=/path/to/ENCFF534DCE.bam
+BAMFILE=/path/to/ENCFF128WZG.bam
 OUTPUT=/path/to/myoutput
 
 samtools index $BAMFILE
 
-java -jar $SCRIPTMANAGER bam-statistics pe-stat $BAMFILE -o $OUTPUT\_bam_stats.txt
-java -jar $SCRIPTMANAGER coordinate-manipulation expand-bed -c 5000 $BEDFILE -o BED_5000bp.bed 
-java -jar $SCRIPTMANAGER read-analysis tag-pileup --combined --full-fragment $OUTPUT/BED_5000bp.bed $BAMFILE -o $OUTPUT\_composite.out -M $OUTPUT\_matrix
-java -jar $SCRIPTMANAGER coordinate-manipulation sort-bed -c 1000 $OUTPUT/BED_5000bp.bed $OUTPUT\_matrix_combined.cdt -o $OUPUT\_SORT.cdt 
-java -jar $SCRIPTMANAGER figure-generation heatmap -p .95 --black $OUTPUT/_SORT.cdt.cdt -o heatmap.png                                              
-
-rm BED_5000bp.bed 
-
+java -jar $SCRIPTMANAGER bam-statistics pe-stat $BAMFILE -o $OUTPUT
+java -jar $SCRIPTMANAGER coordinate-manipulation expand-bed -c 5000 $BEDFILE -o $OUTPUT\_BED_5000bp.bed
+java -jar $SCRIPTMANAGER read-analysis tag-pileup --combined --full-fragment $OUTPUT\_BED_5000bp.bed $BAMFILE -o $OUTPUT\_composite.out -M $OUTPUT\_matrix
+java -jar $SCRIPTMANAGER coordinate-manipulation sort-bed -c 1000 $OUTPUT\_BED_5000bp.bed $OUTPUT\_matrix_combined.cdt -o $OUTPUT\_SORT
+java -jar $SCRIPTMANAGER figure-generation heatmap -p .95 --black $OUTPUT\_SORT.cdt -o $OUTPUT\_heatmap.png
 
 # Output files:
-#  - /path/to/myoutput_bam_stats.txt
-#  - /path/to/myoutputBED_5000bp.bed 
+#  - /path/to/myoutput_InsertHistogram.out
+#  - /path/to/myoutput_PE.png
+#  - /path/to/myoutput_BED_5000bp.bed
 #  - /path/to/myoutput_composite.out
 #  - /path/to/myoutput_matrix_combined.cdt
-#  - /path/to/myoutput_SORT.cdt.cdt
+#  - /path/to/myoutput_SORT.bed
+#  - /path/to/myoutput_SORT.cdt
 #  - /path/to/myoutput_heatmap.png
 ```
 
+[encode-project]:https://www.encodeproject.org
 [noble-paper]:https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1000424&type=printable
 [saccer3cegr-fasta]:https://github.com/CEGRcode/GenoPipe/blob/master/EpitopeID/utility_scripts/genome_data/download_sacCer3_Genome.sh
 [noble2009]:https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1000424&type=printable
