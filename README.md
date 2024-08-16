@@ -5,11 +5,20 @@ https://pughlab.mbg.cornell.edu/scriptmanager-docs
 ## Migration from `CEGRcode/scriptmanager` (August 26, 2022)
 This website includes all the website-building files for the documentation of [ScriptManager](https://github.com/CEGRcode/scriptmanager). These were originally hosted within the same repository until they were split from the original `CEGRcode/scriptmanager` repository as a standalone repository. These files were migrated from the [892f2fb](https://github.com/CEGRcode/scriptmanager/commit/892f2fb0c9991fac0a60982ecf2c7416a6b0277d) commit.
 
+## Dependencies
+Docusaurus is powered by [NodeJS](https://nodejs.org/en). You can set it up with the following [conda](https://anaconda.org/conda-forge/nodejs) command:
+```
+conda create -n docusaurus -c conda-forge nodejs
+```
+After creating the environment above (do this once per machine), you can activate the environment anytime using
+```
+conda activate docusaurus
+```
+
 ## Docusaurus Instructions
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator. Use the following commands from within the repo directory (`cd /your/path/to/scriptmanager-docs`).
 
 ### Installation
-
 ```
 $ npm install
 ```

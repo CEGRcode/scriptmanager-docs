@@ -72,20 +72,20 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'Guides/getting-started',
+            docId: 'Guides/Getting-Started/getting-started',
             position: 'left',
             label: 'General',
           },
           {
             type: 'doc',
-            docId: 'read-analysis/tag-pileup',
+            docId: 'Tools/read-analysis/tag-pileup',
             position: 'left',
             label: 'Tools',
           },
           {
-            href: '/javadocs',
+            type: 'html',
+            value: '<a target="\_blank" href="/scriptmanager-docs/javadocs/" alt="API Docs" >JavaDocs</a>',
             position: 'right',
-            label: 'JavaDocs'
           },
           {
             href: 'https://github.com/CEGRcode/scriptmanager',
@@ -106,11 +106,11 @@ const config = {
             items: [
               {
                 label: 'Tool Index (A-Z)',
-                to: '/docs/References/tool-index',
+                to: '/docs/Guides/tool-index',
               },
               {
                 label: 'File Formats',
-                to: '/docs/References/file-formats',
+                to: '/docs/Guides/Getting-Started/file-formats',
               },
             ],
           },
