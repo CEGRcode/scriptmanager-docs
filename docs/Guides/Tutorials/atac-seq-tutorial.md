@@ -34,7 +34,7 @@ This is the set of transcription start site (TSS) annotations for the GRCh38 gen
 <Link
   className="button button--secondary"
   target="\_blank"
-  href="/sample_data/atac-seq-tutorial/UCSC_GRCh38_knownGene_GENCODEV3_ALL-TSS_2000bp.bed" >
+  href="/sample_data/atac-seq-tutorial/UCSC_GRCh38_knownGene_GENCODEV3_TSS_2000bp_SUBSAMPLE-2000-Sites.bed" >
   Download sample BED file
 </Link>
 
