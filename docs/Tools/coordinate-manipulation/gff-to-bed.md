@@ -1,7 +1,7 @@
 ---
 id: gff-to-bed
 title: Convert GFF to BED
-sidebar_label: Convert GFF to BED
+sidebar_label: GFF to BED
 ---
 
 ![gff-to-bed](/icons/Coordinate_Manipulation/GFFtoBED_square.svg)
@@ -29,7 +29,7 @@ This tool takes a single [GFF file][gff-format] for input.
 
 | Option | Description |
 | ------ | ----------- |
-| -o, --output | specify output directory (default name will be same as original with .bed ext) |
+| -o, --output | specify output filename (default name will be same as original with .bed ext) |
 | -s, --stdout | output bed to STDOUT |
 | `-z, --gzip`            | gzip output (default=false) |
 
