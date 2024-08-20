@@ -28,7 +28,7 @@ The `TOOLGROUP` corresponds to one of the tabs in the GUI tool while the `TOOLNA
 | | [bam-to-gff](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Format-Converter#bam-to-gff) |
 | | [bam-to-scidx](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Format-Converter#bam-to-scidx) |
 | **bam-manipulation** | [bam-indexer\*](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Manipulation#bam-indexer) |
-| | [remove-duplicates\*](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Manipulation#remove-duplicates) |
+| | [mark-duplicates\*](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Manipulation#mark-duplicates) |
 | | [filter-pip-seq](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Manipulation#filter-pip-seq) |
 | | [merge-bam\*](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Manipulation#merge-bam) |
 | | [sort-bam\*](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Manipulation#sort-bam) |
@@ -68,6 +68,7 @@ refer the user to the appropriate tool.
 | | [scaling-factor](https://github.com/CEGRcode/scriptmanager/wiki/Read-Analysis#scaling-factor) |
 | | [similarity-matrix](https://github.com/CEGRcode/scriptmanager/wiki/Read-Analysis#similarity-matrix-suspended) |
 | | [tag-pileup](https://github.com/CEGRcode/scriptmanager/wiki/Read-Analysis#tag-pileup) |
+| | [transpose-matrix](https://github.com/CEGRcode/scriptmanager/wiki/Read-Analysis#transpose-matrix) |
 | **seq-analysis** | [dna-shape-bed](https://github.com/CEGRcode/scriptmanager/wiki/Sequence-Analysis#dna-shape-bed) |
 | | [dna-shape-fasta](https://github.com/CEGRcode/scriptmanager/wiki/Sequence-Analysis#dna-shape-fasta) |
 | | [fasta-extract](https://github.com/CEGRcode/scriptmanager/wiki/Sequence-Analysis#fasta-extract) |

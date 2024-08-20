@@ -10,6 +10,15 @@ Sort a CDT file and its corresponding BED file by the total score in the CDT fil
 
 <img src={require('/../static/md-img/Coordinate_Manipulation/SortBEDWindow.png').default} style={{width:70+'%'}}/>
 
+### CDT File Statistics 
+CDT file statistics provide summary measures like mean, median, and standard deviation, along with distribution and clustering metrics, to help understand and analyze the genomic data's characteristics and variability.
+
+### Sorting Strategy
+Depending on the strategy selected, the "Size of Expansion" (in bins) can mean different things.
+
+* __Sort by Center:__ This strategy sorts genomic BED intervals according to the scores in the CDT file at the midpoint of each BED interval. 
+* __Sort by Index:__ This strategy sorts genomic BED intervals based on scores in the CDT file at a specific index position within each BED interval. 
+
 
 ## Command Line Interface
 
@@ -52,5 +61,5 @@ Note that if the value input using the `-c` flag is odd, it is the equivalent of
 
 
 
-[bed-format]:/docs/Guides/References/file-formats#bed
-[cdt-format]:/docs/Guides/References/file-formats#cdt
+[bed-format]:/docs/Guides/Getting-Started/file-formats#bed
+[cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt

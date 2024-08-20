@@ -31,7 +31,7 @@ Related Tools:
 | [`md5checksum`][md5checksum] |  |
 | [`merge-bam`][merge-bam] | [`merge-bam`][merge-bam] |
 | [`pe-stat`][pe-stat] |  |
-| [`remove-duplicates`][remove-duplicates] | [`remove-duplicates`][remove-duplicates] |
+| [`mark-duplicates`][mark-duplicates] | [`mark-duplicates`][mark-duplicates] |
 | [`scaling-factor`][scaling-factor] |  |
 | [`se-stat`][se-stat] |  |
 | [`signal-dup`][signal-dup] |  |
@@ -127,6 +127,7 @@ Related Tools:
 | [`heatmap`][heatmap] |  |
 |  | [`peak-align-ref`][peak-align-ref] |
 | [`scale-matrix`][scale-matrix] | [`scale-matrix`][scale-matrix] |
+| [`transpose-matrix`][transpose-matrix] | [`transpose-matrix`][transpose-matrix] |
 | [`sort-bed`][sort-bed] |  |
 |  | [`tag-pileup`][tag-pileup] |
 
@@ -215,8 +216,9 @@ Related Tools:
 [`peak-align-ref`][peak-align-ref]
 [`rand-coord`][rand-coord]
 [`randomize-fasta`][randomize-fasta]
-[`remove-duplicates`][remove-duplicates]
+[`mark-duplicates`][mark-duplicates]
 [`scale-matrix`][scale-matrix]
+[`transpose-matrix`][transpose-matrix]
 [`scaling-factor`][scaling-factor]
 [`se-stat`][se-stat]
 [`search-motif`][search-motif]
@@ -232,11 +234,21 @@ Related Tools:
 [ucsc-file-formats]:https://genome.ucsc.edu/FAQ/FAQformat.html
 [bam-specs]:https://samtools.github.io/hts-specs/
 [gff-specs]:https://useast.ensembl.org/info/website/upload/gff3.html
+
 [coordinate-systems]:https://tidyomics.com/blog/2018/12/09/2018-12-09-the-devil-0-and-1-coordinate-system-in-genomics/
 [wiggle]:https://genome.ucsc.edu/goldenPath/help/wiggle.html
 [tab]:http://wiki.christophchamp.com/index.php?title=TAB_file_format
 [lossless-images]:https://www.adobe.com/uk/creativecloud/photography/discover/lossy-vs-lossless.html
 [scidx-tags]:https://toolshed.g2.bx.psu.edu/repository/display_tool?repository_id=642b78707940da3a&tool_config=%2Fsrv%2Ftoolshed%2Fmain%2Fvar%2Fdata%2Frepos%2F002%2Frepo_2064%2Fbam_to_scidx.xml&changeset_revision=408520e1ae1a&render_repository_actions_for=tool_shed
+
+[bam-format]:/docs/Guides/Getting-Started/file-formats#bam
+[bed-format]:/docs/Guides/Getting-Started/file-formats#bed
+[bedgraph-format]:/docs/Guides/Getting-Started/file-formats#bedgraph
+[gff-format]:/docs/Guides/Getting-Started/file-formats#gff
+[fasta-format]:/docs/Guides/Getting-Started/file-formats#fasta
+[cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt
+[png-format]:/docs/Guides/Getting-Started/file-formats#png
+[scidx-format]:/docs/Guides/Getting-Started/file-formats#scidx
 
 [aggregate-data]:/docs/Tools/read-analysis/aggregate-data
 [bam-correlation]:/docs/Tools/bam-statistics/bam-correlation
@@ -264,8 +276,9 @@ Related Tools:
 [peak-align-ref]:/docs/Tools/peak-analysis/peak-align-ref
 [rand-coord]:/docs/Tools/peak-analysis/rand-coord
 [randomize-fasta]:/docs/Tools/sequence-analysis/randomize-fasta
-[remove-duplicates]:/docs/Tools/bam-manipulation/remove-duplicates
+[mark-duplicates]:/docs/Tools/bam-manipulation/mark-duplicates
 [scale-matrix]:/docs/Tools/read-analysis/scale-matrix
+[transpose-matrix]:read-analysis/transpose-matrix
 [scaling-factor]:/docs/Tools/read-analysis/scaling-factor
 [se-stat]:/docs/Tools/bam-statistics/se-stat
 [search-motif]:/docs/Tools/sequence-analysis/search-motif

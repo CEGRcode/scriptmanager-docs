@@ -23,7 +23,7 @@ Perform manipulations andd transformations of coordinate interval files (e.g. ex
 [sort-bed]:/docs/Tools/coordinate-manipulation/sort-bed
 [sort-gff]:/docs/Tools/coordinate-manipulation/sort-gff
 
-[bed-format]:/docs/Guides/References/file-formats#bed
-[cdt-format]:/docs/Guides/References/file-formats#cdt
-[gff-format]:/docs/Guides/References/file-formats#gff
-[mat-format]:/docs/Guides/References/file-formats#matrix-format-custom-for-these-toolss
+[bed-format]:/docs/Guides/Getting-Started/file-formats#bed
+[cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt
+[gff-format]:/docs/Guides/Getting-Started/file-formats#gff
+[mat-format]:/docs/Guides/Getting-Started/file-formats#matrix-format-custom-for-these-toolss

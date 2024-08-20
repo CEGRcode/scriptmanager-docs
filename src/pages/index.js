@@ -104,6 +104,8 @@ const AtacseqInfo = {
       size histograms for ATACseq data.
     </>
   ),
+  label: "View tutorial",
+  href: "docs/Guides/Tutorials/atac-seq-tutorial",
 };
 
 // Format list of images/figures for a single tab in GalleryTabContent

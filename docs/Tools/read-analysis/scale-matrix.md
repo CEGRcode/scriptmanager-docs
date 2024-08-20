@@ -28,6 +28,7 @@ This tool takes a single matrix file for input.
 | Option | Description |
 | ------ | ----------- |
 | `-o, --output=<output>` | specify output filename |
+| `-z, --gzip` | output compressed output (default=false) |
 
 
 
@@ -44,7 +45,7 @@ This tool takes a single matrix file for input.
 
 | Option | Description |
 | ------ | ----------- |
-| `-r, --start-row` |  |
-| `-l, --start-col` |  |
+| `-r, --start-row` | row to start scaling the matrix (zero indexed) |
+| `-l, --start-col` | column to start scaling the matrix (zero indexed) |
 
-[file-format]:/docs/Guides/References/file-formats
+[file-format]:/docs/Guides/Getting-Started/file-formats

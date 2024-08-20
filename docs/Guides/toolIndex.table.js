@@ -17,6 +17,13 @@ export const toolIndex = [
     url: "docs/Tools/read-analysis/aggregate-data",
   },
   {
+    name: "Cross Correlation",
+    group: "BS",
+    description: "Calculate optimal tag shift based on ArchTEx implementation from (PMID:22302569)",
+    command: "-",
+    url: "docs/bam-statistics/cross-corr",
+  },
+  {
     name: "BAM Correlation",
     group: "BS",
     description: "Output BAM Header including alignment statistics and parameters given any indexed (BAI) BAM File.",
@@ -196,7 +203,7 @@ export const toolIndex = [
 	  group: "BM",
 	  description: "This tool locates and tags duplicate reads in a BAM or SAM file, where duplicate reads are defined as originating from a single fragment of DNA.",
 	  command: "Picard",
-	  url: "docs/Tools/bam-manipulation/remove-duplicates",
+	  url: "docs/Tools/bam-manipulation/mark-duplicates",
 	},
 	{
 		name: "Scale Matrix",
@@ -267,6 +274,13 @@ export const toolIndex = [
 		description: "Generate a coordinate file that tiles (non-overlapping) across an entire genome.",
 		command: "-",
 		url: "docs/Tools/peak-analysis/tile-genome",
+	},
+  {
+  	name: "Transpose Matrix",
+		group: "RA",
+		description: "Interchange the rows and columns of a matrix.",
+		command: "-",
+		url: "docs/read-analysis/transpose-matrix",
 	},
 ];
 
