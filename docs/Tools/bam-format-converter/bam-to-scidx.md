@@ -57,3 +57,4 @@ These filter options are shared across all the BAM Format Converter tools.
 | `-2, --read2` | output read 2 |
 | `-a, --all-reads` | output combined |
 | `-m, --midpoint` | output midpoint (require PE) |
+| `--shift` | set a shift in bp (default=0bp) |
