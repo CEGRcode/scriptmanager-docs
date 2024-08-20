@@ -1,27 +1,29 @@
 ---
 id: transpose-matrix
-title: Transpose Matrix 
+title: Transpose Matrix
 sidebar_label: transpose-matrix
 ---
 
-Interchange the rows and columns of tab-delimited matrix data. 
+![transpose-matrix](/../static/icons/Read_Analysis/TransposeMatrix_square.svg)
+
+Transpose the rows and columns of tab-delimited matrix data.
 
 <img src={require('/../static/md-img/Read_Analysis/TransposeMatrixWindow.png').default} style={{width:70+'%'}}/>
 
 ### File Inputs (TAB/CDT Files)
-This tool processes TAB and CDT files where TAB files are tab-delimited text files and CDT files store hierarchical cluster data.
+This tool processes TAB and CDT tab-delimited formatted files and CDT files store data. The script also supports bulk selection and processing of files.
 
 ## Command Line Interface
 
 Usage:
 ```bash
-java -jar ScriptManager.jar read-analysis tranpose-matrix [-hV] [-l=<startCOL>]
+java -jar ScriptManager.jar read-analysis transpose-matrix [-hV] [-z] [-l=<startCOL>]
 [-o=<output>] [-r=<startROW>] <matrix>
 ```
 
 ## Positional Input
 
-This tool takes a matrix files in TAB/CDT format for input.
+This tool takes a matrix file in TAB/CDT format for input.
 
 
 ### Output Options
@@ -36,7 +38,7 @@ This tool takes a matrix files in TAB/CDT format for input.
 
 | Option | Description |
 | ------ | ----------- |
-| `-r, --start-row` |  |
-| `-l, --start-col` |  |
+| `-r, --start-row` | row to start transposing the matrix (zero indexed) |
+| `-l, --start-col` | column to start transposing the matrix (zero indexed) |
 
-[file-format]:/docs/References/file-formats
+[file-format]:/docs/Guides/Getting-Started/file-formats
