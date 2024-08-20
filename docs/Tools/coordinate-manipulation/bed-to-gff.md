@@ -29,6 +29,7 @@ This tool takes a single [BED file][bed-format] for input.
 | ------ | ----------- |
 | -o, --output | specify output directory (default name will be same as original with .gff ext) |
 | -s, --stdout | output gff to STDOUT |
+| `-z, --gzip`            | gzip output (default=false) |
 
 [bed-format]:/docs/Guides/Getting-Started/file-formats#bed
 [gff-format]:/docs/Guides/Getting-Started/file-formats#gff

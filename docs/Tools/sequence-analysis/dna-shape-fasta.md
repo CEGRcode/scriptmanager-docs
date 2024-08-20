@@ -58,6 +58,7 @@ Expects a [FASTA][fasta-format] formatted file with many sequences to stack up w
 | Option | Description |
 | ------ | ----------- |
 | `-o, --output=<outputBasename>` | Specify output basename (files for each shape indicated will share this base) |
+| `-z, --gzip`            | gzip output (default=false) |
 | `--avg-composite` | Save average composite |
 
 ### Shape Options

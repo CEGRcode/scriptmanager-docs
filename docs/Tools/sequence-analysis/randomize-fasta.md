@@ -34,7 +34,7 @@ java -jar ScriptManager.jar sequence-analysis randomize-fasta [-hV] [-o=<output>
 | Option | Description |
 | ------ | ----------- |
 | `-o, --output=<output>` | specify output directory (name will be same as original with .gff ext) |
-| `-z, --gzip` | output compressed output (default=false) |
+| `-z, --gzip`            | gzip output (default=false) |
 
 
 

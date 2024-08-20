@@ -33,5 +33,5 @@ java -jar ScriptManager.jar peak-analysis filter-bed [-hV] [-e=<exclusion>]
 | Option | Description |
 | ------ | ----------- |
 | `-o, --output=<outputBasename>` | specify basename for output files (default=`<bedFilename>_<exclusionNum>bp`)|
+| `-z, --gzip`            | gzip output (default=false) |
 | `-e, --exclusion=<exclusion>` | exclusion distance in bp (default=100) |
-| `-z, --gzip` | output compressed output (default=false) |

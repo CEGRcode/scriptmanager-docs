@@ -31,7 +31,7 @@ This tool takes a matrix file in TAB/CDT format for input.
 | Option | Description |
 | ------ | ----------- |
 | `-o, --output=<output>` | specify output filename |
-| `-z, --gzip` | output compressed output (default=false) |
+| `-z, --gzip`            | gzip output (default=false) |
 
 
 ### Coord Start Options

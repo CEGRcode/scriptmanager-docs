@@ -35,7 +35,7 @@ java -jar ScriptManager.jar peak-analysis tile-genome [-fhV] [-o=<output>]
 | Option | Description |
 | ------ | ----------- |
 | `-o, --output=<output>` | specify output directory (name will be `genome_tiles_<genome>_<window>bp.<ext>`) |
-
+| `-z, --gzip`            | gzip output (default=false) |
 
 | Option | Description |
 | ------ | ----------- |

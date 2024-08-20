@@ -41,6 +41,7 @@ java -jar ScriptManager.jar coordinate-manipulation sort-gff [-hV] [-c=<center>]
 | Option | Description |
 | ------ | ----------- |
 | `-o, --output=<outputBasename>` | specify output file basename (no .`cdt`/`.gff` extension, script will add that) |
+| `-z, --gzip`            | gzip output (default=false) |
 
 
 

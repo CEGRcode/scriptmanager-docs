@@ -45,6 +45,7 @@ This tool takes a single [GFF file][gff-format] for input.
 | ------ | ----------- |
 | `-o, --output` | specify output directory (default name will be same as original with `.gff` ext) |
 | `-s, --stdout` | output bed to STDOUT |
+| `-z, --gzip`            | gzip output (default=false) |
 
 
 ### Expansion Options

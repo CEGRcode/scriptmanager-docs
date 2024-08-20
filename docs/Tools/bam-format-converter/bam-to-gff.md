@@ -40,6 +40,7 @@ This tool takes a single BAM file for input. As with other tools, this tool requ
 | ------ | ----------- |
 | `-o, --output=<output>` | specify output directory (name will be same as original with .gff ext) |
 | `-s, --stdout` | stream output file to STDOUT (cannot be used with `-o` flag) |
+| `-z, --gzip`            | gzip output (default=false) |
 
 ### Filter Options
 These filter options are shared across all the BAM Format Converter tools.

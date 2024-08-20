@@ -48,7 +48,7 @@ java -jar ScriptManager.jar sequence-analysis search-motif [-hV] -m=<motif>
 | Option | Description |
 | ------ | ----------- |
 | `-o, --output=<output>` | specify output file |
-| `-z, --gzip` | output compressed output (default=false) |
+| `-z, --gzip`            | gzip output (default=false) |
 
 
 ### Search Options

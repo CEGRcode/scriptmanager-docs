@@ -42,7 +42,7 @@ The first positional input
 | Option | Description |
 | ------ | ----------- |
 | `-o, --output=<output>` | Specify output file |
-| `-z, --gzip` | output compressed output (default=false) |
+| `-z, --gzip`            | gzip output (default=false) |
 
 
 ### Extract Options

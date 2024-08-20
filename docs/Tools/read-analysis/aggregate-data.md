@@ -62,8 +62,8 @@ _Note that absolute file paths are easier to work with. For relative paths, you'
 | Option | Description |
 | ------ | ----------- |
 | `-m, --merge` | merge to one output file |
-| `-z, --gzip` | output compressed output (default=false) |
 | `-o, --output=<output>` | Specify output file, default is "aggregate_matrix.txt" or the input filename if -f flag used |
+| `-z, --gzip`            | gzip output (default=false) |
 
 The file output can be specified by the user using this flag. Otherwise the output will be `aggregate_matrix.txt` in the same directory as ScriptManager. Or based on the input filename if the `-f` flag is used.
 

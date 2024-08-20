@@ -43,6 +43,7 @@ java -jar ScriptManager.jar coordinate-manipulation sort-bed [-hV] [-c=<center>]
 | Option | Description |
 | ------ | ----------- |
 | `-o, --output=<outputBasename>` | specify output file basename (no .`cdt`/`.bed` extension, script will add that) |
+| `-z, --gzip`            | gzip output (default=false) |
 
 ### Sort Options
 

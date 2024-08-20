@@ -34,7 +34,8 @@ java -jar ScriptManager.jar peak-analysis rand-coord [-fhV] [-n=<numSites>]
 
 | Option | Description |
 | ------ | ----------- |
-| `-o, --output=<output>` | specify output directory (name will be `random_coordinates_<genome>_<window>bp.<ext>`)
+| `-o, --output=<output>` | specify output directory (name will be `random_coordinates_<genome>_<window>bp.<ext>`) |
+| `-z, --gzip`            | gzip output (default=false) |
 | `-f, --gff` | file format output as GFF (default format as BED) |
 | `-n, --num-sites=<numSites>` | number of sites (default=1000) |
 | `-w, --window=<window>` | window size in bp (default=200) |

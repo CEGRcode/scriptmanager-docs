@@ -49,6 +49,7 @@ This tool takes a single [BED file][bed-format] for input.
 | ------ | ----------- |
 | `-o, --output` | specify output directory (name will be same as original with coordinate info appended) |
 | `-s, --stdout` | output gff to STDOUT |
+| `-z, --gzip`            | gzip output (default=false) |
 
 
 
