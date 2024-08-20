@@ -255,6 +255,13 @@ export const toolIndex = [
 		url: "docs/Tools/coordinate-manipulation/sort-bed",
 	},
 	{
+		name: "Sort BED By Distance",
+		group: "PA",
+		description: "Sort BED/GFF by distance to another BED/GFF (e.g. peak annotations)",
+		command: "-",
+		url: "docs/Tools/peak-analysis/sort-by-dis",
+	},
+	{
 		name: "Sort GFF",
 		group: "CM",
 		description: "Sort a CDT file and its corresponding GFF file by the total score in the CDT file across the specified interval",
