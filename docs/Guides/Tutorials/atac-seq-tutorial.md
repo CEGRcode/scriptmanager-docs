@@ -212,7 +212,8 @@ Besides the composite plot image, ScriptManager has saved the matrix `*.cdt` fil
 ### 6. Sort BED file by CDT file
 Use Sort BED files by CDT to sort the entries based on chromosome name (C), followed by the start position (D), and then by the end position (T).
 
-#### 6.1. Navigate to Coordinate File Manipulation ➡️ [__Sort-BED__][sort-BED].
+#### 6.1. Navigate to Coordinate File Manipulation ➡️ [__Sort BED__][sort-bed].
+
 <div class="tutorial-img-flow-container">
   <img src={require('./img_atacseq/bedtocdt_coordinate.png').default} style={{width:60+'%',}}/>
 </div>
@@ -255,7 +256,6 @@ Use Sort BED files by CDT to sort the entries based on chromosome name (C), foll
   <img src={require('./img_atacseq/gui-heatmap-out.png').default} style={{width:45+'%',}}/>
 </div>
 
-
 <!-- Add section 8 for labeling heatmap -->
 
 ## Command-Line shell script
@@ -263,7 +263,7 @@ Use Sort BED files by CDT to sort the entries based on chromosome name (C), foll
 The following shell commands records the locations for a BED file, a BAM file, and the anticipated OUTPUT basename as environmental variables to derive the corresponding composite plot values and heatmaps. This can serve as a template for you to write out your own workflows as bash scripts that execute command-line style ScriptManager.
 
 ```bash
-SCRIPTMANAGER=/path/to/ScriptManager-v0.15.jar
+SCRIPTMANAGER=/path/to/ScriptManager.jar
 BEDFILE=/path/to/UCSC_GRCh38_knownGene_GENCODEV3_ALL-TSS_2000bp.bed
 BAMFILE=/path/to/ENCFF128WZG.bam
 OUTPUT=/path/to/myoutput
@@ -271,15 +271,15 @@ OUTPUT=/path/to/myoutput
 samtools index $BAMFILE
 
 java -jar $SCRIPTMANAGER bam-statistics pe-stat $BAMFILE -o $OUTPUT
-java -jar $SCRIPTMANAGER coordinate-manipulation expand-bed -c 5000 $BEDFILE -o $OUTPUT\_BED_5000bp.bed
-java -jar $SCRIPTMANAGER read-analysis tag-pileup --combined --full-fragment $OUTPUT\_BED_5000bp.bed $BAMFILE -o $OUTPUT\_composite.out -M $OUTPUT\_matrix
-java -jar $SCRIPTMANAGER coordinate-manipulation sort-bed -c 1000 $OUTPUT\_BED_5000bp.bed $OUTPUT\_matrix_combined.cdt -o $OUTPUT\_SORT
+java -jar $SCRIPTMANAGER coordinate-manipulation expand-bed -c 5000 $BEDFILE -o $OUTPUT\_5000bp.bed
+java -jar $SCRIPTMANAGER read-analysis tag-pileup --combined --full-fragment $OUTPUT\_5000bp.bed $BAMFILE -o $OUTPUT\_composite.out -M $OUTPUT\_matrix
+java -jar $SCRIPTMANAGER coordinate-manipulation sort-bed -c 1000 $OUTPUT\_5000bp.bed $OUTPUT\_matrix_combined.cdt -o $OUTPUT\_SORT
 java -jar $SCRIPTMANAGER figure-generation heatmap -p .95 --black $OUTPUT\_SORT.cdt -o $OUTPUT\_heatmap.png
 
 # Output files:
 #  - /path/to/myoutput_InsertHistogram.out
 #  - /path/to/myoutput_PE.png
-#  - /path/to/myoutput_BED_5000bp.bed
+#  - /path/to/myoutput_5000bp.bed
 #  - /path/to/myoutput_composite.out
 #  - /path/to/myoutput_matrix_combined.cdt
 #  - /path/to/myoutput_SORT.bed
@@ -287,7 +287,6 @@ java -jar $SCRIPTMANAGER figure-generation heatmap -p .95 --black $OUTPUT\_SORT.
 #  - /path/to/myoutput_heatmap.png
 ```
 
-[encode-project]:https://www.encodeproject.org
 [noble-paper]:https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1000424&type=printable
 [saccer3cegr-fasta]:https://github.com/CEGRcode/GenoPipe/blob/master/EpitopeID/utility_scripts/genome_data/download_sacCer3_Genome.sh
 [noble2009]:https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1000424&type=printable
@@ -297,7 +296,7 @@ java -jar $SCRIPTMANAGER figure-generation heatmap -p .95 --black $OUTPUT\_SORT.
 
 [java-install]:/docs/#java
 
-[sort-BED]:/docs/Tools/coordinate-manipulation/sort-bed
+[sort-bed]:/docs/Tools/coordinate-manipulation/sort-bed
 [pair-end-statistics]:/docs/Tools/bam-statistics/pe-stat
 [bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer
 [expand-bed]:/docs/Tools/coordinate-manipulation/expand-bed
@@ -307,7 +306,3 @@ java -jar $SCRIPTMANAGER figure-generation heatmap -p .95 --black $OUTPUT\_SORT.
 [file-formats]:/docs/Guides/Getting-Started/file-formats
 
 [encode-project]: https://www.encodeproject.org/experiments/ENCSR868FGK/
-
-
-
-
