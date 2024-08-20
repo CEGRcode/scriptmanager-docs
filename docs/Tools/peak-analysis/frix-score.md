@@ -1,6 +1,6 @@
 ---
 id: frix-score
-title: FriX Score Calculator 
+title: FRiX Score Calculator 
 sidebar_label: frix-score
 ---
 
