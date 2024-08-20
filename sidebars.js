@@ -8,6 +8,7 @@ module.exports = {
         "Guides/Getting-Started/file-formats",
         "Guides/Getting-Started/command-line",
         "Guides/Getting-Started/color-guide",
+        "Guides/Getting-Started/logging-manager",
       ],
     },
     "Guides/tool-index",
