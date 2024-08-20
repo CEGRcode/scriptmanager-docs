@@ -47,7 +47,7 @@ This tool takes a single [BED file][bed-format] for input.
 
 | Option | Description |
 | ------ | ----------- |
-| `-o, --output` | specify output directory (name will be same as original with coordinate info appended) |
+| `-o, --output` | specify output filename (default name will be same as original with expansion info and `.bed` ext) |
 | `-s, --stdout` | output gff to STDOUT |
 | `-z, --gzip`            | gzip output (default=false) |
 
