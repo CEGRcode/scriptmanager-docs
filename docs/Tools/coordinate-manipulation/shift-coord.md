@@ -10,7 +10,7 @@ author: Olivia Lang
 Shift coordinate intervals up/downstream.
 
 
-<img src={require('/../static/md-img/Coordinate_Manipulation/ShiftCoordinateWindow.png').default} style={{width:70+'%'}}/>
+<img src={require('/md-img/Coordinate_Manipulation/ShiftCoordinateWindow.png').default} style={{width:70+'%'}}/>
 
 Related to the [Bedtools `shift` function][bedtools-shift].
 

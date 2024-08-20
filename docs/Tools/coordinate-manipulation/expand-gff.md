@@ -4,11 +4,11 @@ title: Expand GFF File
 sidebar_label: Expand GFF File
 ---
 
-![expand-gff](/../static/icons/Coordinate_Manipulation/ExpandGFF_square.svg)
+![expand-gff](/icons/Coordinate_Manipulation/ExpandGFF_square.svg)
 
 Expands input GFF file by adding positions to the border or around the center
 
-<img src={require('/../static/md-img/Coordinate_Manipulation/ExpandGFFWindow.png').default} style={{width:70+'%'}}/>
+<img src={require('/md-img/Coordinate_Manipulation/ExpandGFFWindow.png').default} style={{width:70+'%'}}/>
 
 ### Input GFF files
 The graphical interface restricts file selection by the `.gff` file extension. This tool supports batch processing of files.

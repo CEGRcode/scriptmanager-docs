@@ -3,11 +3,11 @@ id: bam-indexer
 title: BAM Indexer
 sidebar_label: BAM Indexer
 ---
-![bam-indexer](/../static/icons/BAM_Manipulation/BAIIndexer_square.svg)
+![bam-indexer](/icons/BAM_Manipulation/BAIIndexer_square.svg)
 
 Generates BAI Index for input BAM files. Output BAI is in the same directory as input BAM file.
 
-<img src={require('/../static/md-img/BAM_Manipulation/BAIIndexerWindow.png').default} style={{width:70+'%'}}/>
+<img src={require('/md-img/BAM_Manipulation/BAIIndexerWindow.png').default} style={{width:70+'%'}}/>
 
 Most tools using BAM inputs (including ScriptManager) require a BAM index file (`.bai`) file so that the tool can efficiently query the file for alignment records. _Read more in the [Picard documentation][picard-index]_.
 

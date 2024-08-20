@@ -4,11 +4,11 @@ title: BAM to GFF
 sidebar_label: BAM to GFF
 ---
 
-![bam-to-gff](/../static/icons/BAM_Format_Converter/BAMtoGFF_square.svg)
+![bam-to-gff](/icons/BAM_Format_Converter/BAMtoGFF_square.svg)
 
 Convert BAM file to GFF file
 
-<img src={require('/../static/md-img/BAM_Format_Converter/BAMtoGFFWindow.png').default} style={{width:70+'%'}}/>
+<img src={require('/md-img/BAM_Format_Converter/BAMtoGFFWindow.png').default} style={{width:70+'%'}}/>
 
 ### Read Options
 

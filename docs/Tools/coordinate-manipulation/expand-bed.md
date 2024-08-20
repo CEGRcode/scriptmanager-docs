@@ -5,7 +5,7 @@ sidebar_label: Expand BED
 author: Olivia Lang
 ---
 
-![ExpandBED](/../static/icons/Coordinate_Manipulation/ExpandBED_square.svg)
+![ExpandBED](/icons/Coordinate_Manipulation/ExpandBED_square.svg)
 
 Expands input BED file by adding positions to the border or around the center.
 
@@ -15,7 +15,7 @@ This script is related to several [Bedtools functions][bedtools-slop] and is typ
 
 The script can also pad the intervals of BED coordinates to create intervals that aren't necessarily all of a fixed length.
 
-<img src={require('/../static/md-img/Coordinate_Manipulation/ExpandBEDWindow.png').default} style={{width:70+'%'}}/>
+<img src={require('/md-img/Coordinate_Manipulation/ExpandBEDWindow.png').default} style={{width:70+'%'}}/>
 
 ### Input BED files
 The graphical interface restricts file selection by the `.bed` file extension. This tool supports batch processing of files.

@@ -4,11 +4,11 @@ title: Sort GFF by CDT
 sidebar_label: sort-gff
 ---
 
-![sort-gff](/../static/icons/Coordinate_Manipulation/SortGFF_sqaure.svg)
+![sort-gff](/icons/Coordinate_Manipulation/SortGFF_sqaure.svg)
 
 Sort a CDT file and its corresponding GFF file by the total score in the CDT file across the specified interval
 
-<img src={require('/../static/md-img/Coordinate_Manipulation/SortGFFWindow.png').default} style={{width:70+'%'}}/>
+<img src={require('/md-img/Coordinate_Manipulation/SortGFFWindow.png').default} style={{width:70+'%'}}/>
 
 ### CDT File Statistics 
 CDT file statistics provide summary measures like mean, median, and standard deviation, along with distribution and clustering metrics, to help understand and analyze the genomic data's characteristics and variability.

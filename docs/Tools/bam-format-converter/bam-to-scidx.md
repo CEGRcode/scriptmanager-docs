@@ -4,11 +4,11 @@ title: BAM to scIDX
 sidebar_label: BAM to scIDX
 ---
 
-![bam-to-scidx](/../static/icons/BAM_Format_Converter/BAMtoscIDX_square.svg)
+![bam-to-scidx](/icons/BAM_Format_Converter/BAMtoscIDX_square.svg)
 
 Convert BAM file to scIDX file
 
-<img src={require('/../static/md-img/BAM_Format_Converter/BAMtoscIDXWindow.png').default} style={{width:70+'%'}}/>
+<img src={require('/md-img/BAM_Format_Converter/BAMtoscIDXWindow.png').default} style={{width:70+'%'}}/>
 
 ### Read Options
 

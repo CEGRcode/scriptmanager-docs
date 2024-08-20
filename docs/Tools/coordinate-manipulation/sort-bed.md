@@ -4,11 +4,11 @@ title: Sort BED by CDT
 sidebar_label: sort-bed
 ---
 
-![sort-bed](/../static/icons/Coordinate_Manipulation/SortBED_square.svg)
+![sort-bed](/icons/Coordinate_Manipulation/SortBED_square.svg)
 
 Sort a CDT file and its corresponding BED file by the total score in the CDT file across the specified interval
 
-<img src={require('/../static/md-img/Coordinate_Manipulation/SortBEDWindow.png').default} style={{width:70+'%'}}/>
+<img src={require('/md-img/Coordinate_Manipulation/SortBEDWindow.png').default} style={{width:70+'%'}}/>
 
 ### CDT File Statistics 
 CDT file statistics provide summary measures like mean, median, and standard deviation, along with distribution and clustering metrics, to help understand and analyze the genomic data's characteristics and variability.

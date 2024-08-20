@@ -4,18 +4,16 @@ title: BAM Cross Correlation (ArchTEx)
 sidebar_labal: BAM Cross Correlation
 ---
 
-<!-- ![cross-corr](/../static/icons/BAM_Statistics/Cross-Corr_square.svg) -->
+<!-- ![cross-corr](/icons/BAM_Statistics/Cross-Corr_square.svg) -->
 
 Calculate optimal tag shift based on ArchTEx implementation from [Lai et al, 2012 (PMID:22302569)][lai-2012].
 
-<div class="tutorial-img-flow-container">
-  <img src={require('./img/CrossCorrelation_schematic.png').default} style={{width:50+'%',}} />
-</div>
+<img src={require('./img/CrossCorrelation_schematic.png').default} style={{width:70+'%',}} />
 
 
 This tool is typically used for empirically determining a tag shift value for combining forward and reverse strand occupancies in tools such as [**Tag Pileup**][tag-pileup]. In many chromatin immunoprecipitation (ChIP)-based approaches, there is a slight offset of strand-specific read occupancies as shown above and this offset is different across experiments due to differences in the fragmentation method, the length of DNA that the protein target binds, secondary crosslink patterning, and a variety of other factors. To account for this variable offset, this computational approach to determining tag shift was developed. The correlation for every tag shift from 0 to 1000bp is calculated to determine the shift with the best correlation within this range.
 
-<img src={require('/../static/md-img/BAM_Statistics/CrossCorrelationWindow.png').default} style={{width:70+'%'}}/>
+<img src={require('/md-img/BAM_Statistics/CrossCorrelationWindow.png').default} style={{width:70+'%'}}/>
 
 
 ### Input BAM files

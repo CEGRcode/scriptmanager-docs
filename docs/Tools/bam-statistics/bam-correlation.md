@@ -4,11 +4,11 @@ title: BAM Correlation
 sidebar_label: bam-correlation
 ---
 
-![bam-correlation](/../static/icons/BAM_Statistics/BAMGenomeCorrelation_square.svg)
+![bam-correlation](/icons/BAM_Statistics/BAMGenomeCorrelation_square.svg)
 
 Genome-Genome correlations for replicate comparisons given multiple sorted and indexed (BAI) BAM files.
 
-<img src={require('/../static/md-img/BAM_Statistics/SEStatWindow.png').default} style={{width:70+'%'}}/>
+<img src={require('/md-img/BAM_Statistics/BAMGenomeCorrelationWindow.png').default} style={{width:70+'%'}}/>
 
 ### Read Options
 

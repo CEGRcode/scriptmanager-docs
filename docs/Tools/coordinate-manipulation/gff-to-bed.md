@@ -4,11 +4,11 @@ title: Convert GFF to BED
 sidebar_label: Convert GFF to BED
 ---
 
-![gff-to-bed](/../static/icons/Coordinate_Manipulation/GFFtoBED_square.svg)
+![gff-to-bed](/icons/Coordinate_Manipulation/GFFtoBED_square.svg)
 
 Converts GFF file format to BED file format
 
-<img src={require('/../static/md-img/Coordinate_Manipulation/GFFtoBEDWindow.png').default} style={{width:70+'%'}}/>
+<img src={require('/md-img/Coordinate_Manipulation/GFFtoBEDWindow.png').default} style={{width:70+'%'}}/>
 
 
 ## Command Line Interface

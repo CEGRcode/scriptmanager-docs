@@ -4,11 +4,11 @@ title: BAM to BED
 sidebar_label: BAM to BED
 ---
 
-![bam-to-bed](/../static/icons/BAM_Format_Converter/BAMtoBED_square.svg)
+![bam-to-bed](/icons/BAM_Format_Converter/BAMtoBED_square.svg)
 
 Convert BAM file to BED file
 
-<img src={require('/../static/md-img/BAM_Format_Converter/BAMtoBEDWindow.png').default} style={{width:70+'%'}}/>
+<img src={require('/md-img/BAM_Format_Converter/BAMtoBEDWindow.png').default} style={{width:70+'%'}}/>
 
 ### Read Options
 

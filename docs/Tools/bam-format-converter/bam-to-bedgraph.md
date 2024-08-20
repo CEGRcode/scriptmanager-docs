@@ -4,11 +4,11 @@ title: BAM to bedGraph
 sidebar_label: BAM to bedGraph
 ---
 
-![bam-to-bedgraph](/../static/icons/BAM_Format_Converter/BAMtobedGraph_square.svg)
+![bam-to-bedgraph](/icons/BAM_Format_Converter/BAMtobedGraph_square.svg)
 
 Convert BAM file to bedGraph file
 
-<img src={require('/../static/md-img/BAM_Format_Converter/BAMtobedGraphWindow.png').default} style={{width:70+'%'}}/>
+<img src={require('/md-img/BAM_Format_Converter/BAMtobedGraphWindow.png').default} style={{width:70+'%'}}/>
 
 ### Read Options
 

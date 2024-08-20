@@ -4,11 +4,11 @@ title: Paired-End Statistics
 sidebar_label: Paired-End Statistics
 ---
 
-![pe-stat](/../static/icons/BAM_Statistics/PEStats_square.svg)
+![pe-stat](/icons/BAM_Statistics/PEStats_square.svg)
 
 Generates Insert-size Histogram statistic (GEO requirement) and outputs BAM Header including alignment statistics and parameters given a sorted and indexed (BAI) paired-end BAM File.
 
-<img src={require('/../static/md-img/BAM_Statistics/PEStatWindow.png').default} style={{width:70+'%'}}/>
+<img src={require('/md-img/BAM_Statistics/PEStatWindow.png').default} style={{width:70+'%'}}/>
 
 This tool processes each input BAM file by calculating and tallying the insert-size of every single read pair.
 
