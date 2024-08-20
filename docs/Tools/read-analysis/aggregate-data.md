@@ -11,6 +11,16 @@ metric.
 
 <img src={require('/../static/md-img/Read_Analysis/AggregateDataWindow.png').default} style={{width:70+'%'}}/>
 
+### Aggregation Method Options
+
+* **Sum**
+* **Average**
+* **Median**
+* **Mode**
+* **Min**
+* **Max**
+* **Positional Variance**
+
 ## Command Line Interface
 
 Usage:
@@ -47,13 +57,12 @@ where `inputFile` is listed out line by line:
 _Note that absolute file paths are easier to work with. For relative paths, you'll have to check that they are built with respect to the ScriptManager directory._
 
 
-
-
 ### Output Options
 
 | Option | Description |
 | ------ | ----------- |
 | `-m, --merge` | merge to one output file |
+| `-z, --gzip` | output compressed output (default=false) |
 | `-o, --output=<output>` | Specify output file, default is "aggregate_matrix.txt" or the input filename if -f flag used |
 
 The file output can be specified by the user using this flag. Otherwise the output will be `aggregate_matrix.txt` in the same directory as ScriptManager. Or based on the input filename if the `-f` flag is used.
