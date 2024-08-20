@@ -24,7 +24,7 @@ Others manipulate files to calculate normalization factors, normalize the data, 
 [scaling-factor]:/docs/Tools/read-analysis/scaling-factor
 [similarity-matrix]:/docs/Tools/read-analysis/similarity-matrix
 [tag-pileup]:/docs/Tools/read-analysis/tag-pileup
-[transpose-matrix]:read-analysis/transpose-matrix.md
+[transpose-matrix]:/docs/Tools/read-analysis/transpose-matrix.md
 
 [bam-format]:/docs/Guides/Getting-Started/file-formats#bam
 [bed-format]:/docs/Guides/Getting-Started/file-formats#bed
