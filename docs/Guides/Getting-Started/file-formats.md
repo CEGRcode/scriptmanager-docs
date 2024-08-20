@@ -30,7 +30,7 @@ Related Tools:
 | [`md5checksum`][md5checksum] |  |
 | [`merge-bam`][merge-bam] | [`merge-bam`][merge-bam] |
 | [`pe-stat`][pe-stat] |  |
-| [`remove-duplicates`][remove-duplicates] | [`remove-duplicates`][remove-duplicates] |
+| [`mark-duplicates`][mark-duplicates] | [`mark-duplicates`][mark-duplicates] |
 | [`scaling-factor`][scaling-factor] |  |
 | [`se-stat`][se-stat] |  |
 | [`signal-dup`][signal-dup] |  |
@@ -202,7 +202,7 @@ Related Tools:
 [`peak-align-ref`][peak-align-ref]
 [`rand-coord`][rand-coord]
 [`randomize-fasta`][randomize-fasta]
-[`remove-duplicates`][remove-duplicates]
+[`mark-duplicates`][mark-duplicates]
 [`scale-matrix`][scale-matrix]
 [`transpose-matrix`][transpose-matrix]
 [`scaling-factor`][scaling-factor]
@@ -221,14 +221,14 @@ Related Tools:
 [bam-specs]:https://samtools.github.io/hts-specs/
 [gff-specs]:https://useast.ensembl.org/info/website/upload/gff3.html
 
-[bam-format]:/docs/Guides/References/file-formats#bam
-[bed-format]:/docs/Guides/References/file-formats#bed
-[bedgraph-format]:/docs/Guides/References/file-formats#bedgraph
-[gff-format]:/docs/Guides/References/file-formats#gff
-[fasta-format]:/docs/Guides/References/file-formats#fasta
-[cdt-format]:/docs/Guides/References/file-formats#cdt
-[png-format]:/docs/Guides/References/file-formats#png
-[scidx-format]:/docs/Guides/References/file-formats#scidx
+[bam-format]:/docs/Guides/Getting-Started/file-formats#bam
+[bed-format]:/docs/Guides/Getting-Started/file-formats#bed
+[bedgraph-format]:/docs/Guides/Getting-Started/file-formats#bedgraph
+[gff-format]:/docs/Guides/Getting-Started/file-formats#gff
+[fasta-format]:/docs/Guides/Getting-Started/file-formats#fasta
+[cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt
+[png-format]:/docs/Guides/Getting-Started/file-formats#png
+[scidx-format]:/docs/Guides/Getting-Started/file-formats#scidx
 
 [aggregate-data]:/docs/Tools/read-analysis/aggregate-data
 [bam-correlation]:/docs/Tools/bam-statistics/bam-correlation
@@ -256,7 +256,7 @@ Related Tools:
 [peak-align-ref]:/docs/Tools/peak-analysis/peak-align-ref
 [rand-coord]:/docs/Tools/peak-analysis/rand-coord
 [randomize-fasta]:/docs/Tools/sequence-analysis/randomize-fasta
-[remove-duplicates]:/docs/Tools/bam-manipulation/remove-duplicates
+[mark-duplicates]:/docs/Tools/bam-manipulation/mark-duplicates
 [scale-matrix]:/docs/Tools/read-analysis/scale-matrix
 [transpose-matrix]:read-analysis/transpose-matrix
 [scaling-factor]:/docs/Tools/read-analysis/scaling-factor

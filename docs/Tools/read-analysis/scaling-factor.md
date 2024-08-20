@@ -13,11 +13,18 @@ Calculate a normalization factor using the total tag method or normalization of 
 
 
 ### File input (BAM)
-The scaling factors are calculated directly from a BAM file and are calculated on a per-BAM basis. The scaling factor determined for one file should not be used to normalize data from another BAM file.
+The scaling factors are calculated directly from a BAM file and are calculated on a per-BAM basis. Make sure your input is properly formatted and uses the appropriate `.bam` extension. The scaling factor determined for one file should not be used to normalize data from another BAM file.
 
 :::caution
 Make sure your BAM input files are [sorted][sort-bam] and [indexed][bam-indexer].
 :::
+
+### Filter Options
+* The 'Blacklist' option allows the user to provide a file containing blacklisted entires to exclude certain regions of data from the calculations.
+* There are also options specific for when the user selects an NCIS-style calculation metod:
+  * The 'Control BAM' option is for specifying the control BAM file to model the background-signal
+  * The 'Window Size(bp)' adjusts the size of the tiling window used
+  * The 'Minimum Fraction' sets the minimum fraction for the NCIS method thresholding
 
 ### Scaling Methods
 
@@ -36,7 +43,7 @@ java -jar ScriptManager.jar read-analysis scaling-factor [-t | -n | -b] [-hV]
 ```
 
 
-
+### Filter Options
 | Option | Description |
 | ------ | ----------- |
 | `-f, --blacklist=<blacklistFilter>` | specify blacklist file to filter by |
@@ -71,7 +78,7 @@ This tool takes a single BAM file for input. As with other tools, this tool requ
 
 
 [Liang_2012]:https://pubmed.ncbi.nlm.nih.gov/22883957/
-[file-format]:/docs/Guides/References/file-formats
+[file-format]:/docs/Guides/Getting-Started/file-formats
 
 [sort-bam]:/docs/Tools/bam-manipulation/sort-bam
 [bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer

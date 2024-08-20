@@ -208,6 +208,6 @@ Note user should not use the pound symbol (`#`) in front of the hexidecimal beca
 [merge-heatmap]:/docs/Tools/figure-generation/merge-heatmap
 [peak-align-ref]:/docs/Tools/peak-analysis/peak-align-ref
 
-[cdt-format]:/docs/Guides/References/file-formats#cdt
-[png-format]:/docs/Guides/References/file-formats#png
+[cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt
+[png-format]:/docs/Guides/Getting-Started/file-formats#png
 [color-guide]:/docs/Guides/Getting-Started/color-guide

@@ -13,7 +13,6 @@ Generates Insert-size Histogram statistic (GEO requirement) and outputs BAM Head
 This tool processes each input BAM file by calculating and tallying the insert-size of every single read pair.
 
 
-
 :::caution
 Make sure your BAM input files are [sorted][sort-bam] and [indexed][bam-indexer].
 :::

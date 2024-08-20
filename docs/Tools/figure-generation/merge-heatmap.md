@@ -106,8 +106,8 @@ Expects two [PNG][png-format] like the output from the [heatmap tool][heatmap]. 
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | `-o, --output=<output>` | specify output filename, please use PNG extension (`<senseFile>_merged.png` appended to the name in working directory of ScriptManager |
 
-[cdt-format]:/docs/Guides/References/file-formats#cdt
-[png-format]:/docs/Guides/References/file-formats#png
+[cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt
+[png-format]:/docs/Guides/Getting-Started/file-formats#png
 
 [heatmap]:/docs/Tools/figure-generation/heatmap
 

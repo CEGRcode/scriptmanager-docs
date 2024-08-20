@@ -48,7 +48,7 @@ The CLI will not index the resulting BAM file. The user must use appropriate [sa
 Usage:
 ```bash
 java -jar ScriptManager.jar bam-manipulation filter-pip-seq [-hV] [-f=<filterString>]
-[-o=<output>] <bamFile> <genomeFASTA>
+[-o=<output>] <genomeFASTA> <bamFile>
 ```
 
 ### Output Options

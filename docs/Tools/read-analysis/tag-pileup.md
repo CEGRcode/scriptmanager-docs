@@ -183,8 +183,8 @@ The help guide groups the options by their relation to different aspects of Scri
 
 For visualizing composite data like the GUI window, you need to use a separate tool in the CLI tools. See [Composite Plot][composite-plot] tool.
 
-[file-format]:/docs/Guides/References/file-formats
-[cdt-format]:/docs/Guides/References/file-formats#cdt
+[file-format]:/docs/Guides/Getting-Started/file-formats
+[cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt
 
 [composite-plot]: /docs/Tools/figure-generation/composite-plot
 [heatmap]:/docs/Tools/figure-generation/heatmap

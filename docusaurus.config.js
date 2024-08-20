@@ -83,9 +83,9 @@ const config = {
             label: 'Tools',
           },
           {
-            href: '/javadocs/',
+            type: 'html',
+            value: '<a target="\_blank" href="/scriptmanager-docs/javadocs/" alt="API Docs" >JavaDocs</a>',
             position: 'right',
-            label: 'JavaDocs'
           },
           {
             href: 'https://github.com/CEGRcode/scriptmanager',
@@ -106,11 +106,11 @@ const config = {
             items: [
               {
                 label: 'Tool Index (A-Z)',
-                to: '/docs/References/tool-index',
+                to: '/docs/Guides/tool-index',
               },
               {
                 label: 'File Formats',
-                to: '/docs/References/file-formats',
+                to: '/docs/Guides/Getting-Started/file-formats',
               },
             ],
           },

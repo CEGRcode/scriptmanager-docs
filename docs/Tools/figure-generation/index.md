@@ -19,7 +19,7 @@ Make publication quality figures from heatmap matrix data and sequences.
 [heatmap]:/docs/Tools/figure-generation/heatmap
 [merge-heatmap]:/docs/Tools/figure-generation/merge-heatmap
 
-[cdt-format]:/docs/Guides/References/file-formats#cdt
-[fasta-format]:/docs/Guides/References/file-formats#fasta
-[mat-format]:/docs/Guides/References/file-formats#matrix-format-custom-for-these-tools
-[png-format]:/docs/Guides/References/file-formats#png
+[cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt
+[fasta-format]:/docs/Guides/Getting-Started/file-formats#fasta
+[mat-format]:/docs/Guides/Getting-Started/file-formats#matrix-format-custom-for-these-tools
+[png-format]:/docs/Guides/Getting-Started/file-formats#png
