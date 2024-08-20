@@ -4,7 +4,7 @@ title: File Formats
 sidebar_label: File Formats
 ---
 
-A variety of standard file formats including BAM, GFF, BED, and [CDT][cdt-format] are used by the ScriptManager tools along with some custom file formats. The purpose of this guide is to help users find tools in ScriptManager based on the format their data exists in.
+A variety of standard file formats including [BAM](#bam), [GFF](#gff), [BED](#bed), and [CDT](#cdt) are used by the ScriptManager tools along with some custom file formats. The purpose of this guide is to help users find tools in ScriptManager based on the format their data exists in.
 
 ### Read More
 While this page includes a little info on each of the file formats, there are other resources on the internet that provide detailed descriptions and context that will better inform users looking for more explanation on the data formats (see links below).
@@ -13,6 +13,7 @@ While this page includes a little info on each of the file formats, there are ot
 - [Deeptools file formats guide][encode-file-formats]
 
 ## BAM
+#### _Binary Alignment Map_
 
 The binary form of SAM file format, this is one of the most common formats used by ScriptManager. It's the output of aligners when aligning reads to a reference sequence. See Samtools documentation  or the documentation from the alignment tool for [specification info][bam-specs].
 
@@ -39,8 +40,9 @@ Related Tools:
 
 
 ## BED
+#### _Browser Extendable Data_
 
-0- or 1-indexed...
+A text-based file format for storing information about genomic regions. ScriptManager supports [0-based and 1-based][coordinate-systems] BED files.
 
 Related Tools:
 
@@ -62,6 +64,8 @@ Related Tools:
 
 ## bedGraph
 
+A format used for plotting one value of quantitative data across a genome or region. This format is most closely related to the [wiggle format][wiggle] and always [0-based][coordinate-systems].
+
 Related Tools:
 
 | Input | Output |
@@ -70,6 +74,7 @@ Related Tools:
 
 
 ## GFF
+#### _General Feature Format_
 
 The GTF/GFF/GFF3 file specifications are documented in several places around the the bioinformatics community. See Ensembl for [specification info][gff-specs].
 
@@ -92,11 +97,12 @@ Related Tools:
 
 ## FASTA
 
+A simple, text-based format for representing DNA or protein sequences. Files in the FASTA format may have different extensions, including `.fasta`, `.fna`, `.ffn`, `.frn`, `.fa`, or even `.txt`.
+
 Related Tools:
 
 | Input | Output |
 | ------------- | ------------- |
-|  |  |
 | [`dna-shape-bed`][dna-shape-bed] |  |
 | [`dna-shape-fasta`][dna-shape-fasta] |  |
 | [`fasta-extract`][fasta-extract] | [`fasta-extract`][fasta-extract] |
@@ -106,14 +112,15 @@ Related Tools:
 
 
 ## CDT
+#### _Clustered Data Table_
 
-Although this  is a standard matrix file format, it is perhaps less familiar among bioinformaticians.
+A standard format for matrices, with two row headers and one column header. Values are separated by `\t` characters, making these files a subset of the [TAB](#tab) format.
 
 Related Tools:
 
 | Input | Output |
 | ------------- | ------------- |
-| [`aggregate-data`][aggregate-data] | [`aggregate-data`][aggregate-data] |
+| [`aggregate-data`][aggregate-data] |  |
 | [`composite`][composite] |  |
 |  | [`dna-shape-bed`][dna-shape-bed] |
 |  | [`dna-shape-fasta`][dna-shape-fasta] |
@@ -125,21 +132,24 @@ Related Tools:
 |  | [`tag-pileup`][tag-pileup] |
 
 
-## Matrix format (custom for these tools)
+## TAB
 
-The output from [TagPileup][tag-pileup] is the format for the matrix format
+A text-based format for storing matrices with values separated by [`\t` characters][tab]. These files can be easily viewed in Excel or Google Sheets.
 
 Related Tools:
 
 | Input | Output |
 | ------------- | ------------- |
-|  |  |
-|  |  |
+| [`aggregate-data`][aggregate-data] | |
+| [`heatmap`][heatmap] |  |
+|  | [`tag-pileup`][tag-pileup] |
+| [`scale-matrix`][scale-matrix] | [`scale-matrix`][scale-matrix] |
 
 
 ## PNG
+#### _Portable Network Graphic_
 
-A standard image format LINKHERE...
+A standard, [lossless][lossless-images] image format used for storing figures.
 
 Related Tools:
 
@@ -153,16 +163,20 @@ Related Tools:
 
 
 ## scIDX
+#### _Strand-specific coordinate count_
+A lesser-used, [1-based][coordinate-systems]  format for storing the [number of tags][scidx-tags] at a given coordinate.
 
 Related Tools:
 
 | Input | Output |
 | ------------- | ------------- |
-| [`bam-to-scidx`][bam-to-scidx] |  |
+|  | [`bam-to-scidx`][bam-to-scidx]<br></br>_file has the [`.tab`](#tab) extension_|
 
 
 
 ## TXT
+#### _Text File_
+A standard format for storing text. Some text files may have the `.out` extension.
 
 Related Tools:
 
@@ -220,6 +234,12 @@ Related Tools:
 [ucsc-file-formats]:https://genome.ucsc.edu/FAQ/FAQformat.html
 [bam-specs]:https://samtools.github.io/hts-specs/
 [gff-specs]:https://useast.ensembl.org/info/website/upload/gff3.html
+
+[coordinate-systems]:https://tidyomics.com/blog/2018/12/09/2018-12-09-the-devil-0-and-1-coordinate-system-in-genomics/
+[wiggle]:https://genome.ucsc.edu/goldenPath/help/wiggle.html
+[tab]:http://wiki.christophchamp.com/index.php?title=TAB_file_format
+[lossless-images]:https://www.adobe.com/uk/creativecloud/photography/discover/lossy-vs-lossless.html
+[scidx-tags]:https://toolshed.g2.bx.psu.edu/repository/display_tool?repository_id=642b78707940da3a&tool_config=%2Fsrv%2Ftoolshed%2Fmain%2Fvar%2Fdata%2Frepos%2F002%2Frepo_2064%2Fbam_to_scidx.xml&changeset_revision=408520e1ae1a&render_repository_actions_for=tool_shed
 
 [bam-format]:/docs/Guides/Getting-Started/file-formats#bam
 [bed-format]:/docs/Guides/Getting-Started/file-formats#bed
