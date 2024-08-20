@@ -278,7 +278,7 @@ Related Tools:
 [randomize-fasta]:/docs/Tools/sequence-analysis/randomize-fasta
 [mark-duplicates]:/docs/Tools/bam-manipulation/mark-duplicates
 [scale-matrix]:/docs/Tools/read-analysis/scale-matrix
-[transpose-matrix]:read-analysis/transpose-matrix
+[transpose-matrix]:/docs/Tools/read-analysis/transpose-matrix
 [scaling-factor]:/docs/Tools/read-analysis/scaling-factor
 [se-stat]:/docs/Tools/bam-statistics/se-stat
 [search-motif]:/docs/Tools/sequence-analysis/search-motif

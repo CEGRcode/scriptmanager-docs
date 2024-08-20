@@ -87,4 +87,4 @@ Original code: https://github.com/WilliamKMLai/ArchTEx
 
 [lai-2012]:https://pubmed.ncbi.nlm.nih.gov/22302569/
 
-[tag-pileup]:/docs/read-analysis/tag-pileup
+[tag-pileup]:/docs/Tools/read-analysis/tag-pileup
