@@ -2,6 +2,7 @@
 id: atac-seq-tutorial
 title: "ATAC-seq Tutorial"
 sidebar_label: "ATAC-seq"
+sidebar_position: 2
 ---
 
 import Tabs from '@theme/Tabs';
