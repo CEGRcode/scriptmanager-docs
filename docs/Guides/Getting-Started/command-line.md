@@ -94,30 +94,30 @@ At any point in building a command, if you get stuck or are unsure of your optio
 
 ## Output Options
 
+There are several ways that ScriptManager can return output when executing its scripts.
+
 ### Default filename
 Most tools generate a filename based on the input filenames and attempt to mimic the file naming system of the GUI tools.
 
 ### Specify Output filename (`-o`)
 Many tools allow the user to specify output filenames or output file basenames (`-o`).
 
-When appropriate, some tools have constraints are added to check the extension of the output filename so that it matches the correct format. The tools also check that the parent directory exist before attempting to execute. The tool will print messages that let the user know when the filename fails these checks.
+When appropriate, some tools check that the parent directory in a filepath exists before attempting to execute. The tool will print messages that let the user know when the filename fails these checks.
 
 ### Redirect to STDOUT (`-s`)
-Some tools allow the user to stream the output to [standard output][stdout-help] or "STDOUT". This is to mimic the function of other tools like Samtools, Bedtools, etc.
+Some tools allow the user to stream the output to [standard output][stdout-help] or STDOUT. This is to mimic the function of other tools like Samtools, Bedtools, etc.
+
+Since not all tools support streaming to STDOUT, check the help guide if you're not sure (`-h`).
 
 #### Advantages of streaming:
 1. Save on disk space (fewer intermediate files)
 2. Potentially speed up command by skipping steps to write intermediate file to disk (save on I/O operations).
 
 :::note
-Only some of the tools have this option. Check the help guide if you're not sure.
-:::
-
-:::note
 This flag cannot be used in combination with the `-o` flag.
 :::
 
-#### Examples
+### Examples
 
 For example, if we wanted to run some `COMMANDA` tool and then use the output as an input for the `COMMANDB` tool, there are several ways to run this in a shell script.
 
@@ -142,9 +142,9 @@ COMMANDB <( COMMANDA input.file -s ) -o results.file
 
 <br></br>
 
-More specifically, below shows how these methods would look linking the inputs and outputs of the [Expand BED][expand-bed] and [Tag Pileup][tag-pileup] tools for a user that wants to look at the tag pileup results around a wider coordinate interval window.
+More specifically, below shows how these methods would look linking the inputs and outputs of the [GFF to BED][gff-to-bed] and [Tag Pileup][tag-pileup] tools for a user that wants to look at the tag pileup results around the coordinate interval window defined in a GFF file.
 ```bash
-## TASK: Run TagPileup using data.bam on a GFF-formatted Tup1 peak file when TagPileup expects a BED-formatted input.
+## TASK: Say you want to run TagPileup using data.bam on a GFF-formatted Tup1 peak file when TagPileup expects a BED-formatted input.
 # Method A -save intermediate files
 java -jar ScriptManager.jar coordinate-manipulation gff-to-bed Tup1_peaks.gff -o intermediate.bed
 java -jar ScriptManager.jar read-analysis tag-pileup intermediate.bed data.bam -o RESULTS.composite
@@ -160,5 +160,5 @@ java -jar ScriptManager.jar read-analysis tag-pileup \
 
 [stdout-help]:https://linuxhint.com/bash_stdin_stderr_stdout/
 
-[expand-bed]:/docs/Tools/coordinate-manipulation/expand-bed
+[gff-to-bed]:/docs/Tools/coordinate-manipulation/gff-to-bed
 [tag-pileup]:/docs/Tools/read-analysis/tag-pileup
