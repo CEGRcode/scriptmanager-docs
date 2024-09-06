@@ -89,3 +89,4 @@ java -jar ScriptManager.jar peak-analysis frix-score [-5 | -3 | -m] [-1 | -2 | -
 
 [file-format]:/docs/References/file-formats
 [sort-bam]:/docs/Tools/bam-manipulation/sort-bam
+[bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer
