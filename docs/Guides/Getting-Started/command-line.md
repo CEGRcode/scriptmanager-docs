@@ -18,65 +18,11 @@ To run tools from the CLI version of ScriptManager, use the following format.
 
 The `TOOLGROUP` corresponds to one of the tabs in the GUI tool while the `TOOLNAME` corresponds to the specific tool within the `TOOLGROUP` group. Each tool will have its own set of input requirements and options. You will have to rely on the `-h` flag for usage help or the documentation here for the specific tool you wish to use.
 
-<table>
-<tr valign="top"><td>
+:::tip
 
-| Tool Group  | Tool Name |
-| ------------- | ------------- |
-| **bam-format-converter** | [bam-to-bedgraph](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Format-Converter#bam-to-bedgraph) |
-| | [bam-to-bed](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Format-Converter#bam-to-bed) |
-| | [bam-to-gff](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Format-Converter#bam-to-gff) |
-| | [bam-to-scidx](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Format-Converter#bam-to-scidx) |
-| **bam-manipulation** | [bam-indexer\*](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Manipulation#bam-indexer) |
-| | [mark-duplicates\*](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Manipulation#mark-duplicates) |
-| | [filter-pip-seq](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Manipulation#filter-pip-seq) |
-| | [merge-bam\*](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Manipulation#merge-bam) |
-| | [sort-bam\*](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Manipulation#sort-bam) |
-| **bam-statistics** | [se-stat](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Statistics#se-stat) |
-| | [pe-stat](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Statistics#pe-stat) |
-| | [bam-correlation](https://github.com/CEGRcode/scriptmanager/wiki/BAM-Statistics#bam-correlation) |
-| **coordinate-manipulation** | [bed-to-gff](https://github.com/CEGRcode/scriptmanager/wiki/Coordinate-Manipulation#bed-to-gff) |
-| | [gff-to-bed](https://github.com/CEGRcode/scriptmanager/wiki/Coordinate-Manipulation#gff-to-bed) |
-| | [expand-bed](https://github.com/CEGRcode/scriptmanager/wiki/Coordinate-Manipulation#expand-bed) |
-| | [expand-gff](https://github.com/CEGRcode/scriptmanager/wiki/Coordinate-Manipulation#expand-gff) |
-| | [sort-bed](https://github.com/CEGRcode/scriptmanager/wiki/Coordinate-Manipulation#sort-bed) |
-| | [sort-gff](https://github.com/CEGRcode/scriptmanager/wiki/Coordinate-Manipulation#sort-gff) |
+Look up a full list of tool names and their groups [here][tool-index].
 
-\* - these tools don't have a CLI version\
-because the GUI versions originally wrap\
-existing CLI tools. Executing these will\
-refer the user to the appropriate tool.
-
-</td><td>
-
-| Tool Group  | Tool Name |
-| ------------- | ------------- |
-| **figure-generation** | [composite](https://github.com/CEGRcode/scriptmanager/wiki/Figure-Generation#composite) |
-| | [four-color](https://github.com/CEGRcode/scriptmanager/wiki/Figure-Generation#four-color) |
-| | [heatmap](https://github.com/CEGRcode/scriptmanager/wiki/Figure-Generation#heatmap) |
-| | [merge-heatmap](https://github.com/CEGRcode/scriptmanager/wiki/Figure-Generation#merge-heatmap) |
-| **file-utilities** | [md5checksum\*](https://github.com/CEGRcode/scriptmanager/wiki/File-Utilities#md5checksum) |
-| **peak-analysis** | [peak-align-ref](https://github.com/CEGRcode/scriptmanager/wiki/Peak-Analysis#peak-align-ref) |
-| | [filter-bed](https://github.com/CEGRcode/scriptmanager/wiki/Peak-Analysis#filter-bed) |
-| | [rand-coord](https://github.com/CEGRcode/scriptmanager/wiki/Peak-Analysis#rand-coord) |
-| | [signal-dup](https://github.com/CEGRcode/scriptmanager/wiki/Peak-Analysis#signal-dup) |
-| | [tile-genome](https://github.com/CEGRcode/scriptmanager/wiki/Peak-Analysis#tile-genome) |
-| **peak-calling** | gene-track |
-| | peak-pair |
-| **read-analysis** | [aggregate-data](https://github.com/CEGRcode/scriptmanager/wiki/Read-Analysis#aggregate-data) |
-| | [scale-matrix](https://github.com/CEGRcode/scriptmanager/wiki/Read-Analysis#scale-matrix) |
-| | [scaling-factor](https://github.com/CEGRcode/scriptmanager/wiki/Read-Analysis#scaling-factor) |
-| | [similarity-matrix](https://github.com/CEGRcode/scriptmanager/wiki/Read-Analysis#similarity-matrix-suspended) |
-| | [tag-pileup](https://github.com/CEGRcode/scriptmanager/wiki/Read-Analysis#tag-pileup) |
-| | [transpose-matrix](https://github.com/CEGRcode/scriptmanager/wiki/Read-Analysis#transpose-matrix) |
-| **seq-analysis** | [dna-shape-bed](https://github.com/CEGRcode/scriptmanager/wiki/Sequence-Analysis#dna-shape-bed) |
-| | [dna-shape-fasta](https://github.com/CEGRcode/scriptmanager/wiki/Sequence-Analysis#dna-shape-fasta) |
-| | [fasta-extract](https://github.com/CEGRcode/scriptmanager/wiki/Sequence-Analysis#fasta-extract) |
-| | [randomize-fasta](https://github.com/CEGRcode/scriptmanager/wiki/Sequence-Analysis#randomize-fasta) |
-| | [search-motif](https://github.com/CEGRcode/scriptmanager/wiki/Sequence-Analysis#search-motif) |
-
-</td></tr>
-</table>
+:::
 
 ## General Options
 
