@@ -26,7 +26,7 @@ export const toolIndex = [
   {
     name: "BAM Correlation",
     group: "BS",
-    description: "Output BAM Header including alignment statistics and parameters given any indexed (BAI) BAM File.",
+    description: "Genome-Genome correlations for replicate comparisons given multiple sorted and indexed (BAI) BAM files.",
     command: "-",
     url: "docs/Tools/bam-statistics/bam-correlation",
   },
@@ -222,7 +222,7 @@ export const toolIndex = [
 	{
 		name: "Single-end Statistics",
 		group: "BS",
-		description: "Genome-Genome correlations for replicate comparisons given multiple sorted and indexed (BAI) BAM files.",
+		description: "Output BAM Header including alignment statistics and parameters given any indexed (BAI) BAM File.",
 		command: "-",
 		url: "docs/Tools/bam-statistics/se-stat",
 	},
