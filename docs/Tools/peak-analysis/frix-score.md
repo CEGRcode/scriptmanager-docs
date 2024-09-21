@@ -1,17 +1,21 @@
 ---
 id: frix-score
-title: FRiX Score Calculator 
-sidebar_label: frix-score
+title: FRiX Score Calculator
+sidebar_label: FRiX Calculator
 ---
 
-Quantify library enrichment around a set of Reference points (Fraction of Reads in Peak/Motif, aka FRiP/FRiM)
+<!-- ![frix](/icons/Peak_Analysis/FRiXCalculator_square.svg) -->
 
-<img src={require('/../static/md-img/Peak_Analysis/FRiXScoreWindow.png').default} style={{width:70+'%'}}/>
+Quantify library enrichment around a set of Reference points (Fraction of Reads in Peak/Motif, aka FRiP/FRiM).
+
+Evaluating enrichment of a genomic library around a given set of annotations is a useful way to check how much signal is in a genomic library like a ChIP-seq dataset.
+
+<img src={require('/md-img/Peak_Analysis/FRiXCalculatorWindow.png').default} style={{width:70+'%'}}/>
 
 ### File inputs (BAM & BED)
-This script processes BAM-type files so make sure your input is properly formatted and uses the appropriate `.bam` extension. 
+This script processes BAM-type files so make sure your input is properly formatted and uses the appropriate `.bam` extension.
 
-This script also processes BED-type files so make sure your input is properly formatted and uses the appropriate `.bed` or `.bed.gz` extension. 
+This script also processes BED-type files so make sure your input is properly formatted and uses the appropriate `.bed` or `.bed.gz` extension.
 
 :::caution
 Make sure your BAM input files are [sorted][sort-bam] and [indexed][bam-indexer].
@@ -37,6 +41,23 @@ For the **5' End** and **3' End** options, the tool also provides the selection 
 ### Read Manipulation
 
 The user can shift the aligned tags by indicating the number of base pairs to be shifted by in the 'Tag Shift' box.
+
+
+## Output Statistics
+
+Below is an example of the text output file which shows the set of metrics calculated.
+
+```
+BAM filename: /path/to/MyBAMFile.bam
+RefPT filename: /path/to/MyRefPT_100bp.bed
+Number of Sites: 69733
+Total aligned read count: 9435384.0
+Total genome size: 3.137161264E9
+Summed tags at all sites: 19851.0
+FRiX score: 0.0021038889355218613
+FRiX density: 6.706346146960016E-13
+```
+
 
 ## Command Line Interface
 
