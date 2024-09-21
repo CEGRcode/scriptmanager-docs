@@ -349,7 +349,7 @@ export const toolIndex = [
     group: "RA",
     description: "Interchange the rows and columns of a matrix.",
     command: "-",
-    url: "docs/read-analysis/transpose-matrix",
+    url: "docs/Tools/read-analysis/transpose-matrix",
   },
 ];
 
