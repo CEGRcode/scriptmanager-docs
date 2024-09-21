@@ -5,11 +5,19 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 // ----------------------------------------------------------------------------
 // Please respect alphabetical (name) order when adding new entries.
 // ----------------------------------------------------------------------------
+const defaultTool = {
+  name: "MyTool",
+  group: "MyGroup",
+  jfree: false,
+  picard: false,
+  gui_only: false,
+};
 
 // Suspended: gene-track, peak-pair, and similarity-matrix
 
 export const toolIndex = [
   {
+    ...defaultTool,
     name: "Aggregate Data",
     group: "RA",
     description: "Compile data from tab-delimited file into matrix according to user-specified metric.",
@@ -17,6 +25,7 @@ export const toolIndex = [
     url: "docs/Tools/read-analysis/aggregate-data",
   },
   {
+    ...defaultTool,
     name: "BAM Correlation",
     group: "BS",
     description: "Genome-Genome correlations for replicate comparisons given multiple sorted and indexed (BAI) BAM files.",
@@ -24,6 +33,7 @@ export const toolIndex = [
     url: "docs/Tools/bam-statistics/bam-correlation",
   },
   {
+    ...defaultTool,
     name: "BAM Indexer",
     group: "BM",
     description: "For most tools using BAM inputs (both within and without ScriptManager), a BAM index file (.bai) file is required so that the tool can efficiently query the file for alignment records.",
@@ -31,6 +41,7 @@ export const toolIndex = [
     url: "docs/Tools/bam-manipulation/bam-indexer",
   },
   {
+    ...defaultTool,
     name: "BAM to bedGraph",
     group: "BF",
     description: "Convert BAM file to bedGraph file",
@@ -38,6 +49,7 @@ export const toolIndex = [
     url: "docs/Tools/bam-format-converter/bam-to-bedgraph",
   },
   {
+    ...defaultTool,
     name: "BAM to BED",
     group: "BF",
     description: "Convert BAM file to BED file",
@@ -45,6 +57,7 @@ export const toolIndex = [
     url: "docs/Tools/bam-format-converter/bam-to-bed",
   },
   {
+    ...defaultTool,
     name: "BAM to GFF",
     group: "BF",
     description: "Convert BAM file to GFF file",
@@ -52,6 +65,7 @@ export const toolIndex = [
     url: "docs/Tools/bam-format-converter/bam-to-gff",
   },
   {
+    ...defaultTool,
     name: "BAM to scIdx",
     group: "BF",
     description: "Convert BAM file to scIDX file",
@@ -59,6 +73,7 @@ export const toolIndex = [
     url: "docs/Tools/bam-format-converter/bam-to-scidx",
   },
   {
+    ...defaultTool,
     name: "BED to GFF",
     group: "CM",
     description: "Converts BED file to GFF file",
@@ -66,6 +81,7 @@ export const toolIndex = [
     url: "docs/Tools/coordinate-manipulation/bed-to-gff",
   },
   {
+    ...defaultTool,
     name: "Composite Line Plot",
     group: "FG",
     description: "Generate a Composite Plot PNG from composite data like the output in TagPileup",
@@ -73,6 +89,7 @@ export const toolIndex = [
     url: "docs/Tools/figure-generation/composite-plot",
   },
   {
+    ...defaultTool,
     name: "Cross Correlation",
     group: "BS",
     description: "Calculate optimal tag shift based on ArchTEx implementation from (PMID:22302569)",
@@ -80,6 +97,7 @@ export const toolIndex = [
     url: "docs/Tools/bam-statistics/cross-corr",
   },
   {
+    ...defaultTool,
     name: "DNA shape from BED",
     group: "SA",
     description: "Calculate intrinsic DNA shape parameters given BED file and Genome FASTA file.",
@@ -87,6 +105,7 @@ export const toolIndex = [
     url: "docs/Tools/sequence-analysis/dna-shape-bed",
   },
   {
+    ...defaultTool,
     name: "DNA shape from FASTA",
     group: "SA",
     description: "Calculate intrinsic DNA shape parameters given input FASTA files. Based on Roh's lab DNAshape server data",
@@ -94,6 +113,7 @@ export const toolIndex = [
     url: "docs/Tools/sequence-analysis/dna-shape-fasta",
   },
   {
+    ...defaultTool,
     name: "Expand BED",
     group: "CM",
     description: "Expands input BED file by adding positions to the border or around the center.",
@@ -101,6 +121,7 @@ export const toolIndex = [
     url: "docs/Tools/coordinate-manipulation/expand-bed",
   },
   {
+    ...defaultTool,
     name: "Expand GFF",
     group: "CM",
     description: "Expands input GFF file by adding positions to the border or around the center",
@@ -108,6 +129,7 @@ export const toolIndex = [
     url: "docs/Tools/coordinate-manipulation/expand-gff",
   },
   {
+    ...defaultTool,
     name: "Extract FASTA",
     group: "SA",
     description: "Generate FASTA file from indexed Genome FASTA file and BED file. Script will generate FAI index if not present in Genome FASTA folder.",
@@ -115,6 +137,7 @@ export const toolIndex = [
     url: "docs/Tools/sequence-analysis/fasta-extract",
   },
   {
+    ...defaultTool,
     name: "Filter BED by Proximity",
     group: "PA",
     description: "Filter BED file using user-specified exclusion zone using the score column to determine which peak to retain.",
@@ -122,6 +145,7 @@ export const toolIndex = [
     url: "docs/Tools/peak-analysis/filter-bed",
   },
   {
+    ...defaultTool,
     name: "Filter PIP-seq",
     group: "BM",
     description: "Filter BAM file by -1 nucleotide. Requires genome FASTA file. Note this program does not index the resulting BAM file and user must use appropriate samtools command to generate BAI.",
@@ -129,6 +153,7 @@ export const toolIndex = [
     url: "docs/Tools/bam-manipulation/filter-pip-seq",
   },
   {
+    ...defaultTool,
     name: "Four Color Plot",
     group: "FG",
     description: "Generate 4Color sequence plot given FASTA file and user-defined RGB colors.",
@@ -136,6 +161,7 @@ export const toolIndex = [
     url: "docs/Tools/figure-generation/four-color",
   },
   {
+    ...defaultTool,
     name: "GFF to BED",
     group: "CM",
     description: "Converts GFF file format to BED file format",
@@ -143,6 +169,7 @@ export const toolIndex = [
     url: "docs/Tools/coordinate-manipulation/gff-to-bed",
   },
   {
+    ...defaultTool,
     name: "Two Color Heatmap Plot",
     group: "FG",
     description: "This tool generates a heatmap from a tab-delimited matrix input of numeric values.",
@@ -150,6 +177,7 @@ export const toolIndex = [
     url: "docs/Tools/figure-generation/heatmap",
   },
   {
+    ...defaultTool,
     name: "MD5 Checksum",
     group: "FU",
     description: "A common quality control and security step that everyone should use when downloading files from another source is to compare MD5 checksum values to ensure that the file that was downloaded exactly matches the reported MD5checksum value for the file.",
@@ -157,6 +185,7 @@ export const toolIndex = [
     url: "docs/Tools/file-utilities/md5checksum",
   },
   {
+    ...defaultTool,
     name: "Merge BAM Replicates",
     group: "BM",
     description: "Merge multiple sorted alignment files, producing a single sorted output file that contains all the input records and maintains the existing sort order.",
@@ -164,6 +193,7 @@ export const toolIndex = [
     url: "docs/Tools/bam-manipulation/merge-bam",
   },
   {
+    ...defaultTool,
     name: "Merge Heatmaps",
     group: "FG",
     description: "This tool merges two PNG files into a third PNG file that is an average of each corresponding pair of pixels from the input files.",
@@ -171,6 +201,7 @@ export const toolIndex = [
     url: "docs/Tools/figure-generation/merge-heatmap",
   },
   {
+    ...defaultTool,
     name: "Paired-end Statistics",
     group: "BS",
     description: "Generates Insert-size Histogram statistic (GEO requirement) and outputs BAM Header including alignment statistics and parameters given a sorted and indexed (BAI) paired-end BAM File.",
@@ -178,6 +209,7 @@ export const toolIndex = [
     url: "docs/Tools/bam-statistics/pe-stat",
   },
   {
+    ...defaultTool,
     name: "Align BED to Reference",
     group: "PA",
     description: "Align BED peaks to Reference BED file creating CDT files for heatmap generation",
@@ -185,6 +217,7 @@ export const toolIndex = [
     url: "docs/Tools/peak-analysis/peak-align-ref",
   },
   {
+    ...defaultTool,
     name: "Random Coordinates",
     group: "PA",
     description: "Generate a coordinate file that tiles (non-overlapping) across an entire genome.",
@@ -192,6 +225,7 @@ export const toolIndex = [
     url: "docs/Tools/peak-analysis/rand-coord",
   },
   {
+    ...defaultTool,
     name: "Randomize FASTA",
     group: "SA",
     description: "Randomizes FASTA sequence for each input entry",
@@ -199,6 +233,7 @@ export const toolIndex = [
     url: "docs/Tools/sequence-analysis/randomize-fasta",
   },
   {
+    ...defaultTool,
     name: "Mark (Remove) Duplicates",
     group: "BM",
     description: "This tool locates and tags duplicate reads in a BAM or SAM file, where duplicate reads are defined as originating from a single fragment of DNA.",
@@ -206,6 +241,7 @@ export const toolIndex = [
     url: "docs/Tools/bam-manipulation/mark-duplicates",
   },
   {
+    ...defaultTool,
     name: "Scale Matrix",
     group: "RA",
     description: "Apply a user-specified scaling factor to tab-delimited matrix data",
@@ -213,6 +249,7 @@ export const toolIndex = [
     url: "docs/Tools/read-analysis/scale-matrix",
   },
   {
+    ...defaultTool,
     name: "Calculate Scaling Factor",
     group: "RA",
     description: "Calculate the factor as either total tag normalization or normalization of ChIP-seq data with control (PMID:22883957)",
@@ -220,6 +257,7 @@ export const toolIndex = [
     url: "docs/Tools/read-analysis/scaling-factor",
   },
   {
+    ...defaultTool,
     name: "Single-end Statistics",
     group: "BS",
     description: "Output BAM Header including alignment statistics and parameters given any indexed (BAI) BAM File.",
@@ -227,6 +265,7 @@ export const toolIndex = [
     url: "docs/Tools/bam-statistics/se-stat",
   },
   {
+    ...defaultTool,
     name: "Search Motif",
     group: "SA",
     description: "Search for an IUPAC DNA sequence motif in FASTA files with mismatches allowed",
@@ -234,6 +273,7 @@ export const toolIndex = [
     url: "docs/Tools/sequence-analysis/search-motif",
   },
   {
+    ...defaultTool,
     name: "Signal Duplication",
     group: "PA",
     description: "Calculate duplication statistics at user-specified regions.",
@@ -241,6 +281,7 @@ export const toolIndex = [
     url: "docs/Tools/peak-analysis/signal-dup",
   },
   {
+    ...defaultTool,
     name: "Sort BAM",
     group: "BM",
     description: "Sort alignments by leftmost coordinates, or by read name when -n is used. An appropriate @HD-SO sort order header tag will be added or an existing one updated if necessary.",
@@ -248,6 +289,7 @@ export const toolIndex = [
     url: "docs/Tools/bam-manipulation/sort-bam",
   },
   {
+    ...defaultTool,
     name: "Sort BED",
     group: "CM",
     description: "Sort a CDT file and its corresponding BED file by the total score in the CDT file across the specified interval",
@@ -255,6 +297,7 @@ export const toolIndex = [
     url: "docs/Tools/coordinate-manipulation/sort-bed",
   },
   {
+    ...defaultTool,
     name: "Sort BED By Distance",
     group: "PA",
     description: "Sort BED/GFF by distance to another BED/GFF (e.g. peak annotations)",
@@ -262,6 +305,7 @@ export const toolIndex = [
     url: "docs/Tools/peak-analysis/sort-by-dis",
   },
   {
+    ...defaultTool,
     name: "Sort GFF",
     group: "CM",
     description: "Sort a CDT file and its corresponding GFF file by the total score in the CDT file across the specified interval",
@@ -269,6 +313,7 @@ export const toolIndex = [
     url: "docs/Tools/coordinate-manipulation/sort-gff",
   },
   {
+    ...defaultTool,
     name: "Tag Pileup",
     group: "RA",
     description: "Pileup 5' ends of aligned tags given BED and BAM files according to user-defined parameters",
@@ -276,6 +321,7 @@ export const toolIndex = [
     url: "docs/Tools/read-analysis/tag-pileup",
   },
   {
+    ...defaultTool,
     name: "Tile Genome",
     group: "PA",
     description: "Generate a coordinate file that tiles (non-overlapping) across an entire genome.",
@@ -283,6 +329,7 @@ export const toolIndex = [
     url: "docs/Tools/peak-analysis/tile-genome",
   },
   {
+    ...defaultTool,
     name: "Transpose Matrix",
     group: "RA",
     description: "Interchange the rows and columns of a matrix.",
