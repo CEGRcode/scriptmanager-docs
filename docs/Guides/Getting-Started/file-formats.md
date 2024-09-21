@@ -4,7 +4,7 @@ title: File Formats
 sidebar_label: File Formats
 ---
 
-A variety of standard file formats including [BAM](#bam), [GFF](#gff), [BED](#bed), and [CDT](#cdt) are used by the ScriptManager tools along with some custom file formats. The purpose of this guide is to help users find tools in ScriptManager based on the format their data exists in.
+A variety of standard file formats including [BAM](#bam), [GFF](#gff), [BED](#bed), and [CDT](#cdt) are used by the ScriptManager tools along with some custom file formats. The purpose of this guide is to help users understand what types of information these formats store and find tools in ScriptManager based on the format their data exists in.
 
 ### Read More
 While this page includes a little info on each of the file formats, there are other resources on the internet that provide detailed descriptions and context that will better inform users looking for more explanation on the data formats (see links below).
@@ -12,8 +12,13 @@ While this page includes a little info on each of the file formats, there are ot
 - [ENCODE file formats guide][encode-file-formats]
 - [Deeptools file formats guide][encode-file-formats]
 
-## BAM
-#### _Binary Alignment Map_
+## Alignment Formats
+
+### SAM - _Sequence Alignment Map_
+
+See BAM. ScriptManager does not generally support the use of SAM formats due to the computational strain it puts on hardware. It is strongly recommended to compress it into a BAM format before analyzing.
+
+### BAM - _Binary Alignment Map_
 
 The binary form of SAM file format, this is one of the most common formats used by ScriptManager. It's the output of aligners when aligning reads to a reference sequence. See Samtools documentation  or the documentation from the alignment tool for [specification info][bam-specs].
 
@@ -39,8 +44,9 @@ Related Tools:
 | [`tag-pileup`][tag-pileup] |  |
 
 
-## BED
-#### _Browser Extendable Data_
+## Coordinate/Annotation Formats
+
+### BED - _Browser Extendable Data_
 
 A text-based file format for storing information about genomic regions. ScriptManager supports [0-based and 1-based][coordinate-systems] BED files.
 
@@ -62,19 +68,7 @@ Related Tools:
 | [`tag-pileup`][tag-pileup] |  |
 
 
-## bedGraph
-
-A format used for plotting one value of quantitative data across a genome or region. This format is most closely related to the [wiggle format][wiggle] and always [0-based][coordinate-systems].
-
-Related Tools:
-
-| Input | Output |
-| ------------- | ------------- |
-| [`bam-to-bedgraph`][bam-to-bedgraph] |  |
-
-
-## GFF
-#### _General Feature Format_
+### GFF/GTF - _General Feature Format_
 
 The GTF/GFF/GFF3 file specifications are documented in several places around the the bioinformatics community. See Ensembl for [specification info][gff-specs].
 
@@ -95,7 +89,9 @@ Related Tools:
 |  | [`tile-genome`][tile-genome] |
 
 
-## FASTA
+## Sequence formats
+
+### FASTA
 
 A simple, text-based format for representing DNA or protein sequences. Files in the FASTA format may have different extensions, including `.fasta`, `.fna`, `.ffn`, `.frn`, `.fa`, or even `.txt`.
 
@@ -110,11 +106,11 @@ Related Tools:
 | [`randomize-fasta`][randomize-fasta] | [`randomize-fasta`][randomize-fasta] |
 | [`search-motif`][search-motif] |  |
 
+## Matrix formats
 
-## CDT
-#### _Clustered Data Table_
+### CDT - _Clustered Data Table_
 
-A standard format for matrices, with two row headers and one column header. Values are separated by `\t` characters, making these files a subset of the [TAB](#tab) format.
+A standard format for matrices, with two row headers and one column header. Values are separated by `\t` characters, making these files a subset of the [TAB](#tab) format. Read more about the format [here][pumadb-cdt-microarray].
 
 Related Tools:
 
@@ -131,8 +127,9 @@ Related Tools:
 | [`sort-bed`][sort-bed] |  |
 |  | [`tag-pileup`][tag-pileup] |
 
+### TAB/TSV - _Tab-separated format_
 
-## TAB
+or "Tab-delimited" format
 
 A text-based format for storing matrices with values separated by [`\t` characters][tab]. These files can be easily viewed in Excel or Google Sheets.
 
@@ -140,14 +137,15 @@ Related Tools:
 
 | Input | Output |
 | ------------- | ------------- |
-| [`aggregate-data`][aggregate-data] | |
+| [`aggregate-data`][aggregate-data] | [`aggregate-data`][aggregate-data] |
 | [`heatmap`][heatmap] |  |
 |  | [`tag-pileup`][tag-pileup] |
 | [`scale-matrix`][scale-matrix] | [`scale-matrix`][scale-matrix] |
 
 
-## PNG
-#### _Portable Network Graphic_
+## Image formats
+
+### PNG - _Portable Network Graphic_
 
 A standard, [lossless][lossless-images] image format used for storing figures.
 
@@ -162,9 +160,22 @@ Related Tools:
 | [`merge-heatmap`][merge-heatmap] | [`merge-heatmap`][merge-heatmap] |
 
 
-## scIDX
-#### _Strand-specific coordinate count_
-A lesser-used, [1-based][coordinate-systems]  format for storing the [number of tags][scidx-tags] at a given coordinate.
+
+## Genome Browser Track formats
+
+### bedGraph
+
+A format used for plotting one value of quantitative data across a genome or region. This format is most closely related to the [wiggle format][wiggle] and always [0-based][coordinate-systems].
+
+Related Tools:
+
+| Input | Output |
+| ------------- | ------------- |
+| [`bam-to-bedgraph`][bam-to-bedgraph] |  |
+
+
+### scIDX - _Strand-specific coordinate count_
+A lesser-used, [1-based][coordinate-systems]  format for storing the [number of tags][scidx-tags] at a given coordinate. Files using this format may also use the `.tab` extension since it is a subset of the [TAB](#tab) format.
 
 Related Tools:
 
@@ -174,8 +185,9 @@ Related Tools:
 
 
 
-## TXT
-#### _Text File_
+## Generic formats
+
+### TXT - _Text file_
 A standard format for storing text. Some text files may have the `.out` extension.
 
 Related Tools:
@@ -198,6 +210,7 @@ See our [Tool Index][tool-index] for the full catalog of scripts.
 [deeptools-file-formats]:https://deeptools.readthedocs.io/en/develop/content/help_glossary.html#file-formats
 [encode-file-formats]:https://www.encodeproject.org/help/file-formats/
 [ucsc-file-formats]:https://genome.ucsc.edu/FAQ/FAQformat.html
+[pumadb-cdt-microarray]:https://puma.princeton.edu/help/formats.shtml#cdt
 [bam-specs]:https://samtools.github.io/hts-specs/
 [gff-specs]:https://useast.ensembl.org/info/website/upload/gff3.html
 
