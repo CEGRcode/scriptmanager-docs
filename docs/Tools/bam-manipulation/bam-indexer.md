@@ -3,6 +3,9 @@ id: bam-indexer
 title: BAM Indexer
 sidebar_label: BAM Indexer
 ---
+
+[![Picard - BuildBamIndex](https://img.shields.io/static/v1?label=Picard&message=BuildBamIndex&color=orange)](https://broadinstitute.github.io/picard/command-line-overview.html#BuildBamIndex)
+
 ![bam-indexer](/icons/BAM_Manipulation/BAIIndexer_square.svg)
 
 Generates BAI Index for input BAM files. Output BAI is in the same directory as input BAM file.

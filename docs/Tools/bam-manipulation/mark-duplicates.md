@@ -3,6 +3,7 @@ id: mark-duplicates
 title: Mark Duplicates (Picard)
 sidebar_label: Mark Duplicates
 ---
+[![Picard - MarkDuplicates](https://img.shields.io/static/v1?label=Picard&message=MarkDuplicates&color=orange)](https://broadinstitute.github.io/picard/command-line-overview.html#MarkDuplicates)
 
 ![mark-duplicates](/icons/BAM_Manipulation/BAMMarkDuplicates_square.svg)
 

@@ -3,6 +3,9 @@ id: sort-bam
 title: Sort BAM
 sidebar_label: Sort BAM
 ---
+
+[![Picard - SortSam](https://img.shields.io/static/v1?label=Picard&message=SortSam&color=orange)](https://broadinstitute.github.io/picard/command-line-overview.html#SortSam)
+
 ![sort-bam](/icons/BAM_Manipulation/BAMFileSort_square.svg)
 
 Sort BAM files in order to efficiently extract and manipulate. RAM intensive process. If program freezes, increase JAVA heap size.

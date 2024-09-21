@@ -3,6 +3,7 @@ id: merge-bam
 title: Merge BAM
 sidebar_label: Merge BAM
 ---
+[![Picard - MergeBamAlignment](https://img.shields.io/static/v1?label=Picard&message=MergeBamAlignment&color=orange)](https://broadinstitute.github.io/picard/command-line-overview.html#MergeBamAlignment)
 
 ![merge-bam](/icons/BAM_Manipulation/MergeSamFiles_square.svg)
 
