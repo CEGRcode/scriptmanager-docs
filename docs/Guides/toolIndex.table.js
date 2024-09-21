@@ -31,6 +31,7 @@ export const toolIndex = [
     description: "Genome-Genome correlations for replicate comparisons given multiple sorted and indexed (BAI) BAM files.",
     command: "-",
     url: "docs/Tools/bam-statistics/bam-correlation",
+    jfree: true,
   },
   {
     ...defaultTool,
@@ -39,6 +40,7 @@ export const toolIndex = [
     description: "For most tools using BAM inputs (both within and without ScriptManager), a BAM index file (.bai) file is required so that the tool can efficiently query the file for alignment records.",
     command: "-",
     url: "docs/Tools/bam-manipulation/bam-indexer",
+    picard: true,
   },
   {
     ...defaultTool,
@@ -87,6 +89,7 @@ export const toolIndex = [
     description: "Generate a Composite Plot PNG from composite data like the output in TagPileup",
     command: "-",
     url: "docs/Tools/figure-generation/composite-plot",
+    jfree: true,
   },
   {
     ...defaultTool,
@@ -95,6 +98,7 @@ export const toolIndex = [
     description: "Calculate optimal tag shift based on ArchTEx implementation from (PMID:22302569)",
     command: "-",
     url: "docs/Tools/bam-statistics/cross-corr",
+    jfree: true,
   },
   {
     ...defaultTool,
@@ -103,6 +107,7 @@ export const toolIndex = [
     description: "Calculate intrinsic DNA shape parameters given BED file and Genome FASTA file.",
     command: "-",
     url: "docs/Tools/sequence-analysis/dna-shape-bed",
+    jfree: true,
   },
   {
     ...defaultTool,
@@ -111,6 +116,7 @@ export const toolIndex = [
     description: "Calculate intrinsic DNA shape parameters given input FASTA files. Based on Roh's lab DNAshape server data",
     command: "-",
     url: "docs/Tools/sequence-analysis/dna-shape-fasta",
+    jfree: true,
   },
   {
     ...defaultTool,
@@ -159,6 +165,7 @@ export const toolIndex = [
     description: "Generate 4Color sequence plot given FASTA file and user-defined RGB colors.",
     command: "-",
     url: "docs/Tools/figure-generation/four-color",
+    jfree: true,
   },
   {
     ...defaultTool,
@@ -175,6 +182,7 @@ export const toolIndex = [
     description: "This tool generates a heatmap from a tab-delimited matrix input of numeric values.",
     command: "-",
     url: "docs/Tools/figure-generation/heatmap",
+    jfree: true,
   },
   {
     ...defaultTool,
@@ -191,6 +199,7 @@ export const toolIndex = [
     description: "Merge multiple sorted alignment files, producing a single sorted output file that contains all the input records and maintains the existing sort order.",
     command: "-",
     url: "docs/Tools/bam-manipulation/merge-bam",
+    picard: true,
   },
   {
     ...defaultTool,
@@ -199,6 +208,7 @@ export const toolIndex = [
     description: "This tool merges two PNG files into a third PNG file that is an average of each corresponding pair of pixels from the input files.",
     command: "-",
     url: "docs/Tools/figure-generation/merge-heatmap",
+    jfree: true,
   },
   {
     ...defaultTool,
@@ -207,6 +217,7 @@ export const toolIndex = [
     description: "Generates Insert-size Histogram statistic (GEO requirement) and outputs BAM Header including alignment statistics and parameters given a sorted and indexed (BAI) paired-end BAM File.",
     command: "-",
     url: "docs/Tools/bam-statistics/pe-stat",
+    jfree: true,
   },
   {
     ...defaultTool,
@@ -239,6 +250,7 @@ export const toolIndex = [
     description: "This tool locates and tags duplicate reads in a BAM or SAM file, where duplicate reads are defined as originating from a single fragment of DNA.",
     command: "Picard",
     url: "docs/Tools/bam-manipulation/mark-duplicates",
+    picard: true,
   },
   {
     ...defaultTool,
@@ -255,6 +267,7 @@ export const toolIndex = [
     description: "Calculate the factor as either total tag normalization or normalization of ChIP-seq data with control (PMID:22883957)",
     command: "-",
     url: "docs/Tools/read-analysis/scaling-factor",
+    jfree: true,
   },
   {
     ...defaultTool,
@@ -287,6 +300,7 @@ export const toolIndex = [
     description: "Sort alignments by leftmost coordinates, or by read name when -n is used. An appropriate @HD-SO sort order header tag will be added or an existing one updated if necessary.",
     command: "-",
     url: "docs/Tools/bam-manipulation/sort-bam",
+    picard: true,
   },
   {
     ...defaultTool,
@@ -319,6 +333,7 @@ export const toolIndex = [
     description: "Pileup 5' ends of aligned tags given BED and BAM files according to user-defined parameters",
     command: "-",
     url: "docs/Tools/read-analysis/tag-pileup",
+    jfree: true,
   },
   {
     ...defaultTool,
@@ -338,6 +353,12 @@ export const toolIndex = [
   },
 ];
 
+function ConditionalDisplay(condition, trueText, falseText) {
+  if (condition) {
+    return <p> {trueText} </p>;
+  }
+  return <p> {falseText} </p>;
+}
 
 // ----------------------------------------------------------------------------
 // PesterDataTable column definition
@@ -361,11 +382,36 @@ export const columns = [
       </a>
     ),
   },
-  {
-    Header: "Type",
-    accessor: "command",
-    className: "pester-data-table left",
-  },
+  /* TODO: Uncomment below to include isPicard or isJFree column info.
+			- it's useful but not worth widened table real-estate
+			- consider adding toggle functions for displaying certain coluns
+			- consider adding sequential sort to the table
+  */
+
+  //   {
+  //     Header: "Type", // isPicard
+  //     accessor: "picard",
+  //     className: "pester-data-table",
+  //     Cell: ({ cell: { value }, row: { original } }) =>
+  //       ConditionalDisplay(value, "Picard", ""),
+  //     isVisible: true,
+  //   },
+  //   {
+  //     Header: "isJFree",
+  //     accessor: "jfree",
+  //     className: "pester-data-table",
+  //     Cell: ({ cell: { value }, row: { original } }) =>
+  //       ConditionalDisplay(value, "JFree", ""),
+  //     isVisible: false,
+  //   },
+  //   {
+  //     Header: "isGUIOnly",
+  //     accessor: "gui_only",
+  //     className: "pester-data-table",
+  //     Cell: ({ cell: { value }, row: { original } }) =>
+  //       ConditionalDisplay(value, "GUI only", ""),
+  //     isVisible: false,
+  //   },
   {
     Header: "Description",
     accessor: "description",
