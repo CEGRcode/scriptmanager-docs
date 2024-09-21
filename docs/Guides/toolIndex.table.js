@@ -17,13 +17,6 @@ export const toolIndex = [
     url: "docs/Tools/read-analysis/aggregate-data",
   },
   {
-    name: "Cross Correlation",
-    group: "BS",
-    description: "Calculate optimal tag shift based on ArchTEx implementation from (PMID:22302569)",
-    command: "-",
-    url: "docs/bam-statistics/cross-corr",
-  },
-  {
     name: "BAM Correlation",
     group: "BS",
     description: "Genome-Genome correlations for replicate comparisons given multiple sorted and indexed (BAI) BAM files.",
@@ -78,6 +71,13 @@ export const toolIndex = [
     description: "Generate a Composite Plot PNG from composite data like the output in TagPileup",
     command: "-",
     url: "docs/Tools/figure-generation/composite-plot",
+  },
+  {
+    name: "Cross Correlation",
+    group: "BS",
+    description: "Calculate optimal tag shift based on ArchTEx implementation from (PMID:22302569)",
+    command: "-",
+    url: "docs/Tools/bam-statistics/cross-corr",
   },
   {
     name: "DNA shape from BED",
