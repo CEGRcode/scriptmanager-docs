@@ -190,44 +190,10 @@ Related Tools:
 |  | [`signal-dup`][signal-dup] |
 
 
-[`aggregate-data`][aggregate-data]
-[`bam-correlation`][bam-correlation]
-[`bam-indexer`][bam-indexer]
-[`bam-to-bedgraph`][bam-to-bedgraph]
-[`bam-to-bed`][bam-to-bed]
-[`bam-to-gff`][bam-to-gff]
-[`bam-to-scidx`][bam-to-scidx]
-[`bed-to-gff`][bed-to-gff]
-[`composite`][composite]
-[`dna-shape-bed`][dna-shape-bed]
-[`dna-shape-fasta`][dna-shape-fasta]
-[`expand-bed`][expand-bed]
-[`expand-gff`][expand-gff]
-[`fasta-extract`][fasta-extract]
-[`filter-bed`][filter-bed]
-[`filter-pip-seq`][filter-pip-seq]
-[`four-color`][four-color]
-[`gff-to-bed`][gff-to-bed]
-[`heatmap`][heatmap]
-[`md5checksum`][md5checksum]
-[`merge-bam`][merge-bam]
-[`merge-heatmap`][merge-heatmap]
-[`pe-stat`][pe-stat]
-[`peak-align-ref`][peak-align-ref]
-[`rand-coord`][rand-coord]
-[`randomize-fasta`][randomize-fasta]
-[`mark-duplicates`][mark-duplicates]
-[`scale-matrix`][scale-matrix]
-[`transpose-matrix`][transpose-matrix]
-[`scaling-factor`][scaling-factor]
-[`se-stat`][se-stat]
-[`search-motif`][search-motif]
-[`signal-dup`][signal-dup]
-[`sort-bam`][sort-bam]
-[`sort-bed`][sort-bed]
-[`sort-gff`][sort-gff]
-[`tag-pileup`][tag-pileup]
-[`tile-genome`][tile-genome]
+:::info
+See our [Tool Index][tool-index] for the full catalog of scripts.
+:::
+
 
 [deeptools-file-formats]:https://deeptools.readthedocs.io/en/develop/content/help_glossary.html#file-formats
 [encode-file-formats]:https://www.encodeproject.org/help/file-formats/
@@ -241,6 +207,7 @@ Related Tools:
 [lossless-images]:https://www.adobe.com/uk/creativecloud/photography/discover/lossy-vs-lossless.html
 [scidx-tags]:https://toolshed.g2.bx.psu.edu/repository/display_tool?repository_id=642b78707940da3a&tool_config=%2Fsrv%2Ftoolshed%2Fmain%2Fvar%2Fdata%2Frepos%2F002%2Frepo_2064%2Fbam_to_scidx.xml&changeset_revision=408520e1ae1a&render_repository_actions_for=tool_shed
 
+[tool-index]:/docs/Guides/tool-index
 [bam-format]:/docs/Guides/Getting-Started/file-formats#bam
 [bed-format]:/docs/Guides/Getting-Started/file-formats#bed
 [bedgraph-format]:/docs/Guides/Getting-Started/file-formats#bedgraph
