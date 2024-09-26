@@ -6,20 +6,28 @@ sidebar_label: fasta-extract
 
 ![fasta-extract](/../static/icons/Sequence_Analysis/FASTAExtract_square.svg)
 
-Generate FASTA file from indexed Genome FASTA file and BED file. Script will generate FAI index if not present in Genome FASTA folder.
+Generate FASTA file from indexed Genome FASTA file and BED file. Script will generate [FAI index][fai-idx] if not present in Genome FASTA folder.
+
+<!-- Schematic goes here -->
+
+<!-- Extended description -->
 
 <img src={require('/../static/md-img/Sequence_Analysis/FASTAExtractWindow.png').default} style={{width:70+'%'}}/>
 
-### File inputs (Genomic FASTA & BED)
-Each input FASTA-formatted set of sequences has an average shape score series calculated for it. Because the shape score is a series corresponding to the bp position, the FASTA sequences input should be positionally linked to some feature and of the same length.
+## File inputs (Genomic FASTA & BED)
 
-This script also processes BED-type files so make sure your input is properly formatted and uses the appropriate `.bed` or `.bed.gz` extension.
+BED files capture coordinate regions without the sequence information. This tool allows the user to search the FASTA file the BED file is based on and extract the sequence within the genomic region to a new FASTA-formatted file. The input FASTA is often a genome FASTA but as long as chrname column matches FASTA identifiers, it could be any FASTA.
 
-### File Options 
+When using the GUI, make sure your input is properly formatted and uses the appropriate BED (`.bed` or `.bed.gz`) and FASTA (`.fa` / `.fa.gz` / `.fasta` / `...`) extensions.
+
+## File Options 
 The 'Force Strandedness' options ensures that the analysis will respect the strand information specified in the BED file when extracting sequences.
 
+<!-- ## Header Options -->
 
-# Command Line Interface
+<!-- ## Output Options -->
+
+## Command Line Interface
 
 Usage:
 ```bash
@@ -51,5 +59,7 @@ The first positional input
 | ------ | ----------- |
 | `-c, --coord-header` | use genome coordinate for output FASTA header (default is to use bed file headers) |
 | `-f, --force` | force-strandedness (default) |
+
+[fai-idx]: https://www.htslib.org/doc/faidx.html
 
 [fasta-format]:/docs/Guides/Getting-Started/file-formats#fasta

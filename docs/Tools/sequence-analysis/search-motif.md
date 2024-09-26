@@ -8,13 +8,22 @@ sidebar_label: search-motif
 
 Search for an IUPAC DNA sequence motif in FASTA files with mismatches allowed
 
+<!-- Schematic goes here -->
+
+<!-- Extended description -->
+
 <img src={require('/../static/md-img/Sequence_Analysis/SearchMotifWindow.png').default} style={{width:70+'%'}}/>
 
-### File inputs (FASTA)
-Each input FASTA-formatted set of sequences has an average shape score series calculated for it. Because the shape score is a series corresponding to the bp position, the FASTA sequences input should be positionally linked to some feature and of the same length.
+## File inputs (FASTA)
 
-### Search Options
-1. The IUPAC Motif (International Union of Pure and Applied Chemistry) is a code that represents nucletide sequences with ambiguty code:
+Each input FASTA-formatted file will be searched for the user-provided motif. This is typically a genomic FASTA file but can be used with any FASTA formatted file.
+
+When using the GUI, make sure your input is properly formatted and uses the appropriate FASTA (`.fa` / `.fa.gz` / `.fasta` / `...`) extensions.
+
+## Search Options
+
+### Enter an IUPAC Motif
+[IUPAC (International Union of Pure and Applied Chemistry)][ucsc-iupac] has a standard representation for DNA sequences that supports single and sets of bases. Below are some examples but you will need to look up the full IUPAC code for the comprehensive list of options that this tool supports:
 
 * 'A': Adenine
 * 'T': Thymine
@@ -24,12 +33,21 @@ Each input FASTA-formatted set of sequences has an average shape score series ca
 * 'Y': Pyrimidine (C or T)
 * 'N': Any Nucleotide (A, T, C, or G)
 
+These are used to define a DNA pattern to search for within the input FASTA sequences.
 
-When you 'Enter an IUPAC motif', you provide a sequence that can include these IUPAC codes to define a DNA pattern you want to search for. 
+### Enter Mismatches Allowed
 
-2. The 'Enter Mismatches Allowed' option species the  number of mismatched nucleotides that can be tolerated when searching for the motif in the FASTA sequences. Mismatches are positions in the sequence where the nucleotides do not exactly match the motif but are still considered a valid match.
+The user can toggle the stringency of the motif search by adjusting the number of mismatched nucleotides that can be tolerated when searching for the motif in the FASTA sequences. Mismatches are positions in the sequence where the nucleotide does not match any of the nucleotides represented in the IUPAC motif for that position.
 
-# Command Line Interface
+<!-- ## Output Options -->
+
+<!-- specify output file format -->
+<!-- specify how output filename is constructed (based on input and how suffix is constructed) -->
+
+<!-- ### Output GZip -->
+
+
+## Command Line Interface
 
 Usage:
 ```bash
@@ -58,5 +76,7 @@ java -jar ScriptManager.jar sequence-analysis search-motif [-hV] -m=<motif>
 | `-m, --motif=<motif>` | the IUPAC motif to search for |
 | `-n, --mismatches=<ALLOWED_MISMATCH>` | the number of mismatches allowed (default=0) |_
 
+
+[ucsc-iupac]: https://genome.ucsc.edu/goldenPath/help/iupac.html#:~:text=The%20International%20Union%20of%20Pure,for%20either%20G%20or%20A).
 
 [fasta-format]:/docs/Guides/Getting-Started/file-formats#fasta

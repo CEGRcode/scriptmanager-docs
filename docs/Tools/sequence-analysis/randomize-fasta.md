@@ -8,13 +8,21 @@ sidebar_label: randomize-fasta
 
 Randomizes FASTA sequence for each input entry
 
+<!-- Schematic goes here -->
 
 <img src={require('/../static/md-img/Sequence_Analysis/RandomizeFASTAWindow.png').default} style={{width:70+'%'}}/>
 
-### File inputs (FASTA)
-Each input FASTA-formatted set of sequences has an average shape score series calculated for it. Because the shape score is a series corresponding to the bp position, the FASTA sequences input should be positionally linked to some feature and of the same length.
+## File inputs (FASTA)
+Each input FASTA-formatted file with a set of sequences will produce a new FASTA file of the randomized/shuffled sequences.
 
-# Command Line Interface
+When using the GUI, make sure your input is properly formatted and uses the appropriate FASTA (`.fa` / `.fa.gz` / `.fasta` / `...`) extensions.
+
+<!-- ## Seed Options -->
+
+<!-- ## Output Options -->
+
+
+## Command Line Interface
 
 Usage:
 ```bash
