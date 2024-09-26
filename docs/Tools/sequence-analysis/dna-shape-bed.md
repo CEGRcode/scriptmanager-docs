@@ -1,7 +1,7 @@
 ---
 id: dna-shape-bed
 title: DNA Shape from BED File
-sidebar_label: dna-shape-bed
+sidebar_label: DNA Shape from BED
 ---
 
 import ReactPlayer from 'react-player'
@@ -11,6 +11,7 @@ import ReactPlayer from 'react-player'
 Calculate intrinsic DNA shape parameters given BED file and Genome FASTA file. Based on Roh's lab DNAshape server data.
 
 <!--![DNA Shape Cheatsheet](IMGADDRESS) -->
+<!-- <figure><figcaption></figcaption></figure> -->
 
 Based on the findings from the Rohs lab [(Zhou et al, 2013)][rohs-paper], a sliding window approach using a 5bp wide window is a strong predictor of local DNA shape. Using this approach, we can predict 4 kinds of DNA shape:
 
