@@ -1,10 +1,14 @@
 ---
 id: tag-pileup
 title: Tag Pileup
-sidebar_label: tag-pileup
+sidebar_label: Tag Pileup
 ---
 
 ![tag-pileup](/../static/icons/Read_Analysis/TagPileup_square.svg)
+
+<!-- Schematic goes here -->
+
+<!-- Extended description -->
 
 
 Pileup 5' ends of aligned tags given BED and BAM files according to user-defined parameters
@@ -26,6 +30,9 @@ Make sure your BAM input files are [sorted][sort-bam] and [indexed][bam-indexer]
 ### Output Matrix Options (CDT/TAB)
 
 This script outputs a heatmap matrix in [CDT][cdt-format] format by default. The script can also output a matrix in tab format. For visualizing the output matrix, see [Two-color Heatmap][heatmap] tool.
+
+#### Output GZip
+Toggling this allows the user to write matrix files to a compressed file format using a general compression format (gzip) which has the advantage of *speeding up the execution time* by shrinking the I/O load.
 
 ### Output Composite Options (TXT)
 
