@@ -13,12 +13,7 @@ Calculate intrinsic DNA shape parameters given input FASTA files. Based on Roh's
 <!--![DNA Shape Cheatsheet](IMGADDRESS) -->
 <!-- <figure><figcaption></figcaption></figure> -->
 
-Based on the findings from the Rohs lab [(Zhou et al, 2013)][rohs-paper], a sliding window approach using a 5bp wide window is a strong predictor of local DNA shape. Using this approach, we can predict 4 kinds of DNA shape:
-
-1. **minor groove width**
-2. **propeller twist**
-3. **helix twist**
-4. **roll**
+Based on the findings from the Rohs lab ([Zhou et al, 2013][zhou-paper]; [Li et al, 2017][li-paper]), a sliding window approach using a 5bp wide window is a strong predictor of local DNA shape. Using this approach, we can predict 13 kinds of DNA shapes. The electrostatic potential of the strand is also calculable using a similar approach ([Chiu et al,2017][chiu-paper]).
 
 <img src={require('/../static/md-img/Sequence_Analysis/DNAShapefromFASTAWindow.png').default} style={{width:70+'%'}}/>
 
@@ -28,7 +23,7 @@ This script takes in a series of nucleotide sequences from a FASTA file and dete
 
 Below is a video introducing some of the shape measurements that we are trying to capture with these calculations.
 
-<ReactPlayer playing controls url='https://www.youtube.com/watch?v=JeQLzRhU--U' />
+<ReactPlayer playing controls url="https://www.youtube.com/watch?v=JeQLzRhU--U" style={{ border: '5px solid black' }} />
 
 <br/>
 
@@ -78,22 +73,49 @@ Expects a [FASTA][fasta-format] formatted file with many sequences to stack up w
 | `-z, --gzip`            | gzip output (default=false) |
 | `--avg-composite` | Save average composite |
 
-### Shape Options
-
-| Option | Description |
-| ------ | ----------- |
-| `-g, --groove` | output minor groove width
-| `-r, --roll` | output roll
-| `-p, --propeller` | output propeller twist
-| `-l, --helical` | output helical twist
-| `-a, --all` | output groove, roll, propeller twist, and helical twist, equivalent to `-grpl`.
-
 For each shape option to calculate indicated by the command, a [CDT file][cdt-format] will be generated with an extension indicating the shape  type calculated.
 
 If the *groove* information is indicated in the command to be used for the output, a file called `<outputBasename>_MGW.cdt` will be generated.
 Similarly for *propeller*, *helical*, and *roll*, the output matrix [CDT files][cdt-format] will be named with the suffixes `_PTwist.cdt`, `_HTwist.cdt`, and `_Roll.cdt`, respectively.
 
-[rohs-paper]:https://pubmed.ncbi.nlm.nih.gov/23703209/
+
+### Shape Options
+
+| Option                             | Description                                                                 | Units       | Image |
+|------------------------------------|-----------------------------------------------------------------------------|-------------|-------|
+| `-g, --groove`                     | Output minor groove width                                                   | Angstroms   | <img src={require('/../static/md-img/Sequence_Analysis/DNAShapes/minor_groove.png').default} className={'DNA-shape-img'}/> |
+| `-r, --roll`                       | Output roll                                                                  | Degrees     | <img src={require('/../static/md-img/Sequence_Analysis/DNAShapes/roll.png').default} className={'DNA-shape-img'}/> |
+| `-p, --propeller`                  | Output propeller twist                                                       | Degrees     | <img src={require('/../static/md-img/Sequence_Analysis/DNAShapes/propeller.png').default} className={'DNA-shape-img'}/> |
+| `-l, --helical`                    | Output helical twist                                                         | Degrees     | <img src={require('/../static/md-img/Sequence_Analysis/DNAShapes/twist.png').default} className={'DNA-shape-img'}/> |
+| `--electrostatic-potential`        | Output electrostatic potential                                               | *kT/e*      | <img src={require('/../static/md-img/Sequence_Analysis/DNAShapes/electrostatic_potential.png').default} className={'DNA-shape-img'}/> |
+| `--stretch`                        | Output stretch                                                               | Angstroms   | <img src={require('/../static/md-img/Sequence_Analysis/DNAShapes/stretch.png').default} className={'DNA-shape-img'}/> |
+| `--buckle`                         | Output buckle                                                                | Degrees     | <img src={require('/../static/md-img/Sequence_Analysis/DNAShapes/buckle.png').default} className={'DNA-shape-img'}/> |
+| `--shear`                          | Output shear                                                                 | Angstroms   | <img src={require('/../static/md-img/Sequence_Analysis/DNAShapes/shear.png').default} className={'DNA-shape-img'}/> |
+| `--opening`                        | Output opening                                                               | Degrees     | <img src={require('/../static/md-img/Sequence_Analysis/DNAShapes/opening.png').default} className={'DNA-shape-img'}/> |
+| `--stagger`                        | Output stagger                                                               | Angstroms   | <img src={require('/../static/md-img/Sequence_Analysis/DNAShapes/stagger.png').default} className={'DNA-shape-img'}/> |
+| `--tilt`                           | Output tilt                                                                  | Degrees     | <img src={require('/../static/md-img/Sequence_Analysis/DNAShapes/tilt.png').default} className={'DNA-shape-img'}/> |
+| `--slide`                          | Output slide                                                                 | Angstroms   | <img src={require('/../static/md-img/Sequence_Analysis/DNAShapes/slide.png').default} className={'DNA-shape-img'}/> |
+| `--rise`                           | Output rise                                                                  | Angstroms   | <img src={require('/../static/md-img/Sequence_Analysis/DNAShapes/rise.png').default} className={'DNA-shape-img'}/> |
+| `--shift`                          | Output shift                                                                 | Angstroms   | <img src={require('/../static/md-img/Sequence_Analysis/DNAShapes/shift.png').default} className={'DNA-shape-img'}/> |
+| `--2013`                           | Output groove, roll, propeller twist, and helical twist (equivalent to -grpl) |             | |
+| `-a, --2021`                       | Output all 14 metrics                                                         |             |  |
+
+<sub>
+  Image Sources:<br />
+  <a href="https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/b-dna">
+    MGW
+  </a><br />
+  <a href="https://www.info4eee.com/2013/03/application-of-electrostatics.html">
+    EP
+  </a><br />
+  <a href="https://x3dna.org/highlights/schematic-diagrams-of-base-pair-parameters">
+    Base-pair Schematics
+  </a>
+</sub>
+
+[zhou-paper]:https://pubmed.ncbi.nlm.nih.gov/23703209/
+[li-paper]:https://pubmed.ncbi.nlm.nih.gov/29165643/
+[chiu-paper]:https://pmc.ncbi.nlm.nih.gov/articles/PMC5716191/
 [pb-exo-paper]:https://pubmed.ncbi.nlm.nih.gov/29563167/
 
 [cdt-format]: /docs/Guides/Getting-Started/file-formats#cdt
