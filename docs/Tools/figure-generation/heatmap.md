@@ -23,21 +23,22 @@ This tool generates a heatmap from a tab-delimited matrix input of numeric value
 The values to color scale is defined as a range from a minimum value of 0 (designated white) to a customizable maximum value specified by the user (customizable but typically red, blue, or black), hence, the "two colors" in the "Two Color Heatmap".
 
 
-<div className="row">
+<div class="row">
   <div class = "col col--3">
-  <img src={require('./img/matrix.jpg').default} style={{width:85+'%',}}/>
-  </div>
-    <div class = "col col--2">
-  <img src={require('./img/default_nucleosome.png').default} style={{width:100+'%',}}/>
-  <p>--black</p>
+    <img src={require('./img/matrix.jpg').default} style={{width:85+'%',}}/>
+    <p></p>
   </div>
   <div class = "col col--2">
-  <img src={require('./img/blue_nucleosome.png').default} style={{width:100+'%',}}/>
-  <p>--blue</p>
+    <img src={require('./img/default_nucleosome.png').default} style={{width:100+'%',}}/>
+    <p>--black</p>
   </div>
   <div class = "col col--2">
-  <img src={require('./img/custom_nucleosome.png').default} style={{width:100+'%',}}/>
-  <p>--custom</p>
+    <img src={require('./img/blue_nucleosome.png').default} style={{width:100+'%',}}/>
+    <p>--blue</p>
+  </div>
+  <div class = "col col--2">
+    <img src={require('./img/custom_nucleosome.png').default} style={{width:100+'%',}}/>
+    <p>--custom</p>
   </div>
 </div>
 
