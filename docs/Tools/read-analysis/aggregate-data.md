@@ -9,6 +9,23 @@ sidebar_label: aggregate-data
 Compile data from tab-delimited file into matrix according to user-specified
 metric.
 
+$$
+A \rightarrow
+fA = 
+f *
+\begin{pmatrix}
+  a_{1,1} & \cdots & a_{1,n}\\
+  \vdots & \ddots & \vdots \\
+  a_{m,1} & \cdots & a_{m,n} \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+  f([a_{1,1} \cdots a_{1,n}]) \\
+  \vdots \\
+  f([a_{m,1} \cdots a_{m,n}]) \\
+\end{pmatrix}
+$$
+
 <img src={require('/../static/md-img/Read_Analysis/AggregateDataWindow.png').default} style={{width:70+'%'}}/>
 
 ### Aggregation Method Options

@@ -8,6 +8,21 @@ sidebar_label: transpose-matrix
 
 Transpose the rows and columns of tab-delimited matrix data.
 
+$$
+\begin{pmatrix}
+  a_{1,1} & \cdots & a_{1,n}\\
+  \vdots & \ddots & \vdots \\
+  \vdots & \ddots & \vdots \\
+  a_{m,1} & \cdots & a_{m,n} \\
+\end{pmatrix}
+\rightarrow
+\begin{pmatrix}
+  a_{1,1} & \cdots & \cdots & a_{1,m}\\
+  \vdots & \ddots & \ddots & \vdots \\
+  a_{n,1} & \cdots & \cdots & a_{n,m} \\
+\end{pmatrix}
+$$
+
 <img src={require('/../static/md-img/Read_Analysis/TransposeMatrixWindow.png').default} style={{width:70+'%'}}/>
 
 ### File Inputs (TAB/CDT Files)
