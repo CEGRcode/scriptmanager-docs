@@ -4,7 +4,7 @@ title: Read Analysis
 sidebar_label: Read Analysis
 ---
 
-These Read Analysis tools are mostly tools that work with the [CDT or other tab-delimited Matrix file formats][file-format].
+These Read Analysis tools are mostly tools that work with the [CDT or other tab-delimited Matrix file formats][cdt-format].
 
 Most commonly used  is the TagPileup tool.
 
@@ -26,6 +26,7 @@ Others manipulate files to calculate normalization factors, normalize the data, 
 [tag-pileup]:/docs/Tools/read-analysis/tag-pileup
 [transpose-matrix]:/docs/Tools/read-analysis/transpose-matrix.md
 
+[file-format]:/docs/Guides/Getting-Started/file-formats
 [bam-format]:/docs/Guides/Getting-Started/file-formats#bam
 [bed-format]:/docs/Guides/Getting-Started/file-formats#bed
 [cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt
