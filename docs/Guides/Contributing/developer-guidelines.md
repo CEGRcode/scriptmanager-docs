@@ -117,10 +117,21 @@ With the help of plugins, Gradle can do all sorts of tasks to help manage and ma
 #### Compile/Build
 Compiling Java classes could be handled manually, but for large projects like this, it is cumbersom. We let Gradle juggle the process of compiling, retrieving dependencies, and building the final JAR file with the help of Gradle plugins. The dependencies we use are a mix of downloaded JAR files (`scriptmanager/lib/*.jar` and dependencies retrieved directly from [Maven][maven]).
 
+To compile an executable JAR file from source, run:
+```
+./gradlew build
+```
+
+The ScriptManager jar file will be created in the `build/libs` directory. As long as you have this file, you can move it wherever you want and do whatever you want with the rest of the ScriptManager files (even delete them). If you ever lose the JAR file, you can regenerate it by rerunning the Gradle build command in while in the `scriptmanager` directory.
+
 Gradle will need to be updated periodically to support *building* on later Java versions.
 
 :::caution
-Please note the minimum Java version required to support building the JAR executable. Code compiling with Gradle creates an upper Java version limit depending on the version of Gradle used. See this [table][gradle-version-compatibility] for more information on version compatibility. Check [Java version history][java-version-history] LTS versions for a sense of which Java versions should be supported.
+Please note that your machine's **Java version** may not be compatible our supported Gradle version for compiling. The JAR can be *executed* on most versions but compiling the code may require installing an older version of Java (see SDK Man).
+
+Compiling with Gradle has an upper Java version limit depending on the version of Gradle used. See this [table][gradle-version-compatibility] for more information on version compatibility. Check [Java version history][java-version-history] LTS versions for a sense of which Java versions should be supported.
+
+If you are a user, not a developer, consider directly downloading the JAR executable from the [release page][releases] if these steps aren't working.
 :::
 
 
@@ -156,17 +167,11 @@ Open your terminal and move to the directory where you want to install scriptman
 git clone https://github.com/CEGRcode/scriptmanager
 ```
 
-Then you need to build the executable JAR file with the following two commands.
+Then follow the [build instructions][compilebuild] or run:
 ```
 cd scriptmanager
 ./gradlew build
 ```
-
-The ScriptManager jar file will be created in the `build/libs` directory. As long as you have this file, you can move it wherever you want and do whatever you want with the rest of the ScriptManager files (even delete them). If you ever lose the JAR file, you can regenerate it by rerunning the Gradle build command in while in the `scriptmanager` directory.
-
-:::caution
-Please note that the latest **Java version** may not be compatible our supported Gradle version to compile. The JAR can be *executed* on most versions but compiling the code may require installing an older version of Java. Consider directly downloading the JAR executable (instructions above) if these steps aren't working.
-:::
 
 #### Update your local repository (get the latest)
 If you ever need to get the latest code from the Github repo, just navigate to the `scriptmanager` directory and run the following commands in the terminal to update and then re-build your JAR executable.
@@ -339,6 +344,8 @@ The [Release Roadmap][release-roadmap] on Github organizes issue tickets and cre
 [minimize-issue]:https://github.com/CEGRcode/scriptmanager/issues/116
 [docs-readme]:https://github.com/CEGRcode/scriptmanager-docs
 [release-roadmap]:https://github.com/CEGRcode/scriptmanager/projects/6
+[releases]: https://github.com/CEGRcode/scriptmanager/releases
 
+[compilebuild]: /docs/Guides/Contributing/developer-guidelines#compilebuild
 [sm-javadocs]:/javadocs/
 [gradle-based-build]:/docs/Guides/Contributing/developer-guidelines#gradle
