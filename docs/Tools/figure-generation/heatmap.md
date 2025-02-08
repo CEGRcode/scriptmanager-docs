@@ -52,13 +52,13 @@ This script does not restrict selection of file inputs because a variety of file
 
 ### Color selection
 
-Details of the implementation are described below but typically red and blue are used for "antisense" and "sense" tag counts (respectively) from strand-specific assays and black is used for tag counts of strand non-specific assays such as ATAC-seq and MNase-seq. Users can further select from any RGB color by clicking "custom" and "Heatmap Color" to open the color selection panel to either choose from a palette of colors or input a hexidecimal color code.
+Details of the implementation are described below but typically red and blue are used for "antisense" and "sense" tag counts (respectively) from strand-specific assays and black is used for tag counts of strand non-specific assays such as ATAC-seq and MNase-seq. Users can further select from any RGB color by clicking the "custom" radiobutton and "Heatmap Color" to open the [color selection panel][color-guide] to either choose from a palette of colors or input a hexidecimal color code.
 
 :::tip
 The Pugh Lab standard for ChIP-exo heatmap strand colors is <Highlight color="blue">‘Sense’ = blue</Highlight> and <Highlight color="red">‘Anti’ = red</Highlight>.
 :::
 
-### Transparent Background
+#### Transparent Background
 
 This checkbox was introduced with v0.14 and allows the user to create heatmap traces where the base color scales from transparent instead of white to the user-selected color.
 
@@ -74,6 +74,12 @@ The user can specify the contrast threshold in a couple ways:
 - **Percentile:** Or the user can tell the script to dynamically determine the top $p$ percentile of values across the numeric matrix (excluding zeros) and set them all to have the "maximum color" value and scale color assignment for the rest of the values to white from there.
 
 Read more about the contrast threshold below ("Details of color-scaling strategy").
+
+:::note
+**Is your tool outputting a blank heatmap?**
+
+Check your contrast threshold -- If you select the default 10 absolute threshold but your matrix contains values of mostly 0, 1, and 2s, you might be getting extremely light, almost white patterns that make your output look like a blank heatmap!
+:::
 
 ### Image dimensions
 
