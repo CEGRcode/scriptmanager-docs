@@ -63,6 +63,40 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        /*Help docs: https://docusaurus.io/docs/search*/
+
+        // The application ID provided by Algolia
+        appId: '696AYXHS16',
+  
+        // Public API key: it is safe to commit it
+        apiKey: '78a35eb6d91e4e141238b9023415d807',
+  
+        indexName: 'pughlab-mbg-cornell',
+  
+        // Optional: see doc section below
+        contextualSearch: true,
+  
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        // externalUrlRegex: 'external\\.com|domain\\.com',
+  
+        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        // replaceSearchResultPathname: {
+        //   from: '/docs/', // or as RegExp: /\/docs\//
+        //   to: '/',
+        // },
+  
+        // Optional: Algolia search parameters
+        searchParameters: {},
+  
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+  
+        // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+        insights: false,
+  
+        //... other Algolia params
+      },
       navbar: {
         title: 'ScriptManager',
         logo: {
@@ -81,6 +115,10 @@ const config = {
             docId: 'Tools/read-analysis/tag-pileup',
             position: 'left',
             label: 'Tools',
+          },
+          {
+            type: 'search',
+            position: 'right',
           },
           {
             type: 'html',
@@ -157,6 +195,10 @@ const config = {
       },
     }),
   stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/@docsearch/css@3',
+      type: 'text/css',
+    },
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
       type: 'text/css',
