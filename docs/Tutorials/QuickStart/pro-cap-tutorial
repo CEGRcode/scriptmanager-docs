@@ -2,7 +2,7 @@
 id: pro-cap-tutorial
 title: "Pro-cap Tutorial"
 sidebar_label: "Pro-seq"
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 import Tabs from '@theme/Tabs';

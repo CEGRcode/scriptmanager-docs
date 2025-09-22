@@ -47,11 +47,11 @@ If your BED file downloads with a `.txt` extension, make sure to change the file
 :::
 
 ### BAM File
-This is the set of read alignments from the [ENCODE Project][encode-project] (`ENCFF128WZG.bam`). 
+This is the set of read alignments from the [ENCODE Project][encode-project] (`ENCFF534DCE.bam`). 
 
 <Link
   className="button button--secondary"
-  href="https://www.encodeproject.org/files/ENCFF128WZG/@@download/ENCFF128WZG.bam">
+  href="https://www.encodeproject.org/files/ENCFF128WZG/@@download/ENCFF534DCE.bam">
   Download sample BAM file
 </Link>
 
@@ -61,8 +61,6 @@ This is the set of read alignments from the [ENCODE Project][encode-project] (`E
 :::caution
 The BAM file is ~6.5GB large so make sure you have enough space on your machine before downloading.
 :::
-
-## Generate the Plots
 
 ### 1. Open ScriptManager
 
@@ -286,7 +284,7 @@ The following shell commands records the locations for a BED file, a BAM file, a
 ```bash
 SCRIPTMANAGER=/path/to/ScriptManager.jar
 BEDFILE=/path/to/UCSC_GRCh38_knownGene_GENCODEV3_ALL-TSS_2000bp.bed
-BAMFILE=/path/to/ENCFF128WZG.bam
+BAMFILE=/path/to/ENCFF534DCE.bam
 OUTPUT=/path/to/myoutput
 
 samtools index $BAMFILE
