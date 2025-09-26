@@ -4,6 +4,10 @@ title: Scale Matrix
 sidebar_label: Scale Matrix
 ---
 
+import InputFileMatrices from '/docs/DocComponents/InputFileMatrices.md'
+import RowColumnSelect from '/docs/DocComponents/RowColumnSelect.md'
+import OutputGZip from '/docs/DocComponents/OutputGZip.md'
+
 ![scale-matrix](/../static/icons/Read_Analysis/ScaleMatrix_square.svg)
 
 Apply a user-specified scaling factor to tab-delimited matrix data
@@ -29,9 +33,7 @@ This tool typically applies a scaling factor ($s$) calculated from ScriptManager
 
 <img src={require('/../static/md-img/Read_Analysis/ScaleMatrixWindow.png').default} style={{width:70+'%'}}/>
 
-### File inputs (CDT/TAB)
-
-This script processes matrix files (CDT/TAB) but there is no extension restriction so be make sure your input files include tab-delimited numerical data.
+<InputFileMatrices />
 
 ### Scaling Factor
 
@@ -55,13 +57,13 @@ The input files must be loaded with the file selection tool. The input file colu
 
 If you have multiple files that all need to be scaled by the same value (e.g. TagPileup outputs derived from the same BAM file), the Uniform scaling methood is more convenient to use. When this option is selected, the "Uniform scaling factor" option can be selected while the "Scaling Factor" column is disregarded in the execution of the script.
 
-### Start Row/Column
-
-These integers indicate the last header columns or row labels. By default they are set to follow CDT format specifications but can be adjusted if you have some other tab-delimited file format with different header starts.
+<RowColumnSelect />
 
 ### Output
 
 Each scaled matrix file is written with the `_SCALE.cdt` suffix appended. For example, `SomeMatrixFile.cdt` would be scaled and written to `SomeMatrixFile_SCALE.cdt`.
+
+<OutputGZip />
 
 ## Command Line Interface
 

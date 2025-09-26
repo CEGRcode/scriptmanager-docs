@@ -4,6 +4,9 @@ title: Aggregate Data
 sidebar_label: aggregate-data
 ---
 
+import RowColumnSelect from '/docs/DocComponents/RowColumnSelect.md'
+import OutputGZip from '/docs/DocComponents/OutputGZip.md'
+
 ![aggregate-data](/../static/icons/Read_Analysis/AggregateData_square.svg)
 
 Compile data from tab-delimited file into matrix according to user-specified
@@ -37,6 +40,14 @@ $$
 * **Min**
 * **Max**
 * **Positional Variance**
+
+<RowColumnSelect />
+
+### Output
+
+Each scaled matrix file is written with the `_SCORES.out` suffix appended. For example, `SomeMatrixFile.cdt` would be scaled and written to `SomeMatrixFile_SCORES.out`.
+
+<OutputGzip />
 
 ## Command Line Interface
 

@@ -15,6 +15,22 @@ After creating the environment above (do this once per machine), you can activat
 conda activate docusaurus
 ```
 
+## Contributing
+
+```
+|-- scriptmanager-docs
+|-- docs
+  |-- DocComponents # standard snippets for modular construction of main docs are stored here. Editing these propagates changes to all instantiations of these components
+  |-- Guides # content and pages in here are organized under the "General" navbar tab on the website. If you add new pages to this, you need to update `sidebar.js`
+    |-- Getting-Started
+    |-- Tutorials
+    |-- Community
+    |-- tool-index.md # together with `toolIndex.table.js`,
+  |-- Tools # a markdown file for each tool in scriptmanager is included here (organized by tool group under the "Tool" navbar tab on the website). Unlike Guides/, the sidebar is auto-updated so you do not need to update `sidebar.js` to include new pages
+|--
+
+```
+
 ## Docusaurus Instructions
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator. Use the following commands from within the repo directory (`cd /your/path/to/scriptmanager-docs`).
 
