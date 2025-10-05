@@ -29,6 +29,16 @@ const config = {
     locales: ['en'],
   },
 
+  markdown: { // make link shortcuts available to all markdown pages
+    format: "mdx",
+    preprocessor: ({ filePath, fileContent }) => {
+      console.log("Injecting global markdown references into " + filePath);
+      const fs = require("node:fs");
+      const links = fs.readFileSync("./docs/DocComponents/_format_links.mdx");
+      return fileContent + "\n" + links;
+    },
+  },
+
   presets: [
     [
       'classic',

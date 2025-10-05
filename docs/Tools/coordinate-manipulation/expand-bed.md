@@ -17,8 +17,9 @@ The script can also pad the intervals of BED coordinates to create intervals tha
 
 <img src={require('/md-img/Coordinate_Manipulation/ExpandBEDWindow.png').default} style={{width:70+'%'}}/>
 
-### Input BED files
-The graphical interface restricts file selection by the `.bed` file extension. This tool supports batch processing of files.
+### Input files (BED)
+
+The graphical interface restricts file selection by the `.bed` file extension and expects input files to be in [BED format][bed-format]. This tool supports batch processing of files.
 
 
 ### Expansion strategy & size
@@ -61,8 +62,6 @@ This tool takes a single [BED file][bed-format] for input.
 | `-b, --border` | add to border |
 
 [bedtools-slop]:https://bedtools.readthedocs.io/en/latest/content/tools/slop.html
-
-[bed-format]:/docs/Guides/Getting-Started/file-formats#bed
 
 [tag-pileup]:/docs/Tools/read-analysis/tag-pileup
 [four-color]:/docs/Tools/figure-generation/four-color
