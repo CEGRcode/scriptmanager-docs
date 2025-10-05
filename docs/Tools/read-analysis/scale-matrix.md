@@ -4,9 +4,9 @@ title: Scale Matrix
 sidebar_label: Scale Matrix
 ---
 
-import InputFileMatrices from '/docs/DocComponents/InputFileMatrices.md'
-import RowColumnSelect from '/docs/DocComponents/RowColumnSelect.md'
-import OutputGZip from '/docs/DocComponents/OutputGZip.md'
+import InputFileMatrices from '/docs/DocComponents/InputFileMatrices.mdx'
+import RowColumnSelect from '/docs/DocComponents/RowColumnSelect.mdx'
+import OutputGZip from '/docs/DocComponents/OutputGZip.mdx'
 
 ![scale-matrix](/../static/icons/Read_Analysis/ScaleMatrix_square.svg)
 

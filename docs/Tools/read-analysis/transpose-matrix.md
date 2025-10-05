@@ -4,9 +4,9 @@ title: Transpose Matrix
 sidebar_label: transpose-matrix
 ---
 
-import InputFileMatrices from '/docs/DocComponents/InputFileMatrices.md'
-import RowColumnSelect from '/docs/DocComponents/RowColumnSelect.md'
-import OutputGZip from '/docs/DocComponents/OutputGZip.md'
+import InputFileMatrices from '/docs/DocComponents/InputFileMatrices.mdx'
+import RowColumnSelect from '/docs/DocComponents/RowColumnSelect.mdx'
+import OutputGZip from '/docs/DocComponents/OutputGZip.mdx'
 
 ![transpose-matrix](/../static/icons/Read_Analysis/TransposeMatrix_square.svg)
 

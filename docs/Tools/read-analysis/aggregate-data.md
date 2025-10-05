@@ -4,8 +4,8 @@ title: Aggregate Data
 sidebar_label: aggregate-data
 ---
 
-import RowColumnSelect from '/docs/DocComponents/RowColumnSelect.md'
-import OutputGZip from '/docs/DocComponents/OutputGZip.md'
+import RowColumnSelect from '/docs/DocComponents/RowColumnSelect.mdx'
+import OutputGZip from '/docs/DocComponents/OutputGZip.mdx'
 
 ![aggregate-data](/../static/icons/Read_Analysis/AggregateData_square.svg)
 
