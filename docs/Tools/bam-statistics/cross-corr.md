@@ -1,8 +1,10 @@
 ---
 id: cross-corr
 title: BAM Cross Correlation (ArchTEx)
-sidebar_labal: BAM Cross Correlation
+sidebar_labal: BAM Cross Correlation (ArchTEx)
 ---
+
+import InputFileBAM from '/docs/DocComponents/InputFileBAM.mdx'
 
 <!-- ![cross-corr](/icons/BAM_Statistics/Cross-Corr_square.svg) -->
 
@@ -15,17 +17,19 @@ This tool is typically used for empirically determining a tag shift value for co
 
 <img src={require('/md-img/BAM_Statistics/CrossCorrelationWindow.png').default} style={{width:70+'%'}}/>
 
+This script processes each input BAM file and reports a shift distance for the best cross correlation.
 
-### Input BAM files
-The graphical interface restricts file selection by the `.bam` file extension. This tool supports batch processing of files.
+<InputFileBAM />
 
 ### Correlation Strategies
+
 You may choose from two strategies for calculating the correlation:
 
 * **Whole Genome (recommended)** correlation will calculate the correlation of tags across the entire genome (chr sizes inferred from BAM header).
 * **Random sampling** correlation will sample some user-specified number of sites from each chromosome across a user-specified sized window.
 
 ### Output Files
+
 You may optionally select to write the correlations scores and peak position output to a text file by checking the "Output Statistics" checkbox.
 
 The output window will display progress through the file (printing chromosome currently being analyzed) as well as final **Tag Shift (x-axis)** ➡️ **Correlation Values (y-axis)** under the "C-C Data" tab. The "C-C Plots" tab will display the same values as a line plot.

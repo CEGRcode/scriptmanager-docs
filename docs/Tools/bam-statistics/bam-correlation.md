@@ -1,14 +1,22 @@
 ---
 id: bam-correlation
 title: BAM Correlation
-sidebar_label: bam-correlation
+sidebar_label: BAM Correlation
 ---
+
+import InputFileBAM from '/docs/DocComponents/InputFileBAM.mdx'
 
 ![bam-correlation](/icons/BAM_Statistics/BAMGenomeCorrelation_square.svg)
 
 Genome-Genome correlations for replicate comparisons given multiple sorted and indexed (BAI) BAM files.
 
 <img src={require('/md-img/BAM_Statistics/BAMGenomeCorrelationWindow.png').default} style={{width:70+'%'}}/>
+
+This script processes each input BAM file and peforms a genome-wide correlation for every pair.
+
+<InputFileBAM />
+
+Note that unlike most other ScriptManager tools, this script does not process each BAM file independently, but rather computes a relationship between every pair of BAM files provided (Many BAM --> one output as opposed to Each BAM --> one output).
 
 ### Read Options
 
@@ -93,7 +101,3 @@ _Note that absolute file paths are easier to work with. For relative paths, you\
 | `-2, --read2` | output read 2 |
 | `-a, --all-reads` | output combined |
 | `-m, --midpoint` | output midpoint (require PE) |
-
-
-[sort-bam]:/docs/Tools/bam-manipulation/sort-bam
-[bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer

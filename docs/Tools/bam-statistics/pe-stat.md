@@ -12,14 +12,30 @@ Generates Insert-size Histogram statistic (GEO requirement) and outputs BAM Head
 
 <img src={require('/md-img/BAM_Statistics/PEStatWindow.png').default} style={{width:70+'%'}}/>
 
-This tool processes each input BAM file by calculating and tallying the insert-size of every single read pair.
+This script processes each input BAM file by calculating and tallying the insert-size of every single read pair.
 
 <InputFileBAM />
 
+### Histogram Range (min-max limits)
+
+By default, Paired-End Statistics doesn't tally insert lengths beyond 1000bp but the user may choose to extend or restrict the range of moleule lengths that are tallied.
 
 ### Duplication Statistics
 
-The user can determine the duplicate rate vs. number of duplicate molecules by checking the box "Calculate duplication statistics."
+The user can report the duplicate rate vs. number of duplicate molecules by checking the box "Calculate duplication statistics."
+
+### Output statistics (TXT, PNG)
+
+By default, the Paired-End Statistics does not record the computed values (often users just want to take a look at the report) so check this box if you wish to save these results. If you do check this box, there are several files that will be generated based on each input BAM file basename:
+
+- `*_InsertHistogram.out` - insert size tallies used to make the histogram
+- `*_PE.png` - the histogram itself
+- (if "Duplication statistics" is selected) `*_DuplicationSummary.out` - the computed duplication stats
+- (if "Duplication statistics" is selected) `*_DUP.png` - the visualized duplication stats
+
+:::note
+Even if this output box is not set, note the [logging manager][scriptmanager-logging] will track this run as if this checkbox was selected.
+:::
 
 ## Command Line Interface
 Usage:
@@ -50,3 +66,4 @@ This tool takes a single BAM file for input. As with other tools, this tool requ
 | `-x, --max=<MAX_INSERT>` | histogram range maximum (1000 default) |
 
 
+[logging-manager]:/docs/Guides/Getting-Started/logging-manager
