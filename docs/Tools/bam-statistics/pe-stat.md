@@ -4,6 +4,8 @@ title: Paired-End Statistics
 sidebar_label: Paired-End Statistics
 ---
 
+import InputFileBAM from '/docs/DocComponents/InputFileBAM.mdx'
+
 ![pe-stat](/icons/BAM_Statistics/PEStats_square.svg)
 
 Generates Insert-size Histogram statistic (GEO requirement) and outputs BAM Header including alignment statistics and parameters given a sorted and indexed (BAI) paired-end BAM File.
@@ -12,10 +14,8 @@ Generates Insert-size Histogram statistic (GEO requirement) and outputs BAM Head
 
 This tool processes each input BAM file by calculating and tallying the insert-size of every single read pair.
 
+<InputFileBAM />
 
-:::caution
-Make sure your BAM input files are [sorted][sort-bam] and [indexed][bam-indexer].
-:::
 
 ### Duplication Statistics
 
@@ -50,5 +50,3 @@ This tool takes a single BAM file for input. As with other tools, this tool requ
 | `-x, --max=<MAX_INSERT>` | histogram range maximum (1000 default) |
 
 
-[sort-bam]:/docs/Tools/bam-manipulation/sort-bam
-[bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer
