@@ -22,7 +22,9 @@ See BAM. ScriptManager does not generally support the use of SAM formats due to 
 
 The binary form of SAM file format, this is one of the most common formats used by ScriptManager. It's the output of aligners when aligning reads to a reference sequence. See Samtools documentation  or the documentation from the alignment tool for [specification info][bam-specs].
 
-Related Tools:
+<details>
+
+<summary> Related Tools: </summary>
 
 | Input | Output |
 | ------------- | ------------- |
@@ -43,6 +45,7 @@ Related Tools:
 | [`sort-bam`][sort-bam] | [`sort-bam`][sort-bam] |
 | [`tag-pileup`][tag-pileup] |  |
 
+</details>
 
 ## Coordinate/Annotation Formats
 
@@ -50,7 +53,9 @@ Related Tools:
 
 A text-based file format for storing information about genomic regions. ScriptManager supports [0-based and 1-based][coordinate-systems] BED files.
 
-Related Tools:
+<details>
+
+<summary> Related Tools: </summary>
 
 | Input | Output |
 | ------------- | ------------- |
@@ -67,6 +72,7 @@ Related Tools:
 | [`sort-bed`][sort-bed] | [`sort-bed`][sort-bed] |
 | [`tag-pileup`][tag-pileup] |  |
 
+</details>
 
 ### GFF/GTF - _General Feature Format_
 
@@ -74,7 +80,9 @@ The GTF/GFF/GFF3 file specifications are documented in several places around the
 
 Importantly note that both the start and end are 1-indexed and inclusive.
 
-Related Tools:
+<details>
+
+<summary> Related Tools: </summary>
 
 | Input | Output |
 | ------------- | ------------- |
@@ -88,6 +96,7 @@ Related Tools:
 | [`sort-gff`][sort-gff] | [`sort-gff`][sort-gff] |
 |  | [`tile-genome`][tile-genome] |
 
+</details>
 
 ## Sequence formats
 
@@ -95,7 +104,9 @@ Related Tools:
 
 A simple, text-based format for representing DNA or protein sequences. Files in the FASTA format may have different extensions, including `.fasta`, `.fna`, `.ffn`, `.frn`, `.fa`, or even `.txt`.
 
-Related Tools:
+<details>
+
+<summary> Related Tools: </summary>
 
 | Input | Output |
 | ------------- | ------------- |
@@ -106,13 +117,17 @@ Related Tools:
 | [`randomize-fasta`][randomize-fasta] | [`randomize-fasta`][randomize-fasta] |
 | [`search-motif`][search-motif] |  |
 
+</details>
+
 ## Matrix formats
 
 ### CDT - _Clustered Data Table_
 
 A standard format for matrices, with two row headers and one column header. Values are separated by `\t` characters, making these files a subset of the [TAB](#tab) format. Read more about the format [here][pumadb-cdt-microarray].
 
-Related Tools:
+<details>
+
+<summary> Related Tools: </summary>
 
 | Input | Output |
 | ------------- | ------------- |
@@ -127,13 +142,17 @@ Related Tools:
 | [`sort-bed`][sort-bed] |  |
 |  | [`tag-pileup`][tag-pileup] |
 
+</details>
+
 ### TAB/TSV - _Tab-separated format_
 
 or "Tab-delimited" format
 
 A text-based format for storing matrices with values separated by [`\t` characters][tab]. These files can be easily viewed in Excel or Google Sheets.
 
-Related Tools:
+<details>
+
+<summary> Related Tools: </summary>
 
 | Input | Output |
 | ------------- | ------------- |
@@ -142,6 +161,7 @@ Related Tools:
 |  | [`tag-pileup`][tag-pileup] |
 | [`scale-matrix`][scale-matrix] | [`scale-matrix`][scale-matrix] |
 
+</details>
 
 ## Image formats
 
@@ -149,7 +169,9 @@ Related Tools:
 
 A standard, [lossless][lossless-images] image format used for storing figures.
 
-Related Tools:
+<details>
+
+<summary> Related Tools: </summary>
 
 | Input | Output |
 | ------------- | ------------- |
@@ -159,7 +181,7 @@ Related Tools:
 |  | [`heatmap`][heatmap] |
 | [`merge-heatmap`][merge-heatmap] | [`merge-heatmap`][merge-heatmap] |
 
-
+</details>
 
 ## Genome Browser Track formats
 
@@ -167,30 +189,37 @@ Related Tools:
 
 A format used for plotting one value of quantitative data across a genome or region. This format is most closely related to the [wiggle format][wiggle] and always [0-based][coordinate-systems].
 
-Related Tools:
+<details>
+
+<summary> Related Tools: </summary>
 
 | Input | Output |
 | ------------- | ------------- |
 | [`bam-to-bedgraph`][bam-to-bedgraph] |  |
 
+</details>
 
 ### scIDX - _Strand-specific coordinate count_
 A lesser-used, [1-based][coordinate-systems]  format for storing the [number of tags][scidx-tags] at a given coordinate. Files using this format may also use the `.tab` extension since it is a subset of the [TAB](#tab) format.
 
-Related Tools:
+<details>
+
+<summary> Related Tools: </summary>
 
 | Input | Output |
 | ------------- | ------------- |
 |  | [`bam-to-scidx`][bam-to-scidx]<br></br>_file has the [`.tab`](#tab) extension_|
 
-
+</details>
 
 ## Generic formats
 
 ### TXT - _Text file_
 A standard format for storing text. Some text files may have the `.out` extension.
 
-Related Tools:
+<details>
+
+<summary> Related Tools: </summary>
 
 | Input | Output |
 | ------------- | ------------- |
@@ -201,6 +230,7 @@ Related Tools:
 |  | [`se-stat`][se-stat] |
 |  | [`signal-dup`][signal-dup] |
 
+</details>
 
 :::info
 See our [Tool Index][tool-index] for the full catalog of scripts.
