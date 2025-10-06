@@ -49,9 +49,11 @@ The binary form of SAM file format, this is one of the most common formats used 
 
 ## Coordinate/Annotation Formats
 
+Generally coordinate annotations are tracked as BED or GFF files (see below) which have a number of differences in structure but the most critical difference between them is the [0-based v 1-based coordinate systems][coordinate-systems] for tracking the interval bounds.
+
 ### BED - _Browser Extendable Data_
 
-A text-based file format for storing information about genomic regions. ScriptManager supports [0-based and 1-based][coordinate-systems] BED files.
+The [BED specifications][bed-specs] allow for several variations on the coordinate system (BED3, BED6, bedGraph). ScriptManager scripts generally require the first 6 columns to be present (even if empty).
 
 <details>
 
@@ -242,6 +244,7 @@ See our [Tool Index][tool-index] for the full catalog of scripts.
 [ucsc-file-formats]:https://genome.ucsc.edu/FAQ/FAQformat.html
 [pumadb-cdt-microarray]:https://puma.princeton.edu/help/formats.shtml#cdt
 [bam-specs]:https://samtools.github.io/hts-specs/
+[bed-specs]:https://useast.ensembl.org/info/website/upload/bed.html
 [gff-specs]:https://useast.ensembl.org/info/website/upload/gff3.html
 
 [coordinate-systems]:https://tidyomics.com/blog/2018/12/09/2018-12-09-the-devil-0-and-1-coordinate-system-in-genomics/
