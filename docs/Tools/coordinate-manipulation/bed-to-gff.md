@@ -5,6 +5,7 @@ sidebar_label: BED to GFF
 ---
 
 import InputFileBED from '/docs/DocComponents/InputFileBED.mdx'
+import OutputGZip from '/docs/DocComponents/OutputGZip.mdx'
 
 ![BEDtoGFF](/icons/Coordinate_Manipulation/BEDtoGFF_square.svg)
 
@@ -14,6 +15,14 @@ Converts [BED file][bed-format]  to [GFF file][gff-format]
 
 <InputFileBED />
 
+
+### Output (GFF)
+
+The converted file is named the same as its corresponding input filename by default (just swap extension for `.gff`) in [GFF-style][gff-format] format with the id (4th) column in the BED file used for details stored as the details column (9th) in the new BED file. Score columns map accordingly.
+
+<!-- Consider adding an example input to output toy converter example -->
+
+<OutputGZip />
 
 
 ## Command Line Interface
