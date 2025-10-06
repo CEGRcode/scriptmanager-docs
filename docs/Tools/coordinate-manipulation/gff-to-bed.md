@@ -4,12 +4,14 @@ title: Convert GFF to BED
 sidebar_label: GFF to BED
 ---
 
+import InputFileGFF from '/docs/DocComponents/InputFileGFF.mdx'
 ![gff-to-bed](/icons/Coordinate_Manipulation/GFFtoBED_square.svg)
 
 Converts GFF file format to BED file format
 
 <img src={require('/md-img/Coordinate_Manipulation/GFFtoBEDWindow.png').default} style={{width:70+'%'}}/>
 
+<InputFileGFF />
 
 ## Command Line Interface
 
@@ -33,7 +35,3 @@ This tool takes a single [GFF file][gff-format] for input.
 | -s, --stdout | output bed to STDOUT |
 | `-z, --gzip`            | gzip output (default=false) |
 
-
-
-[bed-format]:/docs/Guides/Getting-Started/file-formats#bed
-[gff-format]:/docs/Guides/Getting-Started/file-formats#gff
