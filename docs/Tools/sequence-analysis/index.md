@@ -4,6 +4,8 @@ title: Sequence Analysis
 sidebar_label: Sequence Analysis
 ---
 
+![Sequence_Analysis](/md-img/Sequence_Analysis.png)
+
 Tools for analyzing sequence files (e.g. shape analysis, motif searches, randomization, and extractions).
 
 | Tool Name | Input | Output | Description |
@@ -20,9 +22,5 @@ Tools for analyzing sequence files (e.g. shape analysis, motif searches, randomi
 [fasta-extract]:/docs/Tools/sequence-analysis/fasta-extract
 [randomize-fasta]:/docs/Tools/sequence-analysis/randomize-fasta
 [search-motif]:/docs/Tools/sequence-analysis/search-motif
-
-[bed-format]:/docs/Guides/Getting-Started/file-formats#bed
-[cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt
-[fasta-format]:/docs/Guides/Getting-Started/file-formats#fasta
 
 [Roh_paper]:https://pubmed.ncbi.nlm.nih.gov/23703209

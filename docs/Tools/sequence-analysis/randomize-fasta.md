@@ -1,8 +1,11 @@
 ---
 id: randomize-fasta
 title: Randomize FASTA
-sidebar_label: randomize-fasta
+sidebar_label: Randomize FASTA
 ---
+
+import InputFileFASTA from '/docs/DocComponents/InputFileFASTA.mdx'
+import OutputGZip from '/docs/DocComponents/OutputGZip.mdx'
 
 ![randomize-fasta](/../static/icons/Sequence_Analysis/RandomizeFASTA_square.svg)
 
@@ -12,14 +15,19 @@ Randomizes FASTA sequence for each input entry
 
 <img src={require('/../static/md-img/Sequence_Analysis/RandomizeFASTAWindow.png').default} style={{width:70+'%'}}/>
 
-## File inputs (FASTA)
-Each input FASTA-formatted file with a set of sequences will produce a new FASTA file of the randomized/shuffled sequences.
+This is a useful way to generate a type of negative control for some sequence analysis that preserves the original dataset's nucleotide frequencies.
 
-When using the GUI, make sure your input is properly formatted and uses the appropriate FASTA (`.fa` / `.fa.gz` / `.fasta` / `...`) extensions.
+<InputFileFASTA />
 
-<!-- ## Seed Options -->
+### Seed Option
 
-<!-- ## Output Options -->
+Users have the option to set a [random seed][about-random-seeds] for reproducible runs.
+
+### Output Options (FASTA)
+
+For each input FASTA file, a new shuffled FASTA file is created and named based on the filename of the input with the the following suffix: `*_RAND.fa`.
+
+<OutputGZip />
 
 
 ## Command Line Interface
@@ -45,6 +53,4 @@ java -jar ScriptManager.jar sequence-analysis randomize-fasta [-hV] [-o=<output>
 | `-z, --gzip`            | gzip output (default=false) |
 
 
-
-
-[fasta-format]:/docs/Guides/Getting-Started/file-formats#fasta
+[about-random-seeds]:https://www.statisticshowto.com/random-seed-definition

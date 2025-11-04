@@ -4,6 +4,7 @@ title: DNA Shape from BED File
 sidebar_label: DNA Shape from BED
 ---
 
+import OutputGZip from '/docs/DocComponents/OutputGZip.mdx'
 import ReactPlayer from 'react-player'
 
 ![dna-shape-bed](/../static/icons/Sequence_Analysis/DNAShapefromBED_square.svg)
@@ -19,10 +20,18 @@ Based on the findings from the Rohs lab ([Zhou et al, 2013][zhou-paper]; [Li et 
 
 This script takes in a series of nucleotide sequences from a BED file and determines the average shape score(s) across the bp positions.
 
-## What do these shape options mean?
+### File inputs (Genomic FASTA & BED)
+
+The sequence for each input BED-specified coordinates in the FASTA file has a shape score series pattern. Because the shape score is a series corresponding to the bp position, the BED records in the input should be positionally linked to some feature and of the same length.
+
+When using the GUI, make sure your input is properly formatted and uses the appropriate BED (`.bed` or `.bed.gz`) and FASTA (`.fa` / `.fa.gz` / `.fasta` / `...`) extensions.
+
+### Shape Options
+
+#### What do these shape options mean?
 
 Below is a video introducing some of the shape measurements that we are trying to capture with these calculations.
-<ReactPlayer playing controls url="https://www.youtube.com/watch?v=JeQLzRhU--U" style={{ border: '5px solid black' }} />
+<ReactPlayer playing={false} controls url="https://www.youtube.com/watch?v=JeQLzRhU--U" style={{ border: '5px solid black' }} />
 
 <br/>
 
@@ -30,16 +39,8 @@ Below is a video introducing some of the shape measurements that we are trying t
 [Read more on how DNA shape was used in the analysis of comparing TF-binding _in-vivo_ vs _in-vitro_ (Rossi et al, 2018).][pb-exo-paper]
 :::
 
-## File inputs (BED & FASTA)
+### Output file (CDT/TAB)
 
-The sequence for each input BED-specified coordinates in the FASTA file has a shape score series pattern. Because the shape score is a series corresponding to the bp position, the BED records in the input should be positionally linked to some feature and of the same length.
-
-When using the GUI, make sure your input is properly formatted and uses the appropriate BED (`.bed` or `.bed.gz`) and FASTA (`.fa` / `.fa.gz` / `.fasta` / `...`) extensions.
-
-## File Options
-The 'Force Strandedness' options ensures that the DNA strand orientation during the analysis is considered.
-
-## Output file (CDT/TAB)
 The average composites of the CDT output will be displayed in the GUI output window:
 
 <div class="tutorial-img-flow-container">
@@ -49,11 +50,14 @@ The average composites of the CDT output will be displayed in the GUI output win
 
 There should be a [CDT file][cdt-format]/Composite file output for each shape aspect selected based on the input filename and with a suffix distinguishing each selected shape style (`_HelT.cdt`, `_MGW.cdt`, `_PropT.cdt`, and `_Roll.cdt`).
 
-For example, in the command-line execution, an `-o myoutput` argument can be provided and the resulting files should be called `myoutput_MGW.cdt`, `myoutput_PTwist.cdt`, `myoutput_HTwist.cdt`, or `myoutput_Roll.cdt` according to the shapes selected (or with `.out` if composite is selected).
+For example, in the command-line execution, an `-o myoutput` argument can be provided and the resulting files should be called `myoutput_MGW.cdt`, `myoutput_HelT.cdt`, `myoutput_PropT.cdt`, or `myoutput_Roll.cdt` according to the shapes selected (or with `.out` of the composites if selected).
 
 :::tip
 The output matrix files use the same format as the output from [Tag Pileup][tag-pileup] (can visualize with Figure Generation's [heatmap][heatmap] and [composite][composite-plot] tools).
 :::
+
+<OutputGZip />
+
 
 ## Command Line Interface
 
@@ -133,10 +137,6 @@ Similarly for *propeller*, *helical*, and *roll*, the output matrix [CDT files][
 [li-paper]:https://pubmed.ncbi.nlm.nih.gov/29165643/
 [chiu-paper]:https://pmc.ncbi.nlm.nih.gov/articles/PMC5716191/
 [pb-exo-paper]:https://pubmed.ncbi.nlm.nih.gov/29563167/
-
-[bed-format]: /docs/Guides/Getting-Started/file-formats#bed
-[cdt-format]: /docs/Guides/Getting-Started/file-formats#cdt
-[fasta-format]: /docs/Guides/Getting-Started/file-formats#fasta
 
 [composite-plot]: /docs/Tools/figure-generation/composite-plot
 [fasta-extract]: /docs/Tools/sequence-analysis/fasta-extract

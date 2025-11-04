@@ -1,8 +1,10 @@
 ---
 id: fasta-extract
 title: Extract FASTA
-sidebar_label: fasta-extract
+sidebar_label: Extract FASTA
 ---
+
+import OutputGZip from '/docs/DocComponents/OutputGZip.mdx'
 
 ![fasta-extract](/../static/icons/Sequence_Analysis/FASTAExtract_square.svg)
 
@@ -14,18 +16,25 @@ Generate FASTA file from indexed Genome FASTA file and BED file. Script will gen
 
 <img src={require('/../static/md-img/Sequence_Analysis/FASTAExtractWindow.png').default} style={{width:70+'%'}}/>
 
-## File inputs (Genomic FASTA & BED)
+### File inputs (Genomic FASTA & BED)
 
 BED files capture coordinate regions without the sequence information. This tool allows the user to search the FASTA file the BED file is based on and extract the sequence within the genomic region to a new FASTA-formatted file. The input FASTA is often a genome FASTA but as long as chrname column matches FASTA identifiers, it could be any FASTA.
 
 When using the GUI, make sure your input is properly formatted and uses the appropriate BED (`.bed` or `.bed.gz`) and FASTA (`.fa` / `.fa.gz` / `.fasta` / `...`) extensions.
 
-## File Options 
-The 'Force Strandedness' options ensures that the analysis will respect the strand information specified in the BED file when extracting sequences.
+### Force Strandedness
 
-<!-- ## Header Options -->
+This ensures that the DNA strand orientation from the BED file is used (otherwise sequence interval extracted from reference '+' strand).
 
-<!-- ## Output Options -->
+### FASTA Header ID Options
+
+BED file specifications allow the user to specify an identifier for each coordinate in the file (fourth column) and this option allows the user to proceed with labeling each FASTA sequence with the value in the BED id column ("BED Name") or to create a new header based on the genomic sequence coordinate information ("Genome Coordinate").
+
+### Output format (FASTA)
+
+For each input BED file, a new FASTA file is created with the coordinates using the input filename except with the file extension swapped for `.fa`.
+
+<OutputGZip/>
 
 ## Command Line Interface
 
@@ -61,5 +70,3 @@ The first positional input
 | `-f, --force` | force-strandedness (default) |
 
 [fai-idx]: https://www.htslib.org/doc/faidx.html
-
-[fasta-format]:/docs/Guides/Getting-Started/file-formats#fasta
