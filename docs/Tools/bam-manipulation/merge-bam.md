@@ -14,6 +14,7 @@ Merges Multiple BAM files into single BAM file. Sorting is performed automatical
 This is frequently used for replicate merging. All input files loaded will be merged to a single BAM file.
 
 ### File inputs (BAM list)
+
 Make sure your inputs are properly formatted and use the appropriate `.bam` extension. This script also supports bulk selection and processing of files.
 
 :::caution
@@ -21,6 +22,7 @@ Make sure your BAM input files are [sorted][sort-bam] and [indexed][bam-indexer]
 :::
 
 ### Output File Name (BAM)
+
 The output merged BAM will be named according to the user-customizable text field that defaults to `merged_BAM.bam` in the user-selected "Output Directory".
 
 :::tip

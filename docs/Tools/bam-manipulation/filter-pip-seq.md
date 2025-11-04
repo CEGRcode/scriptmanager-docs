@@ -4,6 +4,8 @@ title: Filter PIP-seq
 sidebar_label: Filter PIP-seq
 ---
 
+import InputFileBAM from '/docs/DocComponents/InputFileBAM.mdx'
+
 ![filter-pip-seq](/icons/BAM_Manipulation/FilterforPIPseq_square.svg)
 
 Filter BAM file by -1 nucleotide. Requires genome FASTA file.
@@ -22,8 +24,7 @@ Since the alignment files only capture the reference genome sequence at genomic 
 Make sure that the genome build used for the genome input matches the genome aligned to for the BAM formatted files. If you aren't sure, compare the chromosome lengths in the genomic FASTA index file (FAI) against each BAM file header (`samtools view -H myfile.bam`).
 :::
 
-### File inputs (BAM)
-This script filters BAM-type files so make sure your inputs are properly formatted and use the appropriate `.bam` extension. The script also supports bulk selection and processing of files.
+<InputFileBAM />
 
 ### Output
 The output file for this script is a filtered set of alignments in BAM format for each input BAM file. The `_PSfilter.bam` suffix is used for each output. For example, for a given `XXX.bam` input file, `XXX_PSfilter.bam` will be output to the user-selected output directory.
