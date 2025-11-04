@@ -4,6 +4,8 @@ title: BAM Format Converter
 sidebar_label: BAM Format Converter
 ---
 
+![BAM_Format_Converter](/md-img/BAM_Format_Converter.png)
+
 Extract genome-wide pileup information from a BAM file.
 
 | Tool Name | Input | Output | Description |
@@ -13,14 +15,7 @@ Extract genome-wide pileup information from a BAM file.
 | [`bam-to-bed`][bam-to-bed] | [BAM][bam-format] | [BED][bed-format] | Convert BAM file to BED file. |
 | [`bam-to-bedgraph`][bam-to-bedgraph] | [BAM][bam-format] | [bedGraph][bedgraph-format] | Convert BAM file to bedGraph file. |
 
-
 [bam-to-bedgraph]:/docs/Tools/bam-format-converter/bam-to-bedgraph
 [bam-to-bed]:/docs/Tools/bam-format-converter/bam-to-bed
 [bam-to-gff]:/docs/Tools/bam-format-converter/bam-to-gff
 [bam-to-scidx]:/docs/Tools/bam-format-converter/bam-to-scidx
-
-[bam-format]:/docs/Guides/Getting-Started/file-formats#bam
-[bed-format]:/docs/Guides/Getting-Started/file-formats#bed
-[bedgraph-format]:/docs/Guides/Getting-Started/file-formats#bedgraph
-[gff-format]:/docs/Guides/Getting-Started/file-formats#gff
-[scidx-format]:/docs/Guides/Getting-Started/file-formats#scidx

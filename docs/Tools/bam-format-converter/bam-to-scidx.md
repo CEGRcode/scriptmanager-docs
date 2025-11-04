@@ -4,21 +4,47 @@ title: BAM to scIDX
 sidebar_label: BAM to scIDX
 ---
 
+import InputFileBAM from '/docs/DocComponents/InputFileBAM.mdx'
+import FilterInsertSizeOptions from '/docs/DocComponents/FilterInsertSizeOptions.mdx'
+import OutputGZip from '/docs/DocComponents/OutputGZip.mdx'
+
 ![bam-to-scidx](/icons/BAM_Format_Converter/BAMtoscIDX_square.svg)
 
-Convert BAM file to scIDX file
+Convert BAM file to scIDX file like a genome-wide pileup.
 
 <img src={require('/md-img/BAM_Format_Converter/BAMtoscIDXWindow.png').default} style={{width:70+'%'}}/>
 
-### Read Options
+<InputFileBAM />
+
+### Read Encoding Options
 
 This tool has multiple read options to output.
-* **Read 1**: output Read 1
-* **Read 2**: output Read 2
-* **Combined**: output combined reads
+* **Read 1**: output Read 1 (5' end)
+* **Read 2**: output Read 2 (5' end)
+* **Combined**: output both reads (5' end)
 * **Midpoint**: output the midpoint between reads
 
-Note: The **Midpoint** option requires proper mate-pair reading.
+:::note
+The **Midpoint** option requires proper mate-pair reading.
+:::
+
+### Tag Shift
+
+For each position determined by the read encoding, the position is shifted up or downstream by the user-specified number of base pairs with respect to the read strand (read 1 if midpoint selected).
+
+<FilterInsertSizeOptions />
+
+### Output format (scIdx)
+
+The genome-wide tag pileup of each BAM entry is written to the [scIdx format][scidx-format]. The output filename is derived from the BAM filename with the read encoding information. For example, given an input BAM filename, `mybam.bam`, the following output files will be produced for each read encoding option:
+
+* **Read 1 example**: `mybam_READ1.tab`
+* **Read 2 example**: `mybam_READ2.tab`
+* **Combined example**: `mybam_COMBINED.tab`
+* **Midpoint example**: `mybam_MIDPOINT.tab`
+
+<OutputGZip />
+
 
 ## Command Line Interface
 
