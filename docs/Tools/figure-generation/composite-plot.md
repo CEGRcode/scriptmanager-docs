@@ -14,6 +14,8 @@ When reviewing the output from several TagPileup runs, this tool is convenient f
 
 <img src={require('/../static/md-img/Figure_Generation/CompositePlotWindow.png').default} style={{width:70+'%'}}/>
 
+### File input (TSV)
+
 The tool expects a text file with any extension formatted like the [TagPileup's][tag-pileup] composite output of tab-delimited values with a single header column and the first row defining the domain:
 
 ```
@@ -22,19 +24,23 @@ Sample1_read1_sense.cdt	0.0	0.13333333333333333	0.0	0.0	...	0.0	0.06666666666666
 Sample1_read1_anti.cdt	0.06666666666666667	0.0	0.0	...	0.26666666666666666	0.0
 ```
 
-The format allows for any number of rows and columns.
+The format allows for any number of rows, but the same number of columns.
 
 :::caution
-Make sure the tab-delimited file has the same number of columns in each row. Differing number of values within each row will throw an error.
+Differing number of columns between rows will throw an error.
 :::
 
 ### Include Legend
 
-You may choose to include a legend for each heatmap which will specify which color was used for each row of the composite file with the name each row defined by the first column.
+You may choose to include a legend for each heatmap which will specify which color was used for each composite vector, labeled by the row header in the first column.
 
 ### Image dimensions
 
-The image height and width specify the number of pixels to squish or expand the numeric matrix into for the final output `.png` heat map image. Image dimensions are enabled with the selection of "Output Image."
+The image height and width specify the number of pixels to squish or expand the final output `.png` heat map image. Image dimensions are enabled with the selection of "Output Image."
+
+### Output options (PNG)
+
+"Output image" must be selected to save the output image in the GUI but either way, the composite image will pop up for the user in a new window when run in the graphical interface. If you choose to output the image, it will be written to a filename derived from the input with its extension stripped and the `_plot.png` suffix appended.
 
 
 ## Command Line Interface
@@ -66,4 +72,3 @@ java -jar ScriptManager.jar figure-generation composite-plot [-hlV] [-o=<output>
 [tag-pileup]:/docs/Tools/read-analysis/tag-pileup
 
 [color-hex-url]:http://www.javascripter.net/faq/rgbtohex.htm
-[png-format]:/docs/Guides/Getting-Started/file-formats#png

@@ -1,36 +1,30 @@
 ---
 id: three-color-heatmap
 title: Three Color Heatmap
-sidebar_label: three-color-heatmap
+sidebar_label: Three Color Heatmap
 ---
 
-![Three Color Heatmap](/../static/icons/Figure_Generation/ThreeColorHeatmap_square.svg)
+import RowColumnSelect from '/docs/DocComponents/RowColumnSelect.mdx'
+import InputFileMatrix from '/docs/DocComponents/InputFileMatrix.mdx'
+import Highlight from '@site/src/components/Highlight';
 
-export const Highlight = ({children, color}) => (
-<span
-style={{
-      backgroundColor: color,
-      borderRadius: '2px',
-      color: '#fff',
-      padding: '0.2rem',
-    }}>
-{children}
-</span>
-);
+![Three Color Heatmap](/../static/icons/Figure_Generation/ThreeColorHeatmap_square.svg)
 
 Generate heat map with middling values.
 
 <!-- ![ThreeColorHeatMapSchematic.png] -->
 
-:::note
-Extended description goes here.
-:::
+This tool generates a three color heatmap from a tab-delimited matrix input of numeric values. It is generally used to visualize values with both negative and positive values.
+
+The values to color scale is defined as a range from a user-specified minimum, middle, and maximum set of values corresponding to a user-specified set of three colors (default blue, black, and yellow), hence the three-color heatmap.
 
 <img src={require('/../static/md-img/Figure_Generation/ThreeColorHeatMapWindow.png').default} style={{width:70+'%'}}/>
 
-### File inputs
+Consider using this tool to visualize the matrix output of the [**DNA Shape**][dna-shape-bed] tools to visuzlize sequence shape changes. You may also bring your own matrix transformed data (e.g. differential tag pileup matrices) or any tab-delimited text file can be used with numeric type values (many third party tools create such outputs) so long as the appropriate start row and start column are specified appropriately to skip over header columns and rows.
 
-This script does not restrict selection of file inputs because a variety of file extensions may be parsed out for the numeric matrix. The tool supports bulk selection and processing of files.
+<InputFileMatrix />
+
+<RowColumnSelect />
 
 ### Color selection
 
@@ -39,6 +33,7 @@ Details of the implementation are described below but typically Lo(Low), Mid(Mid
 **Lo(Low)** represents the lowest range of data values and is assigned the color 'blue'.
 **Mid(Middle)** represents the middle range of data and is assigned the color 'black'.
 **Hi(High)** represents the highest range of data values and is assigned the color 'yellow'.
+**NaN Color** is used to visualize matrix values that failed to parse into a numeric type.
 
 ### Contrast threshold
 
@@ -49,6 +44,14 @@ The user can specify the contrast threshold in a couple ways:
 
 Read more about the contrast threshold below ("Details of color-scaling strategy").
 
+#### Exclude zero values
+
+When performing percentile threshold calculations, a matrix might have a high number of zeros which the user may want to ignore when determining percentile threshold cutoffs. Checking this box would exclude these values from the percentile calculations and may help the heatmap better display the range of values in the matrix.
+
+<!-- #### Output Min/Max and midpoint cutoffs
+
+The user can optionally elect to output the threshold cutoffs (useful for when computing percentile-based cutoffs as absolutes) by checking this box. Cutoff statistics are reported to ___________ filepath. -->
+
 ### Image dimensions
 
 The image height and width specify the number of pixels to squish or expand the numeric matrix into for the final output `.png` heat map image.
@@ -57,8 +60,17 @@ The image height and width specify the number of pixels to squish or expand the 
 
 The image compression options allow the user to choose from several image compression strategies but we recommend "Treeview" for base-pair resolution tag-pileup occupancy data. This is the same strategy implemented by previous microarray visualization packages ([Saldanha et al, 2004][treeview-paper]).
 
+### Output options (PNG)
 
-# Command Line Interface
+If the user elects to save the heatmap image, it is written to [PNG formatted][png-format] filepath derived from the input matrix file. The input file extension is stripped and replaced with a suffix based on the image compression strategy used. For example, given an input matrix filename, `mymatrix.cdt`, the following output files will be produced for each strategy:
+
+* **Treeview**: `mymatrix_treeview.png`
+* **Bicubic**: `mymatrix_bicubic.png`
+* **Bilinear**: `mymatrix_bilinear.png`
+* **Nearest Neighbor**: `mymatrix_neighbor.png`
+
+
+## Command Line Interface
 Usage:
 ```bash
 java -jar Scriptmanager.jar figure-generation three-color [-pn=<percentile> |
@@ -67,9 +79,6 @@ java -jar Scriptmanager.jar figure-generation three-color [-pn=<percentile> |
        [-l=<startCOL>] [-o=<output>] [-r=<startROW>] [-x=<pixelWidth>]
        [-y=<pixelHeight>] [-z=<compression>] <CDT>
 ```
-Description:
-
-Generate heat map with middling values.
 
 ### Positional Input
 
@@ -125,4 +134,6 @@ Expects a [CDT][cdt-format] formatted matrix file of values to generate heatmap 
 
 For custom color: type hexadecimal string to represent colors (e.g. "FF0000" is hexadecimal for red). See http://www.javascripter.net/faq/rgbtohex.htm for some color options with their corresponding hex strings.
 
-[cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt
+[treeview-paper]:https://pubmed.ncbi.nlm.nih.gov/15180930/
+
+[dna-shape-bed]:/docs/Tools/sequence-analysis/dna-shape-bed

@@ -4,19 +4,11 @@ title: Two-color Heatmap
 sidebar_label: Two-color Heatmap
 ---
 
-![Two-colorheatmap](/../static/icons/Figure_Generation/TwoColorHeatmap_square.svg)
+import RowColumnSelect from '/docs/DocComponents/RowColumnSelect.mdx'
+import InputFileMatrix from '/docs/DocComponents/InputFileMatrix.mdx'
+import Highlight from '@site/src/components/Highlight';
 
-export const Highlight = ({children, color}) => (
-<span
-style={{
-      backgroundColor: color,
-      borderRadius: '2px',
-      color: '#fff',
-      padding: '0.2rem',
-    }}>
-{children}
-</span>
-);
+![Two-colorheatmap](/../static/icons/Figure_Generation/TwoColorHeatmap_square.svg)
 
 This tool generates a heatmap from a tab-delimited matrix input of numeric values.
 
@@ -46,9 +38,9 @@ This tool is typically used for visualizing the matrix output of [**Tag Pileup**
 
 <img src={require('/../static/md-img/Figure_Generation/TwoColorHeatMapWindow.png').default} style={{width:70+'%'}}/>
 
-### File inputs
+<InputFileMatrix />
 
-This script does not restrict selection of file inputs because a variety of file extensions may be parsed out for the numeric matrix. The tool supports bulk selection and processing of files.
+<RowColumnSelect />
 
 ### Color selection
 
@@ -88,6 +80,15 @@ The image height and width specify the number of pixels to squish or expand the 
 ### Image Compression
 
 The image compression options allow the user to choose from several image compression strategies but we recommend "Treeview" for base-pair resolution tag-pileup occupancy data. This is the same strategy implemented by previous microarray visualization packages ([Saldanha et al, 2004][treeview-paper]).
+
+### Output options (PNG)
+
+If the user elects to save the heatmap image, it is written to [PNG formatted][png-format] filepath derived from the input matrix file. The input file extension is stripped and replaced with a suffix based on the image compression strategy used. For example, given an input matrix filename, `mymatrix.cdt`, the following output files will be produced for each strategy:
+
+* **Treeview**: `mymatrix_treeview.png`
+* **Bicubic**: `mymatrix_bicubic.png`
+* **Bilinear**: `mymatrix_bilinear.png`
+* **Nearest Neighbor**: `mymatrix_neighbor.png`
 
 ### Details of color-scaling strategy
 
@@ -215,6 +216,4 @@ Note user should not use the pound symbol (`#`) in front of the hexidecimal beca
 [merge-heatmap]:/docs/Tools/figure-generation/merge-heatmap
 [peak-align-ref]:/docs/Tools/peak-analysis/peak-align-ref
 
-[cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt
-[png-format]:/docs/Guides/Getting-Started/file-formats#png
 [color-guide]:/docs/Guides/Getting-Started/color-guide

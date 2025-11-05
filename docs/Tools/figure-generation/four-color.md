@@ -4,19 +4,10 @@ title: Four Color Sequence Plot
 sidebar_label: Four Color Plot
 ---
 
-![four-color](/../static/icons/Figure_Generation/FourColorSequencePlot_square.svg)
+import InputFileFASTA from '/docs/DocComponents/InputFileFASTA.mdx'
+import Highlight from '@site/src/components/Highlight';
 
-export const Highlight = ({children, color}) => (
-<span
-style={{
-      backgroundColor: color,
-      borderRadius: '2px',
-      color: '#fff',
-      padding: '0.2rem',
-    }}>
-{children}
-</span>
-);
+![four-color](/../static/icons/Figure_Generation/FourColorSequencePlot_square.svg)
 
 Generate 4 color sequence plot from a FASTA file and user-defined RGB colors.
 
@@ -24,21 +15,18 @@ This tool is typically used for visualizing the sequence motifs around ChIP-exo 
 
 <img src={require('/../static/md-img/Figure_Generation/FourColorSequenceWindow.png').default} style={{width:70+'%'}}/>
 
-### Input files (FASTA)
-The sequences in each [FASTA][fasta-format] formatted input file must have one or more sequences. All sequences within each FASTA must share the same fixed sequence length. The input FASTA can be generated using ScriptManager's [FASTA Extract tool][fasta-extract].
+<InputFileFASTA />
 
 :::caution
-
-Sequences from the input FASTA must be the same number of nucleotides in length.
-
+Sequences from the input FASTA must be the same number of nucleotides in length. Consider using ScriptManager's [FASTA Extract tool][fasta-extract] with a BED input from the [Expand BED tool][expand-bed] if your sequences do not meet this criterion.
 :::
 
-
 ### Nucleotide colors
+
 The default colors for each nucleotide are as follows:
 
 | Nucleotide | default color (hex) |
-|: ---------- :|: --------- :|
+|:----------:|:---------:|
 | <Highlight color="#D00000"> **A** </Highlight> | <Highlight color="#D00000"> **#D00000** </Highlight> |
 | <Highlight color="#00D000"> **T** </Highlight> | <Highlight color="#00D000"> **#00D000** </Highlight> |
 | <Highlight color="#FFB400"> **G** </Highlight> | <Highlight color="#FFB400"> **#FFB400** </Highlight> |
@@ -49,10 +37,14 @@ The default colors can be customized using the color selector tool. You can open
 
 __[Read more about color selection in the color guide][color-guide]__
 
-
 ### Pixel dimensions
+
 * **Pixel Height** refers to the pixel height of each nucleotide block represented in the PNG of the four color plot.
 * **Pixel Width** refers to the pixel width of each nucleotide block represented in the PNG of the four color plot.
+
+### Output options (PNG)
+
+The output sequence image is written to [PNG formatted][png-format] filepath derived from the input FASTA file by simply replacing the extension with `.png`.
 
 
 ## Command Line Interface
@@ -84,6 +76,4 @@ java -jar ScriptManager.jar figure-generation four-color [-hV] [-o=<output>]
 [color-hex-url]:http://www.javascripter.net/faq/rgbtohex.htm
 
 [fasta-extract]:/docs/Tools/sequence-analysis/fasta-extract
-
-[fasta-format]:/docs/Guides/Getting-Started/file-formats#fasta
-[png-format]:/docs/Guides/Getting-Started/file-formats#png
+[expand-bed]:/docs/Tools/coordinate-manipulation/expand-bed

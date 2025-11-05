@@ -185,6 +185,20 @@ A standard, [lossless][lossless-images] image format used for storing figures.
 
 </details>
 
+### SVG - _Scalable Vector Graphics_
+
+A [vectorized image][wikipedia-svg] for high-resolution figures.
+
+<details>
+
+<summary> Related Tools: </summary>
+
+| Input | Output |
+| ------------- | ------------- |
+|  | [`heatmap-labeler`][heatmap-labeler] |
+
+</details>
+
 ## Genome Browser Track formats
 
 ### bedGraph
@@ -252,6 +266,7 @@ See our [Tool Index][tool-index] for the full catalog of scripts.
 [tab]:http://wiki.christophchamp.com/index.php?title=TAB_file_format
 [lossless-images]:https://www.adobe.com/uk/creativecloud/photography/discover/lossy-vs-lossless.html
 [scidx-tags]:https://toolshed.g2.bx.psu.edu/repository/display_tool?repository_id=642b78707940da3a&tool_config=%2Fsrv%2Ftoolshed%2Fmain%2Fvar%2Fdata%2Frepos%2F002%2Frepo_2064%2Fbam_to_scidx.xml&changeset_revision=408520e1ae1a&render_repository_actions_for=tool_shed
+[wikipedia-svg]:https://en.wikipedia.org/wiki/SVG
 
 [tool-index]:/docs/Guides/tool-index
 [bam-format]:/docs/Guides/Getting-Started/file-formats#bam
@@ -282,6 +297,7 @@ See our [Tool Index][tool-index] for the full catalog of scripts.
 [four-color]:/docs/Tools/figure-generation/four-color
 [gff-to-bed]:/docs/Tools/coordinate-manipulation/gff-to-bed
 [heatmap]:/docs/Tools/figure-generation/heatmap
+[heatmap-labeler]:/docs/Tools/figure-generation/heatmap-labeler
 [md5checksum]:/docs/Tools/file-utilities/md5checksum
 [merge-bam]:/docs/Tools/bam-manipulation/merge-bam
 [merge-heatmap]:/docs/Tools/figure-generation/merge-heatmap

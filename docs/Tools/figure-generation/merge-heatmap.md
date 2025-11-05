@@ -4,19 +4,9 @@ title: Merge Heatmap
 sidebar_label: Merge Heatmap
 ---
 
-![Merge Heatmap](/../static/icons/Figure_Generation/MergeHeatmaps_square.svg)
+import Highlight from '@site/src/components/Highlight';
 
-export const Highlight = ({children, color}) => (
-<span
-style={{
-      backgroundColor: color,
-      borderRadius: '2px',
-      color: '#fff',
-      padding: '0.2rem',
-    }}>
-{children}
-</span>
-);
+![Merge Heatmap](/../static/icons/Figure_Generation/MergeHeatmaps_square.svg)
 
 This tool merges two PNG files into a third PNG file that is an average of each corresponding pair of pixels from the input files.
 
@@ -25,6 +15,8 @@ This tool merges two PNG files into a third PNG file that is an average of each 
 Typical use of this tool is for merging <Highlight color="blue">blue(sense)</Highlight> and <Highlight color="red">red(anti-sense)</Highlight> [**two-color heatmap plots**][heatmap] plots for [**ChIP-exo analysis**][chipexo-tutorial].
 
 <img src={require('/../static/md-img/Figure_Generation/MergeHeatMapWindow.png').default} style={{width:70+'%'}}/>
+
+### File input (PNGs)
 
 Any file with a `.png` extension may be loaded into the Merge Heatmap tool. When a batch of files have been loaded, the user can click "Merge" which will execute the script which will run the script to pair off samples based on their filenames and merge each pair into a new file with the `*_merge.png` suffix.
 
@@ -40,15 +32,32 @@ SampleB_sense_treeview.png
 SampleC_sense_treeview.png
 ```
 
-The following files will be paired off for merging:<br />
-`SampleA_sense_treeview.png` &harr; `SampleA_anti_treeview.png`<br />
-`SampleB_sense_treeview.png` &harr; `SampleB_anti_treeview.png`<br />
-`Another-Name_StructureA_sense_treeview.png` &harr; `Another-Name_StructureA_anti_treeview.png`<br />
-unpaired: `SampleC_sense_treeview.png`
+The following files will be paired off for merging:
+
+```
+# SampleA_merge.png
+SampleA_sense_treeview.png
+SampleA_anti_treeview.png
+
+# SampleB_merge.png
+SampleB_sense_treeview.png
+SampleB_anti_treeview.png
+
+# Another-Name_StructureA_merge.png
+Another-Name_StructureA_sense_treeview.png
+Another-Name_StructureA_anti_treeview.png
+
+# unpaired
+SampleC_sense_treeview.png
+```
 
 :::caution
 Make sure you are merging PNG files with the same pixel-dimensions. ScriptManager will terminate the process if it encounters a pair of images with unequal dimensions and report it to the user in a pop-up window.
 :::
+
+### Output options (PNG)
+
+The heatmap image is written to [PNG formatted][png-format] file with a filepath derived from the input image file corresponding to the "sense" file in the matched pairs. This filename is cut off right before the last "sense" and the `_merge.png` suffix is appended to it to build the output filename. For example, provided some input `myheatmap_sense_treeview.png` and `myheatmap_anti_treeview.png`, the output filename will be `myheatmap_merge.png`.
 
 ### Details of color-averaging strategy
 
@@ -105,9 +114,6 @@ Expects two [PNG][png-format] like the output from the [heatmap tool][heatmap]. 
 | Option                  | Description                                                                                                                            |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | `-o, --output=<output>` | specify output filename, please use PNG extension (`<senseFile>_merged.png` appended to the name in working directory of ScriptManager |
-
-[cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt
-[png-format]:/docs/Guides/Getting-Started/file-formats#png
 
 [heatmap]:/docs/Tools/figure-generation/heatmap
 
