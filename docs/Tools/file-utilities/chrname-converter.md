@@ -23,15 +23,32 @@ Also, a mitochondiral chromosome name conversion is also included with the selec
 
 <img src={require('/../static/md-img/File_Utilities/ConvertBEDChrNamesWindow.png').default} style={{width:50+'%'}}/><img src={require('/../static/md-img/File_Utilities/ConvertGFFChrNamesWindow.png').default} style={{width:50+'%'}}/>
 
-# Command Line Interface
+### File inputs
+
+There is a separate tool for BED and GFF processing (make sure to use appropriate extensions).
+
+### Conversion options
+
+#### To Arabic or To Roman
+
+The chromosome names can be converted either from **Arabic to Roman** (chr3 &rarr; chrIII) or from **Roman to Arabic** (chrIII &rarr; chr3).
+
+#### Use "chrmt" instead of default "chrM"
+
+Since some genome builds use "chrmt" instead of "chrM", this checkbox gives the user the option to specify the mitochondrial chromsome naming format.
+
+### Output options (BED/GFF)
+
+The first tab-delimited token is a string corresponding to a chromosome name and mapped to its appropriate arabic or roman numeral equivalent according to the selected conversion option. The output filepath is derived from the input filename with its extension stripped (`.bed` or `.gff`) and replaced with either a `_toRoman.bed` or `_toArabic.bed` suffix accordingly (`.gff` suffix if using GFF tool).
+
+
+## Command Line Interface
+
 ### Convert BED Chr Names
 Usage:
 ```bash
 java -jar ScriptManager.jar file-utilities convert-bed-genome [-ahmV] [-o=<output>] <coordFile>
 ```
-Description:
-
-Convert BED coordinate files between the standard SGD roman numeral chromosome names to the legacy SacCer3_cegr arabic numeral chromosome names.
 
 ### Convert GFF Chr Names
 Usage:
@@ -55,7 +72,3 @@ Expects a single [BED file][bed-format] or [GFF file][gff-format] for input.
 | ------ | ----------- |
 |  `-a, --to-arabic` |        switch converter to output arabic numeral chromsome names (default outputs roman numeral chrnames) |
 |  `-m, --chrmt` |             converter will map "chrM" --> "chrmt" (default with no flag is "chrmt" --> "chrM") |
-
-
-[bed-format]:/docs/Guides/Getting-Started/file-formats#bed
-[gff-format]:/docs/Guides/Getting-Started/file-formats#gff

@@ -12,7 +12,16 @@ Compress files to help with limited storage issues and faster reading/writing of
 
 This is particularly useful when working with human data that often involves working with a large number of sites.
 
-### Command Line Interface
+### File input
+
+File formats of any kind may be uploaded to the tool since an MD5 sum calculation is agnostic to file formats. However, the file won't be compressed by much more if its already in a compressed format (e.g. a binarized format like [BAM][bam-format]) and cannot be decompressed if not already compressed using the gzip compression strategy.
+
+### Output files
+
+The output will be the same filename as the input but the `.gz` extension appended/stripped accordingly.
+
+
+## Command Line Interface
 
 _CommandLine tools already exist for this function. This tool only exists as a GUI wrapper in ScriptManager._
 

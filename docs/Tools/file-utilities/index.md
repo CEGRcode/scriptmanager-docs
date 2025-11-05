@@ -4,6 +4,8 @@ title: File Utilities
 sidebar_label: File Utilities
 ---
 
+![File_Utilities](/md-img/File_Utilities.png)
+
 Miscellaneous GUI wrappers for common file utilities (e.g. checksums, compression, and yeast genome conversion)
 
 | Tool Name | Input | Output | Description |
@@ -18,7 +20,3 @@ Miscellaneous GUI wrappers for common file utilities (e.g. checksums, compressio
 [md5checksum]:/docs/Tools/file-utilities/md5checksum
 [chrname-converter]:/docs/Tools/file-utilities/chrname-converter
 [compress-files]:/docs/Tools/file-utilities/compress-files
-
-[bed-format]:/docs/Guides/Getting-Started/file-formats#bed
-[gff-format]:/docs/Guides/Getting-Started/file-formats#gff
-[txt-format]:/docs/Guides/Getting-Started/file-formats#txt
