@@ -4,6 +4,8 @@ title: Chromosome Name Converter
 sidebar_label: Chr Name Converter
 ---
 
+import OutputGZip from '/docs/DocComponents/OutputGZip.mdx'
+
 ![ChrNameConverter](/../static/icons/File_Utilities/ConvertChrNames_square.svg)
 
 Different files using different chromosome naming systems for the same genome build presents a challenge during analysis. This tool is provided as a converter between chromosome naming systems for tab-delimited file formats such as BED and GFF.
@@ -40,6 +42,8 @@ Since some genome builds use "chrmt" instead of "chrM", this checkbox gives the 
 ### Output options (BED/GFF)
 
 The first tab-delimited token is a string corresponding to a chromosome name and mapped to its appropriate arabic or roman numeral equivalent according to the selected conversion option. The output filepath is derived from the input filename with its extension stripped (`.bed` or `.gff`) and replaced with either a `_toRoman.bed` or `_toArabic.bed` suffix accordingly (`.gff` suffix if using GFF tool).
+
+<OutputGZip />
 
 
 ## Command Line Interface
