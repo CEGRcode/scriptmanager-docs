@@ -41,7 +41,6 @@ The binary form of SAM file format, this is one of the most common formats used 
 | [`mark-duplicates`][mark-duplicates] | [`mark-duplicates`][mark-duplicates] |
 | [`scaling-factor`][scaling-factor] |  |
 | [`se-stat`][se-stat] |  |
-| [`signal-dup`][signal-dup] |  |
 | [`sort-bam`][sort-bam] | [`sort-bam`][sort-bam] |
 | [`tag-pileup`][tag-pileup] |  |
 
@@ -94,7 +93,6 @@ Importantly note that both the start and end are 1-indexed and inclusive.
 | [`gff-to-bed`][gff-to-bed] |  |
 |  | [`peak-align-ref`][peak-align-ref] |
 |  | [`rand-coord`][rand-coord] |
-| [`signal-dup`][signal-dup] |  |
 | [`sort-gff`][sort-gff] | [`sort-gff`][sort-gff] |
 |  | [`tile-genome`][tile-genome] |
 
@@ -244,7 +242,6 @@ A standard format for storing text. Some text files may have the `.out` extensio
 |  | [`pe-stat`][pe-stat] |
 |  | [`scaling-factor`][scaling-factor] |
 |  | [`se-stat`][se-stat] |
-|  | [`signal-dup`][signal-dup] |
 
 </details>
 
@@ -311,7 +308,6 @@ See our [Tool Index][tool-index] for the full catalog of scripts.
 [scaling-factor]:/docs/Tools/read-analysis/scaling-factor
 [se-stat]:/docs/Tools/bam-statistics/se-stat
 [search-motif]:/docs/Tools/sequence-analysis/search-motif
-[signal-dup]:/docs/Tools/peak-analysis/signal-dup
 [sort-bam]:/docs/Tools/bam-manipulation/sort-bam
 [sort-bed]:/docs/Tools/coordinate-manipulation/sort-bed
 [sort-gff]:/docs/Tools/coordinate-manipulation/sort-gff

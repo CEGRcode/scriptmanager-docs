@@ -287,14 +287,6 @@ export const toolIndex = [
   },
   {
     ...defaultTool,
-    name: "Signal Duplication",
-    group: "PA",
-    description: "Calculate duplication statistics at user-specified regions.",
-    command: "-",
-    url: "docs/Tools/peak-analysis/signal-dup",
-  },
-  {
-    ...defaultTool,
     name: "Sort BAM",
     group: "BM",
     description: "Sort alignments by leftmost coordinates, or by read name when -n is used. An appropriate @HD-SO sort order header tag will be added or an existing one updated if necessary.",
