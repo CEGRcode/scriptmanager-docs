@@ -12,7 +12,8 @@ Align BED peaks to Reference BED file creating CDT files for heatmap generation.
 
 You can think of this like a "Tag Pileup" for annotations (BED) signal in place of the BAM signal that [Tag Pileup][tag-pileup] uses.
 
-## File Inputs
+## File Inputs (BED & BED)
+
 This script expects both a Peak [BED file][bed-format] input and a Reference [BED file][bed-format] input.
 
 ### Peak BED
