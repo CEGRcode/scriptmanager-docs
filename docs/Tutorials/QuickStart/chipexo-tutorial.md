@@ -2,6 +2,7 @@
 id: chipexo-tutorial
 title: "ChIP-exo Tutorial"
 sidebar_label: "ChIP-exo"
+sidebar_position: 1
 ---
 
 import Tabs from '@theme/Tabs';

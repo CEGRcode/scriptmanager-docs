@@ -1,8 +1,7 @@
 ---
-id: getting-started
 title: Getting Started
 sidebar_label: Getting Started
-slug: /
+sidebar_position: 1
 ---
 
 import Tabs from '@theme/Tabs';
