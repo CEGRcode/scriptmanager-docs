@@ -4,7 +4,7 @@ title: File Formats
 sidebar_label: File Formats
 ---
 
-A variety of standard file formats including [BAM](#bam), [GFF](#gff), [BED](#bed), and [CDT](#cdt) are used by the ScriptManager tools along with some custom file formats. The purpose of this guide is to help users understand what types of information these formats store and find tools in ScriptManager based on the format their data exists in.
+A variety of standard file formats including [BAM][bam-format], [GFF][gff-format], [BED][bed-format], and [CDT][cdt-format] are used by the ScriptManager tools along with some custom file formats. The purpose of this guide is to help users understand what types of information these formats store and find tools in ScriptManager based on the format their data exists in.
 
 ### Read More
 While this page includes a little info on each of the file formats, there are other resources on the internet that provide detailed descriptions and context that will better inform users looking for more explanation on the data formats (see links below).
@@ -123,7 +123,7 @@ A simple, text-based format for representing DNA or protein sequences. Files in 
 
 ### CDT - _Clustered Data Table_
 
-A standard format for matrices, with two row headers and one column header. Values are separated by `\t` characters, making these files a subset of the [TAB](#tab) format. Read more about the format [here][pumadb-cdt-microarray].
+A standard format for matrices, with two row headers and one column header. Values are separated by `\t` characters, making these files a subset of the [TAB][tsv-format] format. Read more about the format [here][pumadb-cdt-microarray].
 
 <details>
 
@@ -214,7 +214,7 @@ A format used for plotting one value of quantitative data across a genome or reg
 </details>
 
 ### scIDX - _Strand-specific coordinate count_
-A lesser-used, [1-based][coordinate-systems]  format for storing the [number of tags][scidx-tags] at a given coordinate. Files using this format may also use the `.tab` extension since it is a subset of the [TAB](#tab) format.
+A lesser-used, [1-based][coordinate-systems]  format for storing the [number of tags][scidx-tags] at a given coordinate. Files using this format may also use the `.tab` extension since it is a subset of the [TAB][tsv-format] format.
 
 <details>
 
@@ -222,7 +222,7 @@ A lesser-used, [1-based][coordinate-systems]  format for storing the [number of 
 
 | Input | Output |
 | ------------- | ------------- |
-|  | [`bam-to-scidx`][bam-to-scidx]<br></br>_file has the [`.tab`](#tab) extension_|
+|  | [`bam-to-scidx`][bam-to-scidx]<br></br>_file has the [`.tab`][tsv-format] extension_|
 
 </details>
 
@@ -266,14 +266,6 @@ See our [Tool Index][tool-index] for the full catalog of scripts.
 [wikipedia-svg]:https://en.wikipedia.org/wiki/SVG
 
 [tool-index]:/docs/Guides/tool-index
-[bam-format]:/docs/Guides/Getting-Started/file-formats#bam
-[bed-format]:/docs/Guides/Getting-Started/file-formats#bed
-[bedgraph-format]:/docs/Guides/Getting-Started/file-formats#bedgraph
-[gff-format]:/docs/Guides/Getting-Started/file-formats#gff
-[fasta-format]:/docs/Guides/Getting-Started/file-formats#fasta
-[cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt
-[png-format]:/docs/Guides/Getting-Started/file-formats#png
-[scidx-format]:/docs/Guides/Getting-Started/file-formats#scidx
 
 [aggregate-data]:/docs/Tools/read-analysis/aggregate-data
 [bam-correlation]:/docs/Tools/bam-statistics/bam-correlation
