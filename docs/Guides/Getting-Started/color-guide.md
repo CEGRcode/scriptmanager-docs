@@ -8,7 +8,6 @@ Some tools allow you to customize colors used in the output, specifically among 
 
 Color customization options available in the [Heatmap Labeler][heatmap-labeler], [Four Color Sequence Plot][four-color], [Two Color Heatmap][heatmap], [Three Color Heatmap][three-color-heatmap], and [Composite Plot][composite] tools.
 
-
 ## Color Selector Window (GUI)
 
 When the user opens up the color selector window, they will see several tabs, each visualizing a different method for selecting a custom color.
@@ -42,11 +41,10 @@ User should not use the pound symbol `#` in front of the hexidecimal when typing
 
 :::
 
-
 [color-hex-url]:http://www.javascripter.net/faq/rgbtohex.htm
 
-[four-color]:/docs/Tools/figure-generation/heatmap
-[heatmap]:/docs/Tools/figure-generation/Four-color
+[four-color]:/docs/Tools/figure-generation/four-color
+[heatmap]:/docs/Tools/figure-generation/heatmap
 [three-color-heatmap]:/docs/Tools/figure-generation/three-color-heatmap
 [heatmap-labeler]:/docs/Tools/figure-generation/heatmap-labeler
 [composite]:/docs/Tools/figure-generation/composite-plot
