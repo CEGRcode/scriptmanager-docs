@@ -1,7 +1,7 @@
 ---
 id: transpose-matrix
 title: Transpose Matrix
-sidebar_label: transpose-matrix
+sidebar_label: Transpose Matrix
 ---
 
 import InputFileMatrices from '/docs/DocComponents/InputFileMatrices.mdx'
@@ -33,6 +33,12 @@ $$
 
 <RowColumnSelect />
 
+### Output
+
+Each matrix file is transposed and written with the `_TRANSPOSE` suffix appended and an extension that matches the input file's extension. For example, `SomeMatrixFile.cdt` would be scaled and written to `SomeMatrixFile_TRANSPOSE.cdt`.
+
+<OutputGZip />
+
 
 ## Command Line Interface
 
@@ -61,5 +67,3 @@ This tool takes a matrix file in TAB/CDT format for input.
 | ------ | ----------- |
 | `-r, --start-row` | row to start transposing the matrix (zero indexed) |
 | `-l, --start-col` | column to start transposing the matrix (zero indexed) |
-
-[file-format]:/docs/Guides/Getting-Started/file-formats

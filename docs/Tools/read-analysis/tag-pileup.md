@@ -4,6 +4,8 @@ title: Tag Pileup
 sidebar_label: Tag Pileup
 ---
 
+import OutputGZip from '/docs/DocComponents/OutputGZip.mdx'
+
 ![tag-pileup](/../static/icons/Read_Analysis/TagPileup_square.svg)
 
 <!-- Schematic goes here -->
@@ -27,12 +29,43 @@ This script also processes BED-type files so make sure your input is properly fo
 Make sure your BAM input files are [sorted][sort-bam] and [indexed][bam-indexer].
 :::
 
+<details>
+
+<summary>Common pitfalls</summary>
+
+#### *same genome build* and *same chrom ids* must be used to build both `.bed` file and `.bam` files
+
+If you're not sure about the genome build used to make your `.bam` file, clues may be found by examining the `.bam` header. For example, you may check the chromosome/contig names using the [BAM Statistics tool][se-stat] to see what the chromosome/contig names and their lengths are.
+
+* For human data, you can start with the more common genome builds:
+  * [`GRCh38 (hg38)`](https://hgdownload.soe.ucsc.edu/goldenpath/hg38/bigZips/hg38.chrom.sizes)
+  * [`hg19`](https://hgdownload.soe.ucsc.edu/goldenpath/hg19/bigZips/hg19.chrom.sizes)
+  * look up older builds at UCSC...
+* If you see NCBI-formatted ids like `NC_026501.1`, you can look them up on NCBI to see what genome build they come from. Note that whatever your `.bam` file names the sequences must match your `.bed` file. So if your chromosomes are named `NC_026501.1`, `NC_026502.1`, ... in the `.bam` file, then your `.bed` files must name the chromosomes `NC_026501.1`, `NC_026502.1`, ..., and **NOT** `I`, `II`, ...
+
+Example:
+
+* If `.bam` file has sequence ids: `NC_026501.1`, `NC_026502.1`, ...
+  * ❌ `.bed` file has sequence ids: `I`, `II`, ...
+  * ❌ `.bed` file has sequence ids: `chrI`, `chrII`, ...
+  * ✅ `.bed` file has sequence ids: `NC_026501.1`, `NC_026502.1`, ...
+* If `.bam` file has sequence ids: `I`, `II`, ...
+  * ✅ `.bed` file has sequence ids: `I`, `II`, ...
+  * ❌ `.bed` file has sequence ids: `chrI`, `chrII`, ...
+  * ❌ `.bed` file has sequence ids: `NC_026501.1`, `NC_026502.1`, ...
+
+
+#### Check that your `.bed` file has been [expanded][expand-bed]
+
+If you are getting composite plots centered around zero with no lines, sometimes this means you just didn't expand your BED file and are looking at "pileups" around zero-lengthed intervals
+
+</details>
+
 ### Output Matrix Options (CDT/TAB)
 
 This script outputs a heatmap matrix in [CDT][cdt-format] format by default. The script can also output a matrix in tab format. For visualizing the output matrix, see [Two-color Heatmap][heatmap] tool.
 
-#### Output GZip
-Toggling this allows the user to write matrix files to a compressed file format using a general compression format (gzip) which has the advantage of *speeding up the execution time* by shrinking the I/O load.
+<OutputGZip />
 
 ### Output Composite Options (TXT)
 
@@ -50,7 +83,9 @@ This tool has multiple read aspects to choose from.
 * **Midpoint**: analyze the midpoint between two reads
 * **Full Fragment**: analyze the full fragment of two reads
 
-Note: The **Midpoint** and **Full Fragment** options require proper paired-end reading.
+:::note
+The **Midpoint** and **Fragment** options require proper mate-pair reading.
+:::
 
 For the **5' End** and **3' End** options, the tool also provides the selection to analyze Read 1, Read 2, or All Reads.
 
@@ -68,7 +103,11 @@ Depending on the type of dataset or analysis the user seeks, the tool provides o
 
 ### Read Manipulation
 
-The user can shift the aligned tags by indicating the number of base pairs to be shifted by in the 'Tag Shift' box. The genomic bin size can also be adjusted to simplify the composite plot visualization.
+**Tag Shift** adjusts the position of each encoded position by a user-specified number of base pairs before pileup. Positive values shift reads downstream (5'→3') and negative values shift upstream (3'→5') with respect to the tag/read's strand. This is useful for correcting known offsets in your data, such as the Tn5 insertion offset in ATAC-seq or the enzyme's headspace for nuclease-digested chromatin in MNase-seq or ChIP-exo.
+
+**Bin Size** sets the width (in base pairs) of each interval used to aggregate signal. Larger bins produce lower-resolution and generallysmoother output while smaller bins preserve finer detail. The default is 1 bp.
+
+**Tag Extend** spreads signal from each encoded position (set by the Read Aspect option) by the specified number of base pairs in the 3' direction. At the default of 0, only the encoded position itself contributes to the pileup.
 
 ### Composite Transformation (Smoothing options)
 
@@ -190,9 +229,8 @@ The help guide groups the options by their relation to different aspects of Scri
 
 For visualizing composite data like the GUI window, you need to use a separate tool in the CLI tools. See [Composite Plot][composite-plot] tool.
 
-[file-format]:/docs/Guides/Getting-Started/file-formats
-[cdt-format]:/docs/Guides/Getting-Started/file-formats#cdt
-
+[expand-bed]: /docs/Tools/coordinate-manipulation/expand-bed
+[se-stat]: /docs/Tools/bam-statistics/se-stat
 [composite-plot]: /docs/Tools/figure-generation/composite-plot
 [heatmap]:/docs/Tools/figure-generation/heatmap
 [sort-bam]:/docs/Tools/bam-manipulation/sort-bam

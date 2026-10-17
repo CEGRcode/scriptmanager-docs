@@ -1,7 +1,7 @@
 ---
 id: aggregate-data
 title: Aggregate Data
-sidebar_label: aggregate-data
+sidebar_label: Aggregate Data
 ---
 
 import RowColumnSelect from '/docs/DocComponents/RowColumnSelect.mdx'
@@ -29,25 +29,42 @@ f *
 \end{pmatrix}
 $$
 
+When generating a bunch of TagPileups around the same set of references ([BED][bed-format]), a user may want to compare the per-site averages of the tags for in each sample ([Matrix format (CDT/TSV)][matrix-format]). This tool is a great way of aggregating all those samples into a single per-site summary statistic that can be sorted, grouped, or even visualized as a [heatmap][heatmap]. Since it supports generally structured tab-delimited files, this tool may be co-opted to aggregate other kinds of inputs.
+
 <img src={require('/../static/md-img/Read_Analysis/AggregateDataWindow.png').default} style={{width:70+'%'}}/>
+
+This script takes a set of tab-delimited matrix files (e.g. list of outputs from TagPileup) and aggregates them per-row by some metric.
+
+### File input (CDT/TAB)
+
+This script processes [matrix-type files][matrix-format] but defaults to the [`.cdt`][cdt-format] header row and column selection criteria. The input extension is not restricted for this script. The script also supports bulk selection and processing of files.
+
 
 ### Aggregation Method Options
 
-* **Sum**
-* **Average**
-* **Median**
-* **Mode**
-* **Min**
-* **Max**
-* **Positional Variance**
+| Metric  | Option | Description |
+| :-----: | :----: | :---------- |
+| Sum     | `--sum` | Add up all the row values |
+| Average | `--avg` | Compute the arithmetic mean of the row values |
+| Median  | `--med` | Report the median of the row values |
+| Mode    | `--mod` | Report the mode (most frequent occurring) from the row values |
+| Min     | `--min` | Report the smallest value in the set of row values |
+| Max     | `--max` | Report the largest value in the set of row values |
+| Positional Variance | `--var` |  |
 
 <RowColumnSelect />
 
 ### Output
 
-Each scaled matrix file is written with the `_SCORES.out` suffix appended. For example, `SomeMatrixFile.cdt` would be scaled and written to `SomeMatrixFile_SCORES.out`.
+#### Process each file individually
 
-<OutputGzip />
+If "Merge to one file" is not not selected/unchecked in the GUI, then each input matrix file is processed individually and written to the same filename with the `_SCORES.out` suffix appended. For example, `SomeMatrixFile.cdt` would be scaled and written to `SomeMatrixFile_SCORES.out`.
+
+#### Merge to one file
+
+By default, "Merge to one file" is checked in the GUI while the CLI always merges all input files given to the script (you may process single files by simply executing the script multiple times for each file). The default output filename is `ALL_SCORES.out` which cannot be changed yet in the GUI.
+
+<OutputGZip />
 
 ## Command Line Interface
 
@@ -117,4 +134,4 @@ The file output can be specified by the user using this flag. Otherwise the outp
 | `-r, --start-row` |  |
 | `-l, --start-col` |  |
 
-[file-format]:/docs/Guides/Getting-Started/file-formats
+[heatmap]:/docs/Tools/figure-generation/heatmap

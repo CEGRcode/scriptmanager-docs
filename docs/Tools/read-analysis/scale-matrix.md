@@ -103,6 +103,5 @@ This tool takes a single matrix file for input.
 | `-r, --start-row` | row to start scaling the matrix (zero indexed) |
 | `-l, --start-col` | column to start scaling the matrix (zero indexed) |
 
-[file-format]:/docs/Guides/Getting-Started/file-formats
 [scaling-factor]:/docs/Tools/read-analysis/scaling-factor
 [tag-pileup]:/docs/Tools/read-analysis/tag-pileup
