@@ -70,7 +70,7 @@ OR
 
 
 <div class="tutorial-img-flow-container">
-  <img src={require('../QuickStart/img/download-yep-home.png').default} style={{width:60+'%'}} />
+  <img src={require('./img/download-yep-home.png').default} style={{width:60+'%'}} />
 </div>
 
 1. Navigate to [www.yeastepigenome.org][yep-stencil] and search for Reb1
@@ -79,8 +79,8 @@ OR
 4. Unzip the resulting file ‘12141_YEP.zip’ and inspect the contents of the new `12141_YEP` folder. It should contain a file called `12141_filtered.bam`.
 
 <div class="tutorial-img-flow-container">
-  <img src={require('../QuickStart/img/download-yep-reb1.png').default} style={{width:50+'%'}} />
-  <img src={require('../QuickStart/img/download-yep-reb1-metadata.png').default} style={{width:50+'%'}} />
+  <img src={require('./img/download-yep-reb1.png').default} style={{width:50+'%'}} />
+  <img src={require('./img/download-yep-reb1-metadata.png').default} style={{width:50+'%'}} />
 </div>
 
 ### XXXX.chrom.sizes Reference File

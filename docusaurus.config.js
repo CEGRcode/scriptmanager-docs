@@ -125,15 +125,15 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'Tutorials/QuickStart/index',
-            position: 'left',
-            label: 'Tutorials',
-          },
-          {
-            type: 'doc',
             docId: 'Tools/read-analysis/tag-pileup',
             position: 'left',
             label: 'Tools',
+          },
+          {
+            type: 'doc',
+            docId: 'Examples/chipexo-tutorial',
+            position: 'left',
+            label: 'Examples',
           },
           {
             type: 'search',
