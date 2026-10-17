@@ -156,7 +156,7 @@ Gradle can compile the JavaDocs from the source code using the following command
 ./gradlew javadoc
 ```
 
-The resulting HTML files are written to `build/docs/javadoc/`. To update the [api documentation][sm-javadocs], move the contents of this directory to the `scriptmanager-docs` repo under `static/javadocs`. Then commit the changes and deploy the latest version according to the [website README][docs-readme].
+The resulting HTML files are written to `build/docs/javadoc/`. To update the <a href="/scriptmanager-docs/javadocs/" target="_blank">api documentation</a>, move the contents of this directory to the `scriptmanager-docs` repo under `static/javadocs`. Then commit the changes and deploy the latest version according to the [website README][docs-readme].
 
 ### Github
 Our code is all hosted on Github and we push updates and changes to the remote repo regularly. There are plenty of tutorials out there if you are unfamiliar with Github's version control system. It is recommended you learn the basic commands before pushing changes to this repo.
@@ -291,7 +291,6 @@ Check out [this commit][newtool-commit] to see an example of what a new tool add
 
 The [Release Roadmap][release-roadmap] on Github organizes issue tickets and creates a projection of which issues should be addressed for each release. This helps when writing up the release notes and tagging all the appropriate issues as well as visually tracks what tasks are left to do in each release. When we are ready for a release, the following checklist should be followed to ensure that we update everything together without missing anything.
 
-
 * Check [Release Roadmap][release-roadmap]
   * [ ] Make sure all issues are closed and pulled into master
   * [ ] Remove/archive column so next version is first to display
@@ -347,5 +346,4 @@ The [Release Roadmap][release-roadmap] on Github organizes issue tickets and cre
 [releases]: https://github.com/CEGRcode/scriptmanager/releases
 
 [compilebuild]: /docs/Guides/Contributing/developer-guidelines#compilebuild
-[sm-javadocs]:/javadocs/
 [gradle-based-build]:/docs/Guides/Contributing/developer-guidelines#gradle
