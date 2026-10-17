@@ -2,6 +2,7 @@
 id: genomic-features-tutorial
 title: "Genomic Features Tutorial"
 sidebar_label: "Genomic Features"
+sidebar_position: 3
 ---
 
 import Tabs from '@theme/Tabs';

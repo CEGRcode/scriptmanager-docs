@@ -47,7 +47,7 @@ const ChipexoInfo = {
     </>
   ),
   label: "View tutorial",
-  href: "docs/Guides/Tutorials/chipexo-tutorial",
+  href: "docs/Tutorials/QuickStart/chipexo-tutorial",
 };
 
 // Create an Javascript object for the Genome Track gallery tab
@@ -66,7 +66,7 @@ const GTrackInfo = {
     </>
   ),
   label: "View tutorial",
-  href: "docs/Guides/Tutorials/genome-tracks-tutorial",
+  href: "docs/Tutorials/GenomeTracks/custom-gtracks-scriptmanager",
 };
 
 // Create an Javascript object for the Genomic Features gallery tab
@@ -85,7 +85,7 @@ const GenomicInfo = {
     </>
   ),
   label: "View tutorial",
-  href: "docs/Guides/Tutorials/genomic-features-tutorial",
+  href: "docs/Tutorials/QuickStart/genomic-features-tutorial",
 };
 
 // Create an Javascript object for the ATAC-seq gallery tab
@@ -105,7 +105,7 @@ const AtacseqInfo = {
     </>
   ),
   label: "View tutorial",
-  href: "docs/Guides/Tutorials/atac-seq-tutorial",
+  href: "docs/Tutorials/QuickStart/atac-seq-tutorial",
 };
 
 // Format list of images/figures for a single tab in GalleryTabContent
