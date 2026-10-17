@@ -17,22 +17,24 @@ _Generating four-color plots to compare positional sequence content across genom
   <img src={require('./img/Reb1_Rhee_primary_sites_975_50bp.png').default} style={{width:10+'%',}}/>
 </div>
 
-## Download ScriptManager (v0.15):
+## Download ScriptManager (v0.15)
+
 The current version of ScriptManager is available for download **[here][github-v15]**. Make sure you have [Java installed][java-install].
 
 The file `ScriptManager-v0.15.jar` should be placed someplace locally accessible. For example on Mac OS on the Desktop (Permissions will need to be accepted) or someplace in your home directory (i.e. Macintosh HD/Users/userID/ScriptManager)
 
 ## Download data
+
 You need one set of genomic coordinate regions to investigate (BED) and the reference genome sequence (FASTQ) to complete this exercise. [Read more about the BED/FASTA file formats here.][file-formats]
 
 ### BED File
+
 This is the set of Reb1 binding sites from [Rossi et al (2018)][rossi-2018].
 
 <Link
   className="button button--secondary"
-  href="https://github.com/CEGRcode/2018-Rossi_GenomeResearch/blob/master/Fig1_Reb1/A.Reb1_Rhee_primary_sites_975.bed">
-  Download sample BED file
-</Link>
+  href="https://github.com/CEGRcode/2018-Rossi_GenomeResearch/blob/master/Fig1_Reb1/A.Reb1_Rhee_primary_sites_975.bed"
+  >Download sample BED file</Link>
 
 <br />
 <br />
@@ -42,13 +44,13 @@ If your BED file downloads with a `.txt` extension, make sure to change the file
 :::
 
 ### FASTA Genome sequence
+
 You will also need the reference genome for yeast (sacCer3).
 
 <Link
   className="button button--secondary"
-  href="https://hgdownload.soe.ucsc.edu/goldenPath/sacCer3/bigZips/sacCer3.fa.gz">
-  Download sacCer3 genome (FASTA)
-</Link>
+  href="https://hgdownload.soe.ucsc.edu/goldenPath/sacCer3/bigZips/sacCer3.fa.gz"
+  >Download sacCer3 genome (FASTA)</Link>
 
 <br />
 <br />
@@ -62,7 +64,6 @@ Turn [this script][saccer3-fasta] into an easier-to-run way to get the reference
 :::
 
 ## Generate the Four-color Plot
-
 
 ### 1. Open ScriptManager
 
@@ -78,7 +79,7 @@ Depending on your system permissions, you may need to be an administrator to ope
 :::caution
 Some MacOS systems may not properly open the JAR by simply double-clicking on the JAR file so you may need to open your Terminal window and execute it from the command line by executing the jar file *without any arguments or flags*:
 
-```
+```sh
 java -jar /path/to/ScriptManager.jar
 ```
 
@@ -94,7 +95,6 @@ Double-click or right-click the ScriptManager JAR file to start the program.
   <img src={require('/static/md-img/General/LinuxOpenSM.png').default} style={{width:40+'%',border:'solid 1px'}} />
 </div>
 
-
   </TabItem>
   <TabItem value="windows" label="Windows">
 
@@ -104,13 +104,13 @@ Double-click or right-click the ScriptManager JAR file to start the program.
   <img src={require('/static/md-img/General/WindowsOpenSM.png').default} style={{width:40+'%',border:'solid 1px'}} />
 </div>
 
-
   </TabItem>
 </Tabs>
 
 Once you see the main tool selection window, you're off to the races!
 
 ### 2. Resize the Reb1 motif-aligned BED file
+
 The BED file is the set of reference coordinates that your heatmap and composite plots will be aligned to, but you’ll need to specify how far upstream and downstream you want your data to be plotted; i.e., “Size of Expansion (bp). If you bed file is defined by more than a 1 bp interval AND you want to add to limits of that interval, then select  “Add to Border”).
 
 #### 2.1. Navigate to Coordinate File Manipulation ➡️ [__Expand BED File__][expand-bed]
@@ -118,7 +118,6 @@ The BED file is the set of reference coordinates that your heatmap and composite
 <div class="tutorial-img-flow-container">
   <img src={require('./img/maingui-expandbed.png').default} style={{width:60+'%',}}/>
 </div>
-
 
 #### 2.2. For this tutorial, use the 50bp expansion and select "Expand from Center".
 
@@ -140,8 +139,8 @@ BED file coordinates often need to be resized for more informative tag pileups. 
   <img src={require('./img/maingui-extractfasta.png').default} style={{width:60+'%',}} />
 </div>
 
-
 #### 3.2. Load the FASTA file containing the Genome FASTA
+
   + A \*.fai file will be generated for the genome file the first time it is used. If the Genome FASTA file is NOT in proper FASTA format the script will fail
 
 #### 3.3. Load appropriate BED file for sequence FASTA generation.
@@ -168,8 +167,7 @@ BED file coordinates often need to be resized for more informative tag pileups. 
 At this point you may opt to resize the pixel dimensions of each nucleotide rectangle or customize the colors corresponding to each nucleic acid base.
 :::
 
-
-#### 4.3. Click "Generate" to execute the script.
+#### 4.3. Click "Generate" to execute the script
 
 <div class="tutorial-img-flow-container">
   <img src={require('./img/gui-fourcolor.png').default} style={{width:60+'%',}} />
@@ -179,11 +177,9 @@ At this point you may opt to resize the pixel dimensions of each nucleotide rect
 
 Tah dah! You've made the four color plot! It's kind of tall but you can resize it in your favorite image editing software.
 
-
 ## Command-Line shell script
 
 The following shell commands takes a BED file and a FASTA file of the full genomic sequences to generate a four-color sequence plot of the center 50bp nucleotides in each BED coordinate interval.
-
 
  and the anticipated OUTPUT basename as environmental variables to derive the corresponding composite plot values and heatmaps. This can serve as a template for you to write out your own workflows as bash scripts that execute command-line style ScriptManager.
 

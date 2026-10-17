@@ -18,26 +18,25 @@ _Generating two basic sequence-specific ATAC-Seq plots: composite and heatmap_
   <img src={require('./img_atacseq/Atac-seq_composite.png').default} style={{width:70+'%',}}/>
 </div>
 
-## Download ScriptManager (v0.15):
+## Download ScriptManager (v0.15)
+
 The current version of ScriptManager is available for download **[here][github-v15]**. Make sure you have [Java installed][java-install].
 
 The file `ScriptManager-v0.15.jar` should be placed someplace locally accessible. For example on Mac OS on the Desktop (Permissions will need to be accepted) or someplace in your home directory (`Macintosh_HD:Users/userID/ScriptManager`)
-
 
 ## Download Data
 
 You need one set of genomic coordinate regions to investigate (BED) and one file of sequencing data alignments (BAM) to complete this exercise. [Read more about the BED/BAM file formats here.][file-formats]
 
-
 ### BED File
+
 This is the set of transcription start site (TSS) annotations for the GRCh38 genome build that has been subsampled down to 2000 sites for quick tutorial purposes. A more formal analysis may use a more complete set of annotations (many more sites).
 
 <Link
   className="button button--secondary"
   target="\_blank"
-  href="/sample_data/atac-seq-tutorial/UCSC_GRCh38_knownGene_GENCODEV3_TSS_2000bp_SUBSAMPLE-2000-Sites.bed" >
-  Download sample BED file
-</Link>
+  href="/sample_data/atac-seq-tutorial/UCSC_GRCh38_knownGene_GENCODEV3_TSS_2000bp_SUBSAMPLE-2000-Sites.bed"
+  >Download sample BED file</Link>
 
 <br />
 <br />
@@ -47,13 +46,13 @@ If your BED file downloads with a `.txt` extension, make sure to change the file
 :::
 
 ### BAM File
-This is the set of read alignments from the [ENCODE Project][encode-project] (`ENCFF534DCE.bam`). 
+
+This is the set of read alignments from the [ENCODE Project][encode-project] (`ENCFF534DCE.bam`).
 
 <Link
   className="button button--secondary"
-  href="https://www.encodeproject.org/files/ENCFF128WZG/@@download/ENCFF534DCE.bam">
-  Download sample BAM file
-</Link>
+  href="https://www.encodeproject.org/files/ENCFF534DCE/@@download/ENCFF534DCE.bam"
+  >Download sample BAM file</Link>
 
 <br />
 <br />
@@ -61,6 +60,8 @@ This is the set of read alignments from the [ENCODE Project][encode-project] (`E
 :::caution
 The BAM file is ~6.5GB large so make sure you have enough space on your machine before downloading.
 :::
+
+## Generate the Plots
 
 ### 1. Open ScriptManager
 
@@ -76,7 +77,7 @@ Depending on your system permissions, you may need to be an administrator to ope
 :::caution
 Some MacOS systems may not properly open the JAR by simply double-clicking on the JAR file so you may need to open your Terminal window and execute it from the command line by executing the jar file *without any arguments or flags*:
 
-```
+```sh
 java -jar /path/to/ScriptManager.jar
 ```
 
@@ -92,7 +93,6 @@ Double-click or right-click the ScriptManager JAR file to start the program.
   <img src={require('/static/md-img/General/LinuxOpenSM.png').default} style={{width:40+'%',border:'solid 1px'}} />
 </div>
 
-
   </TabItem>
   <TabItem value="windows" label="Windows">
 
@@ -102,13 +102,13 @@ Double-click or right-click the ScriptManager JAR file to start the program.
   <img src={require('/static/md-img/General/WindowsOpenSM.png').default} style={{width:40+'%',border:'solid 1px'}} />
 </div>
 
-
   </TabItem>
 </Tabs>
 
 Once you see the main tool selection window, you're off to the races!
 
 ### 2. Generate BAI index file
+
 A BAI index file is required for each BAM file of interest (i.e., the tag occupancy data you want to plot). This file allows for rapid access of the sorted and aligned sequence reads (BAM file).
 
 :::tip
@@ -140,20 +140,24 @@ The speed of this step scales with the size of the BAM file. Generally this step
 :::
 
 ### 3. BAM File Statistics
+
 The BAM File Statistics is a Quality Control feature that includes alignment statistics that can be used to check what the data looks like. Paired-end Statistics is a common quality control step used in many ATAC-seq analyses.  
 
-#### 3.1. Navigate to BAM Statistics ➡️ [__Paired-End Statistics__][pair-end-statistics] 
+#### 3.1. Navigate to BAM Statistics ➡️ [__Paired-End Statistics__][pair-end-statistics]
+
 <div class="tutorial-img_atacseq-flow-container" style={{ textAlign: 'center' }}>
   <img src={require('./img_atacseq/bamstatistics(1).png').default} style={{width:70+'%',}} />
 </div>
 
-#### 3.2. Select Output Statistics 
+#### 3.2. Select Output Statistics
+
 <div className="tutorial-img_atacseq-flow-container" style={{ textAlign: 'center' }}>
   <img src={require('./img_atacseq/bamstats(2).png').default} style={{width:60+'%',}}/>
   <img src={require('./img_atacseq/bamstatsfile.png').default} style={{width:80+'%',}}/>
 </div>
 
 ### 4. Resize the GRCh38 BED file
+
 The BED file is the set of reference coordinates that your heatmap and composite plots will be aligned to, but you’ll need to specify how far upstream and downstream you want your data to be plotted; i.e., “Size of Expansion (bp). If you bed file is defined by more than a 1 bp interval AND you want to add to limits of that interval, then select  “Add to Border”).
 
 #### 4.1. Navigate to Coordinate File Manipulation ➡️ [__Expand BED File__][expand-bed]
@@ -161,7 +165,6 @@ The BED file is the set of reference coordinates that your heatmap and composite
 <div class="tutorial-img-flow-container">
   <img src={require('./img/maingui-expandbed.png').default} style={{width:60+'%',}}/>
 </div>
-
 
 #### 4.2. For this tutorial, use the 5000bp expansion and select "Expand from Center".
 
@@ -171,8 +174,8 @@ The BED file is the set of reference coordinates that your heatmap and composite
   <img src={require('./img/gui-expandbed-complete.png').default} style={{width:30+'%',}}/>
 </div>
 
-
 ### 5. Generate the tag pileup
+
 Use TagPileup to pileup the BAM data within a set of BED coordinate windows to generate the composite plot and the matrix(CDT) files that will be used to generate the heatmaps.
 
 #### 5.1. Navigate to Sequence Read Analysis ➡️ [__Tag Pileup__][tag-pileup]
@@ -190,6 +193,7 @@ Use TagPileup to pileup the BAM data within a set of BED coordinate windows to g
 </div>
 
 #### 5.4. When ready, select ‘Pile Tags’ to execute
+
 :::tip
 The default parameters Tag Pileup is set to expect is a sequence-specific strand separated Atac-seq dataset. Modifications to these parameters are needed for more specific analysis or when using data generated from other assays.
 :::
@@ -209,6 +213,7 @@ Besides the composite plot image, ScriptManager has saved the matrix `*.cdt` fil
 :::
 
 ### 6. Sort BED file by CDT file
+
 Use Sort BED files by CDT to sort the entries based on chromosome name (C), followed by the start position (D), and then by the end position (T).
 
 #### 6.1. Navigate to Coordinate File Manipulation ➡️ [__Sort BED__][sort-bed].
@@ -218,17 +223,19 @@ Use Sort BED files by CDT to sort the entries based on chromosome name (C), foll
 </div>
 
 #### 6.2. Load BED & CDT File from Tag Pileup
+
 <div class="tutorial-img-flow-container">
   <img src={require('./img_atacseq/loadbed:bam.png').default} style={{width:80+'%',}}/>
 </div>
 
+#### 6.3. Change Expansion Size to 1000 from Center
 
-#### 6.3. Change Expansion Size to 1000 from Center 
 <div class="tutorial-img-flow-container">
   <img src={require('./img_atacseq/bed+cdt_expansion.png').default} style={{width:80+'%',}}/>
 </div>
 
-#### 6.4. Select Base Output File Name for sorted BED & CDT Files 
+#### 6.4. Select Base Output File Name for sorted BED & CDT Files
+
 <div class="tutorial-img-flow-container">
   <img src={require('./img_atacseq/outputfile.png').default} style={{width:80+'%',}}/>
 </div>
@@ -243,7 +250,7 @@ Use Sort BED files by CDT to sort the entries based on chromosome name (C), foll
 
 #### 7.2. Load the sorted CDT file
 
-#### 7.3. Select "Custom" for color, and change the Contrast Threshold to "Percentile Value".The heatmaps for this dataset show the best contrast when using the default "Percentile Threshold" value (.95 or 95%). 
+#### 7.3. Select "Custom" for color, and change the Contrast Threshold to "Percentile Value".The heatmaps for this dataset show the best contrast when using the default "Percentile Threshold" value (.95 or 95%).
 
 #### 7.4. Click the "Output Heatmap" checkbox. The Heatmap generator does not save the produced PNG by default.
 
@@ -263,7 +270,6 @@ Use Sort BED files by CDT to sort the entries based on chromosome name (C), foll
   <img src={require('./img/maingui-labelhm.png').default} style={{width:60+'%',}}/>
 </div>
 
-
 #### 8.2. Optionally type text into the fields to annotate your axes (Or leave them empty to just generate an SVG border)
 
 <div class="tutorial-img-flow-container">
@@ -271,7 +277,6 @@ Use Sort BED files by CDT to sort the entries based on chromosome name (C), foll
   <i class="fa-solid fa-arrow-right fa-lg"></i>
   <img src={require('./img/gui-labelhm-dialog.png').default} style={{width:40+'%',}}/>
 </div>
-
 
 #### 8.3. Click "Generate" to create an SVG file that labels your PNG
 

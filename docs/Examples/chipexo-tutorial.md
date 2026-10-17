@@ -18,25 +18,24 @@ _Generating two basic sequence-specific ChIP-exo plots: composite and heatmap_
   <img src={require('/gallery/ChIP-exo_composite.png').default} style={{width:70+'%',}}/>
 </div>
 
-## Download ScriptManager (v0.15):
+## Download ScriptManager (v0.15)
+
 The current version of ScriptManager is available for download **[here][github-v15]**. Make sure you have [Java installed][java-install].
 
 The file `ScriptManager-v0.15.jar` should be placed someplace locally accessible. For example on Mac OS on the Desktop (Permissions will need to be accepted) or someplace in your home directory (`Macintosh_HD:Users/userID/ScriptManager`)
-
 
 ## Download Data
 
 You need one set of genomic coordinate regions to investigate (BED) and one file of sequencing data alignments (BAM) to complete this exercise. [Read more about the BED/BAM file formats here.][file-formats]
 
-
 ### BED File
+
 This is the set of Reb1 binding sites from the [Rossi et al (2018)][rossi-2018].
 
 <Link
   className="button button--secondary"
-  href="https://github.com/CEGRcode/2018-Rossi_GenomeResearch/blob/master/Fig1_Reb1/A.Reb1_Rhee_primary_sites_975.bed">
-  Download sample BED file
-</Link>
+  href="https://github.com/CEGRcode/2018-Rossi_GenomeResearch/blob/master/Fig1_Reb1/A.Reb1_Rhee_primary_sites_975.bed"
+  >Download sample BED file</Link>
 
 <br />
 <br />
@@ -46,13 +45,13 @@ If your BED file downloads with a `.txt` extension, make sure to change the file
 :::
 
 ### BAM File
+
 This is the set of Reb1 read alignments from the Yeast Epigenome Project (YEP). [See Rossi et al (2021)][rossi-2021] for more details.
 
 <Link
   className="button button--secondary"
-  href="ftp://data1.commons.psu.edu/pub/commons/eberly/pughlab/yeast-epigenome-project/12141_YEP.zip">
-  Download sample BAM file
-</Link>
+  href="ftp://data1.commons.psu.edu/pub/commons/eberly/pughlab/yeast-epigenome-project/12141_YEP.zip"
+  >Download sample BAM file</Link>
 
 OR
 
@@ -86,7 +85,7 @@ Depending on your system permissions, you may need to be an administrator to ope
 :::caution
 Some MacOS systems may not properly open the JAR by simply double-clicking on the JAR file so you may need to open your Terminal window and execute it from the command line by executing the jar file *without any arguments or flags*:
 
-```
+```sh
 java -jar /path/to/ScriptManager.jar
 ```
 
@@ -102,7 +101,6 @@ Double-click or right-click the ScriptManager JAR file to start the program.
   <img src={require('/static/md-img/General/LinuxOpenSM.png').default} style={{width:40+'%',border:'solid 1px'}} />
 </div>
 
-
   </TabItem>
   <TabItem value="windows" label="Windows">
 
@@ -112,25 +110,25 @@ Double-click or right-click the ScriptManager JAR file to start the program.
   <img src={require('/static/md-img/General/WindowsOpenSM.png').default} style={{width:40+'%',border:'solid 1px'}} />
 </div>
 
-
   </TabItem>
 </Tabs>
 
 Once you see the main tool selection window, you're off to the races!
 
 ### 2. Generate BAI index file
+
 A BAI index file is required for each BAM file of interest (i.e., the tag occupancy data you want to plot). This file allows for rapid access of the sorted and aligned sequence reads (BAM file).
 
 :::tip
 
 SAM/BAM standard is to keep BAI file in same directory as BAM file with the ScriptManager-generated filename.
-```bash
+
+```sh
 Reb1_YEP_12141.bam
 Reb1_YEP_12141.bam.bai  # Need to generate this file to proceed.
 ```
 
 :::
-
 
 #### 2.1. Navigate to BAM Manipulation ➡️ [__BAM-BAI Indexer__][bam-indexer]
 
@@ -151,6 +149,7 @@ The speed of this step scales with the size of the BAM file. Generally this step
 :::
 
 ### 3. Resize the Reb1 motif-aligned BED file
+
 The BED file is the set of reference coordinates that your heatmap and composite plots will be aligned to, but you’ll need to specify how far upstream and downstream you want your data to be plotted; i.e., “Size of Expansion (bp). If you bed file is defined by more than a 1 bp interval AND you want to add to limits of that interval, then select  “Add to Border”).
 
 #### 3.1. Navigate to Coordinate File Manipulation ➡️ [__Expand BED File__][expand-bed]
@@ -158,7 +157,6 @@ The BED file is the set of reference coordinates that your heatmap and composite
 <div class="tutorial-img-flow-container">
   <img src={require('./img/maingui-expandbed.png').default} style={{width:60+'%',}}/>
 </div>
-
 
 #### 3.2. For this tutorial, use the 250bp expansion and select "Expand from Center".
 
@@ -172,8 +170,8 @@ The BED file is the set of reference coordinates that your heatmap and composite
 BED file coordinates often need to be resized for more informative tag pileups. For Reb1 (yeast), 250-500 bp windows are generally sufficient. Mammalian samples may require larger windows (500-2000 bp) based on the amount of indirect-crosslinking
 :::
 
-
 ### 4. Generate the tag pileup
+
 Use TagPileup to pileup the BAM data within a set of BED coordinate windows to generate the composite plot and the matrix(CDT) files that will be used to generate the heatmaps.
 
 #### 4.1. Navigate to Sequence Read Analysis ➡️ [__Tag Pileup__][tag-pileup]
@@ -214,9 +212,7 @@ The default parameters Tag Pileup is set to expect is a sequence-specific strand
 Besides the composite plot image, ScriptManager has saved the matrix \*.CDT files to your Output Directory together with the composite plot values file (If you didn't change the name it would be called `composite_average.out`). These CDT files will be used as the input for generating heatmaps in the next step.
 :::
 
-
 ### 5. Generate Heatmaps
-
 
 #### 5.1. Navigate to Figure Generation ➡️ [__Heat Map__][heatmap].
 
@@ -244,11 +240,9 @@ Start by generating the 'Sense' heatmap first.
   <img src={require('./img/gui-heatmap-sense-out.png').default} style={{width:40+'%',}}/>
 </div>
 
-
 :::tip
 "Percentile Threshold" is a useful for looking at the shape of ChIP-exo binding patterns while "Absolute Threshold" is useful for setting a shared contrast threshold across several samples and comparing signal density. For other data, you may need to play around with settings to find the right contrast for you data.
 :::
-
 
 Similarly generate the 'Anti' heatmap.
 
@@ -267,7 +261,6 @@ Similarly generate the 'Anti' heatmap.
   <i class="fa-solid fa-arrow-right fa-lg"></i>
   <img src={require('./img/gui-heatmap-anti-out.png').default} style={{width:40+'%',}}/>
 </div>
-
 
 ### 6. Merge strand-separated heatmaps
 
@@ -289,7 +282,6 @@ The script will automatically match sense to anti heatmaps using the standardize
   <img src={require('./img/gui-mergehm-out.png').default} style={{width:40+'%',}}/>
 </div>
 
-
 ### 7. Label your merged heatmaps
 
 #### 7.1. Navigate to Figure Generation ➡️ [__Label Heatmaps__][label-heatmap] so we can add axes to the heatmap
@@ -297,7 +289,6 @@ The script will automatically match sense to anti heatmaps using the standardize
 <div class="tutorial-img-flow-container">
   <img src={require('./img/maingui-labelhm.png').default} style={{width:60+'%',}}/>
 </div>
-
 
 #### 7.2. Optionally type text into the fields to annotate your axes (Or leave them empty to just generate an SVG border)
 
@@ -307,15 +298,13 @@ The script will automatically match sense to anti heatmaps using the standardize
   <img src={require('./img/gui-labelhm-dialog.png').default} style={{width:40+'%',}}/>
 </div>
 
-
 #### 7.3. Click "Generate" to create an SVG file that labels your PNG
 
 Open up your SVG file to see what it looks like! Use PowerPoint, Adobe Illustrator, or wherever you edit your publication figures to make any further edits!
 
-
 ## General Comments
-Bioinformatic projects should be organized in a uniform and consistent manner so that you can easily find them in the future. Consider the organizational structure described in [__Noble, 2009__][noble-paper].
 
+Bioinformatic projects should be organized in a uniform and consistent manner so that you can easily find them in the future. Consider the organizational structure described in [__Noble, 2009__][noble-paper].
 
 ## Command-Line shell script
 

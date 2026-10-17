@@ -18,7 +18,8 @@ _Generating two basic sequence-specific Pro-cap plots: composite and heatmap_
   <img src={require('./img/final_tagpileup.png').default} style={{width:70+'%',}}/>
 </div>
 
-## Download ScriptManager (v0.15):
+## Download ScriptManager (v0.15)
+
 The current version of ScriptManager is available for download **[here][github-v15]**. Make sure you have [Java installed][java-install].
 
 The file `ScriptManager-v0.15.jar` should be placed someplace locally accessible. For example on Mac OS on the Desktop (Permissions will need to be accepted) or someplace in your home directory (`Macintosh_HD:Users/userID/ScriptManager`)
@@ -27,16 +28,15 @@ The file `ScriptManager-v0.15.jar` should be placed someplace locally accessible
 
 You need one set of genomic coordinate regions to investigate (BED) and one file of sequencing data alignments (BAM) to complete this exercise. [Read more about the BED/BAM file formats here.][file-formats]
 
-
 ### BED File
+
 This is the set of transcription start site (TSS) annotations for the GRCh38 genome build that has been subsampled down to 2000 sites for quick tutorial purposes. A more formal analysis may use a more complete set of annotations (many more sites).
 
 <Link
   className="button button--secondary"
   target="\_blank"
-  href="/sample_data/atac-seq-tutorial/UCSC_GRCh38_knownGene_GENCODEV3_TSS_2000bp_SUBSAMPLE-2000-Sites.bed" >
-  Download sample BED file
-</Link>
+  href="/sample_data/atac-seq-tutorial/UCSC_GRCh38_knownGene_GENCODEV3_TSS_2000bp_SUBSAMPLE-2000-Sites.bed"
+  >Download sample BED file</Link>
 
 <br />
 <br />
@@ -46,13 +46,13 @@ If your BED file downloads with a `.txt` extension, make sure to change the file
 :::
 
 ### BAM File
+
 This is the set of read alignments from the [ENCODE Project][encode-project] (`ENCFF759VWR.bam`). 
 
 <Link
   className="button button--secondary"
-  href="https://www.encodeproject.org/files/ENCFF759VWR/@@download/ENCFF759VWR.bam">
-  Download sample BAM file
-</Link>
+  href="https://www.encodeproject.org/files/ENCFF759VWR/@@download/ENCFF759VWR.bam"
+  >Download sample BAM file</Link>
 
 <br />
 <br />
@@ -89,7 +89,6 @@ Double-click or right-click the ScriptManager JAR file to start the program.
   <img src={require('/static/md-img/General/LinuxOpenSM.png').default} style={{width:40+'%',border:'solid 1px'}} />
 </div>
 
-
   </TabItem>
   <TabItem value="windows" label="Windows">
 
@@ -99,25 +98,25 @@ Double-click or right-click the ScriptManager JAR file to start the program.
   <img src={require('/static/md-img/General/WindowsOpenSM.png').default} style={{width:40+'%',border:'solid 1px'}} />
 </div>
 
-
   </TabItem>
 </Tabs>
 
 Once you see the main tool selection window, you're off to the races!
 
 ### 2. Generate BAI index file
+
 A BAI index file is required for each BAM file of interest (i.e., the tag occupancy data you want to plot). This file allows for rapid access of the sorted and aligned sequence reads (BAM file).
 
 :::tip
 
 SAM/BAM standard is to keep BAI file in same directory as BAM file with the ScriptManager-generated filename.
+
 ```bash
 ENCFF759VWR.bam
 ENCFF759VWR.bam.bai 
 ```
 
 :::
-
 
 #### 2.1. Navigate to BAM Manipulation ➡️ [__BAM-BAI Indexer__][bam-indexer]
 
@@ -134,6 +133,7 @@ ENCFF759VWR.bam.bai
 </div>
 
 ### 3. Resize the Reb1 motif-aligned BED file
+
 The BED file is the set of reference coordinates that your heatmap and composite plots will be aligned to, but you’ll need to specify how far upstream and downstream you want your data to be plotted; i.e., “Size of Expansion (bp). If you bed file is defined by more than a 1 bp interval AND you want to add to limits of that interval, then select  “Add to Border”.
 
 #### 3.1. Navigate to Coordinate File Manipulation ➡️ [__Expand BED File__][expand-bed]
@@ -141,7 +141,6 @@ The BED file is the set of reference coordinates that your heatmap and composite
 <div class="tutorial-img-flow-container">
   <img src={require('./img/maingui-expandbed.png').default} style={{width:60+'%',}}/>
 </div>
-
 
 #### 3.2. For this tutorial, use the 250bp expansion and select "Expand from Center".
 
@@ -169,6 +168,7 @@ Use TagPileup to pileup the BAM data within a set of BED coordinate windows to g
 </div>
 
 #### 4.4. When ready, select ‘Pile Tags’ to execute
+
 :::tip
 The default parameters Tag Pileup is set to expect is a sequence-specific strand separated Atac-seq dataset. Modifications to these parameters are needed for more specific analysis or when using data generated from other assays.
 :::
@@ -188,7 +188,6 @@ Besides the composite plot image, ScriptManager has saved the matrix `*.cdt` fil
 :::
 
 ### 5. Generate Heatmaps
-
 
 #### 5.1. Navigate to Figure Generation ➡️ [__Heat Map__][heatmap].
 
@@ -216,11 +215,9 @@ Start by generating the 'Sense' heatmap first.
   <img src={require('./img/procap_heatmap_sense.png').default} style={{width:40+'%',}}/>
 </div>
 
-
 :::tip
 "Percentile Threshold" is a useful for looking at the shape of ChIP-exo binding patterns while "Absolute Threshold" is useful for setting a shared contrast threshold across several samples and comparing signal density. For other data, you may need to play around with settings to find the right contrast for you data.
 :::
-
 
 Similarly generate the 'Anti' heatmap.
 
@@ -239,7 +236,6 @@ Similarly generate the 'Anti' heatmap.
   <i class="fa-solid fa-arrow-right fa-lg"></i>
   <img src={require('./img/procap_heatmap_antisense.png').default} style={{width:40+'%',}}/>
 </div>
-
 
 ### 6. Merge strand-separated heatmaps
 
@@ -261,7 +257,6 @@ The script will automatically match sense to anti heatmaps using the standardize
   <img src={require('./img/merged_heatmap.png').default} style={{width:40+'%',}}/>
 </div>
 
-
 ### 7. Label your merged heatmaps
 
 #### 7.1. Navigate to Figure Generation ➡️ [__Label Heatmaps__][label-heatmap] so we can add axes to the heatmap
@@ -269,7 +264,6 @@ The script will automatically match sense to anti heatmaps using the standardize
 <div class="tutorial-img-flow-container">
   <img src={require('./img/maingui-labelhm.png').default} style={{width:60+'%',}}/>
 </div>
-
 
 #### 7.2. Optionally type text into the fields to annotate your axes (Or leave them empty to just generate an SVG border)
 
@@ -279,12 +273,11 @@ The script will automatically match sense to anti heatmaps using the standardize
   <img src={require('./img/gui-labelhm-dialog.png').default} style={{width:40+'%',}}/>
 </div>
 
-
 #### 7.3. Click "Generate" to create an SVG file that labels your PNG
 
 ## General Comments
-Bioinformatic projects should be organized in a uniform and consistent manner so that you can easily find them in the future. Consider the organizational structure described in [__Noble, 2009__][noble-paper].
 
+Bioinformatic projects should be organized in a uniform and consistent manner so that you can easily find them in the future. Consider the organizational structure described in [__Noble, 2009__][noble-paper].
 
 ## Command-Line shell script
 
