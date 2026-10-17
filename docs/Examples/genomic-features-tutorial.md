@@ -17,10 +17,10 @@ _Generating four-color plots to compare positional sequence content across genom
   <img src={require('./img/Reb1_Rhee_primary_sites_975_50bp.png').default} style={{width:10+'%',}}/>
 </div>
 
-## Download ScriptManager (v0.14):
-The current version of ScriptManager is available for download **[here][github-v14]**. Make sure you have [Java installed][java-install].
+## Download ScriptManager (v0.15):
+The current version of ScriptManager is available for download **[here][github-v15]**. Make sure you have [Java installed][java-install].
 
-The file `ScriptManager-v0.14.jar` should be placed someplace locally accessible. For example on Mac OS on the Desktop (Permissions will need to be accepted) or someplace in your home directory (i.e. Macintosh HD/Users/userID/ScriptManager)
+The file `ScriptManager-v0.15.jar` should be placed someplace locally accessible. For example on Mac OS on the Desktop (Permissions will need to be accepted) or someplace in your home directory (i.e. Macintosh HD/Users/userID/ScriptManager)
 
 ## Download data
 You need one set of genomic coordinate regions to investigate (BED) and the reference genome sequence (FASTQ) to complete this exercise. [Read more about the BED/FASTA file formats here.][file-formats]
@@ -208,7 +208,7 @@ rm BED_50bp.bed BED_50bp.fa
 [saccer3-fasta]:https://github.com/CEGRcode/GenoPipe/blob/master/EpitopeID/utility_scripts/genome_data/download_sacCer3_Genome.sh
 [noble2009]:https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1000424&type=printable
 [github-repo]:https://www.github.com/CEGRcode/scriptmanager
-[github-v14]:https://github.com/CEGRcode/scriptmanager/releases/download/v0.14/ScriptManager-v0.14.jar
+[github-v15]:https://github.com/CEGRcode/scriptmanager/releases/download/v0.15/ScriptManager-v0.15.jar
 [ex-chipexo-bash]:https://www.github.com/CEGRcode/scriptmanager
 
 [java-install]:/docs/#java

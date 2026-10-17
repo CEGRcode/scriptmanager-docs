@@ -39,8 +39,8 @@ We pre-compiled the JAR binary file (same for all operating systems) and made th
 
 <Link
   className="button button--primary"
-  href="https://github.com/CEGRcode/scriptmanager/releases/download/v0.14/ScriptManager-v0.14.jar">
-  Download JAR Executable (v0.14)
+  href="https://github.com/CEGRcode/scriptmanager/releases/download/v0.15/ScriptManager-v0.15.jar">
+  Download JAR Executable (v0.15)
 </Link>
 
 ## Running ScriptManager
@@ -157,7 +157,7 @@ $ singularity exec scriptmanager.sif scriptmanager coordinate-manipulation bed-t
 
 [github-releases]:https://github.com/CEGRcode/scriptmanager/releases
 [github-repo]:https://github.com/CEGRcode/scriptmanager
-[github-v14]:https://github.com/CEGRcode/scriptmanager/releases/download/v0.14/ScriptManager-v0.14.jar
+[github-v15]:https://github.com/CEGRcode/scriptmanager/releases/download/v0.15/ScriptManager-v0.15.jar
 
 [sdk-notes]:/docs/Guides/Contributing/developer-guidelines#java-development-toolkit-jdk
 [cli]:/docs/Guides/Getting-Started/command-line

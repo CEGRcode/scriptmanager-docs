@@ -29,10 +29,10 @@ This tutorial is based on the processing script from [Mittal et al, 2022][geo-tr
 There will be a couple steps that need to be performed on the command line using UCSC binaries because we currently don't have a parser for BigWig files (in the works but not ready yet). In the meantime, here are the step-by-step instructions for using as much of ScriptManager's GUI as possible to generate the BigWig track.
 
 
-## Download ScriptManager (v0.14):
-The current version of ScriptManager is available for download **[here][github-v14]**. Make sure you have [Java installed][java-install].
+## Download ScriptManager (v0.15):
+The current version of ScriptManager is available for download **[here][github-v15]**. Make sure you have [Java installed][java-install].
 
-The file `ScriptManager-v0.14.jar` should be placed someplace locally accessible. For example on Mac OS on the Desktop (Permissions will need to be accepted) or someplace in your home directory (i.e. Macintosh HD/Users/userID/ScriptManager)
+The file `ScriptManager-v0.15.jar` should be placed someplace locally accessible. For example on Mac OS on the Desktop (Permissions will need to be accepted) or someplace in your home directory (i.e. Macintosh HD/Users/userID/ScriptManager)
 
 
 ## Download USCS binary `bedGraphToBigWig`
@@ -321,7 +321,7 @@ rm $OUTPUT.raw.tab $OUTPUT.filtered.tab $OUTPUT.scaled.tab $OUTPUT.forward.bedgr
 [saccer3-fasta]:https://github.com/CEGRcode/GenoPipe/blob/master/EpitopeID/utility_scripts/genome_data/download_sacCer3_Genome.sh
 [noble2009]:https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1000424&type=printable
 [github-repo]:https://www.github.com/CEGRcode/scriptmanager
-[github-v14]:https://github.com/CEGRcode/scriptmanager/releases/download/v0.14/ScriptManager-v0.14.jar
+[github-v15]:https://github.com/CEGRcode/scriptmanager/releases/download/v0.15/ScriptManager-v0.15.jar
 [ex-chipexo-bash]:https://www.github.com/CEGRcode/scriptmanager
 [ucsc-exe]:https://hgdownload.soe.ucsc.edu/admin/exe/
 [get-igv]:https://software.broadinstitute.org/software/igv/download
