@@ -387,9 +387,9 @@ rm SENSE.png ANTI.png ${OUTPUT}_initial*
 [noble2009]:https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1000424&type=printable
 [github-v15]:https://github.com/CEGRcode/scriptmanager/releases/download/v0.15/ScriptManager-v0.15.jar
 
-[java-install]:/docs/#java
+[java-install]:/docs/Guides/Getting-Started/#-dependencies-just-java
 
-[atac-tutorial]:/docs/Guides/Tutorials/atac-seq-tutorial
+[atac-tutorial]:/docs/Examples/atac-seq-tutorial
 [bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer
 [expand-bed]:/docs/Tools/coordinate-manipulation/expand-bed
 [sort-bed]:/docs/Tools/coordinate-manipulation/sort-bed

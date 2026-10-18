@@ -314,7 +314,7 @@ Open up your SVG file to see what it looks like! Use PowerPoint, Adobe Illustrat
 [github-repo]:https://www.github.com/CEGRcode/scriptmanager
 [github-v15]:https://github.com/CEGRcode/scriptmanager/releases/download/v0.15/ScriptManager-v0.15.jar
 
-[java-install]:/docs/#java
+[java-install]:/docs/Guides/Getting-Started/#-dependencies-just-java
 
 [bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer
 [expand-bed]:/docs/Tools/coordinate-manipulation/expand-bed

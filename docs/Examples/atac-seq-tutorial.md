@@ -320,7 +320,7 @@ java -jar $SCRIPTMANAGER figure-generation label-heatmap $OUTPUT\_heatmap.png \
 [github-v15]:https://github.com/CEGRcode/scriptmanager/releases/download/v0.15/ScriptManager-v0.15.jar
 [ex-chipexo-bash]:https://www.github.com/CEGRcode/scriptmanager
 
-[java-install]:/docs/#java
+[java-install]:/docs/Guides/Getting-Started/#-dependencies-just-java
 
 [sort-bed]:/docs/Tools/coordinate-manipulation/sort-bed
 [pair-end-statistics]:/docs/Tools/bam-statistics/pe-stat

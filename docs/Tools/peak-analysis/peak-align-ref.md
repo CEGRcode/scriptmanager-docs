@@ -57,6 +57,4 @@ java -jar ScriptManager.jar peak-analysis peak-align-ref [-hV] [--separate
 | `-o, --output=<output>` | specify output file (default=`<peakBED>_<refBED>_Output.cdt`) |
 | `-z, --gzip`            | gzip output (default=false) |
 
-[bed-format]:/docs/Guides/Getting-Started/file-formats#bed
-
 [tag-pileup]: /docs/Tools/read-analysis/tag-pileup

@@ -345,7 +345,7 @@ rm BED_250bp.bed SENSE.png ANTI.png
 [github-v15]:https://github.com/CEGRcode/scriptmanager/releases/download/v0.15/ScriptManager-v0.15.jar
 [ex-chipexo-bash]:https://www.github.com/CEGRcode/scriptmanager
 
-[java-install]:/docs/#java
+[java-install]:/docs/Guides/Getting-Started/#-dependencies-just-java
 
 [bam-indexer]:/docs/Tools/bam-manipulation/bam-indexer
 [expand-bed]:/docs/Tools/coordinate-manipulation/expand-bed
