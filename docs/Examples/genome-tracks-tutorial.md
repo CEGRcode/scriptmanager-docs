@@ -1,8 +1,7 @@
 ---
-id: custom-gtracks-scriptmanager
-title: "Making Custom Genome Tracks Tutorial"
-sidebar_label: "Custom Tracks (ScriptManager/Kent Tools)"
-sidebar_position: 3
+id: genome-tracks-tutorial
+title: "Making Genome Tracks Tutorial"
+sidebar_label: "Genome Tracks (BigWig)"
 ---
 
 import Tabs from '@theme/Tabs';
